@@ -1,0 +1,207 @@
+{
+  "episode_id": "ithor_fp403_t3_sequential_manipulation_template_spraybottle_container_showerdoor_destination_countertop_open_pick_place_001",
+  "sample_id": "ithor_fp403_t3_sequential_manipulation_template_spraybottle_container_showerdoor_destination_countertop_open_pick_place_001",
+  "scene_ref": "ithor_fp403",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan403",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 0.157457172870636,
+      "y": 0.9093819856643677,
+      "z": 2.4441139698028564
+    },
+    "rotation": {
+      "x": 0,
+      "y": 240,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 0.157457172870636,
+        "y": 0.9093819856643677,
+        "z": 2.4441139698028564
+      },
+      "rotation": {
+        "x": 0,
+        "y": 240,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Open the showerdoor, take out the spray bottle, place it on the countertop, then report success once it is placed correctly.",
+    "task_type": "T3_open_pick_place",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "open_pick_place",
+    "functional_template": "open_pick_place",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "SprayBottle",
+    "target_group": "sequential_manipulation",
+    "container_type": "ShowerDoor",
+    "destination_type": "CounterTop",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "showerdoor_open",
+      "target_object_type": "ShowerDoor",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "spraybottle_pick",
+      "target_object_type": "SprayBottle",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "countertop_place",
+      "target_object_type": "CounterTop",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "SprayBottle",
+    "receptacle_type": "CounterTop",
+    "target_object_id": "SprayBottle|-03.14|+00.59|+01.42",
+    "allowed_receptacle_object_ids": [
+      "CounterTop|-01.36|+01.09|+03.15"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "SprayBottle",
+      "receptacle_type": "CounterTop"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "SprayBottle",
+      "receptacle_type": "CounterTop",
+      "target_object_id": "SprayBottle|-03.14|+00.59|+01.42",
+      "allowed_receptacle_object_ids": [
+        "CounterTop|-01.36|+01.09|+03.15"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "open_pick_place",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": false,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "SprayBottle",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "SprayBottle",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "SprayBottle|-03.14|+00.59|+01.42",
+    "container_object_id": "ShowerDoor|-02.48|+01.77|+02.39",
+    "destination_object_id": "CounterTop|-01.36|+01.09|+03.15",
+    "destination_allowed_object_ids": [
+      "CounterTop|-01.36|+01.09|+03.15"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "SprayBottle",
+    "target_object_id": "SprayBottle|-03.14|+00.59|+01.42",
+    "container_object_type": "ShowerDoor",
+    "container_object_id": "ShowerDoor|-02.48|+01.77|+02.39",
+    "destination_object_type": "CounterTop",
+    "destination_object_id": "CounterTop|-01.36|+01.09|+03.15",
+    "destination_allowed_object_ids": [
+      "CounterTop|-01.36|+01.09|+03.15"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "container_is_closed": true,
+      "object_inside_container": true,
+      "destination_available": true
+    }
+  ]
+}

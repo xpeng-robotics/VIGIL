@@ -1,0 +1,158 @@
+{
+  "episode_id": "procthor10k_train_0069_t1_grounded_interaction_easy_toaster_activate_001",
+  "sample_id": "procthor10k_train_0069_t1_grounded_interaction_easy_toaster_activate_001",
+  "scene_ref": "procthor10k_train_0069",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "procthor10k_train_0069",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 9.561326026916504,
+      "y": 0.9009997844696045,
+      "z": 5.998728275299072
+    },
+    "rotation": {
+      "x": 0,
+      "y": -1.1850573173433077e-05,
+      "z": 0
+    },
+    "horizon": 30.000003814697266,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 9.561326026916504,
+        "y": 0.9009997844696045,
+        "z": 5.998728275299072
+      },
+      "rotation": {
+        "x": 0,
+        "y": -1.1850573173433077e-05,
+        "z": 0
+      },
+      "horizon": 30.000003814697266,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Turn on the toaster, then report success once it is on.",
+    "task_type": "T1_approach_toggle",
+    "task_family": "T1_grounded_interaction",
+    "intent": "activate",
+    "functional_template": "approach_activate",
+    "difficulty": "easy",
+    "primary_capabilities": [
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Toaster",
+    "target_group": "toggle_fixture",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 25,
+    "max_invalid_actions": 8,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "toaster_activate",
+      "target_object_type": "Toaster",
+      "intent": "toggle_on",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "ToggleObjectOn"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_state",
+    "target_object_type": "Toaster",
+    "field": "is_toggled",
+    "value": true,
+    "target_object_id": "Toaster|surface|6|35",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_state",
+      "target_object_type": "Toaster",
+      "field": "is_toggled",
+      "value": true
+    },
+    "strict_spec": {
+      "type": "object_state",
+      "target_object_type": "Toaster",
+      "field": "is_toggled",
+      "value": true,
+      "target_object_id": "Toaster|surface|6|35"
+    }
+  },
+  "trace_hints": {
+    "task_family": "T1_grounded_interaction",
+    "difficulty": "easy",
+    "functional_template": "approach_activate",
+    "primary_capabilities": [
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        2,
+        4.5
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "Toaster",
+    "benchmark_axes": {
+      "task_family": "T1_grounded_interaction",
+      "target_object_type": "Toaster",
+      "difficulty": "easy"
+    },
+    "target_group": "toggle_fixture",
+    "target_object_id": "Toaster|surface|6|35",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "Toaster",
+    "target_object_id": "Toaster|surface|6|35"
+  }
+}

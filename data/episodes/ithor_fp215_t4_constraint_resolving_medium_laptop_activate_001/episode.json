@@ -1,0 +1,168 @@
+{
+  "episode_id": "ithor_fp215_t4_constraint_resolving_medium_laptop_activate_001",
+  "sample_id": "ithor_fp215_t4_constraint_resolving_medium_laptop_activate_001",
+  "scene_ref": "ithor_fp215",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan215",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -2.387627601623535,
+      "y": 0.910965085029602,
+      "z": 0.6805200576782227
+    },
+    "rotation": {
+      "x": 0,
+      "y": 5.078817139292369e-06,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -2.387627601623535,
+        "y": 0.910965085029602,
+        "z": 0.6805200576782227
+      },
+      "rotation": {
+        "x": 0,
+        "y": 5.078817139292369e-06,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Reach the laptop by taking a clear route around the obstruction, then turn it on and report success once it is on.",
+    "task_type": "T4c_approach_toggle",
+    "task_family": "T4_constraint_resolving",
+    "intent": "activate",
+    "functional_template": "detour_toggle",
+    "difficulty": "medium",
+    "primary_capabilities": [
+      "CR",
+      "PG",
+      "DR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Laptop",
+    "target_group": "constraint_resolving",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 40,
+    "max_invalid_actions": 12,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "laptop_activate",
+      "target_object_type": "Laptop",
+      "intent": "toggle_on",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "ToggleObjectOn"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_state",
+    "target_object_type": "Laptop",
+    "field": "is_toggled",
+    "value": true,
+    "target_object_id": "Laptop|-02.45|+00.51|+04.06",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_state",
+      "target_object_type": "Laptop",
+      "field": "is_toggled",
+      "value": true
+    },
+    "strict_spec": {
+      "type": "object_state",
+      "target_object_type": "Laptop",
+      "field": "is_toggled",
+      "value": true,
+      "target_object_id": "Laptop|-02.45|+00.51|+04.06"
+    }
+  },
+  "trace_hints": {
+    "task_family": "T4_constraint_resolving",
+    "difficulty": "medium",
+    "functional_template": "detour_toggle",
+    "primary_capabilities": [
+      "CR",
+      "PG",
+      "DR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        2,
+        4.5
+      ],
+      "path_blocked": true
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Laptop",
+    "benchmark_axes": {
+      "task_family": "T4_constraint_resolving",
+      "target_object_type": "Laptop",
+      "difficulty": "medium"
+    },
+    "target_group": "constraint_resolving",
+    "target_object_id": "Laptop|-02.45|+00.51|+04.06",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "Laptop",
+    "target_object_id": "Laptop|-02.45|+00.51|+04.06"
+  },
+  "pre_conditions": [
+    {
+      "path_blocked": true,
+      "detour_required": true
+    }
+  ]
+}

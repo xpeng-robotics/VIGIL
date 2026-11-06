@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Watch VIGIL: eight embodied task families, three complete recorded rollouts, and the distinction between world completion and terminal reporting.">
+  <title>VIGIL — Research film</title>
+  <link rel="stylesheet" href="player.css">
+  <script src="player.js" defer></script>
+</head>
+<body>
+<main>
+  <header class="masthead">
+    <a class="brand" href="index.html" aria-label="VIGIL film">VIGIL</a>
+    <nav aria-label="Main navigation"><a href="index.html">Walkthrough</a><a href="overview.html" aria-current="page">Research film</a><a href="demos/index.html">Hardware</a><a href="https://github.com/xpeng-robotics/VIGIL">GitHub ↗</a></nav>
+  </header>
+  <section class="hero" aria-labelledby="title">
+    <div><p class="eyebrow">A study of embodied agents</p><h1 id="title">Done,<br>But Not Sure.</h1></div>
+    <p class="intro">A task can be complete while the agent keeps acting. Follow eight task families and three recorded rollouts, then see how VIGIL measures execution and terminal reporting.</p>
+  </section>
+  <div class="player">
+    <video id="film" controls playsinline preload="metadata" poster="overview-poster.jpg" aria-label="VIGIL research film, two minutes and thirty-two seconds">
+      <source src="overview.mp4" type="video/mp4">
+      <a href="overview.mp4">Download the film.</a>
+    </video>
+  </div>
+  <div class="media-meta"><span>02:32 · 1080p · English captions</span><span><a href="overview.mp4" download>Download MP4</a><a href="overview.en.vtt" download>Caption file</a></span></div>
+  <p id="playback-status" class="status" role="status" aria-live="polite"></p>
+  <nav class="chapters" aria-label="Film chapters">
+    <button type="button" data-time="0" aria-current="true"><span>01 / 00:00</span><strong>Eight task families</strong></button>
+    <button type="button" data-time="61"><span>02 / 01:01</span><strong>Three complete rollouts</strong></button>
+    <button type="button" data-time="105"><span>03 / 01:45</span><strong>The frozen dataset</strong></button>
+    <button type="button" data-time="124"><span>04 / 02:04</span><strong>World state &amp; reporting</strong></button>
+  </nav>
+  <details class="detail">
+    <summary>Browse the complete timeline</summary>
+    <div class="full-chapters">
+      <button type="button" data-time="5"><span>00:05</span>Pixel grounding</button>
+      <button type="button" data-time="12"><span>00:12</span>Distance approach</button>
+      <button type="button" data-time="19"><span>00:19</span>View search</button>
+      <button type="button" data-time="26"><span>00:26</span>State verification</button>
+      <button type="button" data-time="33"><span>00:33</span>Approach and interact</button>
+      <button type="button" data-time="40"><span>00:40</span>Search and interact</button>
+      <button type="button" data-time="47"><span>00:47</span>Sequential manipulation</button>
+      <button type="button" data-time="54"><span>00:54</span>Constraint resolving</button>
+      <button type="button" data-time="61"><span>01:01</span>Open and report</button>
+      <button type="button" data-time="73"><span>01:13</span>Pick and place</button>
+      <button type="button" data-time="87"><span>01:27</span>After attainment</button>
+      <button type="button" data-time="105"><span>01:45</span>1,000 episodes</button>
+      <button type="button" data-time="114"><span>01:54</span>Scene coverage</button>
+      <button type="button" data-time="124"><span>02:04</span>W, B and the gap</button>
+      <button type="button" data-time="136"><span>02:16</span>FR, NR and IL</button>
+      <button type="button" data-time="145"><span>02:25</span>The research question</button>
+    </div>
+  </details>
+  <details class="detail">
+    <summary>About the recordings and evidence</summary>
+    <p>The dedicated fridge, apple and kettle sequences retain all 5, 6 and 25 recorded actions. Playback is accelerated, not a measurement of model latency. Apple and kettle use the labeled action-feedback intervention. Task illustrations are separate from continuous recordings.</p>
+    <p>The film describes the original paper dataset: 1,000 episodes, with 265 iTHOR and 735 ProcTHOR tasks. The executable release includes later task corrections. The 640 × 480 observations retain their original detail; no intermediate scene images are generated. Music is original synthesized audio.</p>
+    <p><a href="https://github.com/xpeng-robotics/VIGIL/blob/main/docs/VIDEO.md">Read the full evidence map ↗</a></p>
+  </details>
+  <footer class="footer"><p>VIGIL · NeurIPS 2026</p><p><a href="https://arxiv.org/abs/2605.08747">Read the paper</a> &nbsp;·&nbsp; <a href="https://xpeng-robotics.github.io/vigil/">Project page</a></p></footer>
+</main>
+</body>
+</html>

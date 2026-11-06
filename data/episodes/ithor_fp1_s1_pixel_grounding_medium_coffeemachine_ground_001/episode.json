@@ -1,0 +1,114 @@
+{
+  "episode_id": "ithor_fp1_s1_pixel_grounding_medium_coffeemachine_ground_001",
+  "sample_id": "ithor_fp1_s1_pixel_grounding_medium_coffeemachine_ground_001",
+  "scene_ref": "ithor_fp1",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan1",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -1.25,
+      "y": 0.900999128818512,
+      "z": 0.5
+    },
+    "rotation": {
+      "x": 0.0,
+      "y": 226.5747126009734,
+      "z": 0.0
+    },
+    "horizon": 0.0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -1.25,
+        "y": 0.900999128818512,
+        "z": 0.5
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 226.5747126009734,
+        "z": 0.0
+      },
+      "horizon": 0.0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Select the coffee machine in the image, then report success once you have selected the correct target.",
+    "task_type": "visible_ground",
+    "task_family": "S1_pixel_grounding",
+    "intent": "ground",
+    "functional_template": "visible_ground",
+    "difficulty": "medium",
+    "primary_capabilities": [
+      "PG",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "CoffeeMachine"
+  },
+  "budget": {
+    "max_steps": 5,
+    "max_invalid_actions": 3,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "target_grounded",
+    "target_object_type": "CoffeeMachine",
+    "target_object_id": "CoffeeMachine|-01.98|+00.90|-00.19"
+  },
+  "trace_hints": {
+    "task_family": "S1_pixel_grounding",
+    "difficulty": "medium",
+    "functional_template": "visible_ground",
+    "primary_capabilities": [
+      "PG",
+      "TM"
+    ],
+    "expected_skills": [
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        1.5
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target CoffeeMachine|-01.98|+00.90|-00.19",
+      "reachable positions=162"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "CoffeeMachine",
+    "benchmark_axes": {
+      "task_family": "S1_pixel_grounding",
+      "target_object_type": "CoffeeMachine",
+      "difficulty": "medium"
+    },
+    "target_object_id": "CoffeeMachine|-01.98|+00.90|-00.19"
+  },
+  "bindings": {
+    "target_object_type": "CoffeeMachine",
+    "target_object_id": "CoffeeMachine|-01.98|+00.90|-00.19"
+  }
+}

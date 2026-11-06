@@ -1,0 +1,190 @@
+{
+  "episode_id": "ithor_fp309_t3_sequential_manipulation_template_pen_destination_garbagecan_rearrange_001",
+  "sample_id": "ithor_fp309_t3_sequential_manipulation_template_pen_destination_garbagecan_rearrange_001",
+  "scene_ref": "ithor_fp309",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan309",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -1.4611742496490479,
+      "y": 0.9469271898269653,
+      "z": -1.2091987133026123
+    },
+    "rotation": {
+      "x": 0,
+      "y": 196.25575256347656,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -1.4611742496490479,
+        "y": 0.9469271898269653,
+        "z": -1.2091987133026123
+      },
+      "rotation": {
+        "x": 0,
+        "y": 196.25575256347656,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the pen, place it on the trash can, then report success once it is placed correctly.",
+    "task_type": "T3_rearrange",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "rearrange",
+    "functional_template": "rearrange",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Pen",
+    "target_group": "sequential_manipulation",
+    "destination_type": "GarbageCan",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "pen_pick",
+      "target_object_type": "Pen",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "garbagecan_place",
+      "target_object_type": "GarbageCan",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Pen",
+    "receptacle_type": "GarbageCan",
+    "target_object_id": "Pen|-01.38|+01.11|-03.05",
+    "allowed_receptacle_object_ids": [
+      "GarbageCan|-03.34|+00.02|-02.80"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "Pen",
+      "receptacle_type": "GarbageCan"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "Pen",
+      "receptacle_type": "GarbageCan",
+      "target_object_id": "Pen|-01.38|+01.11|-03.05",
+      "allowed_receptacle_object_ids": [
+        "GarbageCan|-03.34|+00.02|-02.80"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "rearrange",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Pen",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Pen",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Pen|-01.38|+01.11|-03.05",
+    "destination_object_id": "GarbageCan|-03.34|+00.02|-02.80",
+    "destination_allowed_object_ids": [
+      "GarbageCan|-03.34|+00.02|-02.80"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "Pen",
+    "target_object_id": "Pen|-01.38|+01.11|-03.05",
+    "destination_object_type": "GarbageCan",
+    "destination_object_id": "GarbageCan|-03.34|+00.02|-02.80",
+    "destination_allowed_object_ids": [
+      "GarbageCan|-03.34|+00.02|-02.80"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

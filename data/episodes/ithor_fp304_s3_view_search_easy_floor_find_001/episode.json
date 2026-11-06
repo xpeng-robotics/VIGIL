@@ -1,0 +1,146 @@
+{
+  "episode_id": "ithor_fp304_s3_view_search_easy_floor_find_001",
+  "sample_id": "ithor_fp304_s3_view_search_easy_floor_find_001",
+  "scene_ref": "ithor_fp304",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan304",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 1.3010202646255493,
+      "y": 0.9069997072219849,
+      "z": 0.8232223987579346
+    },
+    "rotation": {
+      "x": 0,
+      "y": 330,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 1.3010202646255493,
+        "y": 0.9069997072219849,
+        "z": 0.8232223987579346
+      },
+      "rotation": {
+        "x": 0,
+        "y": 330,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Search for the floor and report success once it becomes visible.",
+    "task_type": "find_target",
+    "task_family": "S3_view_search",
+    "intent": "find",
+    "functional_template": "search_then_report",
+    "difficulty": "easy",
+    "primary_capabilities": [
+      "VS",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Floor",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 20,
+    "max_invalid_actions": 6,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_state",
+    "target_object_type": "Floor",
+    "field": "visible",
+    "value": true,
+    "visibility_latched": true,
+    "target_object_id": "Floor|+00.00|+00.00|+00.00",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_state",
+      "target_object_type": "Floor",
+      "field": "visible",
+      "value": true,
+      "visibility_latched": true,
+      "target_object_id": "Floor|+00.00|+00.00|+00.00"
+    },
+    "strict_spec": {
+      "type": "object_state",
+      "target_object_type": "Floor",
+      "field": "visible",
+      "value": true,
+      "visibility_latched": true,
+      "target_object_id": "Floor|+00.00|+00.00|+00.00"
+    }
+  },
+  "trace_hints": {
+    "task_family": "S3_view_search",
+    "difficulty": "easy",
+    "functional_template": "search_then_report",
+    "primary_capabilities": [
+      "VS",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "look",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": false,
+      "target_distance_m": [
+        2,
+        5
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Floor",
+    "benchmark_axes": {
+      "task_family": "S3_view_search",
+      "target_object_type": "Floor",
+      "difficulty": "easy"
+    },
+    "target_object_id": "Floor|+00.00|+00.00|+00.00",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "Floor",
+    "target_object_id": "Floor|+00.00|+00.00|+00.00"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "episode_id": "procthor_sm_open_pick_fridge_tomato_seed438",
+  "sample_id": "procthor_sm_open_pick_fridge_tomato_seed438",
+  "scene_ref": "procthor_microwave_seed438",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "Procedural",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6.0,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 3.380061626434326,
+      "y": 0.9009993672370911,
+      "z": 2.1519341468811035
+    },
+    "rotation": {
+      "x": -0.0,
+      "y": 220.5648651123047,
+      "z": 0.0
+    },
+    "horizon": 30.000003814697266,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "forceAction": true,
+      "position": {
+        "x": 3.380061626434326,
+        "y": 0.9009993672370911,
+        "z": 2.1519341468811035
+      },
+      "rotation": {
+        "x": -0.0,
+        "y": 220.5648651123047,
+        "z": 0.0
+      },
+      "horizon": 30.000003814697266,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Open the fridge, take out the tomato, then report success once it is in hand.",
+    "task_type": "T3_reveal_pick",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "reveal_pick",
+    "functional_template": "reveal_pick",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Tomato",
+    "target_group": "sequential_manipulation",
+    "container_type": "Fridge"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "fridge_open",
+      "target_object_type": "Fridge",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "tomato_pick",
+      "target_object_type": "Tomato",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_held",
+    "target_object_type": "Tomato",
+    "target_object_id": "small|2|4"
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "reveal_pick",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": false,
+      "target_distance_m": [
+        0.5,
+        2.0
+      ]
+    },
+    "sampling_notes": [
+      "migrated from procthor_microwave_seed438_T2_easy_microwave_001 (sync)",
+      {
+        "forked_from": "procthor_microwave_seed438_T2_easy_microwave_001__mainline",
+        "forked_at": "2026-05-11T04:14:46.424856+00:00"
+      },
+      "contract: T3 reveal_pick — tomato inside Fridge id 2|1 (house.json); prior microwave-only oracle removed"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "Tomato",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Tomato",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "small|2|4",
+    "container_object_id": "2|1"
+  },
+  "bindings": {
+    "target_object_type": "Tomato",
+    "target_object_id": "small|2|4",
+    "container_object_type": "Fridge",
+    "container_object_id": "2|1"
+  },
+  "pre_conditions": [
+    {
+      "container_is_closed": true,
+      "object_inside_container": true
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "episode_id": "ithor_fp409_t3_sequential_manipulation_template_soapbar_destination_garbagecan_put_into_001",
+  "sample_id": "ithor_fp409_t3_sequential_manipulation_template_soapbar_destination_garbagecan_put_into_001",
+  "scene_ref": "ithor_fp409",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan409",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -0.5085185766220093,
+      "y": 0.9011651277542114,
+      "z": 3.314704656600952
+    },
+    "rotation": {
+      "x": 0,
+      "y": 105.00000762939453,
+      "z": 0
+    },
+    "horizon": 15.000000953674316,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -0.5085185766220093,
+        "y": 0.9011651277542114,
+        "z": 3.314704656600952
+      },
+      "rotation": {
+        "x": 0,
+        "y": 105.00000762939453,
+        "z": 0
+      },
+      "horizon": 15.000000953674316,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the soap bar, place it into the trash can, then report success once it is inside.",
+    "task_type": "T3_put_into",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "put_into",
+    "functional_template": "put_into",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "SoapBar",
+    "target_group": "sequential_manipulation",
+    "destination_type": "GarbageCan",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "soapbar_pick",
+      "target_object_type": "SoapBar",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "garbagecan_place",
+      "target_object_type": "GarbageCan",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "SoapBar",
+    "receptacle_type": "GarbageCan",
+    "target_object_id": "SoapBar|+00.58|+00.81|+02.32",
+    "allowed_receptacle_object_ids": [
+      "GarbageCan|+00.41|-00.03|+03.73"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "SoapBar",
+      "receptacle_type": "GarbageCan"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "SoapBar",
+      "receptacle_type": "GarbageCan",
+      "target_object_id": "SoapBar|+00.58|+00.81|+02.32",
+      "allowed_receptacle_object_ids": [
+        "GarbageCan|+00.41|-00.03|+03.73"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "put_into",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "SoapBar",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "SoapBar",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "SoapBar|+00.58|+00.81|+02.32",
+    "destination_object_id": "GarbageCan|+00.41|-00.03|+03.73",
+    "destination_allowed_object_ids": [
+      "GarbageCan|+00.41|-00.03|+03.73"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "SoapBar",
+    "target_object_id": "SoapBar|+00.58|+00.81|+02.32",
+    "destination_object_type": "GarbageCan",
+    "destination_object_id": "GarbageCan|+00.41|-00.03|+03.73",
+    "destination_allowed_object_ids": [
+      "GarbageCan|+00.41|-00.03|+03.73"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

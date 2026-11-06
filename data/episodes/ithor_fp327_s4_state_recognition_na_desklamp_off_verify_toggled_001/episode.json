@@ -1,0 +1,130 @@
+{
+  "episode_id": "ithor_fp327_s4_state_recognition_na_desklamp_off_verify_toggled_001",
+  "sample_id": "ithor_fp327_s4_state_recognition_na_desklamp_off_verify_toggled_001",
+  "scene_ref": "ithor_fp327",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan327",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -0.75,
+      "y": 0.9009992480278015,
+      "z": -1.75
+    },
+    "rotation": {
+      "x": 0,
+      "y": 227.87247072409147,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -0.75,
+        "y": 0.9009992480278015,
+        "z": -1.75
+      },
+      "rotation": {
+        "x": 0,
+        "y": 227.87247072409147,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    },
+    {
+      "action": "ToggleObjectOff",
+      "forceAction": true,
+      "objectId": "DeskLamp|-01.49|+00.67|-02.42"
+    }
+  ],
+  "task": {
+    "instruction": "Check whether the desk lamp is on or off, then report the observed state as on or off.",
+    "task_type": "verify_activated_state",
+    "task_family": "S4_state_recognition",
+    "intent": "verify_toggled",
+    "functional_template": "verify_activated_state",
+    "difficulty": "na",
+    "primary_capabilities": [
+      "SR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "DeskLamp",
+    "target_group": "toggle_fixture"
+  },
+  "budget": {
+    "max_steps": 5,
+    "max_invalid_actions": 2,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "report_status",
+    "expected": "off",
+    "target_object_type": "DeskLamp",
+    "oracle_condition": {
+      "type": "object_state",
+      "target_object_type": "DeskLamp",
+      "field": "is_toggled",
+      "value": false,
+      "target_object_id": "DeskLamp|-01.49|+00.67|-02.42"
+    },
+    "target_object_id": "DeskLamp|-01.49|+00.67|-02.42"
+  },
+  "trace_hints": {
+    "task_family": "S4_state_recognition",
+    "difficulty": "na",
+    "functional_template": "verify_activated_state",
+    "primary_capabilities": [
+      "SR",
+      "TM"
+    ],
+    "expected_skills": [
+      "look",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        1.5
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target DeskLamp|-01.49|+00.67|-02.42",
+      "reachable positions=103"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "DeskLamp",
+    "benchmark_axes": {
+      "task_family": "S4_state_recognition",
+      "target_object_type": "DeskLamp",
+      "difficulty": "na"
+    },
+    "target_group": "toggle_fixture",
+    "target_initial_state": "off",
+    "target_object_id": "DeskLamp|-01.49|+00.67|-02.42"
+  },
+  "bindings": {
+    "target_object_type": "DeskLamp",
+    "target_object_id": "DeskLamp|-01.49|+00.67|-02.42"
+  }
+}

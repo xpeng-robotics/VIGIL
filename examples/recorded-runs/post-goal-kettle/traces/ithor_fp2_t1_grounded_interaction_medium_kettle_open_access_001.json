@@ -1,0 +1,3808 @@
+{
+  "episode_id": "ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001",
+  "max_steps": 25,
+  "metadata": {
+    "contract_version": "vigil_native_v1",
+    "difficulty": "medium",
+    "profile": {
+      "feedback_policy": "proprio_minimal",
+      "memory_policy": "none",
+      "metadata": {
+        "analysis_parent": "pure_rgb_dialogue_history_baseline",
+        "conversation_history_turns": 20,
+        "diagnostic_reason": null,
+        "feedback_axis": "proprio_minimal",
+        "hypothesis": "Single-frame RGB with 20-turn dialogue history and minimal proprioceptive feedback only, isolating feedback from Action Replay memory.",
+        "mainline": true,
+        "mainline_comparable": true,
+        "memory_axis": "none",
+        "memory_bucket": "none",
+        "observation_axis": "rgb",
+        "pose_axis": "none",
+        "visual_context_axis": "current_only"
+      },
+      "name": "pure_rgb_dialogue_history_proprio_minimal",
+      "observation_modalities": [
+        "rgb"
+      ],
+      "pose_policy": "none",
+      "visual_context_policy": "current_only"
+    },
+    "settlement": {
+      "agent_report_status": null,
+      "budget_exhausted": true,
+      "false_report": false,
+      "final_progress": 1.0,
+      "invalid_actions": 7,
+      "protocol_failure": false,
+      "protocol_failures": 0,
+      "recoverable_failures": 9,
+      "report_matches_world": null,
+      "report_submitted": false,
+      "semantic_final_progress": 1.0,
+      "semantic_world_success": true,
+      "step_budget": 25,
+      "steps_used": 25,
+      "strict_final_progress": 1.0,
+      "strict_world_success": true,
+      "terminal_reason": "fail_no_report",
+      "terminal_status": "failure",
+      "violations": [],
+      "world_success": true
+    },
+    "task_family": "T1_grounded_interaction"
+  },
+  "profile": "pure_rgb_dialogue_history_proprio_minimal",
+  "steps": [
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 3,
+          "mode": "forward"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": false,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"navigate\",\n  \"arguments\": {\n    \"mode\": \"forward\",\n    \"magnitude\": 3\n  },\n  \"thought\": \"Moving closer to the kitchen counter where the kettle is located on the left side.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Approaching the kettle on the left counter\",\n    \"next_action\": \"Navigate closer to the kettle, then interact to open it\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 0.0,
+      "step_index": 0,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 3,
+          "mode": "forward"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "action_failed",
+      "error_type": "path_blocked",
+      "judge_success": false,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": "path_blocked",
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": "path_blocked",
+          "failure_type": "path_blocked",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"navigate\",\n  \"arguments\": {\n    \"mode\": \"forward\",\n    \"magnitude\": 3\n  },\n  \"thought\": \"Moving closer to the counter where the kettle is located to prepare for interaction.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Approaching the kettle on the left counter\",\n    \"next_action\": \"Navigate closer to the kettle, then interact to open it\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 0.0,
+      "step_index": 1,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 2,
+          "mode": "backward"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": false,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 2,
+            "mode": "backward"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 2,
+              "mode": "backward"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"navigate\",\n  \"arguments\": {\n    \"mode\": \"backward\",\n    \"magnitude\": 2\n  },\n  \"thought\": \"Path forward is blocked, moving back to reposition and approach the kettle from a better angle.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Repositioning to access the kettle on the left counter\",\n    \"next_action\": \"Turn left and move toward the kettle\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 2,
+              "mode": "backward"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 2,
+              "mode": "backward"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 0.0,
+      "step_index": 2,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 45,
+          "mode": "turn_left"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": false,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 45,
+            "mode": "turn_left"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 45,
+              "mode": "turn_left"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"navigate\",\n  \"arguments\": {\n    \"mode\": \"turn_left\",\n    \"magnitude\": 45\n  },\n  \"thought\": \"Turning left to face the counter where the kettle is located.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Repositioned and now turning towards the kettle on the left counter\",\n    \"next_action\": \"Move forward towards the kettle\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 45,
+              "mode": "turn_left"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 45,
+              "mode": "turn_left"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 0.0,
+      "step_index": 3,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 3,
+          "mode": "forward"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": false,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"navigate\",\n  \"arguments\": {\n    \"mode\": \"forward\",\n    \"magnitude\": 3\n  },\n  \"thought\": \"Moving closer to the counter where the kettle is located to prepare for interaction.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Approaching the kettle on the left counter\",\n    \"next_action\": \"Interact with the kettle to open it\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 0.0,
+      "step_index": 4,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 3,
+          "mode": "forward"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "action_failed",
+      "error_type": "path_blocked",
+      "judge_success": false,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": "path_blocked",
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": "path_blocked",
+          "failure_type": "path_blocked",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"navigate\",\n  \"arguments\": {\n    \"mode\": \"forward\",\n    \"magnitude\": 3\n  },\n  \"thought\": \"Moving closer to the kettle on the counter to prepare for opening it.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Approaching the kettle\",\n    \"next_action\": \"Interact with the kettle to open it\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 0.0,
+      "step_index": 5,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 15,
+          "mode": "turn_right"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": false,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 15,
+            "mode": "turn_right"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 15,
+              "mode": "turn_right"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"navigate\",\n  \"arguments\": {\n    \"mode\": \"turn_right\",\n    \"magnitude\": 15\n  },\n  \"thought\": \"Adjusting angle to the right to approach the kettle on the counter without hitting the stove area.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Repositioning to get a clear path to the kettle\",\n    \"next_action\": \"Move forward towards the kettle\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 15,
+              "mode": "turn_right"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 15,
+              "mode": "turn_right"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 0.0,
+      "step_index": 6,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 3,
+          "mode": "forward"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "action_failed",
+      "error_type": "path_blocked",
+      "judge_success": false,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": "path_blocked",
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": "path_blocked",
+          "failure_type": "path_blocked",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"navigate\",\n  \"arguments\": {\n    \"mode\": \"forward\",\n    \"magnitude\": 3\n  },\n  \"thought\": \"Moving closer to the kettle on the counter to prepare for opening it.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Approaching the kettle\",\n    \"next_action\": \"Interact with the kettle to open it\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 0.0,
+      "step_index": 7,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "intent": "open_access",
+          "x": 450,
+          "y": 750
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 288,
+            "y": 359
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "open_access",
+              "pick"
+            ],
+            "area": 2279,
+            "available_intents": [
+              "ground",
+              "open_access",
+              "pick"
+            ],
+            "bbox": [
+              260,
+              341,
+              303,
+              394
+            ],
+            "distance": 1.1491230726242065,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [],
+            "object_id": "Kettle|+01.68|+00.90|+00.09",
+            "object_type": "Kettle",
+            "openable": true,
+            "pickupable": true,
+            "pixel_hit": true,
+            "receptacle": false,
+            "supported_intents": [
+              "ground",
+              "open_access",
+              "pick"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": true,
+          "target_resolved": true
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 450,
+              "y": 750
+            },
+            "skill_name": "interact_pixel"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"interact_pixel\",\n  \"arguments\": {\n    \"x\": 450,\n    \"y\": 750,\n    \"intent\": \"open_access\"\n  },\n  \"thought\": \"Attempting to open the kettle lid by interacting with it directly.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Positioned near the kettle, attempting to open it\",\n    \"next_action\": \"Check if the kettle is open, if not, try again or adjust position\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": {
+            "adapter": "normalized_1000_to_pixel",
+            "coord_mode": "normalized_1000",
+            "image_size": {
+              "height": 480,
+              "width": 640
+            },
+            "input": {
+              "x": 450,
+              "y": 750
+            },
+            "output": {
+              "x": 288,
+              "y": 359
+            }
+          },
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 288,
+              "y": 359
+            },
+            "skill_name": "interact_pixel"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 450,
+              "y": 750
+            },
+            "skill_name": "interact_pixel"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 8,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 2,
+          "mode": "forward"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "action_failed",
+      "error_type": "path_blocked",
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "path_blocked",
+          "executed_arguments": {
+            "magnitude": 2,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": "path_blocked",
+          "failure_type": "path_blocked",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 2,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"navigate\",\n  \"arguments\": {\n    \"mode\": \"forward\",\n    \"magnitude\": 2\n  },\n  \"thought\": \"Moving closer to the kettle to ensure I am within interaction range.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Approaching the kettle for interaction\",\n    \"next_action\": \"Interact with the kettle to open it\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 2,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 2,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 9,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "intent": "open_access",
+          "x": 450,
+          "y": 750
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": false,
+      "env_status": "action_failed",
+      "error_type": "intent_not_supported",
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 288,
+            "y": 359
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "close_access",
+              "pick"
+            ],
+            "area": 2279,
+            "available_intents": [
+              "ground",
+              "close_access",
+              "pick"
+            ],
+            "bbox": [
+              260,
+              341,
+              303,
+              394
+            ],
+            "distance": 1.149122953414917,
+            "hit_source": "instance_segmentation",
+            "is_open": true,
+            "is_toggled": false,
+            "issues": [],
+            "object_id": "Kettle|+01.68|+00.90|+00.09",
+            "object_type": "Kettle",
+            "openable": true,
+            "pickupable": true,
+            "pixel_hit": true,
+            "receptacle": false,
+            "supported_intents": [
+              "ground",
+              "close_access",
+              "pick"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 450,
+              "y": 750
+            },
+            "skill_name": "interact_pixel"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"interact_pixel\",\n  \"arguments\": {\n    \"x\": 450,\n    \"y\": 750,\n    \"intent\": \"open_access\"\n  },\n  \"thought\": \"Attempting to open the kettle lid by interacting with the kettle object on the counter.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Positioned near the kettle, attempting to open it\",\n    \"next_action\": \"Check if the kettle is open, if not, try again or adjust position\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": {
+            "adapter": "normalized_1000_to_pixel",
+            "coord_mode": "normalized_1000",
+            "image_size": {
+              "height": 480,
+              "width": 640
+            },
+            "input": {
+              "x": 450,
+              "y": 750
+            },
+            "output": {
+              "x": 288,
+              "y": 359
+            }
+          },
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 288,
+              "y": 359
+            },
+            "skill_name": "interact_pixel"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 450,
+              "y": 750
+            },
+            "skill_name": "interact_pixel"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 10,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "intent": "open_access",
+          "x": 430,
+          "y": 750
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": false,
+      "env_status": "action_failed",
+      "error_type": "intent_not_supported",
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 275,
+            "y": 359
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "close_access",
+              "pick"
+            ],
+            "area": 2279,
+            "available_intents": [
+              "ground",
+              "close_access",
+              "pick"
+            ],
+            "bbox": [
+              260,
+              341,
+              303,
+              394
+            ],
+            "distance": 1.149122953414917,
+            "hit_source": "instance_segmentation",
+            "is_open": true,
+            "is_toggled": false,
+            "issues": [],
+            "object_id": "Kettle|+01.68|+00.90|+00.09",
+            "object_type": "Kettle",
+            "openable": true,
+            "pickupable": true,
+            "pixel_hit": true,
+            "receptacle": false,
+            "supported_intents": [
+              "ground",
+              "close_access",
+              "pick"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 430,
+              "y": 750
+            },
+            "skill_name": "interact_pixel"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"interact_pixel\",\n  \"arguments\": {\n    \"x\": 430,\n    \"y\": 750,\n    \"intent\": \"open_access\"\n  },\n  \"thought\": \"Attempting to open the kettle by interacting with its body/lid area.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Positioned near the kettle, attempting to open it\",\n    \"next_action\": \"Check if the kettle is open, if not, try again or adjust position\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": {
+            "adapter": "normalized_1000_to_pixel",
+            "coord_mode": "normalized_1000",
+            "image_size": {
+              "height": 480,
+              "width": 640
+            },
+            "input": {
+              "x": 430,
+              "y": 750
+            },
+            "output": {
+              "x": 275,
+              "y": 359
+            }
+          },
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 275,
+              "y": 359
+            },
+            "skill_name": "interact_pixel"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 430,
+              "y": 750
+            },
+            "skill_name": "interact_pixel"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 11,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "intent": "open_access",
+          "x": 450,
+          "y": 700
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": false,
+      "env_status": "action_failed",
+      "error_type": "intent_not_supported",
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 288,
+            "y": 335
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "activate",
+              "place"
+            ],
+            "area": 2214,
+            "available_intents": [
+              "ground"
+            ],
+            "bbox": [
+              240,
+              305,
+              294,
+              346
+            ],
+            "distance": 1.6619611978530884,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [
+              "too_far>1.5",
+              "no_held_object"
+            ],
+            "object_id": "Toaster|+01.98|+00.90|-00.34",
+            "object_type": "Toaster",
+            "openable": false,
+            "pickupable": false,
+            "pixel_hit": true,
+            "receptacle": true,
+            "supported_intents": [
+              "ground",
+              "activate",
+              "place"
+            ],
+            "toggleable": true,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 450,
+              "y": 700
+            },
+            "skill_name": "interact_pixel"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"interact_pixel\",\n  \"arguments\": {\n    \"x\": 450,\n    \"y\": 700,\n    \"intent\": \"open_access\"\n  },\n  \"thought\": \"Attempting to open the kettle lid by interacting with the top part of the kettle.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Positioned near the kettle, attempting to open the lid\",\n    \"next_action\": \"Check if the kettle is open, if not, try again or adjust position\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": {
+            "adapter": "normalized_1000_to_pixel",
+            "coord_mode": "normalized_1000",
+            "image_size": {
+              "height": 480,
+              "width": 640
+            },
+            "input": {
+              "x": 450,
+              "y": 700
+            },
+            "output": {
+              "x": 288,
+              "y": 335
+            }
+          },
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 288,
+              "y": 335
+            },
+            "skill_name": "interact_pixel"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 450,
+              "y": 700
+            },
+            "skill_name": "interact_pixel"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 12,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "intent": "open_access",
+          "x": 450,
+          "y": 720
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": false,
+      "env_status": "action_failed",
+      "error_type": "intent_not_supported",
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 288,
+            "y": 345
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "place"
+            ],
+            "area": 111228,
+            "available_intents": [
+              "ground"
+            ],
+            "bbox": [
+              41,
+              293,
+              639,
+              479
+            ],
+            "distance": 2.9194748401641846,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [
+              "no_held_object"
+            ],
+            "object_id": "CounterTop|+00.00|+00.95|-01.51",
+            "object_type": "CounterTop",
+            "openable": false,
+            "pickupable": false,
+            "pixel_hit": true,
+            "receptacle": true,
+            "supported_intents": [
+              "ground",
+              "place"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 450,
+              "y": 720
+            },
+            "skill_name": "interact_pixel"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"interact_pixel\",\n  \"arguments\": {\n    \"x\": 450,\n    \"y\": 720,\n    \"intent\": \"open_access\"\n  },\n  \"thought\": \"Attempting to open the kettle lid by interacting with the top part of the kettle again.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Positioned near the kettle, attempting to open the lid\",\n    \"next_action\": \"Check if the kettle is open, if not, try again or adjust position\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": {
+            "adapter": "normalized_1000_to_pixel",
+            "coord_mode": "normalized_1000",
+            "image_size": {
+              "height": 480,
+              "width": 640
+            },
+            "input": {
+              "x": 450,
+              "y": 720
+            },
+            "output": {
+              "x": 288,
+              "y": 345
+            }
+          },
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 288,
+              "y": 345
+            },
+            "skill_name": "interact_pixel"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 450,
+              "y": 720
+            },
+            "skill_name": "interact_pixel"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 13,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 30,
+          "mode": "turn_left"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 30,
+            "mode": "turn_left"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 30,
+              "mode": "turn_left"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "{\"skill_name\": \"navigate\", \"arguments\": {\"mode\": \"turn_left\", \"magnitude\": 30}}"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 30,
+              "mode": "turn_left"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 30,
+              "mode": "turn_left"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 14,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 3,
+          "mode": "forward"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "action_failed",
+      "error_type": "path_blocked",
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "path_blocked",
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": "path_blocked",
+          "failure_type": "path_blocked",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"navigate\",\n  \"arguments\": {\n    \"mode\": \"forward\",\n    \"magnitude\": 3\n  },\n  \"thought\": \"Moving closer to the kettle on the kitchen counter to prepare for opening it.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Approaching the kettle on the right side of the counter\",\n    \"next_action\": \"Interact with the kettle to open it\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 15,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "intent": "open_access",
+          "x": 650,
+          "y": 700
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": true,
+      "env_status": "action_failed",
+      "error_type": "too_far",
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "too_far",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 415,
+            "y": 335
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "open_access",
+              "activate",
+              "place"
+            ],
+            "area": 4526,
+            "available_intents": [
+              "ground"
+            ],
+            "bbox": [
+              389,
+              276,
+              462,
+              338
+            ],
+            "distance": 2.0387911796569824,
+            "hit_source": "bbox",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [
+              "too_far>1.5",
+              "no_held_object"
+            ],
+            "object_id": "Microwave|+01.93|+00.90|-00.77",
+            "object_type": "Microwave",
+            "openable": true,
+            "pickupable": false,
+            "pixel_hit": true,
+            "receptacle": true,
+            "supported_intents": [
+              "ground",
+              "open_access",
+              "activate",
+              "place"
+            ],
+            "toggleable": true,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "judge_result": {
+          "failure_label": "too_far",
+          "failure_type": "too_far",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 650,
+              "y": 700
+            },
+            "skill_name": "interact_pixel"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"interact_pixel\",\n  \"arguments\": {\n    \"x\": 650,\n    \"y\": 700,\n    \"intent\": \"open_access\"\n  },\n  \"thought\": \"Attempting to open the kettle by interacting with it directly, as forward movement is blocked.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Positioned near the kettle, attempting to open it\",\n    \"next_action\": \"Check if the kettle is open, if not, try again or adjust position\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": {
+            "adapter": "normalized_1000_to_pixel",
+            "coord_mode": "normalized_1000",
+            "image_size": {
+              "height": 480,
+              "width": 640
+            },
+            "input": {
+              "x": 650,
+              "y": 700
+            },
+            "output": {
+              "x": 415,
+              "y": 335
+            }
+          },
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 415,
+              "y": 335
+            },
+            "skill_name": "interact_pixel"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 650,
+              "y": 700
+            },
+            "skill_name": "interact_pixel"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 16,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 2,
+          "mode": "forward"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "action_failed",
+      "error_type": "path_blocked",
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "path_blocked",
+          "executed_arguments": {
+            "magnitude": 2,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": "path_blocked",
+          "failure_type": "path_blocked",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 2,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"navigate\",\n  \"arguments\": {\n    \"mode\": \"forward\",\n    \"magnitude\": 2\n  },\n  \"thought\": \"Moving closer to the kettle on the counter to get within interaction range.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Approaching the kettle, previous interaction failed due to distance\",\n    \"next_action\": \"Move closer and then attempt to open the kettle\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 2,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 2,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 17,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 45,
+          "mode": "turn_right"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 45,
+            "mode": "turn_right"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 45,
+              "mode": "turn_right"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"navigate\",\n  \"arguments\": {\n    \"mode\": \"turn_right\",\n    \"magnitude\": 45\n  },\n  \"thought\": \"Turning right to face the counter where the kettle is located, as forward movement is blocked.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Repositioning to face the kettle on the counter\",\n    \"next_action\": \"Move forward towards the kettle and then interact to open it\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 45,
+              "mode": "turn_right"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 45,
+              "mode": "turn_right"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 18,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 3,
+          "mode": "forward"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"navigate\",\n  \"arguments\": {\n    \"mode\": \"forward\",\n    \"magnitude\": 3\n  },\n  \"thought\": \"Moving closer to the silver kettle on the left counter to prepare for opening it.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Approaching the kettle on the left counter\",\n    \"next_action\": \"Interact with the kettle to open it\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 19,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "intent": "open_access",
+          "x": 580,
+          "y": 650
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": false,
+      "env_status": "action_failed",
+      "error_type": "intent_not_supported",
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 371,
+            "y": 311
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "pick",
+              "place"
+            ],
+            "area": 1110,
+            "available_intents": [
+              "ground"
+            ],
+            "bbox": [
+              345,
+              303,
+              382,
+              333
+            ],
+            "distance": 1.8333914279937744,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [
+              "too_far>1.5",
+              "no_held_object"
+            ],
+            "object_id": "Pot|+00.89|+00.90|-01.41",
+            "object_type": "Pot",
+            "openable": false,
+            "pickupable": true,
+            "pixel_hit": true,
+            "receptacle": true,
+            "supported_intents": [
+              "ground",
+              "pick",
+              "place"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 580,
+              "y": 650
+            },
+            "skill_name": "interact_pixel"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"interact_pixel\",\n  \"arguments\": {\n    \"x\": 580,\n    \"y\": 650,\n    \"intent\": \"open_access\"\n  },\n  \"thought\": \"Attempting to open the black kettle on the counter by interacting with it.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Positioned in front of the counter, attempting to open the kettle\",\n    \"next_action\": \"Check if the kettle is open, if not, try again or adjust position\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": {
+            "adapter": "normalized_1000_to_pixel",
+            "coord_mode": "normalized_1000",
+            "image_size": {
+              "height": 480,
+              "width": 640
+            },
+            "input": {
+              "x": 580,
+              "y": 650
+            },
+            "output": {
+              "x": 371,
+              "y": 311
+            }
+          },
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 371,
+              "y": 311
+            },
+            "skill_name": "interact_pixel"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 580,
+              "y": 650
+            },
+            "skill_name": "interact_pixel"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 20,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "intent": "open_access",
+          "x": 580,
+          "y": 630
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": true,
+      "env_status": "action_failed",
+      "error_type": "interaction_no_effect",
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "interaction_no_effect",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 371,
+            "y": 302
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": "interaction_no_effect",
+          "failure_type": "interaction_no_effect",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 580,
+              "y": 630
+            },
+            "skill_name": "interact_pixel"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"interact_pixel\",\n  \"arguments\": {\n    \"x\": 580,\n    \"y\": 630,\n    \"intent\": \"open_access\"\n  },\n  \"thought\": \"Attempting to open the kettle lid by interacting with the top part of the kettle again to ensure it opens.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Positioned in front of the kettle, attempting to open the lid\",\n    \"next_action\": \"Check if the kettle is open, if not, try again or adjust position\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": {
+            "adapter": "normalized_1000_to_pixel",
+            "coord_mode": "normalized_1000",
+            "image_size": {
+              "height": 480,
+              "width": 640
+            },
+            "input": {
+              "x": 580,
+              "y": 630
+            },
+            "output": {
+              "x": 371,
+              "y": 302
+            }
+          },
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 371,
+              "y": 302
+            },
+            "skill_name": "interact_pixel"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 580,
+              "y": 630
+            },
+            "skill_name": "interact_pixel"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 21,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "intent": "open_access",
+          "x": 570,
+          "y": 640
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": false,
+      "env_status": "action_failed",
+      "error_type": "intent_not_supported",
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 364,
+            "y": 307
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "pick",
+              "place"
+            ],
+            "area": 1110,
+            "available_intents": [
+              "ground"
+            ],
+            "bbox": [
+              345,
+              303,
+              382,
+              333
+            ],
+            "distance": 1.8333914279937744,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [
+              "too_far>1.5",
+              "no_held_object"
+            ],
+            "object_id": "Pot|+00.89|+00.90|-01.41",
+            "object_type": "Pot",
+            "openable": false,
+            "pickupable": true,
+            "pixel_hit": true,
+            "receptacle": true,
+            "supported_intents": [
+              "ground",
+              "pick",
+              "place"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 570,
+              "y": 640
+            },
+            "skill_name": "interact_pixel"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"interact_pixel\",\n  \"arguments\": {\n    \"x\": 570,\n    \"y\": 640,\n    \"intent\": \"open_access\"\n  },\n  \"thought\": \"Attempting to open the black kettle by interacting with its lid area again.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Positioned in front of the kettle, attempting to open the lid\",\n    \"next_action\": \"Check if the kettle is open, if not, try again or adjust position\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": {
+            "adapter": "normalized_1000_to_pixel",
+            "coord_mode": "normalized_1000",
+            "image_size": {
+              "height": 480,
+              "width": 640
+            },
+            "input": {
+              "x": 570,
+              "y": 640
+            },
+            "output": {
+              "x": 364,
+              "y": 307
+            }
+          },
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 364,
+              "y": 307
+            },
+            "skill_name": "interact_pixel"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 570,
+              "y": 640
+            },
+            "skill_name": "interact_pixel"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 22,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "intent": "open_access",
+          "x": 570,
+          "y": 630
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": true,
+      "env_status": "action_failed",
+      "error_type": "interaction_no_effect",
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "interaction_no_effect",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 364,
+            "y": 302
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": "interaction_no_effect",
+          "failure_type": "interaction_no_effect",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 570,
+              "y": 630
+            },
+            "skill_name": "interact_pixel"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"interact_pixel\",\n  \"arguments\": {\n    \"x\": 570,\n    \"y\": 630,\n    \"intent\": \"open_access\"\n  },\n  \"thought\": \"Attempting to open the kettle lid by interacting with the top part of the kettle.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Positioned in front of the kettle, attempting to open the lid\",\n    \"next_action\": \"Check if the kettle is open, if not, try again or adjust position\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": {
+            "adapter": "normalized_1000_to_pixel",
+            "coord_mode": "normalized_1000",
+            "image_size": {
+              "height": 480,
+              "width": 640
+            },
+            "input": {
+              "x": 570,
+              "y": 630
+            },
+            "output": {
+              "x": 364,
+              "y": 302
+            }
+          },
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 364,
+              "y": 302
+            },
+            "skill_name": "interact_pixel"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 570,
+              "y": 630
+            },
+            "skill_name": "interact_pixel"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 23,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "intent": "open_access",
+          "x": 570,
+          "y": 640
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": false,
+      "env_status": "action_failed",
+      "error_type": "intent_not_supported",
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 364,
+            "y": 307
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "pick",
+              "place"
+            ],
+            "area": 1110,
+            "available_intents": [
+              "ground"
+            ],
+            "bbox": [
+              345,
+              303,
+              382,
+              333
+            ],
+            "distance": 1.8333914279937744,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [
+              "too_far>1.5",
+              "no_held_object"
+            ],
+            "object_id": "Pot|+00.89|+00.90|-01.41",
+            "object_type": "Pot",
+            "openable": false,
+            "pickupable": true,
+            "pixel_hit": true,
+            "receptacle": true,
+            "supported_intents": [
+              "ground",
+              "pick",
+              "place"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 570,
+              "y": 640
+            },
+            "skill_name": "interact_pixel"
+          },
+          "raw_text": "```json\n{\n  \"skill_name\": \"interact_pixel\",\n  \"arguments\": {\n    \"x\": 570,\n    \"y\": 640,\n    \"intent\": \"open_access\"\n  },\n  \"thought\": \"Attempting to open the kettle lid by interacting with the top part of the kettle again.\",\n  \"cognitive_state\": {\n    \"current_goal\": \"Open the kettle\",\n    \"progress\": \"Positioned in front of the kettle, attempting to open the lid\",\n    \"next_action\": \"Check if the kettle is open, if not, try again or adjust position\"\n  }\n}\n```"
+        },
+        "runtime_action": {
+          "adapter": {
+            "adapter": "normalized_1000_to_pixel",
+            "coord_mode": "normalized_1000",
+            "image_size": {
+              "height": 480,
+              "width": 640
+            },
+            "input": {
+              "x": 570,
+              "y": 640
+            },
+            "output": {
+              "x": 364,
+              "y": 307
+            }
+          },
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 364,
+              "y": 307
+            },
+            "skill_name": "interact_pixel"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 570,
+              "y": 640
+            },
+            "skill_name": "interact_pixel"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 24,
+      "terminal": false
+    }
+  ],
+  "terminal_status": "failure"
+}

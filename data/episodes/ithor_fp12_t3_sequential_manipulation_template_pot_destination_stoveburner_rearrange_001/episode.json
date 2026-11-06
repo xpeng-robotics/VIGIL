@@ -1,0 +1,173 @@
+{
+  "episode_id": "ithor_fp12_t3_sequential_manipulation_template_pot_destination_stoveburner_rearrange_001",
+  "sample_id": "ithor_fp12_t3_sequential_manipulation_template_pot_destination_stoveburner_rearrange_001",
+  "scene_ref": "ithor_fp12",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan12",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -0.027617424726486206,
+      "y": 0.9799999594688416,
+      "z": 0.2787337899208069
+    },
+    "rotation": {
+      "x": 0,
+      "y": 311.2117004394531,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -0.027617424726486206,
+        "y": 0.9799999594688416,
+        "z": 0.2787337899208069
+      },
+      "rotation": {
+        "x": 0,
+        "y": 311.2117004394531,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the pot, place it on the stoveburner, then report success once it is placed correctly.",
+    "task_type": "T3_rearrange",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "rearrange",
+    "functional_template": "rearrange",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Pot",
+    "target_group": "sequential_manipulation",
+    "destination_type": "StoveBurner"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "pot_pick",
+      "target_object_type": "Pot",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "stoveburner_place",
+      "target_object_type": "StoveBurner",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Pot",
+    "receptacle_type": "StoveBurner",
+    "target_object_id": "Pot|-00.82|+00.93|+00.82",
+    "allowed_receptacle_object_ids": [
+      "StoveBurner|-00.83|+00.92|+01.47",
+      "StoveBurner|-00.83|+00.92|+01.87",
+      "StoveBurner|-01.11|+00.92|+01.47",
+      "StoveBurner|-01.11|+00.92|+01.87"
+    ]
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "rearrange",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Pot",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Pot",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Pot|-00.82|+00.93|+00.82",
+    "destination_object_id": "StoveBurner|-00.83|+00.92|+01.47",
+    "destination_allowed_object_ids": [
+      "StoveBurner|-00.83|+00.92|+01.47",
+      "StoveBurner|-00.83|+00.92|+01.87",
+      "StoveBurner|-01.11|+00.92|+01.47",
+      "StoveBurner|-01.11|+00.92|+01.87"
+    ]
+  },
+  "bindings": {
+    "target_object_type": "Pot",
+    "target_object_id": "Pot|-00.82|+00.93|+00.82",
+    "destination_object_type": "StoveBurner",
+    "destination_object_id": "StoveBurner|-00.83|+00.92|+01.47",
+    "destination_allowed_object_ids": [
+      "StoveBurner|-00.83|+00.92|+01.47",
+      "StoveBurner|-00.83|+00.92|+01.87",
+      "StoveBurner|-01.11|+00.92|+01.47",
+      "StoveBurner|-01.11|+00.92|+01.87"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

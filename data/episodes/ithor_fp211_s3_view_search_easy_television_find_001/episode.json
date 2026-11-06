@@ -1,0 +1,145 @@
+{
+  "episode_id": "ithor_fp211_s3_view_search_easy_television_find_001",
+  "sample_id": "ithor_fp211_s3_view_search_easy_television_find_001",
+  "scene_ref": "ithor_fp211",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan211",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 2.321476697921753,
+      "y": 0.9009991884231567,
+      "z": -1.3068976402282715
+    },
+    "rotation": {
+      "x": 0,
+      "y": 120.00000762939453,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 2.321476697921753,
+        "y": 0.9009991884231567,
+        "z": -1.3068976402282715
+      },
+      "rotation": {
+        "x": 0,
+        "y": 120.00000762939453,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Search for the TV and report success once it becomes visible.",
+    "task_type": "find_target",
+    "task_family": "S3_view_search",
+    "intent": "find",
+    "functional_template": "search_then_report",
+    "difficulty": "easy",
+    "primary_capabilities": [
+      "VS",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Television",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 20,
+    "max_invalid_actions": 6,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_state",
+    "target_object_type": "Television",
+    "field": "visible",
+    "value": true,
+    "visibility_latched": true,
+    "target_object_id": "Television|-02.03|+01.08|+00.56",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_state",
+      "target_object_type": "Television",
+      "field": "visible",
+      "value": true,
+      "visibility_latched": true
+    },
+    "strict_spec": {
+      "type": "object_state",
+      "target_object_type": "Television",
+      "field": "visible",
+      "value": true,
+      "visibility_latched": true,
+      "target_object_id": "Television|-02.03|+01.08|+00.56"
+    }
+  },
+  "trace_hints": {
+    "task_family": "S3_view_search",
+    "difficulty": "easy",
+    "functional_template": "search_then_report",
+    "primary_capabilities": [
+      "VS",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "look",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": false,
+      "target_distance_m": [
+        2,
+        5
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Television",
+    "benchmark_axes": {
+      "task_family": "S3_view_search",
+      "target_object_type": "Television",
+      "difficulty": "easy"
+    },
+    "target_object_id": "Television|-02.03|+01.08|+00.56",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "Television",
+    "target_object_id": "Television|-02.03|+01.08|+00.56"
+  }
+}

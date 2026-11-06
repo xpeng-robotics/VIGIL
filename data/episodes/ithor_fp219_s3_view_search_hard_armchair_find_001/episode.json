@@ -1,0 +1,146 @@
+{
+  "episode_id": "ithor_fp219_s3_view_search_hard_armchair_find_001",
+  "sample_id": "ithor_fp219_s3_view_search_hard_armchair_find_001",
+  "scene_ref": "ithor_fp219",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan219",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -4.547969341278076,
+      "y": 0.9010564088821411,
+      "z": 2.2409589290618896
+    },
+    "rotation": {
+      "x": 0,
+      "y": 180,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -4.547969341278076,
+        "y": 0.9010564088821411,
+        "z": 2.2409589290618896
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Search for the armchair and report success once it becomes visible.",
+    "task_type": "find_target",
+    "task_family": "S3_view_search",
+    "intent": "find",
+    "functional_template": "search_then_report",
+    "difficulty": "hard",
+    "primary_capabilities": [
+      "VS",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "ArmChair",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 20,
+    "max_invalid_actions": 6,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_state",
+    "target_object_type": "ArmChair",
+    "field": "visible",
+    "value": true,
+    "visibility_latched": true,
+    "target_object_id": "ArmChair|-02.03|+00.00|+04.42",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_state",
+      "target_object_type": "ArmChair",
+      "field": "visible",
+      "value": true,
+      "visibility_latched": true,
+      "target_object_id": "ArmChair|-02.03|+00.00|+04.42"
+    },
+    "strict_spec": {
+      "type": "object_state",
+      "target_object_type": "ArmChair",
+      "field": "visible",
+      "value": true,
+      "visibility_latched": true,
+      "target_object_id": "ArmChair|-02.03|+00.00|+04.42"
+    }
+  },
+  "trace_hints": {
+    "task_family": "S3_view_search",
+    "difficulty": "hard",
+    "functional_template": "search_then_report",
+    "primary_capabilities": [
+      "VS",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "look",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": false,
+      "target_distance_m": [
+        2,
+        5
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "ArmChair",
+    "benchmark_axes": {
+      "task_family": "S3_view_search",
+      "target_object_type": "ArmChair",
+      "difficulty": "hard"
+    },
+    "target_object_id": "ArmChair|-02.03|+00.00|+04.42",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "ArmChair",
+    "target_object_id": "ArmChair|-02.03|+00.00|+04.42"
+  }
+}

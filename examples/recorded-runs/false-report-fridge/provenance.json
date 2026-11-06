@@ -1,0 +1,112 @@
+{
+  "archived_score_summary": {
+    "compliance": 0.52,
+    "diagnostics": {
+      "agent_report_status": "success",
+      "budget_exhausted": false,
+      "closure_success": false,
+      "false_report": true,
+      "invalid_actions": 2,
+      "primary_world_success": false,
+      "protocol_failure": false,
+      "protocol_failures": 0,
+      "recoverable_failures": 0,
+      "report_matches_world": false,
+      "report_submitted": true,
+      "semantic_progress": 0.0,
+      "semantic_success": false,
+      "semantic_world_success": false,
+      "step_budget": 25,
+      "steps_used": 5,
+      "strict_progress": 0.0,
+      "strict_success": false,
+      "strict_world_success": false,
+      "terminal_reason": "false_success_report",
+      "terminal_status": "failure",
+      "violations": [],
+      "world_success": false
+    },
+    "efficiency": 0.8,
+    "primary_score": 0.08,
+    "progress": 0.0,
+    "safety": 0.52,
+    "semantic_progress": 0.0,
+    "semantic_success": false,
+    "strict_progress": 0.0,
+    "strict_score": 0.0,
+    "strict_success": false,
+    "success": false,
+    "task_family": "T1_grounded_interaction",
+    "terminal_reason": "false_success_report",
+    "terminal_status": "failure"
+  },
+  "conversion": "Lossless frame copies. Zero-based steps. Step images precede actions; terminal.png follows the last action. Scores rebuilt by the public scorer; original settlement preserved and independently checked.",
+  "frames": [
+    {
+      "file": "frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_000.png",
+      "observation_index": 0,
+      "sha256": "fc22f1da8d32885b10aeb47b6553d9cbefc1199b974621a0d0c1d024c2e1bf00",
+      "source_file": "step_000_reset.png"
+    },
+    {
+      "file": "frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_001.png",
+      "observation_index": 1,
+      "sha256": "fc22f1da8d32885b10aeb47b6553d9cbefc1199b974621a0d0c1d024c2e1bf00",
+      "source_file": "step_001_interact_pixel.png"
+    },
+    {
+      "file": "frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_002.png",
+      "observation_index": 2,
+      "sha256": "15938897a5f14d8ecd2907b750d489dac07e5a8f00a615070086565812e7bf40",
+      "source_file": "step_002_navigate.png"
+    },
+    {
+      "file": "frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_003.png",
+      "observation_index": 3,
+      "sha256": "31a641bd19c0f2dca7187320a3ea29eea53dd2640b46c1ca9867348a7f8516c6",
+      "source_file": "step_003_navigate.png"
+    },
+    {
+      "file": "frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_004.png",
+      "observation_index": 4,
+      "sha256": "31a641bd19c0f2dca7187320a3ea29eea53dd2640b46c1ca9867348a7f8516c6",
+      "source_file": "step_004_interact_pixel.png"
+    },
+    {
+      "file": "frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/terminal.png",
+      "observation_index": 5,
+      "sha256": "31a641bd19c0f2dca7187320a3ea29eea53dd2640b46c1ca9867348a7f8516c6",
+      "source_file": "step_005_report.png"
+    }
+  ],
+  "model": "claude-sonnet-4",
+  "omitted": "Transport responses, service configuration, worker identifiers, and duplicated top-level reasoning fields. Raw action text and structured execution evidence retained.",
+  "profile": {
+    "feedback_policy": "none",
+    "memory_policy": "none",
+    "metadata": {
+      "analysis_parent": "pure_rgb_baseline",
+      "conversation_history_turns": 20,
+      "diagnostic_reason": null,
+      "feedback_axis": "none",
+      "hypothesis": "Single-frame RGB with 20-turn dialogue history only: no model-visible feedback, no agent-side memory, and no pose.",
+      "mainline": true,
+      "mainline_comparable": true,
+      "memory_axis": "none",
+      "memory_bucket": "none",
+      "observation_axis": "rgb",
+      "pose_axis": "none",
+      "visual_context_axis": "current_only"
+    },
+    "name": "pure_rgb_dialogue_history_baseline",
+    "observation_modalities": [
+      "rgb"
+    ],
+    "pose_policy": "none",
+    "visual_context_policy": "current_only"
+  },
+  "selection": "Editorial case selection, not a representative evaluation or ranking.",
+  "source_filename": "procthor_fridge_seed314_T1_medium_fridge_001__mainline.json",
+  "source_result_sha256": "948a4e11f13f40b4244bc79c58510d79dd2bad0ad9791bfffd59f90ad25ce94d",
+  "started_at": "2026-04-30T15:10:32Z"
+}

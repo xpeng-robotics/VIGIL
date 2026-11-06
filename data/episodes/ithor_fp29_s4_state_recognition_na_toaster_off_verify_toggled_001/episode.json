@@ -1,0 +1,166 @@
+{
+  "episode_id": "ithor_fp29_s4_state_recognition_na_toaster_off_verify_toggled_001",
+  "sample_id": "ithor_fp29_s4_state_recognition_na_toaster_off_verify_toggled_001",
+  "scene_ref": "ithor_fp29",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan29",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -0.5624222159385681,
+      "y": 0.9317981004714966,
+      "z": -0.7329630851745605
+    },
+    "rotation": {
+      "x": 0,
+      "y": 194.99998474121094,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -0.5624222159385681,
+        "y": 0.9317981004714966,
+        "z": -0.7329630851745605
+      },
+      "rotation": {
+        "x": 0,
+        "y": 194.99998474121094,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    },
+    {
+      "action": "ToggleObjectOff",
+      "forceAction": true,
+      "objectId": "Toaster|-00.55|+01.04|-01.78"
+    }
+  ],
+  "task": {
+    "instruction": "Check whether the toaster is on or off, then report the observed state as on or off.",
+    "task_type": "verify_activated_state",
+    "task_family": "S4_state_recognition",
+    "intent": "verify_toggled",
+    "functional_template": "verify_activated_state",
+    "difficulty": "na",
+    "primary_capabilities": [
+      "SR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Toaster",
+    "target_group": "toggle_fixture",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 5,
+    "max_invalid_actions": 2,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "report_status",
+    "expected": "off",
+    "target_object_type": "Toaster",
+    "oracle_condition": {
+      "type": "object_state",
+      "target_object_type": "Toaster",
+      "field": "is_toggled",
+      "value": false,
+      "target_object_id": "Toaster|-00.55|+01.04|-01.78"
+    },
+    "target_object_id": "Toaster|-00.55|+01.04|-01.78",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "report_status",
+      "expected": "off",
+      "target_object_type": "Toaster",
+      "oracle_condition": {
+        "type": "object_state",
+        "target_object_type": "Toaster",
+        "field": "is_toggled",
+        "value": false,
+        "target_object_id": "Toaster|-00.55|+01.04|-01.78"
+      },
+      "target_object_id": "Toaster|-00.55|+01.04|-01.78"
+    },
+    "strict_spec": {
+      "type": "report_status",
+      "expected": "off",
+      "target_object_type": "Toaster",
+      "oracle_condition": {
+        "type": "object_state",
+        "target_object_type": "Toaster",
+        "field": "is_toggled",
+        "value": false,
+        "target_object_id": "Toaster|-00.55|+01.04|-01.78"
+      },
+      "target_object_id": "Toaster|-00.55|+01.04|-01.78"
+    }
+  },
+  "trace_hints": {
+    "task_family": "S4_state_recognition",
+    "difficulty": "na",
+    "functional_template": "verify_activated_state",
+    "primary_capabilities": [
+      "SR",
+      "TM"
+    ],
+    "expected_skills": [
+      "look",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        1.5
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Toaster",
+    "benchmark_axes": {
+      "task_family": "S4_state_recognition",
+      "target_object_type": "Toaster",
+      "difficulty": "na"
+    },
+    "target_group": "toggle_fixture",
+    "target_initial_state": "off",
+    "target_object_id": "Toaster|-00.55|+01.04|-01.78",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "Toaster",
+    "target_object_id": "Toaster|-00.55|+01.04|-01.78"
+  }
+}

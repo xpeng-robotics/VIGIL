@@ -1,0 +1,172 @@
+{
+  "episode_id": "ithor_fp10_t3_sequential_manipulation_template_statue_destination_shelf_rearrange_001",
+  "sample_id": "ithor_fp10_t3_sequential_manipulation_template_statue_destination_shelf_rearrange_001",
+  "scene_ref": "ithor_fp10",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan10",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -2.5,
+      "y": 0.9009992480278015,
+      "z": -0.25
+    },
+    "rotation": {
+      "x": 0,
+      "y": 67.99628604456528,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -2.5,
+        "y": 0.9009992480278015,
+        "z": -0.25
+      },
+      "rotation": {
+        "x": 0,
+        "y": 67.99628604456528,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the statue, place it on the shelf, then report success once it is placed correctly.",
+    "task_type": "T3_rearrange",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "rearrange",
+    "functional_template": "rearrange",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Statue",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Shelf"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "statue_pick",
+      "target_object_type": "Statue",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "shelf_place",
+      "target_object_type": "Shelf",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Statue",
+    "receptacle_type": "Shelf",
+    "target_object_id": "Statue|-01.33|+00.92|+00.22",
+    "allowed_receptacle_object_ids": [
+      "Shelf|-01.64|+00.17|+02.72",
+      "Shelf|-01.64|+00.55|+02.72",
+      "Shelf|-01.64|+00.88|+02.72"
+    ]
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "rearrange",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target Statue|-01.33|+00.92|+00.22",
+      "reachable positions=269"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Statue",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Statue",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Statue|-01.33|+00.92|+00.22",
+    "destination_object_id": "Shelf|-01.64|+00.17|+02.72",
+    "destination_allowed_object_ids": [
+      "Shelf|-01.64|+00.17|+02.72",
+      "Shelf|-01.64|+00.55|+02.72",
+      "Shelf|-01.64|+00.88|+02.72"
+    ]
+  },
+  "bindings": {
+    "target_object_type": "Statue",
+    "target_object_id": "Statue|-01.33|+00.92|+00.22",
+    "destination_object_type": "Shelf",
+    "destination_object_id": "Shelf|-01.64|+00.17|+02.72",
+    "destination_allowed_object_ids": [
+      "Shelf|-01.64|+00.17|+02.72",
+      "Shelf|-01.64|+00.55|+02.72",
+      "Shelf|-01.64|+00.88|+02.72"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

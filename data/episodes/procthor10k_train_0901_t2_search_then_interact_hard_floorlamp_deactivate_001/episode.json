@@ -1,0 +1,162 @@
+{
+  "episode_id": "procthor10k_train_0901_t2_search_then_interact_hard_floorlamp_deactivate_001",
+  "sample_id": "procthor10k_train_0901_t2_search_then_interact_hard_floorlamp_deactivate_001",
+  "scene_ref": "procthor10k_train_0901",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "procthor10k_train_0901",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 1.089895248413086,
+      "y": 0.9009997844696045,
+      "z": 11.8877534866333
+    },
+    "rotation": {
+      "x": 0,
+      "y": 180,
+      "z": 0
+    },
+    "horizon": 30.000003814697266,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 1.089895248413086,
+        "y": 0.9009997844696045,
+        "z": 11.8877534866333
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "horizon": 30.000003814697266,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Find the floor lamp, then turn it off and report success once it is off.",
+    "task_type": "T2_search_toggle",
+    "task_family": "T2_search_then_interact",
+    "intent": "deactivate",
+    "functional_template": "search_deactivate",
+    "difficulty": "hard",
+    "primary_capabilities": [
+      "VS",
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "FloorLamp",
+    "target_group": "toggle_fixture",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 35,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "floorlamp_deactivate",
+      "target_object_type": "FloorLamp",
+      "intent": "toggle_off",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "ToggleObjectOff"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_state",
+    "target_object_type": "FloorLamp",
+    "field": "is_toggled",
+    "value": false,
+    "target_object_id": "FloorLamp|6|5|1",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_state",
+      "target_object_type": "FloorLamp",
+      "field": "is_toggled",
+      "value": false,
+      "target_object_id": "FloorLamp|6|5|1"
+    },
+    "strict_spec": {
+      "type": "object_state",
+      "target_object_type": "FloorLamp",
+      "field": "is_toggled",
+      "value": false,
+      "target_object_id": "FloorLamp|6|5|1"
+    }
+  },
+  "trace_hints": {
+    "task_family": "T2_search_then_interact",
+    "difficulty": "hard",
+    "functional_template": "search_deactivate",
+    "primary_capabilities": [
+      "VS",
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "look",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": false,
+      "target_distance_m": [
+        2,
+        5
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "FloorLamp",
+    "benchmark_axes": {
+      "task_family": "T2_search_then_interact",
+      "target_object_type": "FloorLamp",
+      "difficulty": "hard"
+    },
+    "target_group": "toggle_fixture",
+    "target_object_id": "FloorLamp|6|5|1",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "FloorLamp",
+    "target_object_id": "FloorLamp|6|5|1"
+  }
+}

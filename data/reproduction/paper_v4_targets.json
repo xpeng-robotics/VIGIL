@@ -1,0 +1,864 @@
+{
+  "schema_version": "vigil_paper_alignment_v1",
+  "paper": {
+    "url": "https://arxiv.org/html/2605.08747v4",
+    "revision": "v4",
+    "revision_date": "2026-06-02",
+    "tables": [
+      "S4.T2",
+      "A6.T10"
+    ],
+    "source_html_sha256": "c3db4099e896d433f73ef7af42f362a9fb7b0ce079d8b01d5395117bbbd38bba"
+  },
+  "pack_id": "mixed_mainline_manual_first_balanced_1000_v1",
+  "release_pack_sha256": "1ad6913d84364141d62c5662cc17c652d009fe41ffdca05b3c88a9cb26a4c245",
+  "episode_count": 1000,
+  "family_episode_count": 125,
+  "metric_contract": {
+    "W": "Final per-step world_success; never ever-attained success.",
+    "B": "Final semantic W and submitted terminal report matching final world state.",
+    "primary_score": "Legacy composite diagnostic, not paper B."
+  },
+  "models": [
+    {
+      "model_id": "mimo-embodied-7b",
+      "paper_name": "MiMo-Embodied-7B",
+      "expected": {
+        "world_success_count": 295,
+        "benchmark_success_count": 213,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 65,
+            "benchmark_success_count": 43
+          },
+          "S2_distance_approach": {
+            "world_success_count": 47,
+            "benchmark_success_count": 30
+          },
+          "S3_view_search": {
+            "world_success_count": 39,
+            "benchmark_success_count": 33
+          },
+          "S4_state_recognition": {
+            "world_success_count": 119,
+            "benchmark_success_count": 93
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 18,
+            "benchmark_success_count": 9
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 1,
+            "benchmark_success_count": 1
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 4,
+            "benchmark_success_count": 2
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 2,
+            "benchmark_success_count": 2
+          }
+        }
+      }
+    },
+    {
+      "model_id": "robobrain2.5-4b",
+      "paper_name": "RoboBrain2.5-4B",
+      "expected": {
+        "world_success_count": 274,
+        "benchmark_success_count": 146,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 98,
+            "benchmark_success_count": 98
+          },
+          "S2_distance_approach": {
+            "world_success_count": 24,
+            "benchmark_success_count": 18
+          },
+          "S3_view_search": {
+            "world_success_count": 17,
+            "benchmark_success_count": 15
+          },
+          "S4_state_recognition": {
+            "world_success_count": 118,
+            "benchmark_success_count": 0
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 10,
+            "benchmark_success_count": 10
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 0,
+            "benchmark_success_count": 0
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 5,
+            "benchmark_success_count": 3
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 2,
+            "benchmark_success_count": 2
+          }
+        }
+      }
+    },
+    {
+      "model_id": "rynnbrain-8b",
+      "paper_name": "rynnbrain-8B",
+      "expected": {
+        "world_success_count": 241,
+        "benchmark_success_count": 173,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 22,
+            "benchmark_success_count": 14
+          },
+          "S2_distance_approach": {
+            "world_success_count": 63,
+            "benchmark_success_count": 48
+          },
+          "S3_view_search": {
+            "world_success_count": 6,
+            "benchmark_success_count": 2
+          },
+          "S4_state_recognition": {
+            "world_success_count": 113,
+            "benchmark_success_count": 75
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 26,
+            "benchmark_success_count": 23
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 1,
+            "benchmark_success_count": 1
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 8,
+            "benchmark_success_count": 8
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 2,
+            "benchmark_success_count": 2
+          }
+        }
+      }
+    },
+    {
+      "model_id": "kimi-vl-a3b-thinking",
+      "paper_name": "Kimi-VL-A3B (T)",
+      "expected": {
+        "world_success_count": 173,
+        "benchmark_success_count": 88,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 13,
+            "benchmark_success_count": 12
+          },
+          "S2_distance_approach": {
+            "world_success_count": 33,
+            "benchmark_success_count": 4
+          },
+          "S3_view_search": {
+            "world_success_count": 4,
+            "benchmark_success_count": 3
+          },
+          "S4_state_recognition": {
+            "world_success_count": 119,
+            "benchmark_success_count": 67
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 1,
+            "benchmark_success_count": 1
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 0,
+            "benchmark_success_count": 0
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 2,
+            "benchmark_success_count": 0
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 1,
+            "benchmark_success_count": 1
+          }
+        }
+      }
+    },
+    {
+      "model_id": "qwen3-vl-4b",
+      "paper_name": "Qwen3-VL-4B",
+      "expected": {
+        "world_success_count": 307,
+        "benchmark_success_count": 256,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 74,
+            "benchmark_success_count": 71
+          },
+          "S2_distance_approach": {
+            "world_success_count": 60,
+            "benchmark_success_count": 53
+          },
+          "S3_view_search": {
+            "world_success_count": 29,
+            "benchmark_success_count": 23
+          },
+          "S4_state_recognition": {
+            "world_success_count": 93,
+            "benchmark_success_count": 59
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 37,
+            "benchmark_success_count": 36
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 1,
+            "benchmark_success_count": 1
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 10,
+            "benchmark_success_count": 10
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 3,
+            "benchmark_success_count": 3
+          }
+        }
+      }
+    },
+    {
+      "model_id": "qwen3-vl-8b",
+      "paper_name": "Qwen3-VL-8B",
+      "expected": {
+        "world_success_count": 268,
+        "benchmark_success_count": 253,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 67,
+            "benchmark_success_count": 66
+          },
+          "S2_distance_approach": {
+            "world_success_count": 39,
+            "benchmark_success_count": 38
+          },
+          "S3_view_search": {
+            "world_success_count": 29,
+            "benchmark_success_count": 24
+          },
+          "S4_state_recognition": {
+            "world_success_count": 118,
+            "benchmark_success_count": 110
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 11,
+            "benchmark_success_count": 11
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 0,
+            "benchmark_success_count": 0
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 2,
+            "benchmark_success_count": 2
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 2,
+            "benchmark_success_count": 2
+          }
+        }
+      }
+    },
+    {
+      "model_id": "qwen3-vl-30b-a3b-thinking",
+      "paper_name": "Qwen3-VL-30B-A3B (T)",
+      "expected": {
+        "world_success_count": 232,
+        "benchmark_success_count": 204,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 81,
+            "benchmark_success_count": 78
+          },
+          "S2_distance_approach": {
+            "world_success_count": 10,
+            "benchmark_success_count": 10
+          },
+          "S3_view_search": {
+            "world_success_count": 20,
+            "benchmark_success_count": 19
+          },
+          "S4_state_recognition": {
+            "world_success_count": 101,
+            "benchmark_success_count": 82
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 11,
+            "benchmark_success_count": 7
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 0,
+            "benchmark_success_count": 0
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 6,
+            "benchmark_success_count": 5
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 3,
+            "benchmark_success_count": 3
+          }
+        }
+      }
+    },
+    {
+      "model_id": "qwen3-vl-32b",
+      "paper_name": "Qwen3-VL-32B",
+      "expected": {
+        "world_success_count": 392,
+        "benchmark_success_count": 189,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 86,
+            "benchmark_success_count": 25
+          },
+          "S2_distance_approach": {
+            "world_success_count": 55,
+            "benchmark_success_count": 18
+          },
+          "S3_view_search": {
+            "world_success_count": 82,
+            "benchmark_success_count": 61
+          },
+          "S4_state_recognition": {
+            "world_success_count": 103,
+            "benchmark_success_count": 64
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 43,
+            "benchmark_success_count": 10
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 7,
+            "benchmark_success_count": 1
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 9,
+            "benchmark_success_count": 7
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 7,
+            "benchmark_success_count": 3
+          }
+        }
+      }
+    },
+    {
+      "model_id": "qwen3-vl-32b-thinking",
+      "paper_name": "Qwen3-VL-32B (T)",
+      "expected": {
+        "world_success_count": 307,
+        "benchmark_success_count": 264,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 88,
+            "benchmark_success_count": 85
+          },
+          "S2_distance_approach": {
+            "world_success_count": 13,
+            "benchmark_success_count": 13
+          },
+          "S3_view_search": {
+            "world_success_count": 54,
+            "benchmark_success_count": 52
+          },
+          "S4_state_recognition": {
+            "world_success_count": 117,
+            "benchmark_success_count": 102
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 19,
+            "benchmark_success_count": 6
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 3,
+            "benchmark_success_count": 1
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 7,
+            "benchmark_success_count": 4
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 6,
+            "benchmark_success_count": 1
+          }
+        }
+      }
+    },
+    {
+      "model_id": "qwen3-vl-235b",
+      "paper_name": "Qwen3-VL-235B-A22B (T)",
+      "expected": {
+        "world_success_count": 352,
+        "benchmark_success_count": 305,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 101,
+            "benchmark_success_count": 98
+          },
+          "S2_distance_approach": {
+            "world_success_count": 6,
+            "benchmark_success_count": 6
+          },
+          "S3_view_search": {
+            "world_success_count": 79,
+            "benchmark_success_count": 75
+          },
+          "S4_state_recognition": {
+            "world_success_count": 111,
+            "benchmark_success_count": 86
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 29,
+            "benchmark_success_count": 19
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 4,
+            "benchmark_success_count": 3
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 16,
+            "benchmark_success_count": 13
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 6,
+            "benchmark_success_count": 5
+          }
+        }
+      }
+    },
+    {
+      "model_id": "qwen3.5-27b",
+      "paper_name": "Qwen3.5-27B",
+      "expected": {
+        "world_success_count": 420,
+        "benchmark_success_count": 362,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 105,
+            "benchmark_success_count": 101
+          },
+          "S2_distance_approach": {
+            "world_success_count": 52,
+            "benchmark_success_count": 49
+          },
+          "S3_view_search": {
+            "world_success_count": 60,
+            "benchmark_success_count": 56
+          },
+          "S4_state_recognition": {
+            "world_success_count": 117,
+            "benchmark_success_count": 107
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 46,
+            "benchmark_success_count": 24
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 19,
+            "benchmark_success_count": 10
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 13,
+            "benchmark_success_count": 12
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 8,
+            "benchmark_success_count": 3
+          }
+        }
+      }
+    },
+    {
+      "model_id": "qwen3.5-397b",
+      "paper_name": "Qwen3.5-397B-A17B (T)",
+      "expected": {
+        "world_success_count": 429,
+        "benchmark_success_count": 338,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 98,
+            "benchmark_success_count": 88
+          },
+          "S2_distance_approach": {
+            "world_success_count": 53,
+            "benchmark_success_count": 52
+          },
+          "S3_view_search": {
+            "world_success_count": 71,
+            "benchmark_success_count": 65
+          },
+          "S4_state_recognition": {
+            "world_success_count": 114,
+            "benchmark_success_count": 94
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 62,
+            "benchmark_success_count": 24
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 15,
+            "benchmark_success_count": 7
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 7,
+            "benchmark_success_count": 3
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 9,
+            "benchmark_success_count": 5
+          }
+        }
+      }
+    },
+    {
+      "model_id": "qwen3.6-27b",
+      "paper_name": "Qwen3.6-27B",
+      "expected": {
+        "world_success_count": 467,
+        "benchmark_success_count": 378,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 109,
+            "benchmark_success_count": 96
+          },
+          "S2_distance_approach": {
+            "world_success_count": 71,
+            "benchmark_success_count": 69
+          },
+          "S3_view_search": {
+            "world_success_count": 59,
+            "benchmark_success_count": 55
+          },
+          "S4_state_recognition": {
+            "world_success_count": 117,
+            "benchmark_success_count": 101
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 68,
+            "benchmark_success_count": 36
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 16,
+            "benchmark_success_count": 9
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 18,
+            "benchmark_success_count": 8
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 9,
+            "benchmark_success_count": 4
+          }
+        }
+      }
+    },
+    {
+      "model_id": "qwen3.6-35b",
+      "paper_name": "Qwen3.6-35B-A3B (T)",
+      "expected": {
+        "world_success_count": 299,
+        "benchmark_success_count": 206,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 67,
+            "benchmark_success_count": 53
+          },
+          "S2_distance_approach": {
+            "world_success_count": 16,
+            "benchmark_success_count": 16
+          },
+          "S3_view_search": {
+            "world_success_count": 45,
+            "benchmark_success_count": 43
+          },
+          "S4_state_recognition": {
+            "world_success_count": 116,
+            "benchmark_success_count": 66
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 37,
+            "benchmark_success_count": 19
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 7,
+            "benchmark_success_count": 3
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 5,
+            "benchmark_success_count": 2
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 6,
+            "benchmark_success_count": 4
+          }
+        }
+      }
+    },
+    {
+      "model_id": "internvl3_5-30b-a3b",
+      "paper_name": "InternVL3.5-30B-A3B",
+      "expected": {
+        "world_success_count": 323,
+        "benchmark_success_count": 188,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 48,
+            "benchmark_success_count": 40
+          },
+          "S2_distance_approach": {
+            "world_success_count": 72,
+            "benchmark_success_count": 19
+          },
+          "S3_view_search": {
+            "world_success_count": 70,
+            "benchmark_success_count": 47
+          },
+          "S4_state_recognition": {
+            "world_success_count": 112,
+            "benchmark_success_count": 77
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 10,
+            "benchmark_success_count": 0
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 6,
+            "benchmark_success_count": 3
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 3,
+            "benchmark_success_count": 1
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 2,
+            "benchmark_success_count": 1
+          }
+        }
+      }
+    },
+    {
+      "model_id": "internvl3_5-38b",
+      "paper_name": "InternVL3.5-38B",
+      "expected": {
+        "world_success_count": 399,
+        "benchmark_success_count": 174,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 99,
+            "benchmark_success_count": 20
+          },
+          "S2_distance_approach": {
+            "world_success_count": 72,
+            "benchmark_success_count": 23
+          },
+          "S3_view_search": {
+            "world_success_count": 63,
+            "benchmark_success_count": 46
+          },
+          "S4_state_recognition": {
+            "world_success_count": 108,
+            "benchmark_success_count": 69
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 39,
+            "benchmark_success_count": 9
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 9,
+            "benchmark_success_count": 0
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 7,
+            "benchmark_success_count": 6
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 2,
+            "benchmark_success_count": 1
+          }
+        }
+      }
+    },
+    {
+      "model_id": "gemini-3.1-pro-preview",
+      "paper_name": "Gemini-3.1-Pro",
+      "expected": {
+        "world_success_count": 577,
+        "benchmark_success_count": 564,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 115,
+            "benchmark_success_count": 115
+          },
+          "S2_distance_approach": {
+            "world_success_count": 66,
+            "benchmark_success_count": 65
+          },
+          "S3_view_search": {
+            "world_success_count": 89,
+            "benchmark_success_count": 89
+          },
+          "S4_state_recognition": {
+            "world_success_count": 119,
+            "benchmark_success_count": 113
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 78,
+            "benchmark_success_count": 76
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 33,
+            "benchmark_success_count": 32
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 54,
+            "benchmark_success_count": 53
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 23,
+            "benchmark_success_count": 21
+          }
+        }
+      }
+    },
+    {
+      "model_id": "doubao-seed-1.8",
+      "paper_name": "Doubao-Seed-1.8",
+      "expected": {
+        "world_success_count": 404,
+        "benchmark_success_count": 371,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 96,
+            "benchmark_success_count": 94
+          },
+          "S2_distance_approach": {
+            "world_success_count": 56,
+            "benchmark_success_count": 52
+          },
+          "S3_view_search": {
+            "world_success_count": 37,
+            "benchmark_success_count": 37
+          },
+          "S4_state_recognition": {
+            "world_success_count": 118,
+            "benchmark_success_count": 100
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 53,
+            "benchmark_success_count": 47
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 7,
+            "benchmark_success_count": 6
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 24,
+            "benchmark_success_count": 22
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 13,
+            "benchmark_success_count": 13
+          }
+        }
+      }
+    },
+    {
+      "model_id": "gpt-5.4",
+      "paper_name": "GPT-5.4",
+      "expected": {
+        "world_success_count": 292,
+        "benchmark_success_count": 247,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 38,
+            "benchmark_success_count": 38
+          },
+          "S2_distance_approach": {
+            "world_success_count": 31,
+            "benchmark_success_count": 31
+          },
+          "S3_view_search": {
+            "world_success_count": 81,
+            "benchmark_success_count": 78
+          },
+          "S4_state_recognition": {
+            "world_success_count": 116,
+            "benchmark_success_count": 90
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 13,
+            "benchmark_success_count": 1
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 5,
+            "benchmark_success_count": 2
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 6,
+            "benchmark_success_count": 5
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 2,
+            "benchmark_success_count": 2
+          }
+        }
+      }
+    },
+    {
+      "model_id": "claude-sonnet-4",
+      "paper_name": "Claude-Sonnet-4",
+      "expected": {
+        "world_success_count": 252,
+        "benchmark_success_count": 211,
+        "by_task_family": {
+          "S1_pixel_grounding": {
+            "world_success_count": 48,
+            "benchmark_success_count": 44
+          },
+          "S2_distance_approach": {
+            "world_success_count": 22,
+            "benchmark_success_count": 21
+          },
+          "S3_view_search": {
+            "world_success_count": 82,
+            "benchmark_success_count": 81
+          },
+          "S4_state_recognition": {
+            "world_success_count": 92,
+            "benchmark_success_count": 57
+          },
+          "T1_grounded_interaction": {
+            "world_success_count": 6,
+            "benchmark_success_count": 6
+          },
+          "T2_search_then_interact": {
+            "world_success_count": 0,
+            "benchmark_success_count": 0
+          },
+          "T3_sequential_manipulation": {
+            "world_success_count": 2,
+            "benchmark_success_count": 2
+          },
+          "T4_constraint_resolving": {
+            "world_success_count": 0,
+            "benchmark_success_count": 0
+          }
+        }
+      }
+    }
+  ]
+}

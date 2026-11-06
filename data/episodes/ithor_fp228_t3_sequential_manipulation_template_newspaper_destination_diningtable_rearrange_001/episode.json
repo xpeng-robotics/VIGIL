@@ -1,0 +1,155 @@
+{
+  "episode_id": "ithor_fp228_t3_sequential_manipulation_template_newspaper_destination_diningtable_rearrange_001",
+  "sample_id": "ithor_fp228_t3_sequential_manipulation_template_newspaper_destination_diningtable_rearrange_001",
+  "scene_ref": "ithor_fp228",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan228",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -3.1470401287078857,
+      "y": 0.8938637971878052,
+      "z": 1.9521859884262085
+    },
+    "rotation": {
+      "x": 0,
+      "y": 158.97340393066406,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -3.1470401287078857,
+        "y": 0.8938637971878052,
+        "z": 1.9521859884262085
+      },
+      "rotation": {
+        "x": 0,
+        "y": 158.97340393066406,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the newspaper, place it on the dining table, then report success once it is placed correctly.",
+    "task_type": "T3_rearrange",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "rearrange",
+    "functional_template": "rearrange",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Newspaper",
+    "target_group": "sequential_manipulation",
+    "destination_type": "DiningTable"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "newspaper_pick",
+      "target_object_type": "Newspaper",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "diningtable_place",
+      "target_object_type": "DiningTable",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Newspaper",
+    "receptacle_type": "DiningTable",
+    "target_object_id": "Newspaper|-03.20|+00.46|+00.51"
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "rearrange",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Newspaper",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Newspaper",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Newspaper|-03.20|+00.46|+00.51",
+    "destination_object_id": "DiningTable|-01.40|-00.01|+01.45"
+  },
+  "bindings": {
+    "target_object_type": "Newspaper",
+    "target_object_id": "Newspaper|-03.20|+00.46|+00.51",
+    "destination_object_type": "DiningTable",
+    "destination_object_id": "DiningTable|-01.40|-00.01|+01.45"
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

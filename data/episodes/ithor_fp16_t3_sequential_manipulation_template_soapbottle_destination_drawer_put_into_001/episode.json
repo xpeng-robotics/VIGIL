@@ -1,0 +1,249 @@
+{
+  "episode_id": "ithor_fp16_t3_sequential_manipulation_template_soapbottle_destination_drawer_put_into_001",
+  "sample_id": "ithor_fp16_t3_sequential_manipulation_template_soapbottle_destination_drawer_put_into_001",
+  "scene_ref": "ithor_fp16",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan16",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 0.13535699248313904,
+      "y": 0.9037266969680786,
+      "z": 1.4227485656738281
+    },
+    "rotation": {
+      "x": 0,
+      "y": 299.1282653808594,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 0.13535699248313904,
+        "y": 0.9037266969680786,
+        "z": 1.4227485656738281
+      },
+      "rotation": {
+        "x": 0,
+        "y": 299.1282653808594,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the soap dispenser, open the drawer, place it inside, then report success once it is inside.",
+    "task_type": "T3_put_into",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "put_into",
+    "functional_template": "put_into",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "SoapBottle",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Drawer",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "drawer_open",
+      "target_object_type": "Drawer",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "soapbottle_pick",
+      "target_object_type": "SoapBottle",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "drawer_place",
+      "target_object_type": "Drawer",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "SoapBottle",
+    "receptacle_type": "Drawer",
+    "target_object_id": "SoapBottle|-00.78|+01.02|+01.80",
+    "allowed_receptacle_object_ids": [
+      "Drawer|-00.64|+00.83|+00.62",
+      "Drawer|-00.64|+00.83|+01.95",
+      "Drawer|-00.64|+00.83|+02.42",
+      "Drawer|+01.35|+00.84|-01.54",
+      "Drawer|+01.65|+00.83|+01.67",
+      "Drawer|+01.94|+00.83|+01.35",
+      "Drawer|+02.23|+00.83|+01.04",
+      "Drawer|+02.52|+00.83|+00.72",
+      "Drawer|+02.69|+00.83|-00.27",
+      "Drawer|+02.69|+00.83|-00.70",
+      "Drawer|+02.69|+00.83|-01.13",
+      "Drawer|+02.69|+00.83|+00.16"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "SoapBottle",
+      "receptacle_type": "Drawer"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "SoapBottle",
+      "receptacle_type": "Drawer",
+      "target_object_id": "SoapBottle|-00.78|+01.02|+01.80",
+      "allowed_receptacle_object_ids": [
+        "Drawer|-00.64|+00.83|+00.62",
+        "Drawer|-00.64|+00.83|+01.95",
+        "Drawer|-00.64|+00.83|+02.42",
+        "Drawer|+01.35|+00.84|-01.54",
+        "Drawer|+01.65|+00.83|+01.67",
+        "Drawer|+01.94|+00.83|+01.35",
+        "Drawer|+02.23|+00.83|+01.04",
+        "Drawer|+02.52|+00.83|+00.72",
+        "Drawer|+02.69|+00.83|-00.27",
+        "Drawer|+02.69|+00.83|-00.70",
+        "Drawer|+02.69|+00.83|-01.13",
+        "Drawer|+02.69|+00.83|+00.16"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "put_into",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "SoapBottle",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "SoapBottle",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "SoapBottle|-00.78|+01.02|+01.80",
+    "destination_object_id": "Drawer|+02.69|+00.83|-01.13",
+    "destination_allowed_object_ids": [
+      "Drawer|-00.64|+00.83|+00.62",
+      "Drawer|-00.64|+00.83|+01.95",
+      "Drawer|-00.64|+00.83|+02.42",
+      "Drawer|+01.35|+00.84|-01.54",
+      "Drawer|+01.65|+00.83|+01.67",
+      "Drawer|+01.94|+00.83|+01.35",
+      "Drawer|+02.23|+00.83|+01.04",
+      "Drawer|+02.52|+00.83|+00.72",
+      "Drawer|+02.69|+00.83|-00.27",
+      "Drawer|+02.69|+00.83|-00.70",
+      "Drawer|+02.69|+00.83|-01.13",
+      "Drawer|+02.69|+00.83|+00.16"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "SoapBottle",
+    "target_object_id": "SoapBottle|-00.78|+01.02|+01.80",
+    "destination_object_type": "Drawer",
+    "destination_object_id": "Drawer|+02.69|+00.83|-01.13",
+    "destination_allowed_object_ids": [
+      "Drawer|-00.64|+00.83|+00.62",
+      "Drawer|-00.64|+00.83|+01.95",
+      "Drawer|-00.64|+00.83|+02.42",
+      "Drawer|+01.35|+00.84|-01.54",
+      "Drawer|+01.65|+00.83|+01.67",
+      "Drawer|+01.94|+00.83|+01.35",
+      "Drawer|+02.23|+00.83|+01.04",
+      "Drawer|+02.52|+00.83|+00.72",
+      "Drawer|+02.69|+00.83|-00.27",
+      "Drawer|+02.69|+00.83|-00.70",
+      "Drawer|+02.69|+00.83|-01.13",
+      "Drawer|+02.69|+00.83|+00.16"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "destination_is_closed": true
+    },
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

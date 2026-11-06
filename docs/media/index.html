@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A short introduction to VIGIL followed by two real-robot walkthroughs, with every decision explained and faces obscured.">
+  <title>VIGIL — Done, But Not Sure</title>
+  <link rel="stylesheet" href="player.css">
+  <script src="player.js" defer></script>
+</head>
+<body>
+<main>
+  <header class="masthead">
+    <a class="brand" href="index.html" aria-label="VIGIL hardware walkthrough">VIGIL</a>
+    <nav aria-label="Main navigation"><a href="index.html" aria-current="page">Walkthrough</a><a href="overview.html">Research film</a><a href="demos/index.html">Hardware</a></nav>
+  </header>
+  <section class="hero" aria-labelledby="title">
+    <div><p class="eyebrow">NeurIPS 2026 · Poster</p><h1 id="title">Done,<br>But Not Sure.</h1></div>
+    <p class="intro">An introduction to VIGIL, followed by two robot-view recordings. Follow each model decision, its final report, and the recorded closure label.</p>
+  </section>
+  <div class="player">
+    <video id="film" controls playsinline preload="metadata" poster="trailer-poster.jpg" aria-label="VIGIL hardware walkthrough, one minute and eight seconds">
+      <source src="trailer.mp4" type="video/mp4">
+      <a href="trailer.mp4">Download the walkthrough.</a>
+    </video>
+  </div>
+  <div class="media-meta"><span>01:08 · Two hardware cases · Step-by-step captions</span><span><a href="trailer.mp4" download>Download MP4</a></span></div>
+  <p id="playback-status" class="status" role="status" aria-live="polite"></p>
+  <nav class="chapters" aria-label="Trailer chapters">
+    <button type="button" data-time="0" aria-current="true"><span>01 / 00:00</span><strong>Introducing VIGIL</strong></button>
+    <button type="button" data-time="8"><span>02 / 00:08</span><strong>Case 1 · Doubao</strong></button>
+    <button type="button" data-time="30"><span>03 / 00:30</span><strong>Case 2 · Gemini</strong></button>
+    <button type="button" data-time="60"><span>04 / 01:00</span><strong>Inspect the report</strong></button>
+  </nav>
+  <details class="detail">
+    <summary>About the footage</summary>
+    <p>These are two separate qualitative, controlled-intervention replays. Both retain every source observation and model decision. The source labels both terminal reports as false success with trace-only validity; this is not an independently certified hardware outcome or a model ranking.</p>
+    <p>Faces are obscured in the film, its covers and all four full hardware recordings. Progress indicators show playback position and decision indices, not task-completion percentages. Music is synthesized for the edit; the observations are sampled steps rather than elapsed robot time.</p>
+    <p><a href="demos/index.html">Four complete hardware recordings</a> &nbsp;·&nbsp; <a href="https://github.com/xpeng-robotics/VIGIL/blob/main/docs/TRAILER.md">Editing and source notes ↗</a></p>
+  </details>
+  <footer class="footer"><p>VIGIL · NeurIPS 2026</p><p><a href="https://arxiv.org/abs/2605.08747">Paper</a> &nbsp;·&nbsp; <a href="https://github.com/xpeng-robotics/VIGIL">Code</a></p></footer>
+</main>
+</body>
+</html>

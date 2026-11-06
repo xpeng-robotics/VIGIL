@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "source": "arXiv:2605.08747v4, Table 3; published values retained separately from trace-derived corrections.",
+  "correction": "Five feedback retry cells used a failure-label proxy. W/B/FR/NR and other cells are unchanged.",
+  "models": [
+    {
+      "model_id": "gemini-3.1-pro-preview",
+      "published": {
+        "base": {
+          "too_far": 1.29,
+          "path_blocked": 2.76,
+          "retry": 0.78
+        },
+        "feedback": {
+          "too_far": 0.73,
+          "path_blocked": 1.12,
+          "retry": 0.16
+        },
+        "deltas": {
+          "W": 13.9,
+          "B": 13.0,
+          "FR": -9.2,
+          "NR": -4.6
+        }
+      },
+      "corrected_counts": {
+        "base": {
+          "W": 577,
+          "B": 564,
+          "FR": 246,
+          "NR": 172,
+          "too_far": 1295,
+          "path_blocked": 2759,
+          "retry": 778
+        },
+        "feedback": {
+          "W": 716,
+          "B": 694,
+          "FR": 154,
+          "NR": 126,
+          "too_far": 732,
+          "path_blocked": 1120,
+          "retry": 158
+        }
+      }
+    },
+    {
+      "model_id": "doubao-seed-1.8",
+      "published": {
+        "base": {
+          "too_far": 1.09,
+          "path_blocked": 4.4,
+          "retry": 1.01
+        },
+        "feedback": {
+          "too_far": 0.5,
+          "path_blocked": 2.28,
+          "retry": 0.11
+        },
+        "deltas": {
+          "W": 12.1,
+          "B": 12.6,
+          "FR": -4.6,
+          "NR": -8.3
+        }
+      },
+      "corrected_counts": {
+        "base": {
+          "W": 404,
+          "B": 371,
+          "FR": 372,
+          "NR": 234,
+          "too_far": 1090,
+          "path_blocked": 4400,
+          "retry": 1006
+        },
+        "feedback": {
+          "W": 525,
+          "B": 497,
+          "FR": 326,
+          "NR": 151,
+          "too_far": 501,
+          "path_blocked": 2284,
+          "retry": 113
+        }
+      }
+    },
+    {
+      "model_id": "qwen3.6-27b",
+      "published": {
+        "base": {
+          "too_far": 2.6,
+          "path_blocked": 5.15,
+          "retry": 3.56
+        },
+        "feedback": {
+          "too_far": 0.73,
+          "path_blocked": 2.49,
+          "retry": 0.65
+        },
+        "deltas": {
+          "W": 8.0,
+          "B": 12.1,
+          "FR": 4.0,
+          "NR": -17.6
+        }
+      },
+      "corrected_counts": {
+        "base": {
+          "W": 467,
+          "B": 378,
+          "FR": 184,
+          "NR": 383,
+          "too_far": 2599,
+          "path_blocked": 5152,
+          "retry": 3556
+        },
+        "feedback": {
+          "W": 547,
+          "B": 499,
+          "FR": 224,
+          "NR": 207,
+          "too_far": 734,
+          "path_blocked": 2486,
+          "retry": 650
+        }
+      }
+    },
+    {
+      "model_id": "gpt-5.4",
+      "published": {
+        "base": {
+          "too_far": 0.18,
+          "path_blocked": 2.22,
+          "retry": 0.01
+        },
+        "feedback": {
+          "too_far": 0.27,
+          "path_blocked": 1.48,
+          "retry": 0.01
+        },
+        "deltas": {
+          "W": 4.5,
+          "B": 2.3,
+          "FR": -3.6,
+          "NR": 3.6
+        }
+      },
+      "corrected_counts": {
+        "base": {
+          "W": 292,
+          "B": 247,
+          "FR": 540,
+          "NR": 85,
+          "too_far": 181,
+          "path_blocked": 2220,
+          "retry": 12
+        },
+        "feedback": {
+          "W": 337,
+          "B": 270,
+          "FR": 504,
+          "NR": 121,
+          "too_far": 267,
+          "path_blocked": 1484,
+          "retry": 10
+        }
+      }
+    },
+    {
+      "model_id": "claude-sonnet-4",
+      "published": {
+        "base": {
+          "too_far": 0.18,
+          "path_blocked": 0.78,
+          "retry": 0.18
+        },
+        "feedback": {
+          "too_far": 0.24,
+          "path_blocked": 1.31,
+          "retry": 0.76
+        },
+        "deltas": {
+          "W": 2.7,
+          "B": 0.9,
+          "FR": -23.0,
+          "NR": 8.5
+        }
+      },
+      "corrected_counts": {
+        "base": {
+          "W": 252,
+          "B": 211,
+          "FR": 699,
+          "NR": 64,
+          "too_far": 182,
+          "path_blocked": 775,
+          "retry": 181
+        },
+        "feedback": {
+          "W": 279,
+          "B": 220,
+          "FR": 469,
+          "NR": 149,
+          "too_far": 240,
+          "path_blocked": 1307,
+          "retry": 761
+        }
+      }
+    },
+    {
+      "model_id": "internvl3_5-38b",
+      "published": {
+        "base": {
+          "too_far": 0.86,
+          "path_blocked": 11.94,
+          "retry": 1.52
+        },
+        "feedback": {
+          "too_far": 0.5,
+          "path_blocked": 7.38,
+          "retry": 0.01
+        },
+        "deltas": {
+          "W": -0.6,
+          "B": 1.5,
+          "FR": -4.0,
+          "NR": 0.7
+        }
+      },
+      "corrected_counts": {
+        "base": {
+          "W": 399,
+          "B": 174,
+          "FR": 103,
+          "NR": 661,
+          "too_far": 858,
+          "path_blocked": 11942,
+          "retry": 1522
+        },
+        "feedback": {
+          "W": 393,
+          "B": 189,
+          "FR": 63,
+          "NR": 668,
+          "too_far": 504,
+          "path_blocked": 7379,
+          "retry": 1189
+        }
+      }
+    },
+    {
+      "model_id": "mimo-embodied-7b",
+      "published": {
+        "base": {
+          "too_far": 2.07,
+          "path_blocked": 4.24,
+          "retry": 4.24
+        },
+        "feedback": {
+          "too_far": 0.67,
+          "path_blocked": 2.43,
+          "retry": 0.39
+        },
+        "deltas": {
+          "W": 3.0,
+          "B": 0.0,
+          "FR": 0.6,
+          "NR": -7.1
+        }
+      },
+      "corrected_counts": {
+        "base": {
+          "W": 295,
+          "B": 213,
+          "FR": 227,
+          "NR": 431,
+          "too_far": 2074,
+          "path_blocked": 4241,
+          "retry": 4236
+        },
+        "feedback": {
+          "W": 325,
+          "B": 213,
+          "FR": 233,
+          "NR": 360,
+          "too_far": 670,
+          "path_blocked": 2434,
+          "retry": 2461
+        }
+      }
+    },
+    {
+      "model_id": "qwen3.5-27b",
+      "published": {
+        "base": {
+          "too_far": 3.19,
+          "path_blocked": 4.15,
+          "retry": 2.37
+        },
+        "feedback": {
+          "too_far": 0.75,
+          "path_blocked": 2.24,
+          "retry": 0.16
+        },
+        "deltas": {
+          "W": 11.3,
+          "B": 12.1,
+          "FR": -0.1,
+          "NR": -15.8
+        }
+      },
+      "corrected_counts": {
+        "base": {
+          "W": 420,
+          "B": 362,
+          "FR": 255,
+          "NR": 321,
+          "too_far": 3192,
+          "path_blocked": 4150,
+          "retry": 2371
+        },
+        "feedback": {
+          "W": 533,
+          "B": 483,
+          "FR": 254,
+          "NR": 163,
+          "too_far": 747,
+          "path_blocked": 2240,
+          "retry": 371
+        }
+      }
+    },
+    {
+      "model_id": "qwen3-vl-32b",
+      "published": {
+        "base": {
+          "too_far": 1.27,
+          "path_blocked": 5.29,
+          "retry": 2.38
+        },
+        "feedback": {
+          "too_far": 0.41,
+          "path_blocked": 1.93,
+          "retry": 0.42
+        },
+        "deltas": {
+          "W": 2.6,
+          "B": 3.0,
+          "FR": 1.5,
+          "NR": -8.8
+        }
+      },
+      "corrected_counts": {
+        "base": {
+          "W": 392,
+          "B": 189,
+          "FR": 258,
+          "NR": 446,
+          "too_far": 1274,
+          "path_blocked": 5289,
+          "retry": 2384
+        },
+        "feedback": {
+          "W": 418,
+          "B": 219,
+          "FR": 273,
+          "NR": 358,
+          "too_far": 411,
+          "path_blocked": 1933,
+          "retry": 2278
+        }
+      }
+    },
+    {
+      "model_id": "qwen3-vl-32b-thinking",
+      "published": {
+        "base": {
+          "too_far": 1.99,
+          "path_blocked": 1.55,
+          "retry": 3.7
+        },
+        "feedback": {
+          "too_far": 0.8,
+          "path_blocked": 1.07,
+          "retry": 0.41
+        },
+        "deltas": {
+          "W": 4.0,
+          "B": 1.4,
+          "FR": 4.1,
+          "NR": -5.0
+        }
+      },
+      "corrected_counts": {
+        "base": {
+          "W": 307,
+          "B": 264,
+          "FR": 393,
+          "NR": 209,
+          "too_far": 1986,
+          "path_blocked": 1548,
+          "retry": 3697
+        },
+        "feedback": {
+          "W": 347,
+          "B": 278,
+          "FR": 434,
+          "NR": 159,
+          "too_far": 801,
+          "path_blocked": 1066,
+          "retry": 1484
+        }
+      }
+    }
+  ],
+  "episode_count": 1000,
+  "pack_sha256": "1ad6913d84364141d62c5662cc17c652d009fe41ffdca05b3c88a9cb26a4c245"
+}

@@ -1,0 +1,157 @@
+{
+  "episode_id": "ithor_fp203_t3_sequential_manipulation_template_watch_destination_sofa_rearrange_001",
+  "sample_id": "ithor_fp203_t3_sequential_manipulation_template_watch_destination_sofa_rearrange_001",
+  "scene_ref": "ithor_fp203",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan203",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 0,
+      "y": 0.9070531129837036,
+      "z": 3.75
+    },
+    "rotation": {
+      "x": 0,
+      "y": 169.0125908459327,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 0,
+        "y": 0.9070531129837036,
+        "z": 3.75
+      },
+      "rotation": {
+        "x": 0,
+        "y": 169.0125908459327,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the watch, place it on the sofa, then report success once it is placed correctly.",
+    "task_type": "T3_rearrange",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "rearrange",
+    "functional_template": "rearrange",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Watch",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Sofa"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "watch_pick",
+      "target_object_type": "Watch",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "sofa_place",
+      "target_object_type": "Sofa",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Watch",
+    "receptacle_type": "Sofa",
+    "target_object_id": "Watch|+00.24|+00.55|+02.52"
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "rearrange",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target Watch|+00.24|+00.55|+02.52",
+      "reachable positions=593"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Watch",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Watch",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Watch|+00.24|+00.55|+02.52",
+    "destination_object_id": "Sofa|-01.53|+00.01|+02.56"
+  },
+  "bindings": {
+    "target_object_type": "Watch",
+    "target_object_id": "Watch|+00.24|+00.55|+02.52",
+    "destination_object_type": "Sofa",
+    "destination_object_id": "Sofa|-01.53|+00.01|+02.56"
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

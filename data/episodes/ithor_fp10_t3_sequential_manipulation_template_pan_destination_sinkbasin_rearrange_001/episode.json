@@ -1,0 +1,166 @@
+{
+  "episode_id": "ithor_fp10_t3_sequential_manipulation_template_pan_destination_sinkbasin_rearrange_001",
+  "sample_id": "ithor_fp10_t3_sequential_manipulation_template_pan_destination_sinkbasin_rearrange_001",
+  "scene_ref": "ithor_fp10",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan10",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 0,
+      "y": 0.9009992480278015,
+      "z": -2
+    },
+    "rotation": {
+      "x": 0,
+      "y": 42.68924476235001,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 0,
+        "y": 0.9009992480278015,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 42.68924476235001,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the pan, place it on the sinkbasin, then report success once it is placed correctly.",
+    "task_type": "T3_rearrange",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "rearrange",
+    "functional_template": "rearrange",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Pan",
+    "target_group": "sequential_manipulation",
+    "destination_type": "SinkBasin"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "pan_pick",
+      "target_object_type": "Pan",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "sinkbasin_place",
+      "target_object_type": "SinkBasin",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Pan",
+    "receptacle_type": "SinkBasin",
+    "target_object_id": "Pan|+00.85|+00.95|-01.08",
+    "allowed_receptacle_object_ids": [
+      "Sink|-00.70|+00.93|-00.65|SinkBasin"
+    ]
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "rearrange",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target Pan|+00.85|+00.95|-01.08",
+      "reachable positions=269"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Pan",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Pan",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Pan|+00.85|+00.95|-01.08",
+    "destination_object_id": "Sink|-00.70|+00.93|-00.65|SinkBasin",
+    "destination_allowed_object_ids": [
+      "Sink|-00.70|+00.93|-00.65|SinkBasin"
+    ]
+  },
+  "bindings": {
+    "target_object_type": "Pan",
+    "target_object_id": "Pan|+00.85|+00.95|-01.08",
+    "destination_object_type": "SinkBasin",
+    "destination_object_id": "Sink|-00.70|+00.93|-00.65|SinkBasin",
+    "destination_allowed_object_ids": [
+      "Sink|-00.70|+00.93|-00.65|SinkBasin"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

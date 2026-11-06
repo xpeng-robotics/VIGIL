@@ -1,0 +1,190 @@
+{
+  "episode_id": "ithor_fp407_t3_sequential_manipulation_template_toiletpaper_destination_toilet_rearrange_001",
+  "sample_id": "ithor_fp407_t3_sequential_manipulation_template_toiletpaper_destination_toilet_rearrange_001",
+  "scene_ref": "ithor_fp407",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan407",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -0.5,
+      "y": 0.9004555940628052,
+      "z": 0
+    },
+    "rotation": {
+      "x": 0,
+      "y": 240,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -0.5,
+        "y": 0.9004555940628052,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 240,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the toilet paper, place it on the toilet, then report success once it is placed correctly.",
+    "task_type": "T3_rearrange",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "rearrange",
+    "functional_template": "rearrange",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "ToiletPaper",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Toilet",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "toiletpaper_pick",
+      "target_object_type": "ToiletPaper",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "toilet_place",
+      "target_object_type": "Toilet",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "ToiletPaper",
+    "receptacle_type": "Toilet",
+    "target_object_id": "ToiletPaper|-01.10|+00.90|-01.39",
+    "allowed_receptacle_object_ids": [
+      "Toilet|-01.61|00.00|+00.21"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "ToiletPaper",
+      "receptacle_type": "Toilet"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "ToiletPaper",
+      "receptacle_type": "Toilet",
+      "target_object_id": "ToiletPaper|-01.10|+00.90|-01.39",
+      "allowed_receptacle_object_ids": [
+        "Toilet|-01.61|00.00|+00.21"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "rearrange",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "ToiletPaper",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "ToiletPaper",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "ToiletPaper|-01.10|+00.90|-01.39",
+    "destination_object_id": "Toilet|-01.61|00.00|+00.21",
+    "destination_allowed_object_ids": [
+      "Toilet|-01.61|00.00|+00.21"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "ToiletPaper",
+    "target_object_id": "ToiletPaper|-01.10|+00.90|-01.39",
+    "destination_object_type": "Toilet",
+    "destination_object_id": "Toilet|-01.61|00.00|+00.21",
+    "destination_allowed_object_ids": [
+      "Toilet|-01.61|00.00|+00.21"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

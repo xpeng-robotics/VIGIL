@@ -1,0 +1,139 @@
+{
+  "episode_id": "procthor_remotecontrol_seed121_T1_medium_remotecontrol_001__mainline",
+  "sample_id": "procthor_remotecontrol_seed121_T1_medium_remotecontrol_001__mainline",
+  "scene_ref": "procthor_remotecontrol_seed121",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "Procedural",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6.0,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 6.0,
+      "y": 0.9009993672370911,
+      "z": 11.0
+    },
+    "rotation": {
+      "x": 0.0,
+      "y": 110.6807632446289,
+      "z": 0.0
+    },
+    "horizon": 30.0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 6.0,
+        "y": 0.9009993672370911,
+        "z": 11.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 110.6807632446289,
+        "z": 0.0
+      },
+      "horizon": 30.0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the remote control, then report success once it is in hand.",
+    "task_type": "T1_approach_pick",
+    "task_family": "T1_grounded_interaction",
+    "intent": "pick",
+    "functional_template": "approach_pick",
+    "difficulty": "medium",
+    "primary_capabilities": [
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "RemoteControl",
+    "target_group": "portable_pickup"
+  },
+  "budget": {
+    "max_steps": 25,
+    "max_invalid_actions": 8,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "remotecontrol_pick",
+      "target_object_type": "RemoteControl",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_held",
+    "target_object_type": "RemoteControl",
+    "target_object_id": "small|3|34"
+  },
+  "trace_hints": {
+    "task_family": "T1_grounded_interaction",
+    "difficulty": "medium",
+    "functional_template": "approach_pick",
+    "primary_capabilities": [
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        2.0,
+        4.5
+      ]
+    },
+    "sampling_notes": [
+      "migrated from procthor_remotecontrol_seed121_T1_medium_remotecontrol_001 (sync)"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "RemoteControl",
+    "benchmark_axes": {
+      "task_family": "T1_grounded_interaction",
+      "target_object_type": "RemoteControl",
+      "difficulty": "medium"
+    },
+    "target_group": "portable_pickup",
+    "target_object_id": "small|3|34",
+    "migration": {
+      "version": "mainline_2026_04_22",
+      "source_pack": "procthor_all_filter_848.json",
+      "source_episode_id": "procthor_remotecontrol_seed121_T1_medium_remotecontrol_001",
+      "source_family": "T1_grounded_interaction",
+      "migrated_at": "2026-04-22T04:45:26Z",
+      "action": "sync"
+    }
+  },
+  "bindings": {
+    "target_object_type": "RemoteControl",
+    "target_object_id": "small|3|34"
+  }
+}

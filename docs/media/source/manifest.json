@@ -1,0 +1,418 @@
+{
+  "paper": {
+    "title": "Done, But Not Sure: Disentangling World Completion from Self-Termination in Embodied Agents",
+    "scope": "Manuscript results; not a new evaluation of this release.",
+    "source_hashes": {
+      "main.tex": "f53a7b75552b0232f24a48bc4d28f0cbc64edf15d6c517ceee2ecc22043d1dff",
+      "main/abstract.tex": "27a0cb55c00637c22ce12f10c5d26e39c058d21357a007401bf6d3c7d2aff294",
+      "main/introduction.tex": "c7083891a4a9f985c0a17c79673099e0a48f0c32acae773b277eb0f80d35ba5b",
+      "main/method.tex": "1eeaf8897f947f826af68683e3b6b42dd6c9ed36b956a95f19f1e05137214891",
+      "main/experiment.tex": "b1aa09d5f29f8591a28654f44c798fcbeed3caa5c81785232e310e8c2f0fce79",
+      "main/conclusion.tex": "518b1560699eacb4fe338c6c6a211e348f8188688c4531c54240c7675bc97349",
+      "main/appendix.tex": "9614ea5c150508f6ffe8a05953cbe1fff485bd39afe5d7d0396280e7dc9fbfe7"
+    }
+  },
+  "assets": [
+    {
+      "file": "benchmark.pdf",
+      "asset_sha256": "630cd8629839ce68e929d40f0bd57ac7d63af68f1ce6afc17e551fb936f77798",
+      "source": "figures/benchmark.pdf",
+      "source_sha256": "630cd8629839ce68e929d40f0bd57ac7d63af68f1ce6afc17e551fb936f77798",
+      "paper_label": "fig:benchmark",
+      "transformation": "Unmodified original PDF"
+    },
+    {
+      "file": "benchmark.webp",
+      "asset_sha256": "1a5336b68c037c2cd1b6906335c1a42bc585b2e185c35e71d683b5ed0411b258",
+      "source": "figures/benchmark.pdf",
+      "source_sha256": "630cd8629839ce68e929d40f0bd57ac7d63af68f1ce6afc17e551fb936f77798",
+      "paper_label": "fig:benchmark",
+      "transformation": "Page 1 rasterized at 288 dpi; lossless WebP; no content edits"
+    },
+    {
+      "file": "pipeline.pdf",
+      "asset_sha256": "5eb9b9c7c7fcb1767825efcab0b495fa6d2701bcfd186c0fac9d87d9820829c4",
+      "source": "figures/pipeline.pdf",
+      "source_sha256": "5eb9b9c7c7fcb1767825efcab0b495fa6d2701bcfd186c0fac9d87d9820829c4",
+      "paper_label": "fig:pipeline",
+      "transformation": "Unmodified original PDF"
+    },
+    {
+      "file": "pipeline.webp",
+      "asset_sha256": "4ee730631dff8da59d0d76e06341932ec2084552458c31949dc837a59969c579",
+      "source": "figures/pipeline.pdf",
+      "source_sha256": "5eb9b9c7c7fcb1767825efcab0b495fa6d2701bcfd186c0fac9d87d9820829c4",
+      "paper_label": "fig:pipeline",
+      "transformation": "Page 1 rasterized at 288 dpi; lossless WebP; no content edits"
+    },
+    {
+      "file": "failure_distribution_models.pdf",
+      "asset_sha256": "34a570eb51d811b92c0e35d52e8184f0098ba0c14347a3b68e21d9413250147c",
+      "source": "figures/failure_distribution_models.pdf",
+      "source_sha256": "34a570eb51d811b92c0e35d52e8184f0098ba0c14347a3b68e21d9413250147c",
+      "paper_label": "fig:failure_distribution",
+      "transformation": "Unmodified original PDF"
+    },
+    {
+      "file": "failure_distribution_models.webp",
+      "asset_sha256": "2eef3b71ebc749e34760c88f42cafe18a9ce2d89b68f4bbeafa58a5e012ec6ff",
+      "source": "figures/failure_distribution_models.pdf",
+      "source_sha256": "34a570eb51d811b92c0e35d52e8184f0098ba0c14347a3b68e21d9413250147c",
+      "paper_label": "fig:failure_distribution",
+      "transformation": "Page 1 rasterized at 288 dpi; lossless WebP; no content edits"
+    },
+    {
+      "file": "belief_closure_figure.pdf",
+      "asset_sha256": "df2b366fc19e705a9b8a8733c09268bc122b51437d862a69a1308ff9ed34a786",
+      "source": "figures/belief_closure_figure.pdf",
+      "source_sha256": "df2b366fc19e705a9b8a8733c09268bc122b51437d862a69a1308ff9ed34a786",
+      "paper_label": "fig:belief_closure",
+      "transformation": "Unmodified original PDF"
+    },
+    {
+      "file": "belief_closure_figure.webp",
+      "asset_sha256": "523aa8d068477ab8c526e5b84ca9d28e5c5c566c99e19e946687871e3c7da163",
+      "source": "figures/belief_closure_figure.pdf",
+      "source_sha256": "df2b366fc19e705a9b8a8733c09268bc122b51437d862a69a1308ff9ed34a786",
+      "paper_label": "fig:belief_closure",
+      "transformation": "Page 1 rasterized at 288 dpi; lossless WebP; no content edits"
+    },
+    {
+      "file": "ui-overview.webp",
+      "asset_sha256": "808bdd720d4260ba00c5289be0e066e2c83e7853b0d1aa53bbeb3f9660dfd48a",
+      "source": "Local public workbench with bundled recorded-runs and an empty model configuration",
+      "source_sha256": "2d8e8635fb66b178dcd245f4c272cc59dc1115aad2eb2e30a0665ebf44c76b87",
+      "transformation": "Browser screenshot, lossless WebP. Editorial crops and holds in the film; no UI content replaced."
+    },
+    {
+      "file": "ui-results.webp",
+      "asset_sha256": "b209ce6e7e896bb036b2595bb0b8291fd883df22eff2c19ca991912da72b338f",
+      "source": "Local public workbench with bundled recorded-runs and an empty model configuration",
+      "source_sha256": "e62909fc2bc7e6d9f385cd5f2fb130bdff641e4d794ba4779e715ae0aa7db297",
+      "transformation": "Browser screenshot, lossless WebP. Editorial crops and holds in the film; no UI content replaced."
+    },
+    {
+      "file": "ui-step1.webp",
+      "asset_sha256": "b5ee780db44ab6896a220e6b6f30423ce606594346357618d29c4e6fb89e457a",
+      "source": "Local public workbench with bundled recorded-runs and an empty model configuration",
+      "source_sha256": "55da827e3e6a141fe18468f77d5d2d54503adc8f5fd85f7659825de210ce6635",
+      "transformation": "Browser screenshot, lossless WebP. Editorial crops and holds in the film; no UI content replaced."
+    },
+    {
+      "file": "ui-step2.webp",
+      "asset_sha256": "f921d41ef7a9f92f9de4f80c58cf4849af69253c1ca88150b8952af9f0e878ae",
+      "source": "Local public workbench with bundled recorded-runs and an empty model configuration",
+      "source_sha256": "5c5b18066e78fdc478938e545901216728bdb3d47291e20a62e3bc0beaf21da5",
+      "transformation": "Browser screenshot, lossless WebP. Editorial crops and holds in the film; no UI content replaced."
+    },
+    {
+      "file": "ui-step3.webp",
+      "asset_sha256": "de62552b797486b84896c11e9de3fa9227464561bee70fe22f57e5d409a37444",
+      "source": "Local public workbench with bundled recorded-runs and an empty model configuration",
+      "source_sha256": "1ad9f84aaddecda15f4708b36e3475da90404c4e3d1485997e9606cfa6650b7b",
+      "transformation": "Browser screenshot, lossless WebP. Editorial crops and holds in the film; no UI content replaced."
+    },
+    {
+      "file": "ui-step4.webp",
+      "asset_sha256": "55f2b2226302f7394fb86fb238b890cfe1d6c56231db289a083da867e690c11d",
+      "source": "Local public workbench with bundled recorded-runs and an empty model configuration",
+      "source_sha256": "88a266c8ac1bdf1c685569a43b4a77e33b62ae31a9e2c970bcaa5bb387330d01",
+      "transformation": "Browser screenshot, lossless WebP. Editorial crops and holds in the film; no UI content replaced."
+    },
+    {
+      "file": "ui-report.webp",
+      "asset_sha256": "994fd410e68bd17bdad6c97a06a94e081d3c5c31255c6ce9213ba28cef6639d5",
+      "source": "Local public workbench with bundled recorded-runs and an empty model configuration",
+      "source_sha256": "f2972d2f214a73c4456dda1c4b070b417abb1e75f963fc0c37b1887cff1d5c6a",
+      "transformation": "Browser screenshot, lossless WebP. Editorial crops and holds in the film; no UI content replaced."
+    },
+    {
+      "file": "ui-reasoning-detail.webp",
+      "asset_sha256": "439df3ae19d6946a6e1e4972f8159ec33537b735f2de6b10b522adc5a6770392",
+      "source": "Actual public workbench, step 4, expanded response and judgment panels",
+      "source_sha256": "89e553889efc5d6a0d7d05bc8cb54ec1065612fa4c7261275af29c23e7cdf1f4",
+      "transformation": "Browser screenshot, lossless WebP. Cropped to the visible evidence panel in the film."
+    },
+    {
+      "file": "ui-reasoning-large.webp",
+      "asset_sha256": "acdbd897dcf325140bad9eab18e8e983b097a16301236a1610789beb101085b3",
+      "source": "Actual public workbench, verified-fridge step 4, original response expanded; isolated authoring copy with larger typography",
+      "source_sha256": "baff913bda50ba4758c72ff9d210bcb694064ee41066e027507b944a0a0776ef",
+      "transformation": "Unmodified browser screenshot encoded as lossless WebP; film crops the evidence panel at native pixel size. Text, actions and outcomes unchanged.",
+      "capture_style_override": "/* Authoring capture only: larger text, original UI and trace content. */\ndialog { width: min(1760px, 96vw); }\n.replay-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }\ndialog .evidence-block pre { font-size: 23px; line-height: 1.5; max-height: none; }\ndialog .evidence-block summary { font-size: 24px; }\n.evidence-block p { font-size: 24px; }\ndialog .eyebrow { font-size: 18px; }\n",
+      "ui_sources": {
+        "vigil/web/app.py": "5d22a2b2f903397b2b5cfb34711526988b31abadd74b890c136139264f707909",
+        "vigil/web/static/index.html": "138e715558c2e84e737e3e7d6eafcab2a5dcc1854e08c164d2e28efcef01dddf",
+        "vigil/web/static/style.css": "17d1d1ebf305ee5c0a1dc927ab81e9475f32f29cdbee6930acb5048de81b7bcd",
+        "vigil/web/static/app.js": "e579965819936cb9643415c9463160c5d514cad22893595524f20a3b380a5701"
+      }
+    },
+    {
+      "file": "task-pg-chair.jpg",
+      "asset_sha256": "49f54c5c877c124988438a183c128f8564529f1b9e69328e47d8fc1cc7a6f1cb",
+      "source": "benchmark.pdf, Figure benchmark, embedded RGB image",
+      "pdf_image_index": 10,
+      "operation": "Original embedded JPEG extracted with pdfimages -j; no resampling or enhancement."
+    },
+    {
+      "file": "task-da-far.jpg",
+      "asset_sha256": "bf1a31d5fa5ff21d24b071a01d78e82c48417ac7c4997129e9269ac6d787170f",
+      "source": "benchmark.pdf, Figure benchmark, embedded RGB image",
+      "pdf_image_index": 31,
+      "operation": "Original embedded JPEG extracted with pdfimages -j; no resampling or enhancement."
+    },
+    {
+      "file": "task-da-near.jpg",
+      "asset_sha256": "c80b23fa99ed02371b85c2058663593bba307afbba28c1b5181e09c6274d84e2",
+      "source": "benchmark.pdf, Figure benchmark, embedded RGB image",
+      "pdf_image_index": 30,
+      "operation": "Original embedded JPEG extracted with pdfimages -j; no resampling or enhancement."
+    },
+    {
+      "file": "task-vs-hidden.jpg",
+      "asset_sha256": "91b90c270e051cb653fb0b2ac7aefcd3c5a48cd8d994febcf2c0f96c8826ac29",
+      "source": "benchmark.pdf, Figure benchmark, embedded RGB image",
+      "pdf_image_index": 29,
+      "operation": "Original embedded JPEG extracted with pdfimages -j; no resampling or enhancement."
+    },
+    {
+      "file": "task-vs-visible.jpg",
+      "asset_sha256": "03396063e836db387fa09bb0162eef4baa794ba33a7abde6273447ae0cb27c3f",
+      "source": "benchmark.pdf, Figure benchmark, embedded RGB image",
+      "pdf_image_index": 28,
+      "operation": "Original embedded JPEG extracted with pdfimages -j; no resampling or enhancement."
+    },
+    {
+      "file": "task-si-search.jpg",
+      "asset_sha256": "f60777713ada4a9aada3e42f44f7e98307833a6be3cd440ad87b20dc6a9da1b9",
+      "source": "benchmark.pdf, Figure benchmark, embedded RGB image",
+      "pdf_image_index": 19,
+      "operation": "Original embedded JPEG extracted with pdfimages -j; no resampling or enhancement."
+    },
+    {
+      "file": "task-si-open.jpg",
+      "asset_sha256": "be28b79297888e6dcabbac1876aaf4752662f5919ab0972f95becf2f9ca60ac3",
+      "source": "benchmark.pdf, Figure benchmark, embedded RGB image",
+      "pdf_image_index": 18,
+      "operation": "Original embedded JPEG extracted with pdfimages -j; no resampling or enhancement."
+    },
+    {
+      "file": "task-cr-route.jpg",
+      "asset_sha256": "f473efda5f7329c8314c9cf22bf035c44eca1e5ec741c3dd2197943b91eace42",
+      "source": "benchmark.pdf, Figure benchmark, embedded RGB image",
+      "pdf_image_index": 26,
+      "operation": "Original embedded JPEG extracted with pdfimages -j; no resampling or enhancement."
+    },
+    {
+      "file": "task-cr-interact.jpg",
+      "asset_sha256": "08d04da2f7186a7acf974e590ffeeb8407f4af47dca8e720901bda45ac2fc1b3",
+      "source": "benchmark.pdf, Figure benchmark, embedded RGB image",
+      "pdf_image_index": 27,
+      "operation": "Original embedded JPEG extracted with pdfimages -j; no resampling or enhancement."
+    },
+    {
+      "file": "benchmark-facts.json",
+      "asset_sha256": "eb6f089a9cf00dafb41c54ba00ecff11e6a499c97e054509e506a6899092f534",
+      "source": "Canonical public pack and included house JSONs",
+      "operation": "Counts recomputed from episode references and roomType; source hashes retained."
+    }
+  ],
+  "comparison": {
+    "source": "main/experiment.tex, tab:global_cross_section",
+    "unit": "percent",
+    "models": [
+      {
+        "name": "Doubao-Seed-1.8",
+        "W": 40.4,
+        "B": 37.1
+      },
+      {
+        "name": "InternVL3.5-38B",
+        "W": 39.9,
+        "B": 17.4
+      }
+    ]
+  },
+  "replay_files": {
+    "examples/recorded-runs/catalog.json": "c2d24649b053e19ecabd5c7a8bf866533241898db34f31fa627d1472b2c2ec85",
+    "examples/recorded-runs/false-report-fridge/aggregate_score.json": "87fa1fe07db50e7697382424132fe0839fa339183380034211ce806d83059661",
+    "examples/recorded-runs/false-report-fridge/frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_000.png": "fc22f1da8d32885b10aeb47b6553d9cbefc1199b974621a0d0c1d024c2e1bf00",
+    "examples/recorded-runs/false-report-fridge/frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_001.png": "fc22f1da8d32885b10aeb47b6553d9cbefc1199b974621a0d0c1d024c2e1bf00",
+    "examples/recorded-runs/false-report-fridge/frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_002.png": "15938897a5f14d8ecd2907b750d489dac07e5a8f00a615070086565812e7bf40",
+    "examples/recorded-runs/false-report-fridge/frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_003.png": "31a641bd19c0f2dca7187320a3ea29eea53dd2640b46c1ca9867348a7f8516c6",
+    "examples/recorded-runs/false-report-fridge/frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_004.png": "31a641bd19c0f2dca7187320a3ea29eea53dd2640b46c1ca9867348a7f8516c6",
+    "examples/recorded-runs/false-report-fridge/frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/terminal.png": "31a641bd19c0f2dca7187320a3ea29eea53dd2640b46c1ca9867348a7f8516c6",
+    "examples/recorded-runs/false-report-fridge/model_config.json": "111feb8ed1335d5fa899e77c9752e635df1b9d085d48a1861ddce0a8934f0d7a",
+    "examples/recorded-runs/false-report-fridge/provenance.json": "df74331eb3061f74e0d91440c30de312e996bddc277638ff3dd41ad1ccd54702",
+    "examples/recorded-runs/false-report-fridge/run_status.json": "ddc8dd999098e88f5777b55d4a00b2c8b911fe274cbb03736046537e6989e75b",
+    "examples/recorded-runs/false-report-fridge/scores/procthor_fridge_seed314_T1_medium_fridge_001__mainline.score.json": "8dfcc05c0d409d818f2679ded1a79703f615fd3d14e21fe65119645e47de5592",
+    "examples/recorded-runs/false-report-fridge/traces/procthor_fridge_seed314_T1_medium_fridge_001__mainline.json": "099a8e3c0166910637651827904c28fb462b874eb7fb54605ac46c12cfa43ecc",
+    "examples/recorded-runs/false-report-fridge/verification.json": "4d0c77128958410331062688f56fda9e8bd25a051c3862ecce1bcb82cae535bf",
+    "examples/recorded-runs/mismatch-microwave/aggregate_score.json": "5e9f50364c66c1fe449eea51473b68f8d66875d683ae1471fa07cb6f47fbe8c7",
+    "examples/recorded-runs/mismatch-microwave/frames/procthor_microwave_seed298_S4_hard_microwave_check_closed_001__mainline/step_000.png": "d5db96066b407ccd88e85815029ca2b764f9b769058339063a0cea98ecda2437",
+    "examples/recorded-runs/mismatch-microwave/frames/procthor_microwave_seed298_S4_hard_microwave_check_closed_001__mainline/terminal.png": "d5db96066b407ccd88e85815029ca2b764f9b769058339063a0cea98ecda2437",
+    "examples/recorded-runs/mismatch-microwave/model_config.json": "822c3b181e385f0385eb9e3beb2e8902fde7e86ddb09794211c6860ff8392efb",
+    "examples/recorded-runs/mismatch-microwave/provenance.json": "2d71635b70ce642febb17f0f0dae17dccd5e1e4d1920cb9cdd1f37c700f61e17",
+    "examples/recorded-runs/mismatch-microwave/run_status.json": "f9cc5a4eda9fc4bd9048fe09b88ba31bce6dfdc8a5b62fce1d97dbd6e7d91f9a",
+    "examples/recorded-runs/mismatch-microwave/scores/procthor_microwave_seed298_S4_hard_microwave_check_closed_001__mainline.score.json": "da3668117308dff8157fac3f8ee834a9b239acf60070a1109e83b8bc0226ecbc",
+    "examples/recorded-runs/mismatch-microwave/traces/procthor_microwave_seed298_S4_hard_microwave_check_closed_001__mainline.json": "db8358c131fa502fa9d5db151b6df10295a83bfbf8d6310163e6a68994b6f500",
+    "examples/recorded-runs/mismatch-microwave/verification.json": "030f5656776124ed34a6dfe2f133c89c82e9ee559f0d81817212024f2b242f4e",
+    "examples/recorded-runs/post-goal-kettle/aggregate_score.json": "36006c88d58b29f5852ec5bf1ddb0592e6fb7a24c3e12872b885a7dbda59a1eb",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_000.png": "c6f7ffb1a1704944a5b5ea8656f957c4db9688c952aff8ab8ce0636fd36def5d",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_001.png": "d5590ff77b953ba66f1b8988f15bb92f05e6cbd3f253e9bae8006b424733be9d",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_002.png": "af71e861486869c130d9f51d3d99ed6eb6ba6a82a164cdd0eec9ef2ee323ae89",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_003.png": "b1e29486fea6d7e5eb9e782e81fef7ee21d44cf002ce6fa20a3411c2882f3473",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_004.png": "11368a4c5fda1284861e00e8b87d8959fd54b7696aedbd9c1eba440d4e1c0d30",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_005.png": "b4138b10de75934efcd0e09ec972b1ce22bf0a7f4656a4803826b30a6bb23bb5",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_006.png": "ea1282504bda395e865b0914eec5f72e16e02dba9d5d9ad02bb475b8c00b84ec",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_007.png": "184c0fde44e0817d5a0c48f4c10c6dabe727c58b1ccbb5656209087e1c2f18fe",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_008.png": "347c25dea9813e20b2e39704cbed827c3ded55c07dcca8795479b479aaf9b503",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_009.png": "8278e4b5d14c6b9ab5f49e743400710ae9ef2a7864fb2c9bea2b9cdf4e2aef41",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_010.png": "8278e4b5d14c6b9ab5f49e743400710ae9ef2a7864fb2c9bea2b9cdf4e2aef41",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_011.png": "8278e4b5d14c6b9ab5f49e743400710ae9ef2a7864fb2c9bea2b9cdf4e2aef41",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_012.png": "8278e4b5d14c6b9ab5f49e743400710ae9ef2a7864fb2c9bea2b9cdf4e2aef41",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_013.png": "8278e4b5d14c6b9ab5f49e743400710ae9ef2a7864fb2c9bea2b9cdf4e2aef41",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_014.png": "8278e4b5d14c6b9ab5f49e743400710ae9ef2a7864fb2c9bea2b9cdf4e2aef41",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_015.png": "fecc522337e33a8b0b910908befd3ac1ce2882196dc38d6c1507d8e14677998d",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_016.png": "fecc522337e33a8b0b910908befd3ac1ce2882196dc38d6c1507d8e14677998d",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_017.png": "fecc522337e33a8b0b910908befd3ac1ce2882196dc38d6c1507d8e14677998d",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_018.png": "fecc522337e33a8b0b910908befd3ac1ce2882196dc38d6c1507d8e14677998d",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_019.png": "80c623fe192edbf64d21fb3501a9ed92837e893ed168c687f37328630b304c01",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_020.png": "825c817b9822d1ba7500a94fba13a67e43cb55857cb5da84d35c95d56cb5fc86",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_021.png": "825c817b9822d1ba7500a94fba13a67e43cb55857cb5da84d35c95d56cb5fc86",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_022.png": "825c817b9822d1ba7500a94fba13a67e43cb55857cb5da84d35c95d56cb5fc86",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_023.png": "825c817b9822d1ba7500a94fba13a67e43cb55857cb5da84d35c95d56cb5fc86",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/step_024.png": "825c817b9822d1ba7500a94fba13a67e43cb55857cb5da84d35c95d56cb5fc86",
+    "examples/recorded-runs/post-goal-kettle/frames/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001/terminal.png": "825c817b9822d1ba7500a94fba13a67e43cb55857cb5da84d35c95d56cb5fc86",
+    "examples/recorded-runs/post-goal-kettle/model_config.json": "2b9506e92e16034bc3403341db1b8dc33ad33071ea5aff9b11521583386757c2",
+    "examples/recorded-runs/post-goal-kettle/provenance.json": "ee8a5a3231336b4b6f4137df39b5623861e371f5c93f8be1fa70fffba075a948",
+    "examples/recorded-runs/post-goal-kettle/run_status.json": "48bc21eafacf74911b0bf1f69ab1d93331e732d1846e64fa76571c10499460f4",
+    "examples/recorded-runs/post-goal-kettle/scores/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001.score.json": "8619e557351eb0249ceb2cd6ccc5ab96457ab786c48de19bf38e845a9a43f04f",
+    "examples/recorded-runs/post-goal-kettle/traces/ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001.json": "9256d2d3ac9b97ac739315891b698db8b44e458b8c23519f72cf6371b6fd70e5",
+    "examples/recorded-runs/post-goal-kettle/verification.json": "0f85b8954e4ec5535c899ac18ae6f0ee9e27090f04ea0bbd8ef3a388faa151d8",
+    "examples/recorded-runs/sequential-apple/aggregate_score.json": "e63512b066c7cdacff5481e202ae2e1264941443a730b1538c6caaa9555050bb",
+    "examples/recorded-runs/sequential-apple/frames/ithor_fp11_t3_sequential_manipulation_template_apple_destination_sinkbasin_put_into_001/step_000.png": "7f0c9149e2c20076643fdb2f9d2f00b031f9e1194e022c3f8813f0c7ae229efe",
+    "examples/recorded-runs/sequential-apple/frames/ithor_fp11_t3_sequential_manipulation_template_apple_destination_sinkbasin_put_into_001/step_001.png": "d36d2a03537cfe70eadc918f46191a9114a7dfef3311fc4b358977377c7cbec4",
+    "examples/recorded-runs/sequential-apple/frames/ithor_fp11_t3_sequential_manipulation_template_apple_destination_sinkbasin_put_into_001/step_002.png": "948d4052e10f6f43c44dafbf50ce4c55a8c638e15fd45e9501fde185a1055db4",
+    "examples/recorded-runs/sequential-apple/frames/ithor_fp11_t3_sequential_manipulation_template_apple_destination_sinkbasin_put_into_001/step_003.png": "e936e3187a0bb3b8d3ead15fe2e36bde19a8cc5da187a3ffa22d14bb49199ffd",
+    "examples/recorded-runs/sequential-apple/frames/ithor_fp11_t3_sequential_manipulation_template_apple_destination_sinkbasin_put_into_001/step_004.png": "ddfd546d5d257cf1604f7eecfd86134fea350c11f80c9de1e13f30a4fd4e95df",
+    "examples/recorded-runs/sequential-apple/frames/ithor_fp11_t3_sequential_manipulation_template_apple_destination_sinkbasin_put_into_001/step_005.png": "1ec4ba4451abca95b3f3bed7fa413b651485e0e64d4986bf3f8797ffe8c7207d",
+    "examples/recorded-runs/sequential-apple/frames/ithor_fp11_t3_sequential_manipulation_template_apple_destination_sinkbasin_put_into_001/terminal.png": "1ec4ba4451abca95b3f3bed7fa413b651485e0e64d4986bf3f8797ffe8c7207d",
+    "examples/recorded-runs/sequential-apple/model_config.json": "b19138d60fe30ca14cf0511abb85ffe6c999691c0a345e029c9e3c74e81af4c5",
+    "examples/recorded-runs/sequential-apple/provenance.json": "4f3cfb40f1da05d76155153309db4b3f2c1975f4542f252784c5c774b3db99d9",
+    "examples/recorded-runs/sequential-apple/run_status.json": "ce9e96a4caca9c007fe4baf1fe9934e9e40a558a2d67e15dd8dc1e03d1abb763",
+    "examples/recorded-runs/sequential-apple/scores/ithor_fp11_t3_sequential_manipulation_template_apple_destination_sinkbasin_put_into_001.score.json": "2e587225b7cd3248a5b43269baa2881772e63c31defb23803eac36cabd1531e4",
+    "examples/recorded-runs/sequential-apple/traces/ithor_fp11_t3_sequential_manipulation_template_apple_destination_sinkbasin_put_into_001.json": "19de1f8abfce1d93aad27e072de9ee7c935226e4add8dabd1929107427677b69",
+    "examples/recorded-runs/sequential-apple/verification.json": "70d62a75623cd23d247b3e540e36d307a9a36baaa1a89a25a0ddef3d23a5da8d",
+    "examples/recorded-runs/verified-fridge/aggregate_score.json": "6dda734a41bcf9a0c9054dfb8d1dc586ff6fce1ffc804f0053fad573b46dc8a3",
+    "examples/recorded-runs/verified-fridge/frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_000.png": "fc22f1da8d32885b10aeb47b6553d9cbefc1199b974621a0d0c1d024c2e1bf00",
+    "examples/recorded-runs/verified-fridge/frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_001.png": "4a947508c3a051c0fd736aaba988020757f01e56cf45a15a4ee90e2fe20442cb",
+    "examples/recorded-runs/verified-fridge/frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_002.png": "bf8a796d516ccf9f805a5ed80524ef18ed5bf879e66e1e4feb30d53292e79443",
+    "examples/recorded-runs/verified-fridge/frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_003.png": "43a2ddb86176db3009f35e15980db84b698e1d054f1498f748d5b1e68bf2469d",
+    "examples/recorded-runs/verified-fridge/frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/step_004.png": "fea62e1b230dc30cf19f66d51d86a31215abf64aaba0c0b0fa47b2645a4af41f",
+    "examples/recorded-runs/verified-fridge/frames/procthor_fridge_seed314_T1_medium_fridge_001__mainline/terminal.png": "fea62e1b230dc30cf19f66d51d86a31215abf64aaba0c0b0fa47b2645a4af41f",
+    "examples/recorded-runs/verified-fridge/model_config.json": "b19138d60fe30ca14cf0511abb85ffe6c999691c0a345e029c9e3c74e81af4c5",
+    "examples/recorded-runs/verified-fridge/provenance.json": "88f9a0dab241d93739e88b024af8667c580f3822f006e1ac2148744f6fd42971",
+    "examples/recorded-runs/verified-fridge/run_status.json": "ddc8dd999098e88f5777b55d4a00b2c8b911fe274cbb03736046537e6989e75b",
+    "examples/recorded-runs/verified-fridge/scores/procthor_fridge_seed314_T1_medium_fridge_001__mainline.score.json": "ea3bda711899369e8b8350b96554fa93eae225aaf5c4c3982bdb37b8b18075b8",
+    "examples/recorded-runs/verified-fridge/traces/procthor_fridge_seed314_T1_medium_fridge_001__mainline.json": "b836395e02e850672868d3acb985fab7c3410a1bc7cdea9087def7202a479ff8",
+    "examples/recorded-runs/verified-fridge/verification.json": "ac651386ab7ee139815e977766bf2c9697499384d27dfdefcdb850f9d8bad701",
+    "examples/recorded-runs/verified-microwave/aggregate_score.json": "2367c684899719ab6a5edd298d914c78174df2c7e5249da966011066e99e819b",
+    "examples/recorded-runs/verified-microwave/frames/procthor_microwave_seed298_S4_hard_microwave_check_closed_001__mainline/step_000.png": "d5db96066b407ccd88e85815029ca2b764f9b769058339063a0cea98ecda2437",
+    "examples/recorded-runs/verified-microwave/frames/procthor_microwave_seed298_S4_hard_microwave_check_closed_001__mainline/terminal.png": "d5db96066b407ccd88e85815029ca2b764f9b769058339063a0cea98ecda2437",
+    "examples/recorded-runs/verified-microwave/model_config.json": "b19138d60fe30ca14cf0511abb85ffe6c999691c0a345e029c9e3c74e81af4c5",
+    "examples/recorded-runs/verified-microwave/provenance.json": "c8c642f3f4cbc613dee84335524188b0d1f980037cd126de7dd223050055590a",
+    "examples/recorded-runs/verified-microwave/run_status.json": "f9cc5a4eda9fc4bd9048fe09b88ba31bce6dfdc8a5b62fce1d97dbd6e7d91f9a",
+    "examples/recorded-runs/verified-microwave/scores/procthor_microwave_seed298_S4_hard_microwave_check_closed_001__mainline.score.json": "819fe88604104fabe855bc293885b57dd58d838539cd68cf4936f29609f9ed4f",
+    "examples/recorded-runs/verified-microwave/traces/procthor_microwave_seed298_S4_hard_microwave_check_closed_001__mainline.json": "bb2c1a41454844541b39e970021432a7bf29f5e1b258fa452310fcef49abf25d",
+    "examples/recorded-runs/verified-microwave/verification.json": "372c9f893057e6c7670a369888ebb2a853d6f5fcae0f149ab9c192eab58d85f7"
+  },
+  "replay_scope": "Six selected archived cases. Four no-feedback cases and two action-feedback intervention cases. Separate from the paper aggregate comparison.",
+  "workbench_capture": {
+    "scope": "Actual UI states reached through Overview, Results & replay, recording selection, replay timeline, Model response & reasoning, and Judgment details. Edited screenshots; not real-time screen recording.",
+    "ui_sources": {
+      "src/vigil/web/app.py": "0f67cab9b2d614d588b43b182ec198ef0f00d2647a76e0bb46c33c99738510a3",
+      "src/vigil/web/static/index.html": "f578a77d48dfa23f45a9c832928a025e80737aecd1c5035d5c498883a4a1fa9c",
+      "src/vigil/web/static/style.css": "87bc59cc39fc26385d58455d499803e4d475bb9efe150ab1cfc79e85d6d7c8d7",
+      "src/vigil/web/static/app.js": "7010afd32184bdf1ef07a41018921334b6c490249853c7b61a2a0e69aeb377c0"
+    }
+  },
+  "film": {
+    "purpose": "Explain all eight task families, show three complete archived demos, then explain data, scene coverage and W/B closure evaluation.",
+    "duration_seconds": 152,
+    "workbench_footage": false,
+    "paper_rgb_scope": "Paired manuscript illustrations are not continuous recordings. PG pointer is illustrative, not a recorded model action.",
+    "replay_cases": [
+      "verified-fridge",
+      "sequential-apple",
+      "verified-microwave",
+      "post-goal-kettle"
+    ],
+    "demos": [
+      {
+        "case": "verified-fridge",
+        "start": 61,
+        "duration": 12,
+        "reset": 1,
+        "action_seconds": [
+          1.3,
+          1.3,
+          1.3,
+          2.6,
+          1.5
+        ],
+        "title": "Open the fridge. Then report success."
+      },
+      {
+        "case": "sequential-apple",
+        "start": 73,
+        "duration": 14,
+        "reset": 1,
+        "action_seconds": [
+          1.1,
+          1.1,
+          2.6,
+          1.5,
+          3.0,
+          1.5
+        ],
+        "title": "Pick up the apple. Place it in the sink."
+      },
+      {
+        "case": "post-goal-kettle",
+        "start": 87,
+        "duration": 18,
+        "reset": 0.8,
+        "action_seconds": [
+          0.35,
+          0.35,
+          0.35,
+          0.35,
+          0.35,
+          0.35,
+          0.35,
+          0.35,
+          4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ],
+        "title": "Open the kettle. Then report success."
+      }
+    ],
+    "demo_timing_scope": "Editorial timing, not model latency. All source actions and pre/post observations are shown; final outcomes appear after closure."
+  }
+}

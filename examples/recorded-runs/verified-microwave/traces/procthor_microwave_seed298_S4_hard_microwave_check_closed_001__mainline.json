@@ -1,0 +1,291 @@
+{
+  "episode_id": "procthor_microwave_seed298_S4_hard_microwave_check_closed_001__mainline",
+  "max_steps": 5,
+  "metadata": {
+    "contract_version": "vigil_native_v1",
+    "difficulty": "na",
+    "profile": {
+      "feedback_policy": "none",
+      "memory_policy": "none",
+      "metadata": {
+        "analysis_parent": "pure_rgb_baseline",
+        "conversation_history_turns": 20,
+        "diagnostic_reason": null,
+        "feedback_axis": "none",
+        "hypothesis": "Single-frame RGB with 20-turn dialogue history only: no model-visible feedback, no agent-side memory, and no pose.",
+        "mainline": true,
+        "mainline_comparable": true,
+        "memory_axis": "none",
+        "memory_bucket": "none",
+        "observation_axis": "rgb",
+        "pose_axis": "none",
+        "visual_context_axis": "current_only"
+      },
+      "name": "pure_rgb_dialogue_history_baseline",
+      "observation_modalities": [
+        "rgb"
+      ],
+      "pose_policy": "none",
+      "visual_context_policy": "current_only"
+    },
+    "settlement": {
+      "agent_report_status": "closed",
+      "budget_exhausted": false,
+      "false_report": false,
+      "final_progress": 1.0,
+      "invalid_actions": 0,
+      "protocol_failure": false,
+      "protocol_failures": 0,
+      "recoverable_failures": 0,
+      "report_matches_world": true,
+      "report_submitted": true,
+      "semantic_final_progress": 1.0,
+      "semantic_world_success": true,
+      "step_budget": 5,
+      "steps_used": 1,
+      "strict_final_progress": 1.0,
+      "strict_world_success": true,
+      "terminal_reason": "report_success",
+      "terminal_status": "success",
+      "violations": [],
+      "world_success": true
+    },
+    "task_family": "S4_state_verification"
+  },
+  "profile": "pure_rgb_dialogue_history_baseline",
+  "steps": [
+    {
+      "action": {
+        "arguments": {
+          "status": "closed",
+          "summary": "The microwave door is flush with the front panel, indicating it is closed."
+        },
+        "skill_name": "report"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "expected_report_status": "closed",
+            "message": "report_status public evidence supports oracle",
+            "oracle_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_eval": {
+              "expected_report_status": "closed",
+              "message": "report_status public evidence supports oracle",
+              "oracle_eval": {
+                "message": "required object state reached",
+                "progress": 1.0,
+                "resolved": true,
+                "success": true
+              },
+              "progress": 1.0,
+              "public_eval": {
+                "message": "report_status public evidence supports oracle",
+                "progress": 1.0,
+                "resolved": true,
+                "success": true
+              },
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "public_eval": {
+              "message": "report_status public evidence supports oracle",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "expected_report_status": "closed",
+              "message": "report_status public evidence supports oracle",
+              "oracle_eval": {
+                "message": "required object state reached",
+                "progress": 1.0,
+                "resolved": true,
+                "success": true
+              },
+              "progress": 1.0,
+              "public_eval": {
+                "message": "report_status public evidence supports oracle",
+                "progress": 1.0,
+                "resolved": true,
+                "success": true
+              },
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "expected_report_status": "closed",
+              "message": "report_status public evidence supports oracle",
+              "oracle_eval": {
+                "message": "required object state reached",
+                "progress": 1.0,
+                "resolved": true,
+                "success": true
+              },
+              "progress": 1.0,
+              "public_eval": {
+                "message": "report_status public evidence supports oracle",
+                "progress": 1.0,
+                "resolved": true,
+                "success": true
+              },
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "status": "closed",
+            "summary": "The microwave door is flush with the front panel, indicating it is closed."
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "expected_report_status": "closed",
+            "message": "report_status public evidence supports oracle",
+            "oracle_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_eval": {
+              "expected_report_status": "closed",
+              "message": "report_status public evidence supports oracle",
+              "oracle_eval": {
+                "message": "required object state reached",
+                "progress": 1.0,
+                "resolved": true,
+                "success": true
+              },
+              "progress": 1.0,
+              "public_eval": {
+                "message": "report_status public evidence supports oracle",
+                "progress": 1.0,
+                "resolved": true,
+                "success": true
+              },
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "public_eval": {
+              "message": "report_status public evidence supports oracle",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "expected_report_status": "closed",
+              "message": "report_status public evidence supports oracle",
+              "oracle_eval": {
+                "message": "required object state reached",
+                "progress": 1.0,
+                "resolved": true,
+                "success": true
+              },
+              "progress": 1.0,
+              "public_eval": {
+                "message": "report_status public evidence supports oracle",
+                "progress": 1.0,
+                "resolved": true,
+                "success": true
+              },
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "expected_report_status": "closed",
+              "message": "report_status public evidence supports oracle",
+              "oracle_eval": {
+                "message": "required object state reached",
+                "progress": 1.0,
+                "resolved": true,
+                "success": true
+              },
+              "progress": 1.0,
+              "public_eval": {
+                "message": "report_status public evidence supports oracle",
+                "progress": 1.0,
+                "resolved": true,
+                "success": true
+              },
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": true,
+          "report_status": "closed",
+          "report_submitted": true,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "success",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": "report_success",
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "status": "closed",
+              "summary": "The microwave door is flush with the front panel, indicating it is closed."
+            },
+            "skill_name": "report"
+          },
+          "raw_text": "{\"skill_name\": \"report\", \"arguments\": {\"status\": \"closed\", \"summary\": \"The microwave door is flush with the front panel, indicating it is closed.\"}, \"thought\": \"The microwave door is flush with the front panel, indicating it is closed.\"}"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "status": "closed",
+              "summary": "The microwave door is flush with the front panel, indicating it is closed."
+            },
+            "skill_name": "report"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "status": "closed",
+              "summary": "The microwave door is flush with the front panel, indicating it is closed."
+            },
+            "skill_name": "report"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 0,
+      "terminal": true
+    }
+  ],
+  "terminal_status": "success"
+}

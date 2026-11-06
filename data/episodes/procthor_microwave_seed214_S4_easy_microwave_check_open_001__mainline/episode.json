@@ -1,0 +1,137 @@
+{
+  "episode_id": "procthor_microwave_seed214_S4_easy_microwave_check_open_001__mainline",
+  "sample_id": "procthor_microwave_seed214_S4_easy_microwave_check_open_001__mainline",
+  "scene_ref": "procthor_sr_check_open_microwave_seed214",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "Procedural",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6.0,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 3.003605736321573,
+      "y": 0.9009993672370911,
+      "z": 3.800032505977648
+    },
+    "rotation": {
+      "x": 0.0,
+      "y": -1.0330233326444802,
+      "z": 0.0
+    },
+    "horizon": 30.0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 3.003605736321573,
+        "y": 0.9009993672370911,
+        "z": 3.800032505977648
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": -1.0330233326444802,
+        "z": 0.0
+      },
+      "horizon": 30.0,
+      "standing": true
+    },
+    {
+      "action": "OpenObject",
+      "forceAction": true,
+      "objectId": "small|2|56"
+    }
+  ],
+  "task": {
+    "instruction": "Check whether the microwave is open or closed, then report the observed state as open or closed.",
+    "task_type": "verify_open_state",
+    "task_family": "S4_state_recognition",
+    "intent": "verify_open",
+    "functional_template": "verify_open_state",
+    "difficulty": "na",
+    "primary_capabilities": [
+      "SR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Microwave",
+    "target_group": "container_access"
+  },
+  "budget": {
+    "max_steps": 5,
+    "max_invalid_actions": 2,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "report_status",
+    "expected": "open",
+    "target_object_type": "Microwave",
+    "oracle_condition": {
+      "type": "object_state",
+      "target_object_type": "Microwave",
+      "field": "is_open",
+      "value": true,
+      "target_object_id": "small|2|56"
+    },
+    "target_object_id": "small|2|56"
+  },
+  "trace_hints": {
+    "task_family": "S4_state_recognition",
+    "difficulty": "na",
+    "functional_template": "verify_open_state",
+    "primary_capabilities": [
+      "SR",
+      "TM"
+    ],
+    "expected_skills": [
+      "look",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        1.5
+      ]
+    },
+    "sampling_notes": [
+      "migrated from procthor_microwave_seed214_S4_easy_microwave_check_open_001 (sync)"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "Microwave",
+    "benchmark_axes": {
+      "task_family": "S4_state_recognition",
+      "target_object_type": "Microwave",
+      "difficulty": "na"
+    },
+    "target_group": "container_access",
+    "target_initial_state": "open",
+    "target_object_id": "small|2|56",
+    "migration": {
+      "version": "mainline_2026_04_22",
+      "source_pack": "procthor_all_filter_848.json",
+      "source_episode_id": "procthor_microwave_seed214_S4_easy_microwave_check_open_001",
+      "source_family": "S4_state_recognition",
+      "migrated_at": "2026-04-22T04:45:26Z",
+      "action": "sync"
+    }
+  },
+  "bindings": {
+    "target_object_type": "Microwave",
+    "target_object_id": "small|2|56"
+  }
+}

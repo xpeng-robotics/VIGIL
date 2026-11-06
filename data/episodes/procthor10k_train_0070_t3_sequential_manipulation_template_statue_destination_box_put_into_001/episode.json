@@ -1,0 +1,206 @@
+{
+  "episode_id": "procthor10k_train_0070_t3_sequential_manipulation_template_statue_destination_box_put_into_001",
+  "sample_id": "procthor10k_train_0070_t3_sequential_manipulation_template_statue_destination_box_put_into_001",
+  "scene_ref": "procthor10k_train_0070",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "procthor10k_train_0070",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 3.224289894104004,
+      "y": 0.9009997844696045,
+      "z": 3.712331771850586
+    },
+    "rotation": {
+      "x": 0,
+      "y": 285,
+      "z": 0
+    },
+    "horizon": 8.91518652679224e-07,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 3.224289894104004,
+        "y": 0.9009997844696045,
+        "z": 3.712331771850586
+      },
+      "rotation": {
+        "x": 0,
+        "y": 285,
+        "z": 0
+      },
+      "horizon": 8.91518652679224e-07,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the statue, open the box, place it inside, then report success once it is inside.",
+    "task_type": "T3_put_into",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "put_into",
+    "functional_template": "put_into",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Statue",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Box",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "box_open",
+      "target_object_type": "Box",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "statue_pick",
+      "target_object_type": "Statue",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "box_place",
+      "target_object_type": "Box",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Statue",
+    "receptacle_type": "Box",
+    "target_object_id": "Statue|surface|2|3",
+    "allowed_receptacle_object_ids": [
+      "Box|surface|2|0"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "Statue",
+      "receptacle_type": "Box"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "Statue",
+      "receptacle_type": "Box",
+      "target_object_id": "Statue|surface|2|3",
+      "allowed_receptacle_object_ids": [
+        "Box|surface|2|0"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "put_into",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "Statue",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Statue",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Statue|surface|2|3",
+    "destination_object_id": "Box|surface|2|0",
+    "destination_allowed_object_ids": [
+      "Box|surface|2|0"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "Statue",
+    "target_object_id": "Statue|surface|2|3",
+    "destination_object_type": "Box",
+    "destination_object_id": "Box|surface|2|0",
+    "destination_allowed_object_ids": [
+      "Box|surface|2|0"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "destination_is_closed": true
+    },
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "episode_id": "ithor_fp3_t2_search_then_interact_medium_stoveknob_activate_001",
+  "sample_id": "ithor_fp3_t2_search_then_interact_medium_stoveknob_activate_001",
+  "scene_ref": "ithor_fp3",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan3",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -0.12940937280654907,
+      "y": 1.123205542564392,
+      "z": 1.6307400465011597
+    },
+    "rotation": {
+      "x": 0,
+      "y": 44.99999237060547,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -0.12940937280654907,
+        "y": 1.123205542564392,
+        "z": 1.6307400465011597
+      },
+      "rotation": {
+        "x": 0,
+        "y": 44.99999237060547,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Find the stove knob, then turn it on and report success once it is on.",
+    "task_type": "T2_search_toggle",
+    "task_family": "T2_search_then_interact",
+    "intent": "activate",
+    "functional_template": "search_activate",
+    "difficulty": "medium",
+    "primary_capabilities": [
+      "VS",
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "StoveKnob",
+    "target_group": "toggle_fixture",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 35,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "stoveknob_activate",
+      "target_object_type": "StoveKnob",
+      "intent": "toggle_on",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "ToggleObjectOn"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_state",
+    "target_object_type": "StoveKnob",
+    "field": "is_toggled",
+    "value": true,
+    "target_object_id": "StoveKnob|-00.19|+01.34|-02.74",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_state",
+      "target_object_type": "StoveKnob",
+      "field": "is_toggled",
+      "value": true
+    },
+    "strict_spec": {
+      "type": "object_state",
+      "target_object_type": "StoveKnob",
+      "field": "is_toggled",
+      "value": true,
+      "target_object_id": "StoveKnob|-00.19|+01.34|-02.74"
+    }
+  },
+  "trace_hints": {
+    "task_family": "T2_search_then_interact",
+    "difficulty": "medium",
+    "functional_template": "search_activate",
+    "primary_capabilities": [
+      "VS",
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "look",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": false,
+      "target_distance_m": [
+        2,
+        5
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "StoveKnob",
+    "benchmark_axes": {
+      "task_family": "T2_search_then_interact",
+      "target_object_type": "StoveKnob",
+      "difficulty": "medium"
+    },
+    "target_group": "toggle_fixture",
+    "target_object_id": "StoveKnob|-00.19|+01.34|-02.74",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "StoveKnob",
+    "target_object_id": "StoveKnob|-00.19|+01.34|-02.74"
+  }
+}

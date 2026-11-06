@@ -1,0 +1,163 @@
+{
+  "episode_id": "procthor10k_train_0028_t4_constraint_resolving_medium_basketball_pick_001",
+  "sample_id": "procthor10k_train_0028_t4_constraint_resolving_medium_basketball_pick_001",
+  "scene_ref": "procthor10k_train_0028",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "procthor10k_train_0028",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 4.375364303588867,
+      "y": 0.9009997844696045,
+      "z": 7.214895725250244
+    },
+    "rotation": {
+      "x": 0,
+      "y": 105.00000762939453,
+      "z": 0
+    },
+    "horizon": 30.00000762939453,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 4.375364303588867,
+        "y": 0.9009997844696045,
+        "z": 7.214895725250244
+      },
+      "rotation": {
+        "x": 0,
+        "y": 105.00000762939453,
+        "z": 0
+      },
+      "horizon": 30.00000762939453,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Reach the basketball by taking a clear route around the obstruction, then pick it up and report success once it is in hand.",
+    "task_type": "T4c_approach_pick",
+    "task_family": "T4_constraint_resolving",
+    "intent": "pick",
+    "functional_template": "detour_pick",
+    "difficulty": "medium",
+    "primary_capabilities": [
+      "CR",
+      "PG",
+      "DR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "BasketBall",
+    "target_group": "constraint_resolving",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 40,
+    "max_invalid_actions": 12,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "basketball_pick",
+      "target_object_type": "BasketBall",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_held",
+    "target_object_type": "BasketBall",
+    "target_object_id": "BasketBall|8|4",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_held",
+      "target_object_type": "BasketBall"
+    },
+    "strict_spec": {
+      "type": "object_held",
+      "target_object_type": "BasketBall",
+      "target_object_id": "BasketBall|8|4"
+    }
+  },
+  "trace_hints": {
+    "task_family": "T4_constraint_resolving",
+    "difficulty": "medium",
+    "functional_template": "detour_pick",
+    "primary_capabilities": [
+      "CR",
+      "PG",
+      "DR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        2,
+        4.5
+      ],
+      "path_blocked": true
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "BasketBall",
+    "benchmark_axes": {
+      "task_family": "T4_constraint_resolving",
+      "target_object_type": "BasketBall",
+      "difficulty": "medium"
+    },
+    "target_group": "constraint_resolving",
+    "target_object_id": "BasketBall|8|4",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "BasketBall",
+    "target_object_id": "BasketBall|8|4"
+  },
+  "pre_conditions": [
+    {
+      "path_blocked": true,
+      "detour_required": true
+    }
+  ]
+}

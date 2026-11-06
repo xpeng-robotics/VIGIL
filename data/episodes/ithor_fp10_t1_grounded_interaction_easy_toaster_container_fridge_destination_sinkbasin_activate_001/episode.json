@@ -1,0 +1,134 @@
+{
+  "episode_id": "ithor_fp10_t1_grounded_interaction_easy_toaster_container_fridge_destination_sinkbasin_activate_001",
+  "sample_id": "ithor_fp10_t1_grounded_interaction_easy_toaster_container_fridge_destination_sinkbasin_activate_001",
+  "scene_ref": "ithor_fp10",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan10",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 0.25,
+      "y": 0.9009992480278015,
+      "z": -1.75
+    },
+    "rotation": {
+      "x": 0.0,
+      "y": 19.445961982171436,
+      "z": 0.0
+    },
+    "horizon": 0.0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 0.25,
+        "y": 0.9009992480278015,
+        "z": -1.75
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 19.445961982171436,
+        "z": 0.0
+      },
+      "horizon": 0.0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Turn on the toaster, then report success once it is on.",
+    "task_type": "T1_approach_toggle",
+    "task_family": "T1_grounded_interaction",
+    "intent": "activate",
+    "functional_template": "approach_activate",
+    "difficulty": "easy",
+    "primary_capabilities": [
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Toaster",
+    "target_group": "toggle_fixture"
+  },
+  "budget": {
+    "max_steps": 25,
+    "max_invalid_actions": 8,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "toaster_activate",
+      "target_object_type": "Toaster",
+      "intent": "toggle_on",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "ToggleObjectOn"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_state",
+    "target_object_type": "Toaster",
+    "field": "is_toggled",
+    "value": true,
+    "target_object_id": "Toaster|+00.98|+00.90|+00.33"
+  },
+  "trace_hints": {
+    "task_family": "T1_grounded_interaction",
+    "difficulty": "easy",
+    "functional_template": "approach_activate",
+    "primary_capabilities": [
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        2.0,
+        4.5
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target Toaster|+00.98|+00.90|+00.33",
+      "reachable positions=269"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Toaster",
+    "benchmark_axes": {
+      "task_family": "T1_grounded_interaction",
+      "target_object_type": "Toaster",
+      "difficulty": "easy"
+    },
+    "target_group": "toggle_fixture",
+    "target_object_id": "Toaster|+00.98|+00.90|+00.33"
+  },
+  "bindings": {
+    "target_object_type": "Toaster",
+    "target_object_id": "Toaster|+00.98|+00.90|+00.33"
+  }
+}

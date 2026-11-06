@@ -1,0 +1,230 @@
+{
+  "episode_id": "ithor_fp222_t3_sequential_manipulation_template_keychain_destination_drawer_put_into_001",
+  "sample_id": "ithor_fp222_t3_sequential_manipulation_template_keychain_destination_drawer_put_into_001",
+  "scene_ref": "ithor_fp222",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan222",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 1.4419875144958496,
+      "y": 0.9009992480278015,
+      "z": -0.41746848821640015
+    },
+    "rotation": {
+      "x": 0,
+      "y": 15.000001907348633,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 1.4419875144958496,
+        "y": 0.9009992480278015,
+        "z": -0.41746848821640015
+      },
+      "rotation": {
+        "x": 0,
+        "y": 15.000001907348633,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the keychain, open the drawer, place it inside, then report success once it is inside.",
+    "task_type": "T3_put_into",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "put_into",
+    "functional_template": "put_into",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "KeyChain",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Drawer",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "drawer_open",
+      "target_object_type": "Drawer",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "keychain_pick",
+      "target_object_type": "KeyChain",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "drawer_place",
+      "target_object_type": "Drawer",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "KeyChain",
+    "receptacle_type": "Drawer",
+    "target_object_id": "KeyChain|+01.83|+00.87|+01.68",
+    "allowed_receptacle_object_ids": [
+      "Drawer|-00.02|+00.06|-00.17",
+      "Drawer|-00.02|+00.17|-00.17",
+      "Drawer|-00.02|+00.27|-00.17",
+      "Drawer|+00.47|+00.06|-00.17",
+      "Drawer|+00.47|+00.17|-00.17",
+      "Drawer|+00.47|+00.27|-00.17",
+      "Drawer|+02.00|+00.78|+01.71"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "KeyChain",
+      "receptacle_type": "Drawer",
+      "target_object_id": "KeyChain|+01.83|+00.87|+01.68"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "KeyChain",
+      "receptacle_type": "Drawer",
+      "target_object_id": "KeyChain|+01.83|+00.87|+01.68",
+      "allowed_receptacle_object_ids": [
+        "Drawer|-00.02|+00.06|-00.17",
+        "Drawer|-00.02|+00.17|-00.17",
+        "Drawer|-00.02|+00.27|-00.17",
+        "Drawer|+00.47|+00.06|-00.17",
+        "Drawer|+00.47|+00.17|-00.17",
+        "Drawer|+00.47|+00.27|-00.17",
+        "Drawer|+02.00|+00.78|+01.71"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "put_into",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "KeyChain",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "KeyChain",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "KeyChain|+01.83|+00.87|+01.68",
+    "destination_object_id": "Drawer|-00.02|+00.06|-00.17",
+    "destination_allowed_object_ids": [
+      "Drawer|-00.02|+00.06|-00.17",
+      "Drawer|-00.02|+00.17|-00.17",
+      "Drawer|-00.02|+00.27|-00.17",
+      "Drawer|+00.47|+00.06|-00.17",
+      "Drawer|+00.47|+00.17|-00.17",
+      "Drawer|+00.47|+00.27|-00.17",
+      "Drawer|+02.00|+00.78|+01.71"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "KeyChain",
+    "target_object_id": "KeyChain|+01.83|+00.87|+01.68",
+    "destination_object_type": "Drawer",
+    "destination_object_id": "Drawer|-00.02|+00.06|-00.17",
+    "destination_allowed_object_ids": [
+      "Drawer|-00.02|+00.06|-00.17",
+      "Drawer|-00.02|+00.17|-00.17",
+      "Drawer|-00.02|+00.27|-00.17",
+      "Drawer|+00.47|+00.06|-00.17",
+      "Drawer|+00.47|+00.17|-00.17",
+      "Drawer|+00.47|+00.27|-00.17",
+      "Drawer|+02.00|+00.78|+01.71"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "destination_is_closed": true
+    },
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

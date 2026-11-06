@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VIGIL · Evaluation workbench</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <aside class="sidebar">
+      <a href="#overview" class="brand"
+        ><span class="brand-mark" aria-hidden="true">◈</span> VIGIL<span
+          class="version"
+          >0.1</span
+        ></a
+      >
+      <p class="eyebrow">EVALUATION WORKBENCH</p>
+      <nav aria-label="Main navigation">
+        <a href="#overview" data-page="overview"
+          ><span class="nav-icon" aria-hidden="true">◫</span> Overview</a
+        >
+        <a href="#evaluate" data-page="evaluate"
+          ><span class="nav-icon" aria-hidden="true">⊕</span> Run an
+          evaluation</a
+        >
+        <a href="#results" data-page="results"
+          ><span class="nav-icon" aria-hidden="true">▷</span> Results &
+          replay</a
+        >
+      </nav>
+      <div class="side-bottom">
+        <div class="session-label">
+          <span class="dot"></span> Private workspace
+        </div>
+        <p>One model. Every decision.<br />Evidence you can revisit.</p>
+        <a href="#evaluate" class="sidebar-setup"
+          >Workspace setup <span>↗</span></a
+        >
+        <span class="sidebar-version">VIGIL / RELEASE 0.1</span>
+      </div>
+    </aside>
+    <main id="main-content">
+      <header class="topbar">
+        <span class="breadcrumb"
+          >Workspace <span>/</span>
+          <strong id="page-title">Overview</strong></span
+        >
+        <span class="local-label"><span class="dot"></span> Local session</span>
+      </header>
+      <div id="notice" class="notice" role="status" hidden></div>
+      <section id="page-overview" class="page">
+        <div class="overview-layout">
+          <div class="hero">
+            <p class="eyebrow">
+              <span class="accent-dash"></span> VISION. ACTION. EVIDENCE.
+            </p>
+            <h1>Every action.<br /><em>In full view.</em></h1>
+            <p class="lede">
+              A clearer view of embodied intelligence. Run your model through
+              real tasks, then inspect the decisions behind the result.
+            </p>
+            <div class="actions">
+              <button id="explore-demo" class="button primary">
+                Explore a recorded run <span>↗</span>
+              </button>
+              <a class="button secondary" href="#evaluate"
+                >Connect your model <span>→</span></a
+              >
+            </div>
+            <p class="hero-note">
+              <span class="dot"></span> Start exploring. No API key needed.
+            </p>
+          </div>
+          <div class="observation-card">
+            <div class="observation-toolbar">
+              <span><span class="dot"></span> OBSERVATION / 001</span
+              ><span class="recorded-tag">RECORDED</span>
+            </div>
+            <button
+              id="demo-image-button"
+              class="demo-image"
+              aria-label="Open recorded RGB replay"
+            >
+              <img
+                id="demo-image"
+                hidden
+                alt="Recorded first-person view of an AI2-THOR kitchen"
+              />
+              <span id="demo-placeholder" class="demo-placeholder"
+                >Loading recorded observation…</span
+              >
+              <span class="viewfinder" aria-hidden="true"></span>
+              <span class="play-circle">▶<span>Open replay</span></span>
+              <span class="image-label"
+                >FIRST-PERSON RGB <span>640 × 480</span></span
+              >
+            </button>
+            <div class="observation-caption">
+              <div>
+                <span class="eyebrow">PG · PIXEL GROUNDING</span>
+                <h3>Find the fridge.</h3>
+              </div>
+              <span class="outcome-pill"
+                ><span class="dot"></span>
+                <span id="demo-outcome-label">Recorded episode</span></span
+              >
+            </div>
+            <div class="observation-timeline">
+              <span>01 <strong>Ground target</strong></span
+              ><span class="timeline-line"></span
+              ><span>02 <strong>Report success</strong></span>
+            </div>
+          </div>
+        </div>
+        <div class="facts">
+          <div>
+            <span class="fact-label">BENCHMARK SCOPE</span
+            ><strong id="task-count">1,000</strong><span>executable tasks</span>
+          </div>
+          <div>
+            <span class="fact-label">CAPABILITIES</span
+            ><strong>8<span class="fact-unit"> families</span></strong
+            ><span>from grounding to planning</span>
+          </div>
+          <div>
+            <span class="fact-label">MODEL INPUT</span
+            ><strong>RGB<span class="fact-unit"> only</span></strong
+            ><span>first-person observations</span>
+          </div>
+          <div>
+            <span class="fact-label">MEASUREMENT</span
+            ><strong>W <span class="fact-slash">/</span> B</strong
+            ><span>world completion & reporting</span>
+          </div>
+        </div>
+        <section id="recorded-cases" hidden>
+          <div class="section-heading">
+            <div><p class="eyebrow">FROM THE DEMO FILM</p><h2>Explore six real trajectories.</h2></div>
+          </div>
+          <p class="small">Selected archived cases with individual models and profiles. These are illustrations, not a model ranking.</p>
+          <div id="recorded-case-list" class="recorded-case-grid"></div>
+        </section>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR NEXT STEP</p>
+            <h2>From first look to first run.</h2>
+          </div>
+          <a href="#results" class="section-link"
+            >Browse results <span>↗</span></a
+          >
+        </div>
+        <div class="workflow-grid">
+          <article class="workflow-card">
+            <div class="workflow-top">
+              <span class="workflow-icon">▷</span
+              ><span class="badge good">Ready to explore</span>
+            </div>
+            <h3>Follow the evidence</h3>
+            <p>
+              Replay a success and a failure. See the frame, the action and the
+              evaluator's decision together.
+            </p>
+            <button id="demo-replay" class="card-action">
+              Open the example <span>→</span>
+            </button>
+          </article>
+          <article class="workflow-card">
+            <div class="workflow-top">
+              <span class="workflow-icon">⊕</span
+              ><span id="model-readiness" class="badge">Checking setup</span>
+            </div>
+            <h3>Bring your model</h3>
+            <p>
+              Connect an existing API. Choose a task and start with one real
+              episode.
+            </p>
+            <a href="#evaluate" class="card-action"
+              >Configure evaluation <span>→</span></a
+            >
+          </article>
+          <article class="workflow-card">
+            <div class="workflow-top">
+              <span class="workflow-icon">◫</span
+              ><span id="runtime-readiness" class="badge"
+                >Checking environment</span
+              >
+            </div>
+            <h3>Build a reliable run</h3>
+            <p id="runtime-guidance">
+              Check your rendering environment before increasing the number of
+              parallel episodes.
+            </p>
+            <a href="#evaluate" class="card-action"
+              >Review setup <span>→</span></a
+            >
+          </article>
+        </div>
+        <p class="overview-footnote">
+          The recorded example contains two real episodes. Its scores illustrate
+          the workflow and do not represent the full benchmark.
+        </p>
+      </section>
+
+      <section id="page-evaluate" class="page" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">SET UP ONCE. START SMALL.</p>
+            <h1>Run an evaluation</h1>
+          </div>
+          <span class="badge">No run starts automatically</span>
+        </div>
+          <div class="launch-bar">
+            <label
+              >Parallel episodes<input
+                id="workers"
+                type="number"
+                value="1"
+                min="1"
+                max="16"
+            /></label>
+            <p id="run-hint">
+              A real run uses your model API and local simulator.
+            </p>
+            <button id="launch-run" class="button primary" disabled>
+              Run selected tasks →
+            </button>
+          </div>
+        <p id="output-location" class="small"></p>
+        <details class="panel">
+          <summary>Concurrency and API capacity</summary>
+          <div class="form-grid">
+            <label>Simultaneous simulator starts (0 = auto)
+              <input id="boot-concurrency" type="number" value="0" min="0" max="16" />
+            </label>
+            <label>Active simulators (0 = auto, at most 4)
+              <input id="render-concurrency" type="number" value="0" min="0" max="16" />
+            </label>
+          </div>
+          <p id="concurrency-summary" class="small"></p>
+          <p class="small">Each episode makes one model request at a time. These limits apply to this run;
+            your API service controls requests and tokens per minute across jobs.</p>
+        </details>
+        <div id="data-warning" class="notice" hidden></div>
+        <div id="setup-guidance" class="setup-guidance" hidden></div>
+        <section class="panel">
+          <div class="panel-title">
+            <span class="step-number">1</span>
+            <div>
+              <h2>Connect your model</h2>
+              <p>Settings are saved locally in your configuration file.</p>
+            </div>
+            <span id="config-state" class="badge">Not configured</span>
+          </div>
+          <form id="model-form">
+            <div class="form-grid">
+              <label
+                >API format<select id="backend">
+                  <option value="openai-compatible">
+                    OpenAI-compatible / vLLM
+                  </option>
+                  <option value="openai">OpenAI</option>
+                  <option value="gemini">Gemini</option>
+                  <option value="anthropic">Anthropic / Claude</option>
+                </select></label
+              ><label
+                >Model name<input
+                  id="model"
+                  placeholder="Model ID from your provider"
+                  required
+                  autocomplete="off" /></label
+              ><label class="wide"
+                >Base URL<input
+                  id="base-url"
+                  type="url"
+                  placeholder="https://your-server.example/v1"
+                  autocomplete="off"
+                /><small id="url-hint"
+                  >A server root, /v1, or full endpoint URL.</small
+                ></label
+              ><label class="wide"
+                >API key<input
+                  id="api-key"
+                  type="password"
+                  placeholder="Enter a key, or use your environment variable"
+                  autocomplete="off"
+                /><small id="key-hint"
+                  >Keys are kept on this computer and never displayed in
+                  results.</small
+                ></label
+              >
+            </div>
+            <details class="advanced">
+              <summary>Advanced model settings</summary>
+              <div class="form-grid">
+                <label
+                  >API key header<input
+                    id="api-key-header"
+                    value="Authorization" /></label
+                ><label
+                  >Request timeout (seconds)<input
+                    id="timeout"
+                    type="number"
+                    min="1"
+                    value="120" /></label
+                ><label
+                  >Output token limit<input
+                    id="max-tokens"
+                    type="number"
+                    min="1"
+                    value="4096" /></label
+                ><label
+                  >Temperature<input
+                    id="temperature"
+                    type="number"
+                    min="0"
+                    step="0.1"
+                    value="0.6"
+                    placeholder="Leave blank to omit" /></label
+                ><label
+                  >Top-p<input
+                    id="top-p"
+                    type="number"
+                    min="0"
+                    max="1"
+                    step="0.05"
+                    value="0.9"
+                    placeholder="Leave blank to omit" /></label
+                ><label
+                  >Top-k<input
+                    id="top-k"
+                    type="number"
+                    min="1"
+                    placeholder="Leave blank to omit" /></label
+                ><label
+                  >Pixel coordinates<select id="coord-mode">
+                    <option value="">Frame pixels (default)</option>
+                    <option value="normalized_1000">Normalized 0–1000</option>
+                  </select></label
+                ><label
+                  >JSON response mode<select id="json-mode">
+                    <option value="1">Enabled</option>
+                    <option value="0">Disabled</option>
+                  </select></label
+                ><label class="wide"
+                  >Provider options (JSON)<textarea
+                    id="extra-body"
+                    rows="3"
+                    spellcheck="false"
+                  >
+{}</textarea
+                  ><small
+                    >For example, chat_template_kwargs for Qwen. Generation
+                    settings above remain authoritative.</small
+                  ></label
+                ><label class="check-label wide"
+                  ><input id="clear-key" type="checkbox" />Remove the saved key
+                  (environment keys can still apply)</label
+                >
+              </div>
+            </details>
+            <div class="actions form-actions">
+              <button type="submit" class="button primary">
+                Save configuration</button
+              ><button type="button" id="check-setup" class="button">
+                Check setup</button
+              ><button type="button" id="check-model" class="button">
+                Test connection</button
+              ><span class="small"
+                >Connection test sends one text request.</span
+              >
+            </div>
+          </form>
+          <div id="checks" class="checks" aria-live="polite"></div>
+        </section>
+        <section class="panel">
+          <div class="panel-title">
+            <span class="step-number">2</span>
+            <div>
+              <h2>Choose your tasks</h2>
+              <p>
+                Start with one episode. The original task budgets are preserved.
+              </p>
+            </div>
+          </div>
+          <div class="filters">
+            <label class="search-label"
+              ><span class="sr-only">Search tasks</span
+              ><input
+                id="task-search"
+                placeholder="Search instructions, objects, scenes…"
+                type="search" /></label
+            ><label
+              ><span class="sr-only">Task family</span
+              ><select id="family-filter">
+                <option value="">All task families</option>
+              </select></label
+            ><label
+              ><span class="sr-only">Difficulty</span
+              ><select id="difficulty-filter">
+                <option value="">All difficulties</option>
+              </select></label
+            >
+          </div>
+          <div class="selection-line">
+            <span id="selection-count">0 selected</span
+            ><button id="select-filtered" class="text-button">
+              Select filtered tasks</button
+            ><button id="clear-selection" class="text-button">
+              Clear selection
+            </button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th><span class="sr-only">Select</span></th>
+                  <th>Task / instruction</th>
+                  <th>Scene</th>
+                  <th>Budget</th>
+                </tr>
+              </thead>
+              <tbody id="task-rows"></tbody>
+            </table>
+          </div>
+          <div class="pagination">
+            <span id="page-count"></span>
+            <div>
+              <button id="previous-page" class="button small-button">
+                ← Previous</button
+              ><button id="next-page" class="button small-button">
+                Next →
+              </button>
+            </div>
+          </div>
+
+        </section>
+      </section>
+
+      <section id="page-results" class="page" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FOLLOW THE EVIDENCE</p>
+            <h1>Results & replay</h1>
+          </div>
+          <button id="refresh-runs" class="button">↻ Refresh</button>
+        </div>
+        <label class="run-selector"
+          >Evaluation run<select id="run-select"></select
+        ></label>
+        <div id="run-empty" class="empty" hidden>
+          No runs yet. Explore the recorded example or start your first
+          evaluation.
+        </div>
+        <div id="run-detail" hidden>
+          <div class="run-heading">
+            <div>
+              <h2 id="run-name"></h2>
+              <p id="run-model"></p>
+            </div>
+            <div class="actions">
+              <span id="verification-state" class="badge" hidden
+                >Evidence verified</span
+              >
+              <span id="run-state" class="badge"></span
+              ><button id="stop-run" class="button danger" hidden>
+                Stop run</button
+              ><a id="download-results" class="button" download hidden
+                >Download results ↓</a
+              >
+            </div>
+          </div>
+          <div id="run-warning" class="notice" hidden></div>
+          <div class="metrics">
+            <div>
+              <span>COMPLETED EPISODES</span
+              ><strong id="metric-completed">—</strong
+              ><small id="metric-total"></small>
+            </div>
+            <div>
+              <span>WORLD COMPLETION · W</span
+              ><strong id="metric-world">—</strong
+              ><small>The goal is true in the final world state.</small>
+            </div>
+            <div>
+              <span>BENCHMARK SUCCESS · B</span
+              ><strong id="metric-benchmark">—</strong
+              ><small>The goal and terminal report both agree.</small>
+            </div>
+          </div>
+          <progress
+            id="run-progress"
+            max="1"
+            value="0"
+            aria-label="Saved episodes"
+          ></progress>
+          <div class="table-wrap panel result-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Task</th>
+                  <th>Outcome</th>
+                  <th>W / B</th>
+                  <th>Steps</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="result-rows"></tbody>
+            </table>
+          </div>
+          <details id="log-details" class="panel logs">
+            <summary>Run log and troubleshooting</summary>
+            <pre id="run-log">Open to load the run log.</pre>
+          </details>
+        </div>
+      </section>
+      <footer>
+        <span
+          >VIGIL <span class="footer-divider">/</span> EMBODIED EVALUATION</span
+        ><span>Every result has a story. Follow the evidence.</span>
+      </footer>
+    </main>
+
+    <dialog id="replay" aria-labelledby="replay-title">
+      <div class="replay-head">
+        <div>
+          <p id="replay-kicker" class="eyebrow">EPISODE REPLAY</p>
+          <h2 id="replay-title"></h2>
+          <p id="replay-instruction"></p>
+        </div>
+        <button id="close-replay" class="button" aria-label="Close replay">
+          ✕
+        </button>
+      </div>
+      <div class="replay-grid">
+        <div>
+          <div class="frame-box">
+            <img
+              id="replay-frame"
+              alt="First-person RGB observation before this action"
+            />
+            <div id="no-frame" class="empty" hidden>
+              RGB frame unavailable. This run may have used --no-frames.
+            </div>
+            <div id="pixel-marker" class="pixel-marker" hidden></div>
+            <span class="image-label">OBSERVATION BEFORE ACTION</span>
+          </div>
+          <div class="transport">
+            <button id="prev-step" class="button" aria-label="Previous step">
+              ←</button
+            ><button id="play-steps" class="button" aria-label="Play replay">
+              ▶ Play</button
+            ><input
+              id="step-slider"
+              type="range"
+              min="0"
+              max="0"
+              value="0"
+              aria-label="Replay step"
+            /><span id="step-label"></span
+            ><button id="next-step" class="button" aria-label="Next step">
+              →
+            </button>
+          </div>
+          <div id="step-list" class="step-list"></div>
+        </div>
+        <div class="replay-evidence">
+          <div class="evidence-block">
+            <span class="eyebrow">MODEL DECISION</span>
+            <pre id="model-action"></pre>
+          </div>
+          <div class="evidence-block">
+            <span class="eyebrow">EXECUTED ACTION</span>
+            <pre id="executed-action"></pre>
+            <small>Pixel coordinates shown here are actual frame pixels.</small>
+          </div>
+          <div class="evidence-block">
+            <span class="eyebrow">ENVIRONMENT & EVALUATOR</span>
+            <p id="step-result"></p>
+            <p id="step-world"></p>
+            <small
+              >Evaluator information is for inspection; it is not an extra model
+              observation.</small
+            >
+          </div>
+          <details class="evidence-block">
+            <summary>Model response & reasoning</summary>
+            <pre id="model-response"></pre>
+            <pre id="model-reasoning"></pre>
+          </details>
+          <details class="evidence-block">
+            <summary>Judgment details</summary>
+            <pre id="step-judge"></pre>
+          </details>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

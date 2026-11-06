@@ -1,0 +1,88 @@
+{
+  "archived_score_summary": {
+    "compliance": 1.0,
+    "diagnostics": {
+      "agent_report_status": "closed",
+      "budget_exhausted": false,
+      "closure_success": true,
+      "false_report": false,
+      "invalid_actions": 0,
+      "primary_world_success": true,
+      "protocol_failure": false,
+      "protocol_failures": 0,
+      "recoverable_failures": 0,
+      "report_matches_world": true,
+      "report_submitted": true,
+      "semantic_progress": 1.0,
+      "semantic_success": true,
+      "semantic_world_success": true,
+      "step_budget": 5,
+      "steps_used": 1,
+      "strict_progress": 1.0,
+      "strict_success": true,
+      "strict_world_success": true,
+      "terminal_reason": "report_success",
+      "terminal_status": "success",
+      "violations": [],
+      "world_success": true
+    },
+    "efficiency": 0.8,
+    "primary_score": 0.97,
+    "progress": 1.0,
+    "safety": 1.0,
+    "semantic_progress": 1.0,
+    "semantic_success": true,
+    "strict_progress": 1.0,
+    "strict_score": 1.0,
+    "strict_success": true,
+    "success": true,
+    "task_family": "S4_state_recognition",
+    "terminal_reason": "report_success",
+    "terminal_status": "success"
+  },
+  "conversion": "Lossless frame copies. Zero-based steps. Step images precede actions; terminal.png follows the last action. Scores rebuilt by the public scorer; original settlement preserved and independently checked.",
+  "frames": [
+    {
+      "file": "frames/procthor_microwave_seed298_S4_hard_microwave_check_closed_001__mainline/step_000.png",
+      "observation_index": 0,
+      "sha256": "d5db96066b407ccd88e85815029ca2b764f9b769058339063a0cea98ecda2437",
+      "source_file": "step_000_reset.png"
+    },
+    {
+      "file": "frames/procthor_microwave_seed298_S4_hard_microwave_check_closed_001__mainline/terminal.png",
+      "observation_index": 1,
+      "sha256": "d5db96066b407ccd88e85815029ca2b764f9b769058339063a0cea98ecda2437",
+      "source_file": "step_001_report.png"
+    }
+  ],
+  "model": "gemini-3.1-pro-preview",
+  "omitted": "Transport responses, service configuration, worker identifiers, and duplicated top-level reasoning fields. Raw action text and structured execution evidence retained.",
+  "profile": {
+    "feedback_policy": "none",
+    "memory_policy": "none",
+    "metadata": {
+      "analysis_parent": "pure_rgb_baseline",
+      "conversation_history_turns": 20,
+      "diagnostic_reason": null,
+      "feedback_axis": "none",
+      "hypothesis": "Single-frame RGB with 20-turn dialogue history only: no model-visible feedback, no agent-side memory, and no pose.",
+      "mainline": true,
+      "mainline_comparable": true,
+      "memory_axis": "none",
+      "memory_bucket": "none",
+      "observation_axis": "rgb",
+      "pose_axis": "none",
+      "visual_context_axis": "current_only"
+    },
+    "name": "pure_rgb_dialogue_history_baseline",
+    "observation_modalities": [
+      "rgb"
+    ],
+    "pose_policy": "none",
+    "visual_context_policy": "current_only"
+  },
+  "selection": "Editorial case selection, not a representative evaluation or ranking.",
+  "source_filename": "procthor_microwave_seed298_S4_hard_microwave_check_closed_001__mainline.json",
+  "source_result_sha256": "a4de4d07ce6e6a959edf8337156b930374fe089430cc1f522999608921c3094e",
+  "started_at": "2026-04-30T15:12:05Z"
+}

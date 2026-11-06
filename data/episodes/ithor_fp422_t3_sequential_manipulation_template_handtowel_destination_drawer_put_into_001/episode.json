@@ -1,0 +1,170 @@
+{
+  "episode_id": "ithor_fp422_t3_sequential_manipulation_template_handtowel_destination_drawer_put_into_001",
+  "sample_id": "ithor_fp422_t3_sequential_manipulation_template_handtowel_destination_drawer_put_into_001",
+  "scene_ref": "ithor_fp422",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan422",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -0.8846521377563477,
+      "y": 0.9008351564407349,
+      "z": 1.319441318511963
+    },
+    "rotation": {
+      "x": 0,
+      "y": 189.70852661132812,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -0.8846521377563477,
+        "y": 0.9008351564407349,
+        "z": 1.319441318511963
+      },
+      "rotation": {
+        "x": 0,
+        "y": 189.70852661132812,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the hand towel, open the drawer, place it inside, then report success once it is inside.",
+    "task_type": "T3_put_into",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "put_into",
+    "functional_template": "put_into",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "HandTowel",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Drawer"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "drawer_open",
+      "target_object_type": "Drawer",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "handtowel_pick",
+      "target_object_type": "HandTowel",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "drawer_place",
+      "target_object_type": "Drawer",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "HandTowel",
+    "receptacle_type": "Drawer",
+    "target_object_id": "HandTowel|-01.30|+01.77|+00.04"
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "put_into",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "HandTowel",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "HandTowel",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "HandTowel|-01.30|+01.77|+00.04",
+    "destination_object_id": "Drawer|-00.81|+00.96|+00.38"
+  },
+  "bindings": {
+    "target_object_type": "HandTowel",
+    "target_object_id": "HandTowel|-01.30|+01.77|+00.04",
+    "destination_object_type": "Drawer",
+    "destination_object_id": "Drawer|-00.81|+00.96|+00.38"
+  },
+  "pre_conditions": [
+    {
+      "destination_is_closed": true
+    },
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

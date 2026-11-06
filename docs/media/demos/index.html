@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VIGIL — Hardware recordings</title>
+  <link rel="stylesheet" href="../player.css">
+  <script src="../player.js" defer></script>
+</head>
+<body>
+<main>
+  <header class="masthead">
+    <a class="brand" href="../index.html" aria-label="VIGIL film">VIGIL</a>
+    <nav aria-label="Main navigation"><a href="../index.html">Walkthrough</a><a href="../overview.html">Research film</a><a href="index.html" aria-current="page">Hardware</a><a href="https://github.com/xpeng-robotics/VIGIL">GitHub ↗</a></nav>
+  </header>
+  <section class="hero" aria-labelledby="title">
+    <div><p class="eyebrow">Four qualitative recordings</p><h1 id="title">From observation<br>to action.</h1></div>
+    <p class="intro">External footage shows the robot in its environment. Recorded observation-and-action replays expose individual decisions. Faces are obscured. These examples illustrate a hardware loop; they are separate from the paper's quantitative evaluation.</p>
+  </section>
+  <div class="gallery">
+    <article class="recording">
+      <video controls playsinline preload="metadata" poster="robot-1.jpg" aria-label="Object approach, external camera"><source src="robot-1.mp4" type="video/mp4"><a href="robot-1.mp4">Download video.</a></video>
+      <p class="eyebrow">01 / External camera</p><h2>Object approach</h2>
+      <p>The robot moves through the lab toward a target area. This view shows physical execution without the agent's full decision trace.</p>
+      <div class="record-meta"><span>01:01 · Silent</span><a href="robot-1.mp4" download>Download MP4</a></div>
+    </article>
+    <article class="recording">
+      <video controls playsinline preload="metadata" poster="robot-2.jpg" aria-label="Room entry and fan search, external camera"><source src="robot-2.mp4" type="video/mp4"><a href="robot-2.mp4">Download video.</a></video>
+      <p class="eyebrow">02 / External camera</p><h2>Room entry and fan search</h2>
+      <p>The instruction asks the robot to enter a room and approach a fan. The footage shows room entry; it does not certify completion.</p>
+      <div class="record-meta"><span>00:36 · Silent · Display blurred</span><a href="robot-2.mp4" download>Download MP4</a></div>
+    </article>
+    <article class="recording">
+      <video class="trace" controls playsinline preload="metadata" poster="robot-3.jpg" aria-label="Person approach replay, Doubao-Seed-1.6"><source src="robot-3.mp4" type="video/mp4"><a href="robot-3.mp4">Download replay.</a></video>
+      <p class="eyebrow">03 / Controlled-intervention replay</p><h2>Find and approach a person<small>Doubao-Seed-1.6</small></h2>
+      <p>Step-sampled observations and navigation decisions lead to a terminal report. The target wears a white T-shirt; playback is not elapsed execution time.</p>
+      <div class="record-meta"><span>00:16 · Diagnostics panel omitted</span><a href="robot-3.mp4" download>Download MP4</a></div>
+    </article>
+    <article class="recording">
+      <video class="trace" controls playsinline preload="metadata" poster="robot-4.jpg" aria-label="Person approach replay, Gemini-3.1-Pro-preview"><source src="robot-4.mp4" type="video/mp4"><a href="robot-4.mp4">Download replay.</a></video>
+      <p class="eyebrow">04 / Controlled-intervention replay</p><h2>Find and approach a person<small>Gemini-3.1-Pro-preview</small></h2>
+      <p>A second observation-and-action sequence shows the model's decisions before its terminal report. It is an illustration, not a model comparison.</p>
+      <div class="record-meta"><span>00:24 · Diagnostics panel omitted</span><a href="robot-4.mp4" download>Download MP4</a></div>
+    </article>
+  </div>
+  <details class="detail"><summary>Scope and source notes</summary>
+    <p>No hardware success rate, FR/NR cost ratio or simulation-to-hardware transfer claim is derived from these clips. The two person-approach sources explicitly use a controlled intervention and trace-only scoring.</p>
+    <p>The original description of the first external recording is inconsistent about its target, so the clip is not labeled as a verified successful task. Original action sequences are retained, with audio removed and privacy edits where needed.</p>
+    <p><a href="manifest.json">Recording metadata</a> &nbsp;·&nbsp; <a href="https://github.com/xpeng-robotics/VIGIL/blob/main/docs/VIDEO.md">Film evidence map ↗</a></p>
+  </details>
+  <footer class="footer"><p>VIGIL · NeurIPS 2026</p><p><a href="../index.html">Back to the walkthrough</a></p></footer>
+</main>
+</body>
+</html>

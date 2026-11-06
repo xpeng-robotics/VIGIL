@@ -1,0 +1,136 @@
+{
+  "episode_id": "ithor_fp214_s2_distance_approach_easy_painting_approach_001",
+  "sample_id": "ithor_fp214_s2_distance_approach_easy_painting_approach_001",
+  "scene_ref": "ithor_fp214",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan214",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -1.5385481119155884,
+      "y": 0.9204407930374146,
+      "z": 3.7721126079559326
+    },
+    "rotation": {
+      "x": 0,
+      "y": 7.663275027880445e-06,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -1.5385481119155884,
+        "y": 0.9204407930374146,
+        "z": 3.7721126079559326
+      },
+      "rotation": {
+        "x": 0,
+        "y": 7.663275027880445e-06,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Move close to the painting until you reach interaction range, then report success once you are close enough.",
+    "task_type": "approach_target",
+    "task_family": "S2_distance_approach",
+    "intent": "approach",
+    "functional_template": "approach_then_report",
+    "difficulty": "easy",
+    "primary_capabilities": [
+      "DR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Painting",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 12,
+    "max_invalid_actions": 4,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "agent_near_target",
+    "target_object_type": "Painting",
+    "distance_threshold": 1.5,
+    "target_object_id": "Painting|-02.67|+01.57|+07.00",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "agent_near_target",
+      "target_object_type": "Painting",
+      "distance_threshold": 1.5
+    },
+    "strict_spec": {
+      "type": "agent_near_target",
+      "target_object_type": "Painting",
+      "distance_threshold": 1.5,
+      "target_object_id": "Painting|-02.67|+01.57|+07.00"
+    }
+  },
+  "trace_hints": {
+    "task_family": "S2_distance_approach",
+    "difficulty": "easy",
+    "functional_template": "approach_then_report",
+    "primary_capabilities": [
+      "DR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        2,
+        4
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Painting",
+    "benchmark_axes": {
+      "task_family": "S2_distance_approach",
+      "target_object_type": "Painting",
+      "difficulty": "easy"
+    },
+    "target_object_id": "Painting|-02.67|+01.57|+07.00",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "Painting",
+    "target_object_id": "Painting|-02.67|+01.57|+07.00"
+  }
+}

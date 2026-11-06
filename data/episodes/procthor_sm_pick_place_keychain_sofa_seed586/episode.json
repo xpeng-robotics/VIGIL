@@ -1,0 +1,184 @@
+{
+  "episode_id": "procthor_sm_pick_place_keychain_sofa_seed586",
+  "sample_id": "procthor_sm_pick_place_keychain_sofa_seed586",
+  "scene_ref": "procthor_sm_reveal_pick_box_keychain_seed576",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "Procedural",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6.0,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 7.099254131317139,
+      "y": 0.9009994268417358,
+      "z": 3.472989559173584
+    },
+    "rotation": {
+      "x": -0.0,
+      "y": 105.44145965576172,
+      "z": -0.0
+    },
+    "horizon": 30.000003814697266,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "OpenObject",
+      "objectId": "3|6",
+      "forceAction": true
+    },
+    {
+      "action": "TeleportFull",
+      "forceAction": true,
+      "position": {
+        "x": 7.099254131317139,
+        "y": 0.9009994268417358,
+        "z": 3.472989559173584
+      },
+      "rotation": {
+        "x": -0.0,
+        "y": 105.44145965576172,
+        "z": -0.0
+      },
+      "horizon": 30.000003814697266,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "pick up the keychain, place it on the sofa, then report success once it is on sofa",
+    "task_type": "T3_rearrange",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "rearrange",
+    "functional_template": "rearrange",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Keychain",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Sofa"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "keychain_pick",
+      "target_object_type": "Keychain",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "sofa_place",
+      "target_object_type": "Sofa",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Keychain",
+    "receptacle_type": "Sofa",
+    "target_object_id": "small|3|27",
+    "allowed_receptacle_object_ids": [
+      "3|0"
+    ]
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "rearrange",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2.5
+      ]
+    },
+    "sampling_notes": [
+      "migrated from procthor_sm_reveal_pick_box_keychain_seed576_T3_easy_keychain_001 (migrate_t3)",
+      {
+        "forked_from": "procthor_sm_reveal_pick_box_keychain_seed576_T3_easy_keychain_001__mainline",
+        "forked_at": "2026-05-11T05:04:05.184532+00:00"
+      },
+      "contract: rearrange — pick Keychain small|3|27 and place on Sofa 3|0 (instruction has no open-box step; scene_setup opens Box 3|6)"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "Keychain",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Keychain",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "small|3|27",
+    "migration": {
+      "version": "mainline_2026_04_22",
+      "source_pack": "procthor_all_filter_848.json",
+      "source_episode_id": "procthor_sm_reveal_pick_box_keychain_seed576_T3_easy_keychain_001",
+      "source_family": "T3_sequential_manipulation",
+      "migrated_at": "2026-04-22T04:45:26Z",
+      "action": "migrate_t3"
+    },
+    "destination_object_id": "3|0",
+    "destination_allowed_object_ids": [
+      "3|0"
+    ]
+  },
+  "bindings": {
+    "target_object_type": "Keychain",
+    "target_object_id": "small|3|27",
+    "destination_object_type": "Sofa",
+    "destination_object_id": "3|0",
+    "destination_allowed_object_ids": [
+      "3|0"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scope": "Primary historical template rendered with task_instruction=<placeholder>; does not hash all per-request coordinate overrides.",
+  "template_sha256": "b450374f4bcc13a58a782c10522e8bc97f46d92d4b49039ee8f00a4889df1d38",
+  "matching_primary_archives": 20,
+  "manifest_policy_version": "2026-04-18",
+  "source_prompt_constant": "2026-04-27-state-report-labels",
+  "explanation": "The historical run script hard-coded the manifest version label. Rendering the baseline prompt from each recorded source commit produces the same archived hash. The template contains the two anti-hallucination instructions and no extra report-default-exit instruction.",
+  "source_commits": [
+    "a889badcb43b249d946cc26d20e8a4e7d1727561",
+    "bfb5c1c93bc08972c3ffc3dbebde9ffe1e34a47e",
+    "c18857f99005a82a6a9686f441d800868bf301e0"
+  ],
+  "limitations": "Dirty worktrees and incomplete serving/checkpoint metadata prevent a claim of bit-identical online reproduction. The current legacy prompt preset is a reconstruction, not the archived prompt bytes."
+}

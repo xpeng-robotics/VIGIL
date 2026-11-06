@@ -1,0 +1,191 @@
+{
+  "episode_id": "procthor10k_train_0018_t3_sequential_manipulation_template_remotecontrol_destination_tvstand_rearrange_001",
+  "sample_id": "procthor10k_train_0018_t3_sequential_manipulation_template_remotecontrol_destination_tvstand_rearrange_001",
+  "scene_ref": "procthor10k_train_0018",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "procthor10k_train_0018",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 3.4456217288970947,
+      "y": 0.9009997844696045,
+      "z": 0.8702125549316406
+    },
+    "rotation": {
+      "x": 0,
+      "y": 285,
+      "z": 0
+    },
+    "horizon": 30.000003814697266,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 3.4456217288970947,
+        "y": 0.9009997844696045,
+        "z": 0.8702125549316406
+      },
+      "rotation": {
+        "x": 0,
+        "y": 285,
+        "z": 0
+      },
+      "horizon": 30.000003814697266,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the remote control, place it on the TV stand, then report success once it is placed correctly.",
+    "task_type": "T3_rearrange",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "rearrange",
+    "functional_template": "rearrange",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "RemoteControl",
+    "target_group": "sequential_manipulation",
+    "destination_type": "TVStand",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "remotecontrol_pick",
+      "target_object_type": "RemoteControl",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "tvstand_place",
+      "target_object_type": "TVStand",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "RemoteControl",
+    "receptacle_type": "TVStand",
+    "target_object_id": "RemoteControl|surface|7|32",
+    "allowed_receptacle_object_ids": [
+      "TVStand|7|0|0"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "RemoteControl",
+      "receptacle_type": "TVStand"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "RemoteControl",
+      "receptacle_type": "TVStand",
+      "target_object_id": "RemoteControl|surface|7|32",
+      "allowed_receptacle_object_ids": [
+        "TVStand|7|0|0"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "rearrange",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "RemoteControl",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "RemoteControl",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "RemoteControl|surface|7|32",
+    "destination_object_id": "TVStand|7|0|0",
+    "destination_allowed_object_ids": [
+      "TVStand|7|0|0"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "RemoteControl",
+    "target_object_id": "RemoteControl|surface|7|32",
+    "destination_object_type": "TVStand",
+    "destination_object_id": "TVStand|7|0|0",
+    "destination_allowed_object_ids": [
+      "TVStand|7|0|0"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

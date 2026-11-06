@@ -1,0 +1,246 @@
+{
+  "episode_id": "procthor10k_train_0073_t3_sequential_manipulation_template_tissuebox_destination_drawer_put_into_001",
+  "sample_id": "procthor10k_train_0073_t3_sequential_manipulation_template_tissuebox_destination_drawer_put_into_001",
+  "scene_ref": "procthor10k_train_0073",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "procthor10k_train_0073",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 2.573167324066162,
+      "y": 0.9009997844696045,
+      "z": 4.401381492614746
+    },
+    "rotation": {
+      "x": 0,
+      "y": 5.078817139292369e-06,
+      "z": 0
+    },
+    "horizon": 30.000003814697266,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 2.573167324066162,
+        "y": 0.9009997844696045,
+        "z": 4.401381492614746
+      },
+      "rotation": {
+        "x": 0,
+        "y": 5.078817139292369e-06,
+        "z": 0
+      },
+      "horizon": 30.000003814697266,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the tissue box, open the drawer, place it inside, then report success once it is inside.",
+    "task_type": "T3_put_into",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "put_into",
+    "functional_template": "put_into",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "TissueBox",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Drawer",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "drawer_open",
+      "target_object_type": "Drawer",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "tissuebox_pick",
+      "target_object_type": "TissueBox",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "drawer_place",
+      "target_object_type": "Drawer",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "TissueBox",
+    "receptacle_type": "Drawer",
+    "target_object_id": "TissueBox|surface|4|1",
+    "allowed_receptacle_object_ids": [
+      "Dresser|4|1___0",
+      "Dresser|4|1___1",
+      "Dresser|4|1___2",
+      "Dresser|4|1___3",
+      "Dresser|4|1___4",
+      "Dresser|4|1___5",
+      "Dresser|4|1___6",
+      "Dresser|4|1___7",
+      "Dresser|7|3___0",
+      "Dresser|7|3___1",
+      "Dresser|7|3___2"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "TissueBox",
+      "receptacle_type": "Drawer"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "TissueBox",
+      "receptacle_type": "Drawer",
+      "target_object_id": "TissueBox|surface|4|1",
+      "allowed_receptacle_object_ids": [
+        "Dresser|4|1___0",
+        "Dresser|4|1___1",
+        "Dresser|4|1___2",
+        "Dresser|4|1___3",
+        "Dresser|4|1___4",
+        "Dresser|4|1___5",
+        "Dresser|4|1___6",
+        "Dresser|4|1___7",
+        "Dresser|7|3___0",
+        "Dresser|7|3___1",
+        "Dresser|7|3___2"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "put_into",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "TissueBox",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "TissueBox",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "TissueBox|surface|4|1",
+    "destination_object_id": "Dresser|4|1___5",
+    "destination_allowed_object_ids": [
+      "Dresser|4|1___0",
+      "Dresser|4|1___1",
+      "Dresser|4|1___2",
+      "Dresser|4|1___3",
+      "Dresser|4|1___4",
+      "Dresser|4|1___5",
+      "Dresser|4|1___6",
+      "Dresser|4|1___7",
+      "Dresser|7|3___0",
+      "Dresser|7|3___1",
+      "Dresser|7|3___2"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "TissueBox",
+    "target_object_id": "TissueBox|surface|4|1",
+    "destination_object_type": "Drawer",
+    "destination_object_id": "Dresser|4|1___5",
+    "destination_allowed_object_ids": [
+      "Dresser|4|1___0",
+      "Dresser|4|1___1",
+      "Dresser|4|1___2",
+      "Dresser|4|1___3",
+      "Dresser|4|1___4",
+      "Dresser|4|1___5",
+      "Dresser|4|1___6",
+      "Dresser|4|1___7",
+      "Dresser|7|3___0",
+      "Dresser|7|3___1",
+      "Dresser|7|3___2"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "destination_is_closed": true
+    },
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "episode_id": "ithor_fp405_t3_sequential_manipulation_template_soapbottle_destination_cabinet_put_into_001",
+  "sample_id": "ithor_fp405_t3_sequential_manipulation_template_soapbottle_destination_cabinet_put_into_001",
+  "scene_ref": "ithor_fp405",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan405",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -1.660320520401001,
+      "y": 0.9048510789871216,
+      "z": 0.36243700981140137
+    },
+    "rotation": {
+      "x": 0,
+      "y": 270,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -1.660320520401001,
+        "y": 0.9048510789871216,
+        "z": 0.36243700981140137
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the soap dispenser, open the cabinet, place it inside, then report success once it is inside.",
+    "task_type": "T3_put_into",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "put_into",
+    "functional_template": "put_into",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "SoapBottle",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Cabinet",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "cabinet_open",
+      "target_object_type": "Cabinet",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "soapbottle_pick",
+      "target_object_type": "SoapBottle",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "cabinet_place",
+      "target_object_type": "Cabinet",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "SoapBottle",
+    "receptacle_type": "Cabinet",
+    "target_object_id": "SoapBottle|-03.24|+00.99|-00.15",
+    "allowed_receptacle_object_ids": [
+      "Cabinet|-02.76|+00.42|-00.27",
+      "Cabinet|-02.76|+00.42|-00.76",
+      "Cabinet|-02.76|+00.45|+00.60",
+      "Cabinet|-02.90|+02.05|+01.01",
+      "Cabinet|-02.91|+02.10|+01.88"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "SoapBottle",
+      "receptacle_type": "Cabinet"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "SoapBottle",
+      "receptacle_type": "Cabinet",
+      "target_object_id": "SoapBottle|-03.24|+00.99|-00.15",
+      "allowed_receptacle_object_ids": [
+        "Cabinet|-02.76|+00.42|-00.27",
+        "Cabinet|-02.76|+00.42|-00.76",
+        "Cabinet|-02.76|+00.45|+00.60",
+        "Cabinet|-02.90|+02.05|+01.01",
+        "Cabinet|-02.91|+02.10|+01.88"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "put_into",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "SoapBottle",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "SoapBottle",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "SoapBottle|-03.24|+00.99|-00.15",
+    "destination_object_id": "Cabinet|-02.76|+00.42|-00.27",
+    "destination_allowed_object_ids": [
+      "Cabinet|-02.76|+00.42|-00.27",
+      "Cabinet|-02.76|+00.42|-00.76",
+      "Cabinet|-02.76|+00.45|+00.60",
+      "Cabinet|-02.90|+02.05|+01.01",
+      "Cabinet|-02.91|+02.10|+01.88"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "SoapBottle",
+    "target_object_id": "SoapBottle|-03.24|+00.99|-00.15",
+    "destination_object_type": "Cabinet",
+    "destination_object_id": "Cabinet|-02.76|+00.42|-00.27",
+    "destination_allowed_object_ids": [
+      "Cabinet|-02.76|+00.42|-00.27",
+      "Cabinet|-02.76|+00.42|-00.76",
+      "Cabinet|-02.76|+00.45|+00.60",
+      "Cabinet|-02.90|+02.05|+01.01",
+      "Cabinet|-02.91|+02.10|+01.88"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "destination_is_closed": true
+    },
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

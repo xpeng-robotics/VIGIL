@@ -1,0 +1,181 @@
+{
+  "episode_id": "ithor_fp15_t3_sequential_manipulation_template_spoon_container_drawer_destination_sinkbasin_open_pick_place_001",
+  "sample_id": "ithor_fp15_t3_sequential_manipulation_template_spoon_container_drawer_destination_sinkbasin_open_pick_place_001",
+  "scene_ref": "ithor_fp15",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan15",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -2.0320448875427246,
+      "y": 0.914953351020813,
+      "z": 2.1275436878204346
+    },
+    "rotation": {
+      "x": 0,
+      "y": 299.3290710449219,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -2.0320448875427246,
+        "y": 0.914953351020813,
+        "z": 2.1275436878204346
+      },
+      "rotation": {
+        "x": 0,
+        "y": 299.3290710449219,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Open the drawer, take out the spoon, place it on the sinkbasin, then report success once it is placed correctly.",
+    "task_type": "T3_open_pick_place",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "open_pick_place",
+    "functional_template": "open_pick_place",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Spoon",
+    "target_group": "sequential_manipulation",
+    "container_type": "Drawer",
+    "destination_type": "SinkBasin"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "drawer_open",
+      "target_object_type": "Drawer",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "spoon_pick",
+      "target_object_type": "Spoon",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "sinkbasin_place",
+      "target_object_type": "SinkBasin",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Spoon",
+    "receptacle_type": "SinkBasin",
+    "target_object_id": "Spoon|-03.12|+00.74|+02.83",
+    "allowed_receptacle_object_ids": [
+      "Sink|-01.80|+00.92|+03.66|SinkBasin"
+    ]
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "open_pick_place",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": false,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Spoon",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Spoon",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Spoon|-03.12|+00.74|+02.83",
+    "container_object_id": "Drawer|-03.12|+00.78|+01.36",
+    "destination_object_id": "Sink|-01.80|+00.92|+03.66|SinkBasin",
+    "destination_allowed_object_ids": [
+      "Sink|-01.80|+00.92|+03.66|SinkBasin"
+    ]
+  },
+  "bindings": {
+    "target_object_type": "Spoon",
+    "target_object_id": "Spoon|-03.12|+00.74|+02.83",
+    "container_object_type": "Drawer",
+    "container_object_id": "Drawer|-03.12|+00.78|+01.36",
+    "destination_object_type": "SinkBasin",
+    "destination_object_id": "Sink|-01.80|+00.92|+03.66|SinkBasin",
+    "destination_allowed_object_ids": [
+      "Sink|-01.80|+00.92|+03.66|SinkBasin"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "container_is_closed": true,
+      "object_inside_container": true,
+      "destination_available": true
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vigil-benchmark"
+version = "0.1.0"
+description = "RGB-only embodied benchmark with model evaluation and trajectory replay"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "licenses/THIRD_PARTY_NOTICES.md", "licenses/*.txt"]
+dependencies = []
+authors = [
+  { name = "VIGIL Authors" }
+]
+
+[project.urls]
+Homepage = "https://xpeng-robotics.github.io/vigil/"
+Repository = "https://github.com/xpeng-robotics/VIGIL"
+Issues = "https://github.com/xpeng-robotics/VIGIL/issues"
+
+[project.optional-dependencies]
+thor = [
+  "ai2thor>=5.0",
+]
+dev = [
+  "pytest>=8.0",
+]
+media = [
+  "Pillow>=10.0",
+  "numpy>=1.24",
+  "imageio-ffmpeg>=0.5",
+]
+
+[project.scripts]
+vigil = "vigil.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vigil", "vigil.*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+"vigil.web" = ["static/*.html", "static/*.css", "static/*.js", "demo/*.json", "demo/traces/*.json", "demo/scores/*.json", "demo/frames/*/*.png"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
+markers = [
+  "thor: requires AI2-THOR runtime assets",
+  "model_api: requires an external model endpoint",
+]

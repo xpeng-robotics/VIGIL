@@ -1,0 +1,190 @@
+{
+  "episode_id": "ithor_fp310_t3_sequential_manipulation_template_baseballbat_destination_bed_rearrange_001",
+  "sample_id": "ithor_fp310_t3_sequential_manipulation_template_baseballbat_destination_bed_rearrange_001",
+  "scene_ref": "ithor_fp310",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan310",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 0.5,
+      "y": 0.9009992480278015,
+      "z": -1.25
+    },
+    "rotation": {
+      "x": 0,
+      "y": 315,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 0.5,
+        "y": 0.9009992480278015,
+        "z": -1.25
+      },
+      "rotation": {
+        "x": 0,
+        "y": 315,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the baseball bat, place it on the bed, then report success once it is placed correctly.",
+    "task_type": "T3_rearrange",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "rearrange",
+    "functional_template": "rearrange",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "BaseballBat",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Bed",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "baseballbat_pick",
+      "target_object_type": "BaseballBat",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "bed_place",
+      "target_object_type": "Bed",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "BaseballBat",
+    "receptacle_type": "Bed",
+    "target_object_id": "BaseballBat|-01.50|+00.04|+00.34",
+    "allowed_receptacle_object_ids": [
+      "Bed|+01.18|00.00|+00.24"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "BaseballBat",
+      "receptacle_type": "Bed"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "BaseballBat",
+      "receptacle_type": "Bed",
+      "target_object_id": "BaseballBat|-01.50|+00.04|+00.34",
+      "allowed_receptacle_object_ids": [
+        "Bed|+01.18|00.00|+00.24"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "rearrange",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "BaseballBat",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "BaseballBat",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "BaseballBat|-01.50|+00.04|+00.34",
+    "destination_object_id": "Bed|+01.18|00.00|+00.24",
+    "destination_allowed_object_ids": [
+      "Bed|+01.18|00.00|+00.24"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "BaseballBat",
+    "target_object_id": "BaseballBat|-01.50|+00.04|+00.34",
+    "destination_object_type": "Bed",
+    "destination_object_id": "Bed|+01.18|00.00|+00.24",
+    "destination_allowed_object_ids": [
+      "Bed|+01.18|00.00|+00.24"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

@@ -1,0 +1,349 @@
+{
+  "episode_id": "ithor_fp1_s1_pixel_grounding_easy_fridge_ground_001",
+  "max_steps": 5,
+  "metadata": {
+    "benchmark_mode": "pure_model",
+    "contract_version": "vigil_native_v1",
+    "difficulty": "easy",
+    "functional_template": "visible_ground",
+    "pack_id": "recorded_public_example",
+    "platform": "mixed",
+    "primary_capabilities": [
+      "PG",
+      "TM"
+    ],
+    "profile": {
+      "description": "Single-frame RGB with episode-local dialogue/action history. No model-visible feedback, agent-side memory, or pose is used.",
+      "feedback_policy": "none",
+      "memory_policy": "none",
+      "metadata": {
+        "analysis_parent": "pure_rgb_baseline",
+        "benchmark_mode": "pure_rgb_dialogue_history_baseline",
+        "conversation_history_turns": 20,
+        "diagnostic_reason": null,
+        "feedback_axis": "none",
+        "hypothesis": "Single-frame RGB with 20-turn dialogue history only: no model-visible feedback, no agent-side memory, and no pose.",
+        "mainline": true,
+        "mainline_comparable": true,
+        "memory_axis": "none",
+        "memory_bucket": "none",
+        "observation_axis": "rgb",
+        "pose_axis": "none",
+        "prompt_policy_name": "native_embodied_public_evidence_neutral_report",
+        "prompt_policy_version": "2026-05-02-neutral-report",
+        "structured_memory": false,
+        "visual_context_axis": "current_only"
+      },
+      "name": "pure_rgb_dialogue_history_baseline",
+      "observation_modalities": [
+        "rgb"
+      ],
+      "pose_policy": "none",
+      "visual_context_policy": "current_only"
+    },
+    "scene_id": "FloorPlan1",
+    "scene_platform": "ithor",
+    "settlement": {
+      "agent_report_status": "success",
+      "budget_exhausted": false,
+      "false_report": false,
+      "final_progress": 1.0,
+      "invalid_actions": 0,
+      "protocol_failure": false,
+      "protocol_failures": 0,
+      "recoverable_failures": 0,
+      "report_matches_world": true,
+      "report_submitted": true,
+      "semantic_final_progress": 1.0,
+      "semantic_world_success": true,
+      "step_budget": 5,
+      "steps_used": 2,
+      "strict_final_progress": 1.0,
+      "strict_world_success": true,
+      "terminal_reason": "report_success",
+      "terminal_status": "success",
+      "violations": [],
+      "world_success": true
+    },
+    "target_object_type": "Fridge",
+    "task_family": "S1_pixel_grounding"
+  },
+  "profile": "pure_rgb_dialogue_history_baseline",
+  "steps": [
+    {
+      "action": {
+        "arguments": {
+          "intent": "ground",
+          "x": 513,
+          "y": 571
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": true,
+      "env_status": "success",
+      "error_type": null,
+      "judge_success": true,
+      "metadata": {
+        "agent_turn": {
+          "reasoning": "**My Thought Process for Fridge Selection**\n\nAlright, the request is clear: I need to identify and confirm the selection of the refrigerator in the provided image. My immediate scan of the visual data confirms a large, white refrigerator prominently positioned in the center of the frame. This makes the task straightforward. To execute the selection, I'll employ the `interact_pixel` action. The specific intent for this interaction will be `ground`, which is appropriate for selecting an object in this manner. Considering the fridge's central placement, a coordinate point around (500, 500) within the image appears to be a suitable and accurate target for the interaction, ensuring I accurately pinpoint the refrigerator. Once this action is performed, I will report successful completion.",
+          "sanitation": {
+            "observation_echo_retry_count": 0,
+            "protocol_retry_count": 0,
+            "sanitized": false,
+            "total_retry_count": 0
+          },
+          "system_prompt_chars": 3615,
+          "system_prompt_sha256": "33e24e57a02c99d3eaaab2c31139bbfe32160ba7ac8e3ee291b4feb296e87ded",
+          "thought": "**My Thought Process for Fridge Selection**\n\nAlright, the request is clear: I need to identify and confirm the selection of the refrigerator in the provided image. My immediate scan of the visual data confirms a large, white refrigerator prominently positioned in the center of the frame. This makes the task straightforward. To execute the selection, I'll employ the `interact_pixel` action. The specific intent for this interaction will be `ground`, which is appropriate for selecting an object in this manner. Considering the fridge's central placement, a coordinate point around (500, 500) within the image appears to be a suitable and accurate target for the interaction, ensuring I accurately pinpoint the refrigerator. Once this action is performed, I will report successful completion.",
+          "usage": {
+            "candidatesTokenCount": 71,
+            "candidatesTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 71
+              }
+            ],
+            "promptTokenCount": 2036,
+            "promptTokensDetails": [
+              {
+                "modality": "IMAGE",
+                "tokenCount": 1064
+              },
+              {
+                "modality": "TEXT",
+                "tokenCount": 972
+              }
+            ],
+            "thoughtsTokenCount": 93,
+            "totalTokenCount": 2200,
+            "trafficType": "ON_DEMAND"
+          }
+        },
+        "env_result": {
+          "action_adapter": {
+            "candidate": {
+              "distance": 1.3624948263168335,
+              "issues": [],
+              "object_id": "Fridge|-02.10|+00.00|+01.07",
+              "object_type": "Fridge",
+              "supported_intents": [
+                "close_access",
+                "ground",
+                "open_access",
+                "place"
+              ],
+              "visible": true
+            }
+          },
+          "diagnostics": {
+            "condition": {
+              "target_object_id": "Fridge|-02.10|+00.00|+01.07",
+              "target_object_type": "Fridge",
+              "type": "target_grounded"
+            },
+            "message": "target grounded by interact_pixel",
+            "progress": 1.0,
+            "resolved": true,
+            "success": true
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "intent": "ground",
+            "object_id": "Fridge|-02.10|+00.00|+01.07",
+            "object_type": "Fridge",
+            "x": 328,
+            "y": 274
+          },
+          "requested_arguments": {
+            "intent": "ground",
+            "x": 513,
+            "y": 571
+          },
+          "resolved_target": {
+            "object_id": "Fridge|-02.10|+00.00|+01.07",
+            "object_type": "Fridge"
+          },
+          "simulator_success": true,
+          "skill_name": "interact_pixel",
+          "target_resolved": true
+        },
+        "judge_result": {
+          "failure_label": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "target grounded by interact_pixel",
+            "primary_eval": {
+              "message": "target grounded by interact_pixel",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "target grounded by interact_pixel",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "target grounded by interact_pixel",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "raw_response": "{\n  \"skill_name\": \"interact_pixel\",\n  \"arguments\": {\n    \"x\": 513,\n    \"y\": 571,\n    \"intent\": \"ground\"\n  },\n  \"thought\": \"I will select the fridge by clicking on its central surface.\"\n}"
+      },
+      "progress": 1.0,
+      "step_index": 0,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "status": "success",
+          "summary": "I have successfully selected the fridge."
+        },
+        "skill_name": "report"
+      },
+      "action_valid": true,
+      "env_status": "stopped",
+      "error_type": null,
+      "judge_success": true,
+      "metadata": {
+        "agent_report_status": "success",
+        "agent_turn": {
+          "reasoning": null,
+          "sanitation": {
+            "observation_echo_retry_count": 0,
+            "protocol_retry_count": 0,
+            "sanitized": false,
+            "total_retry_count": 0
+          },
+          "system_prompt_chars": 3615,
+          "system_prompt_sha256": "33e24e57a02c99d3eaaab2c31139bbfe32160ba7ac8e3ee291b4feb296e87ded",
+          "usage": {
+            "candidatesTokenCount": 43,
+            "candidatesTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 43
+              }
+            ],
+            "promptTokenCount": 2187,
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 1123
+              },
+              {
+                "modality": "IMAGE",
+                "tokenCount": 1064
+              }
+            ],
+            "totalTokenCount": 2230,
+            "trafficType": "ON_DEMAND"
+          }
+        },
+        "env_result": {
+          "action_adapter": null,
+          "diagnostics": {
+            "condition": {
+              "target_object_id": "Fridge|-02.10|+00.00|+01.07",
+              "target_object_type": "Fridge",
+              "type": "target_grounded"
+            },
+            "message": "target grounded by interact_pixel",
+            "progress": 1.0,
+            "resolved": true,
+            "success": true
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "status": "success",
+            "summary": "I have successfully selected the fridge."
+          },
+          "requested_arguments": {
+            "status": "success",
+            "summary": "I have successfully selected the fridge."
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "skill_name": "report",
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "target grounded by interact_pixel",
+            "primary_eval": {
+              "message": "target grounded by interact_pixel",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "target grounded by interact_pixel",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "target grounded by interact_pixel",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": true,
+          "report_status": "success",
+          "report_submitted": true,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "success",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": "report_success",
+          "violations": [],
+          "world_success": true
+        },
+        "raw_response": "{\n  \"skill_name\": \"report\",\n  \"arguments\": {\n    \"status\": \"success\",\n    \"summary\": \"I have successfully selected the fridge.\"\n  }\n}",
+        "report_matches_world": true
+      },
+      "progress": 1.0,
+      "step_index": 1,
+      "terminal": true
+    }
+  ],
+  "terminal_status": "success"
+}

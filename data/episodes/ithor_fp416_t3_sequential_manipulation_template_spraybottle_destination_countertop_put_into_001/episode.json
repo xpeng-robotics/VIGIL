@@ -1,0 +1,157 @@
+{
+  "episode_id": "ithor_fp416_t3_sequential_manipulation_template_spraybottle_destination_countertop_put_into_001",
+  "sample_id": "ithor_fp416_t3_sequential_manipulation_template_spraybottle_destination_countertop_put_into_001",
+  "scene_ref": "ithor_fp416",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan416",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -0.75,
+      "y": 0.9019347429275513,
+      "z": 1
+    },
+    "rotation": {
+      "x": 0,
+      "y": 246.44006720156585,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -0.75,
+        "y": 0.9019347429275513,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 246.44006720156585,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the spray bottle, place it into the countertop, then report success once it is inside.",
+    "task_type": "T3_put_into",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "put_into",
+    "functional_template": "put_into",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "SprayBottle",
+    "target_group": "sequential_manipulation",
+    "destination_type": "CounterTop"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "spraybottle_pick",
+      "target_object_type": "SprayBottle",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "countertop_place",
+      "target_object_type": "CounterTop",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "SprayBottle",
+    "receptacle_type": "CounterTop",
+    "target_object_id": "SprayBottle|-01.86|+01.04|+00.52"
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "put_into",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target SprayBottle|-01.86|+01.04|+00.52",
+      "reachable positions=99"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "SprayBottle",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "SprayBottle",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "SprayBottle|-01.86|+01.04|+00.52",
+    "destination_object_id": "CounterTop|-01.61|+00.70|+02.83"
+  },
+  "bindings": {
+    "target_object_type": "SprayBottle",
+    "target_object_id": "SprayBottle|-01.86|+01.04|+00.52",
+    "destination_object_type": "CounterTop",
+    "destination_object_id": "CounterTop|-01.61|+00.70|+02.83"
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

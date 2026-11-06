@@ -1,0 +1,933 @@
+{
+  "episode_id": "ithor_fp11_t3_sequential_manipulation_template_apple_destination_sinkbasin_put_into_001",
+  "max_steps": 30,
+  "metadata": {
+    "contract_version": "vigil_native_v1",
+    "difficulty": "template",
+    "profile": {
+      "feedback_policy": "proprio_minimal",
+      "memory_policy": "none",
+      "metadata": {
+        "analysis_parent": "pure_rgb_dialogue_history_baseline",
+        "conversation_history_turns": 20,
+        "diagnostic_reason": null,
+        "feedback_axis": "proprio_minimal",
+        "hypothesis": "Single-frame RGB with 20-turn dialogue history and minimal proprioceptive feedback only, isolating feedback from Action Replay memory.",
+        "mainline": true,
+        "mainline_comparable": true,
+        "memory_axis": "none",
+        "memory_bucket": "none",
+        "observation_axis": "rgb",
+        "pose_axis": "none",
+        "visual_context_axis": "current_only"
+      },
+      "name": "pure_rgb_dialogue_history_proprio_minimal",
+      "observation_modalities": [
+        "rgb"
+      ],
+      "pose_policy": "none",
+      "visual_context_policy": "current_only"
+    },
+    "settlement": {
+      "agent_report_status": "success",
+      "budget_exhausted": false,
+      "false_report": false,
+      "final_progress": 1.0,
+      "invalid_actions": 0,
+      "protocol_failure": false,
+      "protocol_failures": 0,
+      "recoverable_failures": 0,
+      "report_matches_world": true,
+      "report_submitted": true,
+      "semantic_final_progress": 1.0,
+      "semantic_world_success": true,
+      "step_budget": 30,
+      "steps_used": 6,
+      "strict_final_progress": 1.0,
+      "strict_world_success": true,
+      "terminal_reason": "report_success",
+      "terminal_status": "success",
+      "violations": [],
+      "world_success": true
+    },
+    "task_family": "T3_sequential_manipulation"
+  },
+  "profile": "pure_rgb_dialogue_history_proprio_minimal",
+  "steps": [
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 1,
+          "mode": "forward"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": false,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object not at receptacle SinkBasin group (1 instances)",
+            "primary_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 1,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object not at receptacle SinkBasin group (1 instances)",
+            "primary_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 1,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "{\"skill_name\": \"navigate\", \"arguments\": {\"mode\": \"forward\", \"magnitude\": 1}, \"thought\": \"Moving forward to get closer to the apple on the counter.\"}"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 1,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 1,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 0.0,
+      "step_index": 0,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "direction": "down",
+          "magnitude": 30
+        },
+        "skill_name": "look"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": false,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object not at receptacle SinkBasin group (1 instances)",
+            "primary_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "direction": "down",
+            "magnitude": 30
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object not at receptacle SinkBasin group (1 instances)",
+            "primary_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "direction": "down",
+              "magnitude": 30
+            },
+            "skill_name": "look"
+          },
+          "raw_text": "{\"skill_name\": \"look\", \"arguments\": {\"direction\": \"down\", \"magnitude\": 30}, \"thought\": \"Looking down to see the apple on the counter more clearly.\"}"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "direction": "down",
+              "magnitude": 30
+            },
+            "skill_name": "look"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "direction": "down",
+              "magnitude": 30
+            },
+            "skill_name": "look"
+          }
+        }
+      },
+      "progress": 0.0,
+      "step_index": 1,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "intent": "pick",
+          "x": 112,
+          "y": 630
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": false,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object not at receptacle SinkBasin group (1 instances)",
+            "primary_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "intent": "pick",
+            "x": 72,
+            "y": 302
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "pick"
+            ],
+            "area": 1334,
+            "available_intents": [
+              "ground",
+              "pick"
+            ],
+            "bbox": [
+              48,
+              289,
+              94,
+              318
+            ],
+            "distance": 1.0821099281311035,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [],
+            "object_id": "Apple|-00.05|+00.95|+00.30",
+            "object_type": "Apple",
+            "openable": false,
+            "pickupable": true,
+            "pixel_hit": true,
+            "receptacle": false,
+            "supported_intents": [
+              "ground",
+              "pick"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": true,
+          "target_resolved": true
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object not at receptacle SinkBasin group (1 instances)",
+            "primary_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "intent": "pick",
+              "x": 112,
+              "y": 630
+            },
+            "skill_name": "interact_pixel"
+          },
+          "raw_text": "{\"skill_name\": \"interact_pixel\", \"arguments\": {\"intent\": \"pick\", \"x\": 112, \"y\": 630}, \"thought\": \"Picking up the apple from the counter.\"}"
+        },
+        "runtime_action": {
+          "adapter": {
+            "adapter": "normalized_1000_to_pixel",
+            "coord_mode": "normalized_1000",
+            "image_size": {
+              "height": 480,
+              "width": 640
+            },
+            "input": {
+              "x": 112,
+              "y": 630
+            },
+            "output": {
+              "x": 72,
+              "y": 302
+            }
+          },
+          "executed_invocation": {
+            "arguments": {
+              "intent": "pick",
+              "x": 72,
+              "y": 302
+            },
+            "skill_name": "interact_pixel"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "intent": "pick",
+              "x": 112,
+              "y": 630
+            },
+            "skill_name": "interact_pixel"
+          }
+        }
+      },
+      "progress": 0.0,
+      "step_index": 2,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "magnitude": 90,
+          "mode": "turn_right"
+        },
+        "skill_name": "navigate"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": false,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object not at receptacle SinkBasin group (1 instances)",
+            "primary_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 90,
+            "mode": "turn_right"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object not at receptacle SinkBasin group (1 instances)",
+            "primary_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object not at receptacle SinkBasin group (1 instances)",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "magnitude": 90,
+              "mode": "turn_right"
+            },
+            "skill_name": "navigate"
+          },
+          "raw_text": "{\"skill_name\": \"navigate\", \"arguments\": {\"mode\": \"turn_right\", \"magnitude\": 90}, \"thought\": \"Turning right to face the sink.\"}"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 90,
+              "mode": "turn_right"
+            },
+            "skill_name": "navigate"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "magnitude": 90,
+              "mode": "turn_right"
+            },
+            "skill_name": "navigate"
+          }
+        }
+      },
+      "progress": 0.0,
+      "step_index": 3,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "intent": "place",
+          "x": 130,
+          "y": 550
+        },
+        "skill_name": "interact_pixel"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object at receptacle SinkBasin group (1 instances)",
+            "primary_eval": {
+              "message": "required object at receptacle SinkBasin group (1 instances)",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object at receptacle SinkBasin group (1 instances)",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object at receptacle SinkBasin group (1 instances)",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "intent": "place",
+            "x": 83,
+            "y": 263
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "place"
+            ],
+            "area": 3496,
+            "available_intents": [
+              "ground",
+              "place"
+            ],
+            "bbox": [
+              35,
+              248,
+              127,
+              286
+            ],
+            "distance": 1.6054704189300537,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [],
+            "object_id": "Sink|+00.71|+00.82|-01.77|SinkBasin",
+            "object_type": "SinkBasin",
+            "openable": false,
+            "pickupable": false,
+            "pixel_hit": true,
+            "receptacle": true,
+            "supported_intents": [
+              "ground",
+              "place"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": true,
+          "target_resolved": true
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object at receptacle SinkBasin group (1 instances)",
+            "primary_eval": {
+              "message": "required object at receptacle SinkBasin group (1 instances)",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object at receptacle SinkBasin group (1 instances)",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object at receptacle SinkBasin group (1 instances)",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "intent": "place",
+              "x": 130,
+              "y": 550
+            },
+            "skill_name": "interact_pixel"
+          },
+          "raw_text": "{\"skill_name\": \"interact_pixel\", \"arguments\": {\"intent\": \"place\", \"x\": 130, \"y\": 550}, \"thought\": \"Placing the apple into the sinkbasin.\"}"
+        },
+        "runtime_action": {
+          "adapter": {
+            "adapter": "normalized_1000_to_pixel",
+            "coord_mode": "normalized_1000",
+            "image_size": {
+              "height": 480,
+              "width": 640
+            },
+            "input": {
+              "x": 130,
+              "y": 550
+            },
+            "output": {
+              "x": 83,
+              "y": 263
+            }
+          },
+          "executed_invocation": {
+            "arguments": {
+              "intent": "place",
+              "x": 83,
+              "y": 263
+            },
+            "skill_name": "interact_pixel"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "intent": "place",
+              "x": 130,
+              "y": 550
+            },
+            "skill_name": "interact_pixel"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 4,
+      "terminal": false
+    },
+    {
+      "action": {
+        "arguments": {
+          "status": "success",
+          "summary": "The apple has been successfully placed into the sinkbasin."
+        },
+        "skill_name": "report"
+      },
+      "action_valid": true,
+      "env_status": "ok",
+      "error_type": null,
+      "judge_success": true,
+      "metadata": {
+        "env_result": {
+          "diagnostics": {
+            "message": "required object at receptacle SinkBasin group (1 instances)",
+            "primary_eval": {
+              "message": "required object at receptacle SinkBasin group (1 instances)",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object at receptacle SinkBasin group (1 instances)",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object at receptacle SinkBasin group (1 instances)",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "status": "success",
+            "summary": "The apple has been successfully placed into the sinkbasin."
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object at receptacle SinkBasin group (1 instances)",
+            "primary_eval": {
+              "message": "required object at receptacle SinkBasin group (1 instances)",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object at receptacle SinkBasin group (1 instances)",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object at receptacle SinkBasin group (1 instances)",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": true,
+          "report_status": "success",
+          "report_submitted": true,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "success",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": "report_success",
+          "violations": [],
+          "world_success": true
+        },
+        "model_output": {
+          "parsed_invocation": {
+            "arguments": {
+              "status": "success",
+              "summary": "The apple has been successfully placed into the sinkbasin."
+            },
+            "skill_name": "report"
+          },
+          "raw_text": "{\"skill_name\": \"report\", \"arguments\": {\"status\": \"success\", \"summary\": \"The apple has been successfully placed into the sinkbasin.\"}, \"thought\": \"The apple is now in the sinkbasin, so the task is complete.\"}"
+        },
+        "runtime_action": {
+          "adapter": null,
+          "executed_invocation": {
+            "arguments": {
+              "status": "success",
+              "summary": "The apple has been successfully placed into the sinkbasin."
+            },
+            "skill_name": "report"
+          },
+          "validated_invocation": {
+            "arguments": {
+              "status": "success",
+              "summary": "The apple has been successfully placed into the sinkbasin."
+            },
+            "skill_name": "report"
+          }
+        }
+      },
+      "progress": 1.0,
+      "step_index": 5,
+      "terminal": true
+    }
+  ],
+  "terminal_status": "success"
+}

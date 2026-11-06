@@ -1,0 +1,115 @@
+{
+  "episode_id": "ithor_fp1_s2_distance_approach_easy_book_approach_001",
+  "sample_id": "ithor_fp1_s2_distance_approach_easy_book_approach_001",
+  "scene_ref": "ithor_fp1",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan1",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 1.75,
+      "y": 0.900999128818512,
+      "z": -1.0
+    },
+    "rotation": {
+      "x": 0.0,
+      "y": 315.3923966165845,
+      "z": 0.0
+    },
+    "horizon": 0.0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 1.75,
+        "y": 0.900999128818512,
+        "z": -1.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 315.3923966165845,
+        "z": 0.0
+      },
+      "horizon": 0.0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Move close to the book until you reach interaction range, then report success once you are close enough.",
+    "task_type": "approach_target",
+    "task_family": "S2_distance_approach",
+    "intent": "approach",
+    "functional_template": "approach_then_report",
+    "difficulty": "easy",
+    "primary_capabilities": [
+      "DR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Book"
+  },
+  "budget": {
+    "max_steps": 12,
+    "max_invalid_actions": 4,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "agent_near_target",
+    "target_object_type": "Book",
+    "distance_threshold": 1.5,
+    "target_object_id": "Book|+00.15|+01.10|+00.62"
+  },
+  "trace_hints": {
+    "task_family": "S2_distance_approach",
+    "difficulty": "easy",
+    "functional_template": "approach_then_report",
+    "primary_capabilities": [
+      "DR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        2.0,
+        4.0
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target Book|+00.15|+01.10|+00.62",
+      "reachable positions=162"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Book",
+    "benchmark_axes": {
+      "task_family": "S2_distance_approach",
+      "target_object_type": "Book",
+      "difficulty": "easy"
+    },
+    "target_object_id": "Book|+00.15|+01.10|+00.62"
+  },
+  "bindings": {
+    "target_object_type": "Book",
+    "target_object_id": "Book|+00.15|+01.10|+00.62"
+  }
+}

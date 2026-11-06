@@ -1,0 +1,114 @@
+{
+  "episode_id": "ithor_fp201_s1_pixel_grounding_easy_sofa_ground_001",
+  "sample_id": "ithor_fp201_s1_pixel_grounding_easy_sofa_ground_001",
+  "scene_ref": "ithor_fp201",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan201",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -2.0,
+      "y": 0.9026566743850708,
+      "z": 2.5
+    },
+    "rotation": {
+      "x": 0.0,
+      "y": 336.19242630358787,
+      "z": 0.0
+    },
+    "horizon": 0.0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -2.0,
+        "y": 0.9026566743850708,
+        "z": 2.5
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 336.19242630358787,
+        "z": 0.0
+      },
+      "horizon": 0.0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Select the sofa in the image, then report success once you have selected the correct target.",
+    "task_type": "visible_ground",
+    "task_family": "S1_pixel_grounding",
+    "intent": "ground",
+    "functional_template": "visible_ground",
+    "difficulty": "easy",
+    "primary_capabilities": [
+      "PG",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Sofa"
+  },
+  "budget": {
+    "max_steps": 5,
+    "max_invalid_actions": 3,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "target_grounded",
+    "target_object_type": "Sofa",
+    "target_object_id": "Sofa|-02.40|00.00|+03.42"
+  },
+  "trace_hints": {
+    "task_family": "S1_pixel_grounding",
+    "difficulty": "easy",
+    "functional_template": "visible_ground",
+    "primary_capabilities": [
+      "PG",
+      "TM"
+    ],
+    "expected_skills": [
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        1.5
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target Sofa|-02.40|00.00|+03.42",
+      "reachable positions=234"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Sofa",
+    "benchmark_axes": {
+      "task_family": "S1_pixel_grounding",
+      "target_object_type": "Sofa",
+      "difficulty": "easy"
+    },
+    "target_object_id": "Sofa|-02.40|00.00|+03.42"
+  },
+  "bindings": {
+    "target_object_type": "Sofa",
+    "target_object_id": "Sofa|-02.40|00.00|+03.42"
+  }
+}

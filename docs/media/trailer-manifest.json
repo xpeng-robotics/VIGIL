@@ -1,0 +1,146 @@
+{
+  "duration_seconds": 68,
+  "canvas": [
+    1920,
+    1080
+  ],
+  "fps": 24,
+  "sources": {
+    "docs/media/demos/robot-3.mp4": "4a5ccea12972d45b36284c78e4c2006261ac0f31b0d0efa9313cb18af99e7978",
+    "docs/media/demos/robot-4.mp4": "f839d34b3075e78daae47a9e34271ed2e02fd004c0680e03ea1a2eb01cd4a9ff"
+  },
+  "chapters": [
+    [
+      0,
+      8,
+      "Introduction"
+    ],
+    [
+      8,
+      30,
+      "01 \u00b7 Person approach"
+    ],
+    [
+      30,
+      60,
+      "02 \u00b7 Person approach"
+    ],
+    [
+      60,
+      68,
+      "Closing"
+    ]
+  ],
+  "cases": [
+    {
+      "video": "robot-3.mp4",
+      "model": "Doubao-Seed-1.6",
+      "decisions": [
+        {
+          "mode": "forward",
+          "magnitude": 3,
+          "label": "Move forward",
+          "explanation": "The person is visible ahead.\nThe model chooses to approach."
+        },
+        {
+          "mode": "forward",
+          "magnitude": 2,
+          "label": "Continue forward",
+          "explanation": "An updated image is available.\nThe model selects another forward action."
+        },
+        {
+          "mode": "forward",
+          "magnitude": 1,
+          "label": "Move closer",
+          "explanation": "The model requests a smaller\nforward movement."
+        },
+        {
+          "mode": "forward",
+          "magnitude": 1,
+          "label": "Continue approaching",
+          "explanation": "Another forward action follows\nfrom the updated observation."
+        },
+        {
+          "status": "success",
+          "label": "Report \u201csuccess\u201d",
+          "explanation": "The model now claims it has\nstopped near the person."
+        }
+      ],
+      "frames": 8,
+      "source_seconds": 16,
+      "begin": 8,
+      "play_begin": 12,
+      "end": 30
+    },
+    {
+      "video": "robot-4.mp4",
+      "model": "Gemini-3.1-Pro-preview",
+      "decisions": [
+        {
+          "mode": "forward",
+          "magnitude": 5,
+          "label": "Move forward",
+          "explanation": "The person is visible ahead.\nThe model chooses to approach."
+        },
+        {
+          "mode": "forward",
+          "magnitude": 2,
+          "label": "Continue forward",
+          "explanation": "The person is behind the chairs.\nThe model continues its approach."
+        },
+        {
+          "mode": "turn_left",
+          "magnitude": 15,
+          "label": "Turn left",
+          "explanation": "The reply describes a route\naround the row of chairs."
+        },
+        {
+          "mode": "turn_left",
+          "magnitude": 15,
+          "label": "Turn left again",
+          "explanation": "A second left turn follows\nfrom the next observation."
+        },
+        {
+          "mode": "forward",
+          "magnitude": 2,
+          "label": "Move forward",
+          "explanation": "The model requests forward movement\non the new heading."
+        },
+        {
+          "mode": "forward",
+          "magnitude": 1,
+          "label": "Move closer",
+          "explanation": "The model selects another\nforward movement."
+        },
+        {
+          "mode": "turn_right",
+          "magnitude": 15,
+          "label": "Turn right",
+          "explanation": "The reply says to face the person\nbefore moving closer."
+        },
+        {
+          "mode": "forward",
+          "magnitude": 1,
+          "label": "Move forward again",
+          "explanation": "One more forward action\nprecedes the terminal report."
+        },
+        {
+          "status": "success",
+          "label": "Report \u201csuccess\u201d",
+          "explanation": "The model claims it is near enough\nto interact with the person."
+        }
+      ],
+      "frames": 12,
+      "source_seconds": 24,
+      "begin": 30,
+      "play_begin": 34,
+      "end": 60
+    }
+  ],
+  "privacy": "All source head regions were obscured before compositing; no unredacted hardware frame is used.",
+  "timing": "All eight/twelve source replay frames are held two seconds each, matching source presentation timing, plus a two-second terminal hold. This is not elapsed physical execution time.",
+  "scope": "Two qualitative controlled-intervention replays; not a controlled model comparison, hardware success rate or sim-to-real estimate. Source false-success annotations have score_validity=trace_only.",
+  "progress": "Chapter playback position and decision indices only; not world-goal progress.",
+  "audio": "Original synthesized music, not scene audio.",
+  "video_sha256": "2084f07798115cda0a9f50b8e35800fe70542819c50fb3c7067817da7d529f5a"
+}

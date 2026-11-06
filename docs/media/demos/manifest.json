@@ -1,0 +1,55 @@
+{
+  "scope": "Four qualitative hardware demonstrations; no benchmark scores or sim-to-real validation.",
+  "encoder": "FFmpeg/libx264 CRF 18, yuv420p, faststart",
+  "records": [
+    {
+      "id": "robot-1",
+      "title": "Object approach: external view",
+      "source_sha256": "e7d66f0d258ac7ce095daa140bbca0b52e33236f0c41d669d20a944ab42af978",
+      "video": "robot-1.mp4",
+      "video_sha256": "e6f07d81112e320c5467016ad22fe2c9e0f056670a1f774e23f80468a310524c",
+      "poster": "robot-1.jpg",
+      "poster_sha256": "d5835ad0b35a985553399d3c5fcf0a6a33729fc147c6a5889aad683172772e94",
+      "edits": "Source audio omitted; visual sequence and playback timing retained. Faces obscured in every encoded frame using reviewed, padded head regions; posters regenerated from redacted footage.",
+      "evidence": "External recording",
+      "pre_redaction_video_sha256": "76c1f0668bcc13203485a103fc3adada23915559c80f51f2cc60598e2fd5d17e"
+    },
+    {
+      "id": "robot-2",
+      "title": "Room entry and fan search: external view",
+      "source_sha256": "9c7f60b5c406536b8b5233c20a3623561509a2d634270aee1e03bee729e49389",
+      "video": "robot-2.mp4",
+      "video_sha256": "8207147e82ed4d67746949f181bffbf2b015459e38386c1c8813deda6edd5477",
+      "poster": "robot-2.jpg",
+      "poster_sha256": "1749630424136cf99c9d91f31a531aefb3dfb8fc8c66c54046353998afc8a0c2",
+      "edits": "Source audio omitted; visual sequence and playback timing retained. Laptop display area blurred at x=320,y=370,w=220,h=170. Faces obscured in every encoded frame using reviewed, padded head regions; posters regenerated from redacted footage. Display redaction expanded after 28.5 seconds as the laptop rises into view.",
+      "evidence": "External recording",
+      "pre_redaction_video_sha256": "b77ef51d727d9fad8c72212419f992700f0c89dd13e68fad638e7c86b0e517e8"
+    },
+    {
+      "id": "robot-3",
+      "title": "Person approach: Doubao-Seed-1.6",
+      "source_sha256": "a75e728f6df1ba38f7caee6dfb965086a33be8aa9f0f7874b824618a8943ec8c",
+      "video": "robot-3.mp4",
+      "video_sha256": "4a5ccea12972d45b36284c78e4c2006261ac0f31b0d0efa9313cb18af99e7978",
+      "poster": "robot-3.jpg",
+      "poster_sha256": "e5bad905b95d0b2c5d141f13474bc1cc8458f6f6b3d1d00ab1ce769bc96040e0",
+      "edits": "Source audio omitted; visual sequence and playback timing retained. Lower controller diagnostics panel cropped at y=972 to omit local paths; RGB, task and model reply retained. Faces obscured in every encoded frame using reviewed, padded head regions; posters regenerated from redacted footage.",
+      "evidence": "Step-sampled trace replay; source labels mode=controlled_intervention; not elapsed rollout time",
+      "pre_redaction_video_sha256": "5a4798b9b171185371da0d41eeaf06e97bcd0ad9658aac2098acbc1a3d6fffae"
+    },
+    {
+      "id": "robot-4",
+      "title": "Person approach: Gemini-3.1-Pro-preview",
+      "source_sha256": "2ad35fa6a8f2fbd7d1871266f124f537bb6cbe1b39df8790957c3df5f6e2d355",
+      "video": "robot-4.mp4",
+      "video_sha256": "f839d34b3075e78daae47a9e34271ed2e02fd004c0680e03ea1a2eb01cd4a9ff",
+      "poster": "robot-4.jpg",
+      "poster_sha256": "aa56a3aba9c0327a9264e188ddf8d7fa6a27e3d34683ff99b831ac36411c8e65",
+      "edits": "Source audio omitted; visual sequence and playback timing retained. Lower controller diagnostics panel cropped at y=972 to omit local paths; RGB, task and model reply retained. Faces obscured in every encoded frame using reviewed, padded head regions; posters regenerated from redacted footage.",
+      "evidence": "Step-sampled trace replay; source labels mode=controlled_intervention; not elapsed rollout time",
+      "pre_redaction_video_sha256": "445dd1031a1767ba7b0bbe99c986843b04f76221cf416f42d1e35661b5466bbf"
+    }
+  ],
+  "privacy": "Face redaction added for public presentation. Scene, action sequence and source playback timing retained. Face-detector output was not treated as proof of absence; masks were reviewed from source frames."
+}

@@ -1,0 +1,190 @@
+{
+  "episode_id": "ithor_fp404_t3_sequential_manipulation_template_candle_destination_bathtub_rearrange_001",
+  "sample_id": "ithor_fp404_t3_sequential_manipulation_template_candle_destination_bathtub_rearrange_001",
+  "scene_ref": "ithor_fp404",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan404",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -2.2414815425872803,
+      "y": 0.9031611680984497,
+      "z": 1.9307302236557007
+    },
+    "rotation": {
+      "x": 0,
+      "y": 105,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -2.2414815425872803,
+        "y": 0.9031611680984497,
+        "z": 1.9307302236557007
+      },
+      "rotation": {
+        "x": 0,
+        "y": 105,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the candle, place it on the bathtub, then report success once it is placed correctly.",
+    "task_type": "T3_rearrange",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "rearrange",
+    "functional_template": "rearrange",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Candle",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Bathtub",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "candle_pick",
+      "target_object_type": "Candle",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "bathtub_place",
+      "target_object_type": "Bathtub",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Candle",
+    "receptacle_type": "Bathtub",
+    "target_object_id": "Candle|-00.61|+01.10|+02.15",
+    "allowed_receptacle_object_ids": [
+      "Bathtub|+00.22|+00.34|+00.64"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "Candle",
+      "receptacle_type": "Bathtub"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "Candle",
+      "receptacle_type": "Bathtub",
+      "target_object_id": "Candle|-00.61|+01.10|+02.15",
+      "allowed_receptacle_object_ids": [
+        "Bathtub|+00.22|+00.34|+00.64"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "rearrange",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Candle",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Candle",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Candle|-00.61|+01.10|+02.15",
+    "destination_object_id": "Bathtub|+00.22|+00.34|+00.64",
+    "destination_allowed_object_ids": [
+      "Bathtub|+00.22|+00.34|+00.64"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "Candle",
+    "target_object_id": "Candle|-00.61|+01.10|+02.15",
+    "destination_object_type": "Bathtub",
+    "destination_object_id": "Bathtub|+00.22|+00.34|+00.64",
+    "destination_allowed_object_ids": [
+      "Bathtub|+00.22|+00.34|+00.64"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

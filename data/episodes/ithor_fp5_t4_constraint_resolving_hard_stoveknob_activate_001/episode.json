@@ -1,0 +1,168 @@
+{
+  "episode_id": "ithor_fp5_t4_constraint_resolving_hard_stoveknob_activate_001",
+  "sample_id": "ithor_fp5_t4_constraint_resolving_hard_stoveknob_activate_001",
+  "scene_ref": "ithor_fp5",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan5",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -0.4814082682132721,
+      "y": 0.9009991884231567,
+      "z": 1.387489676475525
+    },
+    "rotation": {
+      "x": 0,
+      "y": 221.5989532470703,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -0.4814082682132721,
+        "y": 0.9009991884231567,
+        "z": 1.387489676475525
+      },
+      "rotation": {
+        "x": 0,
+        "y": 221.5989532470703,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Reach the stove knob by taking a clear route around the obstruction, then turn it on and report success once it is on.",
+    "task_type": "T4c_approach_toggle",
+    "task_family": "T4_constraint_resolving",
+    "intent": "activate",
+    "functional_template": "detour_toggle",
+    "difficulty": "hard",
+    "primary_capabilities": [
+      "CR",
+      "PG",
+      "DR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "StoveKnob",
+    "target_group": "constraint_resolving",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 40,
+    "max_invalid_actions": 12,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "stoveknob_activate",
+      "target_object_type": "StoveKnob",
+      "intent": "toggle_on",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "ToggleObjectOn"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_state",
+    "target_object_type": "StoveKnob",
+    "field": "is_toggled",
+    "value": true,
+    "target_object_id": "StoveKnob|-00.87|+00.90|-01.12",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_state",
+      "target_object_type": "StoveKnob",
+      "field": "is_toggled",
+      "value": true
+    },
+    "strict_spec": {
+      "type": "object_state",
+      "target_object_type": "StoveKnob",
+      "field": "is_toggled",
+      "value": true,
+      "target_object_id": "StoveKnob|-00.87|+00.90|-01.12"
+    }
+  },
+  "trace_hints": {
+    "task_family": "T4_constraint_resolving",
+    "difficulty": "hard",
+    "functional_template": "detour_toggle",
+    "primary_capabilities": [
+      "CR",
+      "PG",
+      "DR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        2,
+        4.5
+      ],
+      "path_blocked": true
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "StoveKnob",
+    "benchmark_axes": {
+      "task_family": "T4_constraint_resolving",
+      "target_object_type": "StoveKnob",
+      "difficulty": "hard"
+    },
+    "target_group": "constraint_resolving",
+    "target_object_id": "StoveKnob|-00.87|+00.90|-01.12",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "StoveKnob",
+    "target_object_id": "StoveKnob|-00.87|+00.90|-01.12"
+  },
+  "pre_conditions": [
+    {
+      "path_blocked": true,
+      "detour_required": true
+    }
+  ]
+}

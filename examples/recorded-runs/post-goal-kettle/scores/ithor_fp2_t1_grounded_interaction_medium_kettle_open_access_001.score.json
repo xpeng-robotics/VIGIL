@@ -1,0 +1,3096 @@
+{
+  "action_validity": 0.72,
+  "behavior_success": false,
+  "clean_success": false,
+  "compliance": 0.72,
+  "difficulty": "medium",
+  "efficiency": 0.0,
+  "episode_id": "ithor_fp2_t1_grounded_interaction_medium_kettle_open_access_001",
+  "episode_score": 0.1,
+  "max_steps": 25,
+  "primary_score": 0.1,
+  "progress_score": 1.0,
+  "result_metadata": {
+    "contract_version": "vigil_native_v1",
+    "difficulty": "medium",
+    "profile": {
+      "feedback_policy": "proprio_minimal",
+      "memory_policy": "none",
+      "metadata": {
+        "analysis_parent": "pure_rgb_dialogue_history_baseline",
+        "conversation_history_turns": 20,
+        "diagnostic_reason": null,
+        "feedback_axis": "proprio_minimal",
+        "hypothesis": "Single-frame RGB with 20-turn dialogue history and minimal proprioceptive feedback only, isolating feedback from Action Replay memory.",
+        "mainline": true,
+        "mainline_comparable": true,
+        "memory_axis": "none",
+        "memory_bucket": "none",
+        "observation_axis": "rgb",
+        "pose_axis": "none",
+        "visual_context_axis": "current_only"
+      },
+      "name": "pure_rgb_dialogue_history_proprio_minimal",
+      "observation_modalities": [
+        "rgb"
+      ],
+      "pose_policy": "none",
+      "visual_context_policy": "current_only"
+    },
+    "task_family": "T1_grounded_interaction",
+    "trace": [
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "failure_label": null,
+        "failure_type": null,
+        "goal_progress": 0.0,
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "ok": true,
+        "oracle_terminal_status": "fail",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 1,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": "path_blocked",
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "failure_label": "path_blocked",
+        "failure_type": "path_blocked",
+        "goal_progress": 0.0,
+        "judge_result": {
+          "failure_label": "path_blocked",
+          "failure_type": "path_blocked",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "ok": true,
+        "oracle_terminal_status": "fail",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 2,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 2,
+            "mode": "backward"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "failure_label": null,
+        "failure_type": null,
+        "goal_progress": 0.0,
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "ok": true,
+        "oracle_terminal_status": "fail",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 2,
+              "mode": "backward"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 3,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 45,
+            "mode": "turn_left"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "failure_label": null,
+        "failure_type": null,
+        "goal_progress": 0.0,
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "ok": true,
+        "oracle_terminal_status": "fail",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 45,
+              "mode": "turn_left"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 4,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "failure_label": null,
+        "failure_type": null,
+        "goal_progress": 0.0,
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "ok": true,
+        "oracle_terminal_status": "fail",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 5,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": "path_blocked",
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "failure_label": "path_blocked",
+        "failure_type": "path_blocked",
+        "goal_progress": 0.0,
+        "judge_result": {
+          "failure_label": "path_blocked",
+          "failure_type": "path_blocked",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "ok": true,
+        "oracle_terminal_status": "fail",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 6,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 15,
+            "mode": "turn_right"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "failure_label": null,
+        "failure_type": null,
+        "goal_progress": 0.0,
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "ok": true,
+        "oracle_terminal_status": "fail",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 15,
+              "mode": "turn_right"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 7,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "error_message": "path_blocked",
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "failure_label": "path_blocked",
+        "failure_type": "path_blocked",
+        "goal_progress": 0.0,
+        "judge_result": {
+          "failure_label": "path_blocked",
+          "failure_type": "path_blocked",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+            "primary_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "primary_metric": "semantic",
+            "progress": 0.0,
+            "resolved": false,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "interactive object_state tasks require a successful target interaction before success can be credited",
+              "progress": 0.0,
+              "resolved": false,
+              "success": false
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state not reached",
+              "progress": 0.0,
+              "resolved": true,
+              "success": false
+            },
+            "success": false
+          },
+          "progress": 0.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 0.0,
+          "semantic_world_success": false,
+          "status": "ongoing",
+          "strict_progress": 0.0,
+          "strict_world_success": false,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": false
+        },
+        "ok": true,
+        "oracle_terminal_status": "fail",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 8,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 288,
+            "y": 359
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "open_access",
+              "pick"
+            ],
+            "area": 2279,
+            "available_intents": [
+              "ground",
+              "open_access",
+              "pick"
+            ],
+            "bbox": [
+              260,
+              341,
+              303,
+              394
+            ],
+            "distance": 1.1491230726242065,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [],
+            "object_id": "Kettle|+01.68|+00.90|+00.09",
+            "object_type": "Kettle",
+            "openable": true,
+            "pickupable": true,
+            "pixel_hit": true,
+            "receptacle": false,
+            "supported_intents": [
+              "ground",
+              "open_access",
+              "pick"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": true,
+          "target_resolved": true
+        },
+        "failure_label": null,
+        "failure_type": null,
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": true,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 450,
+              "y": 750
+            },
+            "skill_name": "interact_pixel"
+          }
+        },
+        "step": 9,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "path_blocked",
+          "executed_arguments": {
+            "magnitude": 2,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "failure_label": "path_blocked",
+        "failure_type": "path_blocked",
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": "path_blocked",
+          "failure_type": "path_blocked",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": true,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 2,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 10,
+        "terminal_status": null
+      },
+      {
+        "action_valid": false,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 288,
+            "y": 359
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "close_access",
+              "pick"
+            ],
+            "area": 2279,
+            "available_intents": [
+              "ground",
+              "close_access",
+              "pick"
+            ],
+            "bbox": [
+              260,
+              341,
+              303,
+              394
+            ],
+            "distance": 1.149122953414917,
+            "hit_source": "instance_segmentation",
+            "is_open": true,
+            "is_toggled": false,
+            "issues": [],
+            "object_id": "Kettle|+01.68|+00.90|+00.09",
+            "object_type": "Kettle",
+            "openable": true,
+            "pickupable": true,
+            "pixel_hit": true,
+            "receptacle": false,
+            "supported_intents": [
+              "ground",
+              "close_access",
+              "pick"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "failure_label": "intent_not_supported",
+        "failure_type": "intent_not_supported",
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": false,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 450,
+              "y": 750
+            },
+            "skill_name": "interact_pixel"
+          }
+        },
+        "step": 11,
+        "terminal_status": null
+      },
+      {
+        "action_valid": false,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 275,
+            "y": 359
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "close_access",
+              "pick"
+            ],
+            "area": 2279,
+            "available_intents": [
+              "ground",
+              "close_access",
+              "pick"
+            ],
+            "bbox": [
+              260,
+              341,
+              303,
+              394
+            ],
+            "distance": 1.149122953414917,
+            "hit_source": "instance_segmentation",
+            "is_open": true,
+            "is_toggled": false,
+            "issues": [],
+            "object_id": "Kettle|+01.68|+00.90|+00.09",
+            "object_type": "Kettle",
+            "openable": true,
+            "pickupable": true,
+            "pixel_hit": true,
+            "receptacle": false,
+            "supported_intents": [
+              "ground",
+              "close_access",
+              "pick"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "failure_label": "intent_not_supported",
+        "failure_type": "intent_not_supported",
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": false,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 430,
+              "y": 750
+            },
+            "skill_name": "interact_pixel"
+          }
+        },
+        "step": 12,
+        "terminal_status": null
+      },
+      {
+        "action_valid": false,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 288,
+            "y": 335
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "activate",
+              "place"
+            ],
+            "area": 2214,
+            "available_intents": [
+              "ground"
+            ],
+            "bbox": [
+              240,
+              305,
+              294,
+              346
+            ],
+            "distance": 1.6619611978530884,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [
+              "too_far>1.5",
+              "no_held_object"
+            ],
+            "object_id": "Toaster|+01.98|+00.90|-00.34",
+            "object_type": "Toaster",
+            "openable": false,
+            "pickupable": false,
+            "pixel_hit": true,
+            "receptacle": true,
+            "supported_intents": [
+              "ground",
+              "activate",
+              "place"
+            ],
+            "toggleable": true,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "failure_label": "intent_not_supported",
+        "failure_type": "intent_not_supported",
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": false,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 450,
+              "y": 700
+            },
+            "skill_name": "interact_pixel"
+          }
+        },
+        "step": 13,
+        "terminal_status": null
+      },
+      {
+        "action_valid": false,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 288,
+            "y": 345
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "place"
+            ],
+            "area": 111228,
+            "available_intents": [
+              "ground"
+            ],
+            "bbox": [
+              41,
+              293,
+              639,
+              479
+            ],
+            "distance": 2.9194748401641846,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [
+              "no_held_object"
+            ],
+            "object_id": "CounterTop|+00.00|+00.95|-01.51",
+            "object_type": "CounterTop",
+            "openable": false,
+            "pickupable": false,
+            "pixel_hit": true,
+            "receptacle": true,
+            "supported_intents": [
+              "ground",
+              "place"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "failure_label": "intent_not_supported",
+        "failure_type": "intent_not_supported",
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": false,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 450,
+              "y": 720
+            },
+            "skill_name": "interact_pixel"
+          }
+        },
+        "step": 14,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 30,
+            "mode": "turn_left"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "failure_label": null,
+        "failure_type": null,
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": true,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 30,
+              "mode": "turn_left"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 15,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "path_blocked",
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "failure_label": "path_blocked",
+        "failure_type": "path_blocked",
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": "path_blocked",
+          "failure_type": "path_blocked",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": true,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 16,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "too_far",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 415,
+            "y": 335
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "open_access",
+              "activate",
+              "place"
+            ],
+            "area": 4526,
+            "available_intents": [
+              "ground"
+            ],
+            "bbox": [
+              389,
+              276,
+              462,
+              338
+            ],
+            "distance": 2.0387911796569824,
+            "hit_source": "bbox",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [
+              "too_far>1.5",
+              "no_held_object"
+            ],
+            "object_id": "Microwave|+01.93|+00.90|-00.77",
+            "object_type": "Microwave",
+            "openable": true,
+            "pickupable": false,
+            "pixel_hit": true,
+            "receptacle": true,
+            "supported_intents": [
+              "ground",
+              "open_access",
+              "activate",
+              "place"
+            ],
+            "toggleable": true,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "failure_label": "too_far",
+        "failure_type": "too_far",
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": "too_far",
+          "failure_type": "too_far",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": true,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 650,
+              "y": 700
+            },
+            "skill_name": "interact_pixel"
+          }
+        },
+        "step": 17,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "path_blocked",
+          "executed_arguments": {
+            "magnitude": 2,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "failure_label": "path_blocked",
+        "failure_type": "path_blocked",
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": "path_blocked",
+          "failure_type": "path_blocked",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": true,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 2,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 18,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 45,
+            "mode": "turn_right"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "failure_label": null,
+        "failure_type": null,
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": true,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 45,
+              "mode": "turn_right"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 19,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": null,
+          "executed_arguments": {
+            "magnitude": 3,
+            "mode": "forward"
+          },
+          "resolved_target": null,
+          "simulator_success": true,
+          "target_resolved": false
+        },
+        "failure_label": null,
+        "failure_type": null,
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": null,
+          "failure_type": null,
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": true,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "magnitude": 3,
+              "mode": "forward"
+            },
+            "skill_name": "navigate"
+          }
+        },
+        "step": 20,
+        "terminal_status": null
+      },
+      {
+        "action_valid": false,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 371,
+            "y": 311
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "pick",
+              "place"
+            ],
+            "area": 1110,
+            "available_intents": [
+              "ground"
+            ],
+            "bbox": [
+              345,
+              303,
+              382,
+              333
+            ],
+            "distance": 1.8333914279937744,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [
+              "too_far>1.5",
+              "no_held_object"
+            ],
+            "object_id": "Pot|+00.89|+00.90|-01.41",
+            "object_type": "Pot",
+            "openable": false,
+            "pickupable": true,
+            "pixel_hit": true,
+            "receptacle": true,
+            "supported_intents": [
+              "ground",
+              "pick",
+              "place"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "failure_label": "intent_not_supported",
+        "failure_type": "intent_not_supported",
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": false,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 580,
+              "y": 650
+            },
+            "skill_name": "interact_pixel"
+          }
+        },
+        "step": 21,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "interaction_no_effect",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 371,
+            "y": 302
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "failure_label": "interaction_no_effect",
+        "failure_type": "interaction_no_effect",
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": "interaction_no_effect",
+          "failure_type": "interaction_no_effect",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": true,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 580,
+              "y": 630
+            },
+            "skill_name": "interact_pixel"
+          }
+        },
+        "step": 22,
+        "terminal_status": null
+      },
+      {
+        "action_valid": false,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 364,
+            "y": 307
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "pick",
+              "place"
+            ],
+            "area": 1110,
+            "available_intents": [
+              "ground"
+            ],
+            "bbox": [
+              345,
+              303,
+              382,
+              333
+            ],
+            "distance": 1.8333914279937744,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [
+              "too_far>1.5",
+              "no_held_object"
+            ],
+            "object_id": "Pot|+00.89|+00.90|-01.41",
+            "object_type": "Pot",
+            "openable": false,
+            "pickupable": true,
+            "pixel_hit": true,
+            "receptacle": true,
+            "supported_intents": [
+              "ground",
+              "pick",
+              "place"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "failure_label": "intent_not_supported",
+        "failure_type": "intent_not_supported",
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": false,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 570,
+              "y": 640
+            },
+            "skill_name": "interact_pixel"
+          }
+        },
+        "step": 23,
+        "terminal_status": null
+      },
+      {
+        "action_valid": true,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "interaction_no_effect",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 364,
+            "y": 302
+          },
+          "resolved_target": null,
+          "simulator_success": false,
+          "target_resolved": false
+        },
+        "failure_label": "interaction_no_effect",
+        "failure_type": "interaction_no_effect",
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": "interaction_no_effect",
+          "failure_type": "interaction_no_effect",
+          "invalid_action": false,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": true,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": true,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 570,
+              "y": 630
+            },
+            "skill_name": "interact_pixel"
+          }
+        },
+        "step": 24,
+        "terminal_status": null
+      },
+      {
+        "action_valid": false,
+        "agent_report_status": null,
+        "env_result": {
+          "diagnostics": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "error_message": "intent_not_supported",
+          "executed_arguments": {
+            "intent": "open_access",
+            "x": 364,
+            "y": 307
+          },
+          "resolved_target": {
+            "allowed_intents": [
+              "ground",
+              "pick",
+              "place"
+            ],
+            "area": 1110,
+            "available_intents": [
+              "ground"
+            ],
+            "bbox": [
+              345,
+              303,
+              382,
+              333
+            ],
+            "distance": 1.8333914279937744,
+            "hit_source": "instance_segmentation",
+            "is_open": false,
+            "is_toggled": false,
+            "issues": [
+              "too_far>1.5",
+              "no_held_object"
+            ],
+            "object_id": "Pot|+00.89|+00.90|-01.41",
+            "object_type": "Pot",
+            "openable": false,
+            "pickupable": true,
+            "pixel_hit": true,
+            "receptacle": true,
+            "supported_intents": [
+              "ground",
+              "pick",
+              "place"
+            ],
+            "toggleable": false,
+            "visible": true
+          },
+          "simulator_success": false,
+          "target_resolved": true
+        },
+        "failure_label": "intent_not_supported",
+        "failure_type": "intent_not_supported",
+        "goal_progress": 1.0,
+        "judge_result": {
+          "failure_label": "intent_not_supported",
+          "failure_type": "intent_not_supported",
+          "invalid_action": true,
+          "oracle_facts": {
+            "message": "required object state reached",
+            "primary_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "primary_metric": "semantic",
+            "progress": 1.0,
+            "resolved": true,
+            "secondary_metric": "strict",
+            "semantic_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "strict_available": true,
+            "strict_eval": {
+              "message": "required object state reached",
+              "progress": 1.0,
+              "resolved": true,
+              "success": true
+            },
+            "success": true
+          },
+          "progress": 1.0,
+          "protocol_failure": false,
+          "recoverable": false,
+          "report_matches_world": null,
+          "report_status": null,
+          "report_submitted": false,
+          "semantic_progress": 1.0,
+          "semantic_world_success": true,
+          "status": "ongoing",
+          "strict_progress": 1.0,
+          "strict_world_success": true,
+          "terminal_reason": null,
+          "violations": [],
+          "world_success": true
+        },
+        "ok": false,
+        "oracle_terminal_status": "success",
+        "report_matches_world": null,
+        "reported_status": null,
+        "runtime_action": {
+          "executed_invocation": {
+            "arguments": {
+              "intent": "open_access",
+              "x": 570,
+              "y": 640
+            },
+            "skill_name": "interact_pixel"
+          }
+        },
+        "step": 25,
+        "terminal_status": null
+      }
+    ]
+  },
+  "score_summary": {
+    "behavior_success": false,
+    "clean_success": false,
+    "compliance": 0.72,
+    "diagnostics": {
+      "agent_report_status": null,
+      "behavior_success": false,
+      "budget_exhausted": true,
+      "clean_success": false,
+      "closure_success": false,
+      "false_report": false,
+      "invalid_actions": 7,
+      "primary_world_success": true,
+      "protocol_failure": false,
+      "protocol_failures": 0,
+      "recoverable_failures": 9,
+      "report_matches_world": null,
+      "report_submitted": false,
+      "semantic_progress": 1.0,
+      "semantic_success": false,
+      "semantic_world_success": true,
+      "step_budget": 25,
+      "steps_used": 25,
+      "strict_progress": 1.0,
+      "strict_success": false,
+      "strict_world_success": true,
+      "terminal_reason": "fail_no_report",
+      "terminal_status": "failure",
+      "violations": [],
+      "world_success": true
+    },
+    "efficiency": 0.0,
+    "primary_score": 0.1,
+    "progress": 1.0,
+    "safety": 0.72,
+    "semantic_progress": 1.0,
+    "semantic_success": false,
+    "strict_progress": 1.0,
+    "strict_score": 0.0,
+    "strict_success": false,
+    "success": false,
+    "task_family": "T1_grounded_interaction",
+    "terminal_reason": "fail_no_report",
+    "terminal_status": "failure"
+  },
+  "semantic_success": false,
+  "settlement": {
+    "agent_report_status": null,
+    "budget_exhausted": true,
+    "false_report": false,
+    "final_progress": 1.0,
+    "invalid_actions": 7,
+    "protocol_failure": false,
+    "protocol_failures": 0,
+    "recoverable_failures": 9,
+    "report_matches_world": null,
+    "report_submitted": false,
+    "semantic_final_progress": 1.0,
+    "semantic_world_success": true,
+    "step_budget": 25,
+    "steps_used": 25,
+    "strict_final_progress": 1.0,
+    "strict_world_success": true,
+    "terminal_reason": "fail_no_report",
+    "terminal_status": "failure",
+    "violations": [],
+    "world_success": true
+  },
+  "status": "failure",
+  "steps_taken": 25,
+  "steps_used": 25,
+  "strict_success": false,
+  "success": false,
+  "task_family": "T1_grounded_interaction",
+  "terminal_reason": "fail_no_report",
+  "terminal_status": "failure"
+}

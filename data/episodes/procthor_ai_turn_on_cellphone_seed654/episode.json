@@ -1,0 +1,138 @@
+{
+  "episode_id": "procthor_ai_turn_on_cellphone_seed654",
+  "sample_id": "procthor_ai_turn_on_cellphone_seed654",
+  "scene_ref": "procthor_fridge_seed654",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "Procedural",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6.0,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 1.957298755645752,
+      "y": 0.9009993672370911,
+      "z": 4.244422435760498
+    },
+    "rotation": {
+      "x": -0.0,
+      "y": 176.6949920654297,
+      "z": 0.0
+    },
+    "horizon": 29.999998092651367,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "forceAction": true,
+      "position": {
+        "x": 1.957298755645752,
+        "y": 0.9009993672370911,
+        "z": 4.244422435760498
+      },
+      "rotation": {
+        "x": -0.0,
+        "y": 176.6949920654297,
+        "z": 0.0
+      },
+      "horizon": 29.999998092651367,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Turn on the cell phone, then report success once it is on.",
+    "task_type": "T1_approach_toggle",
+    "task_family": "T1_grounded_interaction",
+    "intent": "activate",
+    "functional_template": "approach_activate",
+    "difficulty": "easy",
+    "primary_capabilities": [
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "CellPhone",
+    "target_group": "toggle_fixture"
+  },
+  "budget": {
+    "max_steps": 25,
+    "max_invalid_actions": 8,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "cellphone_activate",
+      "target_object_type": "CellPhone",
+      "intent": "toggle_on",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "ToggleObjectOn"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_state",
+    "target_object_type": "CellPhone",
+    "field": "is_toggled",
+    "value": true,
+    "target_object_id": "small|3|7"
+  },
+  "trace_hints": {
+    "task_family": "T1_grounded_interaction",
+    "difficulty": "easy",
+    "functional_template": "approach_activate",
+    "primary_capabilities": [
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        2.0,
+        4.5
+      ]
+    },
+    "sampling_notes": [
+      "operator prefix ai→T1: ToggleObjectOn CellPhone small|3|7 (house.json); was mis-synced T2 fridge-open",
+      {
+        "forked_from": "procthor_fridge_seed654_T2_hard_fridge_001__mainline",
+        "forked_at": "2026-05-11T09:19:23.635085+00:00"
+      }
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "CellPhone",
+    "benchmark_axes": {
+      "task_family": "T1_grounded_interaction",
+      "target_object_type": "CellPhone",
+      "difficulty": "easy"
+    },
+    "target_group": "toggle_fixture",
+    "target_object_id": "small|3|7"
+  },
+  "bindings": {
+    "target_object_type": "CellPhone",
+    "target_object_id": "small|3|7"
+  }
+}

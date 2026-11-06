@@ -1,0 +1,140 @@
+{
+  "episode_id": "procthor_si_pick_book_seed304",
+  "sample_id": "procthor_si_pick_book_seed304",
+  "scene_ref": "procthor_sm_reveal_pick_box_creditcard_seed304",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "Procedural",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6.0,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 4.9976091384887695,
+      "y": 0.9009993672370911,
+      "z": 3.0143771171569824
+    },
+    "rotation": {
+      "x": -0.0,
+      "y": 153.5442352294922,
+      "z": -0.0
+    },
+    "horizon": 30.000003814697266,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "forceAction": true,
+      "position": {
+        "x": 4.9976091384887695,
+        "y": 0.9009993672370911,
+        "z": 3.0143771171569824
+      },
+      "rotation": {
+        "x": -0.0,
+        "y": 153.5442352294922,
+        "z": -0.0
+      },
+      "horizon": 30.000003814697266,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Find the book, then pick it up and report success once it is in hand.",
+    "task_type": "T2_search_pick",
+    "task_family": "T2_search_then_interact",
+    "intent": "pick",
+    "functional_template": "search_pick",
+    "difficulty": "easy",
+    "primary_capabilities": [
+      "VS",
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Book",
+    "target_group": "portable_pickup"
+  },
+  "budget": {
+    "max_steps": 35,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "book_pick",
+      "target_object_type": "Book",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_held",
+    "target_object_type": "Book",
+    "target_object_id": "small|3|19"
+  },
+  "trace_hints": {
+    "task_family": "T2_search_then_interact",
+    "difficulty": "easy",
+    "functional_template": "search_pick",
+    "primary_capabilities": [
+      "VS",
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "look",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": false,
+      "target_distance_m": [
+        2.0,
+        5.0
+      ]
+    },
+    "sampling_notes": [
+      "operator prefix si→T2: search_pick Book small|3|19 on side table (house.json)",
+      {
+        "forked_from": "procthor_sm_reveal_pick_box_creditcard_seed304_T3_easy_creditcard_001__mainline",
+        "forked_at": "2026-05-17T15:36:38.899415+00:00",
+        "retargeted_to": "book_pick_T2"
+      }
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "Book",
+    "benchmark_axes": {
+      "task_family": "T2_search_then_interact",
+      "target_object_type": "Book",
+      "difficulty": "easy"
+    },
+    "target_group": "portable_pickup",
+    "target_object_id": "small|3|19"
+  },
+  "bindings": {
+    "target_object_type": "Book",
+    "target_object_id": "small|3|19"
+  }
+}

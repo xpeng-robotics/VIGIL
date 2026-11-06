@@ -1,0 +1,140 @@
+{
+  "episode_id": "procthor_sr_check_off_laptop__seed314",
+  "sample_id": "procthor_sr_check_off_laptop__seed314",
+  "scene_ref": "procthor_sr_check_closed_dresser_seed314",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "Procedural",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6.0,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 6.002028465270996,
+      "y": 0.9009994268417358,
+      "z": 1.9080839157104492
+    },
+    "rotation": {
+      "x": -0.0,
+      "y": 114.1656723022461,
+      "z": 0.0
+    },
+    "horizon": 30.000001907348633,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "forceAction": true,
+      "position": {
+        "x": 6.002028465270996,
+        "y": 0.9009994268417358,
+        "z": 1.9080839157104492
+      },
+      "rotation": {
+        "x": -0.0,
+        "y": 114.1656723022461,
+        "z": 0.0
+      },
+      "horizon": 30.000001907348633,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Check whether the laptop is switched off or on, then report the observed state as off or on.",
+    "task_type": "verify_activated_state",
+    "task_family": "S4_state_recognition",
+    "intent": "verify_toggled",
+    "functional_template": "verify_activated_state",
+    "difficulty": "na",
+    "primary_capabilities": [
+      "SR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Laptop",
+    "target_group": "toggle_fixture"
+  },
+  "budget": {
+    "max_steps": 5,
+    "max_invalid_actions": 2,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "report_status",
+    "expected": "off",
+    "target_object_type": "Laptop",
+    "oracle_condition": {
+      "type": "object_state",
+      "target_object_type": "Laptop",
+      "field": "is_toggled",
+      "value": false,
+      "target_object_id": "small|4|33"
+    },
+    "target_object_id": "small|4|33"
+  },
+  "trace_hints": {
+    "task_family": "S4_state_recognition",
+    "difficulty": "na",
+    "functional_template": "verify_activated_state",
+    "primary_capabilities": [
+      "SR",
+      "TM"
+    ],
+    "expected_skills": [
+      "look",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        1.5
+      ],
+      "state_signal_visible": true
+    },
+    "sampling_notes": [
+      "migrated from procthor_sr_check_closed_dresser_seed314_S4_hard_dresser_check_closed_001 (migrate_s4)",
+      {
+        "forked_from": "procthor_sr_check_closed_dresser_seed314_S4_hard_dresser_check_closed_001__mainline",
+        "forked_at": "2026-05-13T05:52:29.493254+00:00"
+      },
+      "contract: S4 verify_activated_state — Laptop small|4|33 is_toggled=false => report off (house.json)"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "Laptop",
+    "benchmark_axes": {
+      "task_family": "S4_state_recognition",
+      "target_object_type": "Laptop",
+      "difficulty": "na",
+      "functional_template": "verify_activated_state"
+    },
+    "target_group": "toggle_fixture",
+    "target_initial_state": "off",
+    "target_object_id": "small|4|33",
+    "migration": {
+      "version": "mainline_2026_04_22",
+      "source_pack": "procthor_all_filter_848.json",
+      "source_episode_id": "procthor_sr_check_closed_dresser_seed314_S4_hard_dresser_check_closed_001",
+      "source_family": "S4_state_recognition",
+      "migrated_at": "2026-04-22T04:45:26Z",
+      "action": "migrate_s4"
+    }
+  },
+  "bindings": {
+    "target_object_type": "Laptop",
+    "target_object_id": "small|4|33"
+  }
+}

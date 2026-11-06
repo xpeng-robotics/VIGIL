@@ -1,0 +1,166 @@
+{
+  "episode_id": "ithor_fp13_t3_sequential_manipulation_template_spatula_destination_sinkbasin_rearrange_001",
+  "sample_id": "ithor_fp13_t3_sequential_manipulation_template_spatula_destination_sinkbasin_rearrange_001",
+  "scene_ref": "ithor_fp13",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan13",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -3.5,
+      "y": 0.8995019197463989,
+      "z": 4
+    },
+    "rotation": {
+      "x": 0,
+      "y": 340.5222492249602,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -3.5,
+        "y": 0.8995019197463989,
+        "z": 4
+      },
+      "rotation": {
+        "x": 0,
+        "y": 340.5222492249602,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the spatula, place it on the sinkbasin, then report success once it is placed correctly.",
+    "task_type": "T3_rearrange",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "rearrange",
+    "functional_template": "rearrange",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Spatula",
+    "target_group": "sequential_manipulation",
+    "destination_type": "SinkBasin"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "spatula_pick",
+      "target_object_type": "Spatula",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "sinkbasin_place",
+      "target_object_type": "SinkBasin",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Spatula",
+    "receptacle_type": "SinkBasin",
+    "target_object_id": "Spatula|-03.91|+00.92|+05.17",
+    "allowed_receptacle_object_ids": [
+      "Sink|-04.19|+00.92|+03.28|SinkBasin"
+    ]
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "rearrange",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target Spatula|-03.91|+00.92|+05.17",
+      "reachable positions=226"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Spatula",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Spatula",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Spatula|-03.91|+00.92|+05.17",
+    "destination_object_id": "Sink|-04.19|+00.92|+03.28|SinkBasin",
+    "destination_allowed_object_ids": [
+      "Sink|-04.19|+00.92|+03.28|SinkBasin"
+    ]
+  },
+  "bindings": {
+    "target_object_type": "Spatula",
+    "target_object_id": "Spatula|-03.91|+00.92|+05.17",
+    "destination_object_type": "SinkBasin",
+    "destination_object_id": "Sink|-04.19|+00.92|+03.28|SinkBasin",
+    "destination_allowed_object_ids": [
+      "Sink|-04.19|+00.92|+03.28|SinkBasin"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

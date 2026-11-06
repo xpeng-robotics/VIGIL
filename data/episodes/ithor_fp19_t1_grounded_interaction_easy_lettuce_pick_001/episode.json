@@ -1,0 +1,152 @@
+{
+  "episode_id": "ithor_fp19_t1_grounded_interaction_easy_lettuce_pick_001",
+  "sample_id": "ithor_fp19_t1_grounded_interaction_easy_lettuce_pick_001",
+  "scene_ref": "ithor_fp19",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan19",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -1.6426414251327515,
+      "y": 0.9023619890213013,
+      "z": -1.4335579872131348
+    },
+    "rotation": {
+      "x": 0,
+      "y": 182.73854064941406,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -1.6426414251327515,
+        "y": 0.9023619890213013,
+        "z": -1.4335579872131348
+      },
+      "rotation": {
+        "x": 0,
+        "y": 182.73854064941406,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the lettuce, then report success once it is in hand.",
+    "task_type": "T1_approach_pick",
+    "task_family": "T1_grounded_interaction",
+    "intent": "pick",
+    "functional_template": "approach_pick",
+    "difficulty": "easy",
+    "primary_capabilities": [
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Lettuce",
+    "target_group": "portable_pickup",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 25,
+    "max_invalid_actions": 8,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "lettuce_pick",
+      "target_object_type": "Lettuce",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_held",
+    "target_object_type": "Lettuce",
+    "target_object_id": "Lettuce|-01.32|+00.99|-03.75",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_held",
+      "target_object_type": "Lettuce",
+      "target_object_id": "Lettuce|-01.32|+00.99|-03.75"
+    },
+    "strict_spec": {
+      "type": "object_held",
+      "target_object_type": "Lettuce",
+      "target_object_id": "Lettuce|-01.32|+00.99|-03.75"
+    }
+  },
+  "trace_hints": {
+    "task_family": "T1_grounded_interaction",
+    "difficulty": "easy",
+    "functional_template": "approach_pick",
+    "primary_capabilities": [
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        2,
+        4.5
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Lettuce",
+    "benchmark_axes": {
+      "task_family": "T1_grounded_interaction",
+      "target_object_type": "Lettuce",
+      "difficulty": "easy"
+    },
+    "target_group": "portable_pickup",
+    "target_object_id": "Lettuce|-01.32|+00.99|-03.75",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "Lettuce",
+    "target_object_id": "Lettuce|-01.32|+00.99|-03.75"
+  }
+}

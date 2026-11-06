@@ -1,0 +1,114 @@
+{
+  "episode_id": "ithor_fp10_s1_pixel_grounding_hard_cup_ground_001",
+  "sample_id": "ithor_fp10_s1_pixel_grounding_hard_cup_ground_001",
+  "scene_ref": "ithor_fp10",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan10",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 0.25,
+      "y": 0.9009992480278015,
+      "z": -0.25
+    },
+    "rotation": {
+      "x": 0.0,
+      "y": 121.9982210373345,
+      "z": 0.0
+    },
+    "horizon": 0.0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 0.25,
+        "y": 0.9009992480278015,
+        "z": -0.25
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 121.9982210373345,
+        "z": 0.0
+      },
+      "horizon": 0.0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Select the cup in the image, then report success once you have selected the correct target.",
+    "task_type": "visible_ground",
+    "task_family": "S1_pixel_grounding",
+    "intent": "ground",
+    "functional_template": "visible_ground",
+    "difficulty": "hard",
+    "primary_capabilities": [
+      "PG",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Cup"
+  },
+  "budget": {
+    "max_steps": 5,
+    "max_invalid_actions": 3,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "target_grounded",
+    "target_object_type": "Cup",
+    "target_object_id": "Cup|+01.08|+00.90|-00.77"
+  },
+  "trace_hints": {
+    "task_family": "S1_pixel_grounding",
+    "difficulty": "hard",
+    "functional_template": "visible_ground",
+    "primary_capabilities": [
+      "PG",
+      "TM"
+    ],
+    "expected_skills": [
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        1.5
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target Cup|+01.08|+00.90|-00.77",
+      "reachable positions=269"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Cup",
+    "benchmark_axes": {
+      "task_family": "S1_pixel_grounding",
+      "target_object_type": "Cup",
+      "difficulty": "hard"
+    },
+    "target_object_id": "Cup|+01.08|+00.90|-00.77"
+  },
+  "bindings": {
+    "target_object_type": "Cup",
+    "target_object_id": "Cup|+01.08|+00.90|-00.77"
+  }
+}

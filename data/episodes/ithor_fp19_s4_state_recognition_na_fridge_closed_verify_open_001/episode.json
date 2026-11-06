@@ -1,0 +1,166 @@
+{
+  "episode_id": "ithor_fp19_s4_state_recognition_na_fridge_closed_verify_open_001",
+  "sample_id": "ithor_fp19_s4_state_recognition_na_fridge_closed_verify_open_001",
+  "scene_ref": "ithor_fp19",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan19",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -1.3506284952163696,
+      "y": 0.9023619890213013,
+      "z": -1.01143217086792
+    },
+    "rotation": {
+      "x": 0,
+      "y": 257.738525390625,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -1.3506284952163696,
+        "y": 0.9023619890213013,
+        "z": -1.01143217086792
+      },
+      "rotation": {
+        "x": 0,
+        "y": 257.738525390625,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    },
+    {
+      "action": "CloseObject",
+      "forceAction": true,
+      "objectId": "Fridge|-03.19|+00.00|-02.19"
+    }
+  ],
+  "task": {
+    "instruction": "Check whether the fridge is open or closed, then report the observed state as open or closed.",
+    "task_type": "verify_open_state",
+    "task_family": "S4_state_recognition",
+    "intent": "verify_open",
+    "functional_template": "verify_open_state",
+    "difficulty": "na",
+    "primary_capabilities": [
+      "SR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Fridge",
+    "target_group": "container_access",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 5,
+    "max_invalid_actions": 2,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "report_status",
+    "expected": "closed",
+    "target_object_type": "Fridge",
+    "oracle_condition": {
+      "type": "object_state",
+      "target_object_type": "Fridge",
+      "field": "is_open",
+      "value": false,
+      "target_object_id": "Fridge|-03.19|+00.00|-02.19"
+    },
+    "target_object_id": "Fridge|-03.19|+00.00|-02.19",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "report_status",
+      "expected": "closed",
+      "target_object_type": "Fridge",
+      "oracle_condition": {
+        "type": "object_state",
+        "target_object_type": "Fridge",
+        "field": "is_open",
+        "value": false,
+        "target_object_id": "Fridge|-03.19|+00.00|-02.19"
+      },
+      "target_object_id": "Fridge|-03.19|+00.00|-02.19"
+    },
+    "strict_spec": {
+      "type": "report_status",
+      "expected": "closed",
+      "target_object_type": "Fridge",
+      "oracle_condition": {
+        "type": "object_state",
+        "target_object_type": "Fridge",
+        "field": "is_open",
+        "value": false,
+        "target_object_id": "Fridge|-03.19|+00.00|-02.19"
+      },
+      "target_object_id": "Fridge|-03.19|+00.00|-02.19"
+    }
+  },
+  "trace_hints": {
+    "task_family": "S4_state_recognition",
+    "difficulty": "na",
+    "functional_template": "verify_open_state",
+    "primary_capabilities": [
+      "SR",
+      "TM"
+    ],
+    "expected_skills": [
+      "look",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        1.5
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Fridge",
+    "benchmark_axes": {
+      "task_family": "S4_state_recognition",
+      "target_object_type": "Fridge",
+      "difficulty": "na"
+    },
+    "target_group": "container_access",
+    "target_initial_state": "closed",
+    "target_object_id": "Fridge|-03.19|+00.00|-02.19",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "Fridge",
+    "target_object_id": "Fridge|-03.19|+00.00|-02.19"
+  }
+}

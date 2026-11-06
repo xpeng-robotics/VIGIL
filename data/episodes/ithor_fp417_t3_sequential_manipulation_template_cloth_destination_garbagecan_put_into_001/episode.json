@@ -1,0 +1,157 @@
+{
+  "episode_id": "ithor_fp417_t3_sequential_manipulation_template_cloth_destination_garbagecan_put_into_001",
+  "sample_id": "ithor_fp417_t3_sequential_manipulation_template_cloth_destination_garbagecan_put_into_001",
+  "scene_ref": "ithor_fp417",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan417",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -0.75,
+      "y": 0.9016677141189575,
+      "z": -2.75
+    },
+    "rotation": {
+      "x": 0,
+      "y": 164.0612153705084,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -0.75,
+        "y": 0.9016677141189575,
+        "z": -2.75
+      },
+      "rotation": {
+        "x": 0,
+        "y": 164.0612153705084,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the cloth, place it into the trash can, then report success once it is inside.",
+    "task_type": "T3_put_into",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "put_into",
+    "functional_template": "put_into",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Cloth",
+    "target_group": "sequential_manipulation",
+    "destination_type": "GarbageCan"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "cloth_pick",
+      "target_object_type": "Cloth",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "garbagecan_place",
+      "target_object_type": "GarbageCan",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Cloth",
+    "receptacle_type": "GarbageCan",
+    "target_object_id": "Cloth|-00.43|+01.04|-03.86"
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "put_into",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target Cloth|-00.43|+01.04|-03.86",
+      "reachable positions=83"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Cloth",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Cloth",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Cloth|-00.43|+01.04|-03.86",
+    "destination_object_id": "GarbageCan|-00.91|-00.03|-03.65"
+  },
+  "bindings": {
+    "target_object_type": "Cloth",
+    "target_object_id": "Cloth|-00.43|+01.04|-03.86",
+    "destination_object_type": "GarbageCan",
+    "destination_object_id": "GarbageCan|-00.91|-00.03|-03.65"
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

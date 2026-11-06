@@ -1,0 +1,181 @@
+{
+  "episode_id": "ithor_fp12_t3_sequential_manipulation_template_egg_destination_fridge_put_into_001",
+  "sample_id": "ithor_fp12_t3_sequential_manipulation_template_egg_destination_fridge_put_into_001",
+  "scene_ref": "ithor_fp12",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan12",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 0.5,
+      "y": 0.9799999594688416,
+      "z": 0.75
+    },
+    "rotation": {
+      "x": 0,
+      "y": 39.32515521807401,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 0.5,
+        "y": 0.9799999594688416,
+        "z": 0.75
+      },
+      "rotation": {
+        "x": 0,
+        "y": 39.32515521807401,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the egg, open the fridge, place it inside, then report success once it is inside.",
+    "task_type": "T3_put_into",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "put_into",
+    "functional_template": "put_into",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Egg",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Fridge"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "fridge_open",
+      "target_object_type": "Fridge",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "egg_pick",
+      "target_object_type": "Egg",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "fridge_place",
+      "target_object_type": "Fridge",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Egg",
+    "receptacle_type": "Fridge",
+    "target_object_id": "Egg|+01.32|+00.96|+01.75",
+    "allowed_receptacle_object_ids": [
+      "Fridge|-01.00|+00.00|+00.12"
+    ]
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "put_into",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target Egg|+01.32|+00.96|+01.75",
+      "reachable positions=109"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Egg",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Egg",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Egg|+01.32|+00.96|+01.75",
+    "destination_object_id": "Fridge|-01.00|+00.00|+00.12",
+    "destination_allowed_object_ids": [
+      "Fridge|-01.00|+00.00|+00.12"
+    ]
+  },
+  "bindings": {
+    "target_object_type": "Egg",
+    "target_object_id": "Egg|+01.32|+00.96|+01.75",
+    "destination_object_type": "Fridge",
+    "destination_object_id": "Fridge|-01.00|+00.00|+00.12",
+    "destination_allowed_object_ids": [
+      "Fridge|-01.00|+00.00|+00.12"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "destination_is_closed": true
+    },
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

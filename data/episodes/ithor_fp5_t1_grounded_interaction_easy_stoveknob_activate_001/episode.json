@@ -1,0 +1,157 @@
+{
+  "episode_id": "ithor_fp5_t1_grounded_interaction_easy_stoveknob_activate_001",
+  "sample_id": "ithor_fp5_t1_grounded_interaction_easy_stoveknob_activate_001",
+  "scene_ref": "ithor_fp5",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan5",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 0.9693685173988342,
+      "y": 0.9009991884231567,
+      "z": -1.3015897274017334
+    },
+    "rotation": {
+      "x": 0,
+      "y": 281.59893798828125,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 0.9693685173988342,
+        "y": 0.9009991884231567,
+        "z": -1.3015897274017334
+      },
+      "rotation": {
+        "x": 0,
+        "y": 281.59893798828125,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Turn on the stove knob, then report success once it is on.",
+    "task_type": "T1_approach_toggle",
+    "task_family": "T1_grounded_interaction",
+    "intent": "activate",
+    "functional_template": "approach_activate",
+    "difficulty": "easy",
+    "primary_capabilities": [
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "StoveKnob",
+    "target_group": "toggle_fixture",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 25,
+    "max_invalid_actions": 8,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "stoveknob_activate",
+      "target_object_type": "StoveKnob",
+      "intent": "toggle_on",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "ToggleObjectOn"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_state",
+    "target_object_type": "StoveKnob",
+    "field": "is_toggled",
+    "value": true,
+    "target_object_id": "StoveKnob|-00.87|+00.90|-01.12",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_state",
+      "target_object_type": "StoveKnob",
+      "field": "is_toggled",
+      "value": true
+    },
+    "strict_spec": {
+      "type": "object_state",
+      "target_object_type": "StoveKnob",
+      "field": "is_toggled",
+      "value": true,
+      "target_object_id": "StoveKnob|-00.87|+00.90|-01.12"
+    }
+  },
+  "trace_hints": {
+    "task_family": "T1_grounded_interaction",
+    "difficulty": "easy",
+    "functional_template": "approach_activate",
+    "primary_capabilities": [
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        2,
+        4.5
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "StoveKnob",
+    "benchmark_axes": {
+      "task_family": "T1_grounded_interaction",
+      "target_object_type": "StoveKnob",
+      "difficulty": "easy"
+    },
+    "target_group": "toggle_fixture",
+    "target_object_id": "StoveKnob|-00.87|+00.90|-01.12",
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "StoveKnob",
+    "target_object_id": "StoveKnob|-00.87|+00.90|-01.12"
+  }
+}

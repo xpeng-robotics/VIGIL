@@ -1,0 +1,115 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.000
+VIGIL tests what embodied agents can do, and whether they report correctly.
+
+00:00:05.000 --> 00:00:08.500
+PG: select the correct pixel on a visible, reachable object.
+
+00:00:08.500 --> 00:00:12.000
+This isolates visual grounding, followed by an explicit completion report.
+
+00:00:12.000 --> 00:00:15.500
+DA: the target is visible, but the agent must move closer.
+
+00:00:15.500 --> 00:00:19.000
+Reach interaction range, then report. No object manipulation is required.
+
+00:00:19.000 --> 00:00:22.500
+VS: the target is initially outside the current view.
+
+00:00:22.500 --> 00:00:26.000
+Search by changing viewpoint, find the target, and report.
+
+00:00:26.000 --> 00:00:29.500
+SV: inspect an object without changing it.
+
+00:00:29.500 --> 00:00:33.000
+Report its actual state: open or closed, on or off.
+
+00:00:33.000 --> 00:00:36.500
+AI: approach a visible target and perform the requested interaction.
+
+00:00:36.500 --> 00:00:40.000
+Here, the agent opens the fridge and then reports completion.
+
+00:00:40.000 --> 00:00:43.500
+SI: first find a target that starts out of view.
+
+00:00:43.500 --> 00:00:47.000
+Then approach, interact, and report. Search alone does not finish the task.
+
+00:00:47.000 --> 00:00:50.500
+SM: complete an ordered sequence, such as picking up and placing an object.
+
+00:00:50.500 --> 00:00:54.000
+This archived apple example uses the labeled action-feedback intervention.
+
+00:00:54.000 --> 00:00:57.500
+CR: a physical constraint blocks the direct approach.
+
+00:00:57.500 --> 00:01:01.000
+Resolve it or find a clear route, then complete the interaction and report.
+
+00:01:01.000 --> 00:01:05.900
+Demo 1: turn toward the fridge and approach. A blocked move is retained.
+
+00:01:05.900 --> 00:01:08.500
+The recorded pixel interaction opens the fridge.
+
+00:01:08.500 --> 00:01:13.000
+The agent reports success. The final world state supports that report.
+
+00:01:13.000 --> 00:01:16.200
+Demo 2: approach the apple and look down.
+
+00:01:16.200 --> 00:01:20.300
+Pick up the apple, then turn toward the sink.
+
+00:01:20.300 --> 00:01:23.300
+Place the held apple into the sink at the executed image pixel.
+
+00:01:23.300 --> 00:01:27.000
+The matching report completes the chain. This case uses action feedback.
+
+00:01:27.000 --> 00:01:30.600
+Demo 3: approach the kettle. All blocked attempts remain in the replay.
+
+00:01:30.600 --> 00:01:34.600
+Action nine opens the lid. Compare the original before-and-after observations.
+
+00:01:34.600 --> 00:01:41.000
+The goal stays met, but sixteen more actions follow without a report.
+
+00:01:41.000 --> 00:01:45.000
+Budget exhausted: world complete, benchmark unsuccessful. Action-feedback case.
+
+00:01:45.000 --> 00:01:49.500
+The frozen benchmark contains 1,000 episodes: 125 in each of eight families.
+
+00:01:49.500 --> 00:01:54.000
+It includes 265 iTHOR episodes and 735 ProcTHOR episodes.
+
+00:01:54.000 --> 00:01:59.000
+Coverage spans 69 iTHOR scene names and 465 included ProcTHOR houses.
+
+00:01:59.000 --> 00:02:04.000
+The house assets include kitchens, living rooms, bedrooms and bathrooms.
+
+00:02:04.000 --> 00:02:10.000
+W checks the final world goal. B also requires a matching terminal report.
+
+00:02:10.000 --> 00:02:16.000
+The gap W minus B measures achieved goals not converted into correct closure.
+
+00:02:16.000 --> 00:02:19.000
+FR: the report contradicts the final world state or expected state label.
+
+00:02:19.000 --> 00:02:22.000
+NR: the step budget expires without a report.
+
+00:02:22.000 --> 00:02:25.000
+IL: the invalid-action limit forces termination. Read these measures together.
+
+00:02:25.000 --> 00:02:32.000
+VIGIL separates world completion from correct terminal commitment.

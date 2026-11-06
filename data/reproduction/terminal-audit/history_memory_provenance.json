@@ -1,0 +1,880 @@
+{
+  "scope": "Offline audit of paired history/memory archives; 1000 frozen episode IDs per run. W/B recomputed from saved per-step judges, not fresh execution.",
+  "records": [
+    {
+      "model": "qwen3-vl-32b-thinking",
+      "condition": "baseline",
+      "archive_sha256": "fe8c775781ac5f0d258253e2a449d75785742285f2e798963dbc24682f74994a",
+      "manifest_sha256": "418c01f37e77015196372a69cf3fd450e7b1d568d001c371af50954885e97e18",
+      "source_commit": "a889badcb43b249d946cc26d20e8a4e7d1727561",
+      "counts": {
+        "n": 1000,
+        "W": 305,
+        "B": 256,
+        "reports": 669,
+        "exact_correct": 267,
+        "achievement_n": 875,
+        "achievement_W": 189,
+        "achievement_ever": 190,
+        "achievement_lost": 1,
+        "achievement_correct_success": 158,
+        "achievement_false_success": 263,
+        "achievement_no_report": 328,
+        "achievement_correct_failure": 6,
+        "sv_n": 125,
+        "sv_W": 116,
+        "sv_B": 98,
+        "sv_reports": 122,
+        "sv_exact_correct": 103,
+        "sv_ever_notW": 10,
+        "sv_returned_W": 1,
+        "sv_summary_unmapped": 50,
+        "sv_summary_agree": 64,
+        "sv_summary_disagree": 8,
+        "sv_summary_no_report": 3,
+        "achievement_other_invalid_label": 119,
+        "achievement_false_failure": 1
+      },
+      "profile": {
+        "name": "pure_rgb_dialogue_history_baseline",
+        "observation_modalities": [
+          "rgb"
+        ],
+        "visual_context_policy": "current_only",
+        "feedback_policy": "none",
+        "pose_policy": "none",
+        "memory_policy": "none",
+        "metadata": {
+          "observation_axis": "rgb",
+          "visual_context_axis": "current_only",
+          "feedback_axis": "none",
+          "pose_axis": "none",
+          "memory_axis": "none",
+          "mainline": true,
+          "mainline_comparable": true,
+          "memory_bucket": "none",
+          "diagnostic_reason": null,
+          "hypothesis": "Single-frame RGB with 20-turn dialogue history only: no model-visible feedback, no agent-side memory, and no pose.",
+          "analysis_parent": "pure_rgb_baseline",
+          "conversation_history_turns": 20
+        }
+      },
+      "max_steps": 0,
+      "history_window": 6,
+      "coord_mode": "",
+      "coord_prompt_mode": "",
+      "prompt_policy": {
+        "policy_name": "native_embodied_public_evidence",
+        "policy_version": "2026-04-18",
+        "policy_sha256": "b450374f4bcc13a58a782c10522e8bc97f46d92d4b49039ee8f00a4889df1d38",
+        "render_profile_name": "pure_rgb_dialogue_history_baseline"
+      },
+      "diagnostic_steps": 12444,
+      "frame_counts": {
+        "1": 12444
+      },
+      "memory_feedback_keys": [],
+      "object_memory_feedback": []
+    },
+    {
+      "model": "qwen3-vl-32b-thinking",
+      "condition": "short_window",
+      "archive_sha256": "8bf489e6192c338a2db6f79951902c4c3bbcd8ab57732a4d2e890fb4ebe808d2",
+      "manifest_sha256": "f376271b0a072e5ea71a40047b4cd4d380a29d930eff9c37a3ff52135a3fe161",
+      "source_commit": "a889badcb43b249d946cc26d20e8a4e7d1727561",
+      "counts": {
+        "n": 1000,
+        "W": 286,
+        "B": 251,
+        "reports": 767,
+        "exact_correct": 278,
+        "achievement_n": 875,
+        "achievement_W": 171,
+        "achievement_ever": 171,
+        "achievement_lost": 0,
+        "achievement_no_report": 233,
+        "achievement_false_success": 282,
+        "achievement_correct_success": 153,
+        "achievement_false_failure": 2,
+        "sv_n": 125,
+        "sv_W": 115,
+        "sv_B": 98,
+        "sv_reports": 125,
+        "sv_exact_correct": 103,
+        "sv_ever_notW": 10,
+        "sv_returned_W": 0,
+        "sv_summary_unmapped": 54,
+        "sv_summary_agree": 58,
+        "sv_summary_disagree": 13,
+        "achievement_other_invalid_label": 183,
+        "achievement_correct_failure": 22
+      },
+      "profile": {
+        "name": "pure_rgb_dialogue_history_short_window",
+        "observation_modalities": [
+          "rgb"
+        ],
+        "visual_context_policy": "short_window",
+        "feedback_policy": "none",
+        "pose_policy": "none",
+        "memory_policy": "none",
+        "metadata": {
+          "observation_axis": "rgb",
+          "visual_context_axis": "short_window",
+          "feedback_axis": "none",
+          "pose_axis": "none",
+          "memory_axis": "none",
+          "mainline": true,
+          "mainline_comparable": true,
+          "memory_bucket": "none",
+          "diagnostic_reason": null,
+          "hypothesis": "RGB short-window (multi-frame) with 20-turn dialogue history but no structured memory: isolates temporal visual context contribution under dialogue history baseline.",
+          "analysis_parent": "pure_rgb_dialogue_history_baseline",
+          "conversation_history_turns": 20
+        }
+      },
+      "max_steps": 0,
+      "history_window": 6,
+      "coord_mode": "",
+      "coord_prompt_mode": "",
+      "prompt_policy": {
+        "policy_name": "native_embodied_public_evidence",
+        "policy_version": "2026-04-18",
+        "policy_sha256": "848208574f03d8d0fdeac47bc10c07214be7b04fea03360d5429d63312ccc27a",
+        "render_profile_name": "pure_rgb_dialogue_history_short_window"
+      },
+      "diagnostic_steps": 11040,
+      "frame_counts": {
+        "1": 1000,
+        "2": 883,
+        "3": 713,
+        "4": 660,
+        "5": 596,
+        "6": 7188
+      },
+      "memory_feedback_keys": [],
+      "object_memory_feedback": []
+    },
+    {
+      "model": "qwen3-vl-32b-thinking",
+      "condition": "ar_sb_oe_memory",
+      "archive_sha256": "436db1fac4c86999818bcf0b621c94810684213b8ee99080c3ee816ab2e70d74",
+      "manifest_sha256": "f24883843cb2c2fb2f9c0da16d424d691899cbdbc74a7727833ccf4d55b26339",
+      "source_commit": "a889badcb43b249d946cc26d20e8a4e7d1727561",
+      "counts": {
+        "n": 1000,
+        "W": 357,
+        "B": 298,
+        "reports": 623,
+        "exact_correct": 315,
+        "achievement_n": 875,
+        "achievement_W": 243,
+        "achievement_ever": 246,
+        "achievement_lost": 3,
+        "achievement_no_report": 377,
+        "achievement_correct_success": 200,
+        "achievement_false_success": 219,
+        "sv_n": 125,
+        "sv_W": 114,
+        "sv_B": 98,
+        "sv_reports": 125,
+        "sv_exact_correct": 104,
+        "sv_ever_notW": 15,
+        "sv_returned_W": 4,
+        "sv_summary_unmapped": 63,
+        "sv_summary_agree": 57,
+        "sv_summary_disagree": 5,
+        "achievement_other_invalid_label": 67,
+        "achievement_correct_failure": 11,
+        "achievement_false_failure": 1
+      },
+      "profile": {
+        "name": "pure_rgb_dialogue_history_ar_sb_oe_memory",
+        "observation_modalities": [
+          "rgb"
+        ],
+        "visual_context_policy": "current_only",
+        "feedback_policy": "none",
+        "pose_policy": "none",
+        "memory_policy": "ar_sb_oe",
+        "metadata": {
+          "observation_axis": "rgb",
+          "visual_context_axis": "current_only",
+          "feedback_axis": "none",
+          "pose_axis": "none",
+          "memory_axis": "ar_sb_oe",
+          "mainline": true,
+          "mainline_comparable": true,
+          "memory_bucket": "factual",
+          "diagnostic_reason": null,
+          "hypothesis": "Single-frame RGB with 20-turn dialogue history and full factual memory support (Action Trace / Stall, Spatial Search, and Object-State Evidence).",
+          "analysis_parent": "pure_rgb_dialogue_history_sb_oe_memory",
+          "conversation_history_turns": 20,
+          "memory_feedback_policy": "robot_observable"
+        }
+      },
+      "max_steps": 0,
+      "history_window": 6,
+      "coord_mode": "",
+      "coord_prompt_mode": "",
+      "prompt_policy": {
+        "policy_name": "native_embodied_public_evidence",
+        "policy_version": "2026-04-18",
+        "policy_sha256": "b450374f4bcc13a58a782c10522e8bc97f46d92d4b49039ee8f00a4889df1d38",
+        "render_profile_name": "pure_rgb_dialogue_history_ar_sb_oe_memory"
+      },
+      "diagnostic_steps": 14340,
+      "frame_counts": {
+        "1": 14340
+      },
+      "memory_feedback_keys": [
+        "error_message",
+        "is_holding",
+        "last_action"
+      ],
+      "object_memory_feedback": [
+        "hand_full",
+        "intent_not_supported",
+        "interaction_no_effect",
+        "interaction_not_available",
+        "too_far"
+      ]
+    },
+    {
+      "model": "qwen3-vl-32b",
+      "condition": "baseline",
+      "archive_sha256": "f8014d59635e3379b90ca1297005bb1249d41b1bfbc73cf5e6d0b132a29cda05",
+      "manifest_sha256": "e181027521390634b91456c30d6a9bfbe2ff4b52f00a7e6ef5585cb80fabb701",
+      "source_commit": "a889badcb43b249d946cc26d20e8a4e7d1727561",
+      "counts": {
+        "n": 1000,
+        "W": 381,
+        "B": 202,
+        "reports": 502,
+        "exact_correct": 230,
+        "achievement_n": 875,
+        "achievement_W": 281,
+        "achievement_ever": 285,
+        "achievement_lost": 4,
+        "achievement_no_report": 456,
+        "achievement_correct_success": 132,
+        "achievement_false_success": 157,
+        "achievement_correct_failure": 20,
+        "achievement_other_invalid_label": 108,
+        "sv_n": 125,
+        "sv_W": 100,
+        "sv_B": 70,
+        "sv_reports": 83,
+        "sv_exact_correct": 78,
+        "sv_ever_notW": 25,
+        "sv_returned_W": 0,
+        "sv_summary_unmapped": 25,
+        "sv_summary_no_report": 42,
+        "sv_summary_agree": 57,
+        "sv_summary_disagree": 1,
+        "achievement_false_failure": 2
+      },
+      "profile": {
+        "name": "pure_rgb_dialogue_history_baseline",
+        "observation_modalities": [
+          "rgb"
+        ],
+        "visual_context_policy": "current_only",
+        "feedback_policy": "none",
+        "pose_policy": "none",
+        "memory_policy": "none",
+        "metadata": {
+          "observation_axis": "rgb",
+          "visual_context_axis": "current_only",
+          "feedback_axis": "none",
+          "pose_axis": "none",
+          "memory_axis": "none",
+          "mainline": true,
+          "mainline_comparable": true,
+          "memory_bucket": "none",
+          "diagnostic_reason": null,
+          "hypothesis": "Single-frame RGB with 20-turn dialogue history only: no model-visible feedback, no agent-side memory, and no pose.",
+          "analysis_parent": "pure_rgb_baseline",
+          "conversation_history_turns": 20
+        }
+      },
+      "max_steps": 0,
+      "history_window": 6,
+      "coord_mode": "",
+      "coord_prompt_mode": "",
+      "prompt_policy": {
+        "policy_name": "native_embodied_public_evidence",
+        "policy_version": "2026-04-18",
+        "policy_sha256": "b450374f4bcc13a58a782c10522e8bc97f46d92d4b49039ee8f00a4889df1d38",
+        "render_profile_name": "pure_rgb_dialogue_history_baseline"
+      },
+      "diagnostic_steps": 13620,
+      "frame_counts": {
+        "1": 13620
+      },
+      "memory_feedback_keys": [],
+      "object_memory_feedback": []
+    },
+    {
+      "model": "qwen3-vl-32b",
+      "condition": "short_window",
+      "archive_sha256": "c39b2c9aea93fcb967fc5e24499c06e46bebbc590fbe9d109d8bb213815b70a0",
+      "manifest_sha256": "67387e042125a071687f3681755cd68013f5d84c272fcd7cb1c16ebb5d749f52",
+      "source_commit": "a889badcb43b249d946cc26d20e8a4e7d1727561",
+      "counts": {
+        "n": 1000,
+        "W": 406,
+        "B": 238,
+        "reports": 436,
+        "exact_correct": 276,
+        "achievement_n": 875,
+        "achievement_W": 299,
+        "achievement_ever": 300,
+        "achievement_lost": 1,
+        "achievement_correct_success": 162,
+        "achievement_false_success": 78,
+        "achievement_no_report": 531,
+        "achievement_correct_failure": 31,
+        "sv_n": 125,
+        "sv_W": 107,
+        "sv_B": 76,
+        "sv_reports": 92,
+        "sv_exact_correct": 83,
+        "sv_ever_notW": 19,
+        "sv_returned_W": 1,
+        "sv_summary_unmapped": 29,
+        "sv_summary_agree": 60,
+        "sv_summary_no_report": 33,
+        "sv_summary_disagree": 3,
+        "achievement_other_invalid_label": 73
+      },
+      "profile": {
+        "name": "pure_rgb_dialogue_history_short_window",
+        "observation_modalities": [
+          "rgb"
+        ],
+        "visual_context_policy": "short_window",
+        "feedback_policy": "none",
+        "pose_policy": "none",
+        "memory_policy": "none",
+        "metadata": {
+          "observation_axis": "rgb",
+          "visual_context_axis": "short_window",
+          "feedback_axis": "none",
+          "pose_axis": "none",
+          "memory_axis": "none",
+          "mainline": true,
+          "mainline_comparable": true,
+          "memory_bucket": "none",
+          "diagnostic_reason": null,
+          "hypothesis": "RGB short-window (multi-frame) with 20-turn dialogue history but no structured memory: isolates temporal visual context contribution under dialogue history baseline.",
+          "analysis_parent": "pure_rgb_dialogue_history_baseline",
+          "conversation_history_turns": 20
+        }
+      },
+      "max_steps": 0,
+      "history_window": 6,
+      "coord_mode": "",
+      "coord_prompt_mode": "",
+      "prompt_policy": {
+        "policy_name": "native_embodied_public_evidence",
+        "policy_version": "2026-04-18",
+        "policy_sha256": "848208574f03d8d0fdeac47bc10c07214be7b04fea03360d5429d63312ccc27a",
+        "render_profile_name": "pure_rgb_dialogue_history_short_window"
+      },
+      "diagnostic_steps": 15218,
+      "frame_counts": {
+        "1": 1000,
+        "2": 916,
+        "3": 844,
+        "4": 803,
+        "5": 775,
+        "6": 10880
+      },
+      "memory_feedback_keys": [],
+      "object_memory_feedback": []
+    },
+    {
+      "model": "qwen3-vl-32b",
+      "condition": "ar_sb_oe_memory",
+      "archive_sha256": "20c3d1b117e35d44c30e26e6ad57a748c332b623acb2e584a84752f426c7dd8c",
+      "manifest_sha256": "4cf914eb3190f77a1928a2439440f5c08d6625547bcfe5618ee10ade873bb4e1",
+      "source_commit": "a889badcb43b249d946cc26d20e8a4e7d1727561",
+      "counts": {
+        "n": 1000,
+        "W": 363,
+        "B": 228,
+        "reports": 580,
+        "exact_correct": 311,
+        "achievement_n": 875,
+        "achievement_W": 264,
+        "achievement_ever": 267,
+        "achievement_lost": 3,
+        "achievement_correct_success": 162,
+        "achievement_false_success": 160,
+        "achievement_no_report": 384,
+        "achievement_correct_failure": 73,
+        "sv_n": 125,
+        "sv_W": 99,
+        "sv_B": 66,
+        "sv_reports": 89,
+        "sv_exact_correct": 76,
+        "sv_ever_notW": 29,
+        "sv_returned_W": 3,
+        "sv_summary_no_report": 36,
+        "sv_summary_agree": 52,
+        "sv_summary_unmapped": 36,
+        "sv_summary_disagree": 1,
+        "achievement_other_invalid_label": 95,
+        "achievement_false_failure": 1
+      },
+      "profile": {
+        "name": "pure_rgb_dialogue_history_ar_sb_oe_memory",
+        "observation_modalities": [
+          "rgb"
+        ],
+        "visual_context_policy": "current_only",
+        "feedback_policy": "none",
+        "pose_policy": "none",
+        "memory_policy": "ar_sb_oe",
+        "metadata": {
+          "observation_axis": "rgb",
+          "visual_context_axis": "current_only",
+          "feedback_axis": "none",
+          "pose_axis": "none",
+          "memory_axis": "ar_sb_oe",
+          "mainline": true,
+          "mainline_comparable": true,
+          "memory_bucket": "factual",
+          "diagnostic_reason": null,
+          "hypothesis": "Single-frame RGB with 20-turn dialogue history and full factual memory support (Action Trace / Stall, Spatial Search, and Object-State Evidence).",
+          "analysis_parent": "pure_rgb_dialogue_history_sb_oe_memory",
+          "conversation_history_turns": 20,
+          "memory_feedback_policy": "robot_observable"
+        }
+      },
+      "max_steps": 0,
+      "history_window": 6,
+      "coord_mode": "",
+      "coord_prompt_mode": "",
+      "prompt_policy": {
+        "policy_name": "native_embodied_public_evidence",
+        "policy_version": "2026-04-18",
+        "policy_sha256": "b450374f4bcc13a58a782c10522e8bc97f46d92d4b49039ee8f00a4889df1d38",
+        "render_profile_name": "pure_rgb_dialogue_history_ar_sb_oe_memory"
+      },
+      "diagnostic_steps": 12682,
+      "frame_counts": {
+        "1": 12682
+      },
+      "memory_feedback_keys": [
+        "error_message",
+        "is_holding",
+        "last_action"
+      ],
+      "object_memory_feedback": [
+        "hand_full",
+        "intent_not_supported",
+        "interaction_no_effect",
+        "interaction_not_available",
+        "too_far"
+      ]
+    },
+    {
+      "model": "qwen3-vl-8b",
+      "condition": "baseline",
+      "archive_sha256": "3fff61c7268e9f537eb7020c25796b7744bd4a8881b71fb34fbe12c251e02591",
+      "manifest_sha256": "1a928ec71f57d36146c721c5bd422708e3a033c37b980ad76c8abd8de437158d",
+      "source_commit": "a889badcb43b249d946cc26d20e8a4e7d1727561",
+      "counts": {
+        "n": 1000,
+        "W": 273,
+        "B": 262,
+        "reports": 946,
+        "exact_correct": 320,
+        "achievement_n": 875,
+        "achievement_W": 155,
+        "achievement_ever": 156,
+        "achievement_lost": 1,
+        "achievement_correct_success": 149,
+        "achievement_false_success": 617,
+        "achievement_no_report": 54,
+        "achievement_false_failure": 2,
+        "achievement_correct_failure": 53,
+        "sv_n": 125,
+        "sv_W": 118,
+        "sv_B": 113,
+        "sv_reports": 125,
+        "sv_exact_correct": 118,
+        "sv_ever_notW": 7,
+        "sv_returned_W": 0,
+        "sv_summary_agree": 104,
+        "sv_summary_unmapped": 18,
+        "sv_summary_disagree": 3
+      },
+      "profile": {
+        "name": "pure_rgb_dialogue_history_baseline",
+        "observation_modalities": [
+          "rgb"
+        ],
+        "visual_context_policy": "current_only",
+        "feedback_policy": "none",
+        "pose_policy": "none",
+        "memory_policy": "none",
+        "metadata": {
+          "observation_axis": "rgb",
+          "visual_context_axis": "current_only",
+          "feedback_axis": "none",
+          "pose_axis": "none",
+          "memory_axis": "none",
+          "mainline": true,
+          "mainline_comparable": true,
+          "memory_bucket": "none",
+          "diagnostic_reason": null,
+          "hypothesis": "Single-frame RGB with 20-turn dialogue history only: no model-visible feedback, no agent-side memory, and no pose.",
+          "analysis_parent": "pure_rgb_baseline",
+          "conversation_history_turns": 20
+        }
+      },
+      "max_steps": 0,
+      "history_window": 6,
+      "coord_mode": "",
+      "coord_prompt_mode": "",
+      "prompt_policy": {
+        "policy_name": "native_embodied_public_evidence",
+        "policy_version": "2026-04-18",
+        "policy_sha256": "b450374f4bcc13a58a782c10522e8bc97f46d92d4b49039ee8f00a4889df1d38",
+        "render_profile_name": "pure_rgb_dialogue_history_baseline"
+      },
+      "diagnostic_steps": 6246,
+      "frame_counts": {
+        "1": 6246
+      },
+      "memory_feedback_keys": [],
+      "object_memory_feedback": []
+    },
+    {
+      "model": "qwen3-vl-8b",
+      "condition": "short_window",
+      "archive_sha256": "7e2f1c4524616cabb4f30f3c4a3ba0b7625ab5831cff52f6abd8cf29f50db38a",
+      "manifest_sha256": "782f17d52d30d7771d1ff473595d2cf2a92a94cfc7db39b1c41eb9a250b6d3e8",
+      "source_commit": "a889badcb43b249d946cc26d20e8a4e7d1727561",
+      "counts": {
+        "n": 1000,
+        "W": 255,
+        "B": 236,
+        "reports": 938,
+        "exact_correct": 323,
+        "achievement_n": 875,
+        "achievement_W": 136,
+        "achievement_ever": 137,
+        "achievement_lost": 1,
+        "achievement_correct_success": 129,
+        "achievement_false_success": 602,
+        "achievement_correct_failure": 84,
+        "achievement_false_failure": 3,
+        "achievement_no_report": 57,
+        "sv_n": 125,
+        "sv_W": 119,
+        "sv_B": 107,
+        "sv_reports": 120,
+        "sv_exact_correct": 110,
+        "sv_ever_notW": 6,
+        "sv_returned_W": 0,
+        "sv_summary_agree": 89,
+        "sv_summary_no_report": 5,
+        "sv_summary_disagree": 5,
+        "sv_summary_unmapped": 26
+      },
+      "profile": {
+        "name": "pure_rgb_dialogue_history_short_window",
+        "observation_modalities": [
+          "rgb"
+        ],
+        "visual_context_policy": "short_window",
+        "feedback_policy": "none",
+        "pose_policy": "none",
+        "memory_policy": "none",
+        "metadata": {
+          "observation_axis": "rgb",
+          "visual_context_axis": "short_window",
+          "feedback_axis": "none",
+          "pose_axis": "none",
+          "memory_axis": "none",
+          "mainline": true,
+          "mainline_comparable": true,
+          "memory_bucket": "none",
+          "diagnostic_reason": null,
+          "hypothesis": "RGB short-window (multi-frame) with 20-turn dialogue history but no structured memory: isolates temporal visual context contribution under dialogue history baseline.",
+          "analysis_parent": "pure_rgb_dialogue_history_baseline",
+          "conversation_history_turns": 20
+        }
+      },
+      "max_steps": 0,
+      "history_window": 6,
+      "coord_mode": "",
+      "coord_prompt_mode": "",
+      "prompt_policy": {
+        "policy_name": "native_embodied_public_evidence",
+        "policy_version": "2026-04-18",
+        "policy_sha256": "848208574f03d8d0fdeac47bc10c07214be7b04fea03360d5429d63312ccc27a",
+        "render_profile_name": "pure_rgb_dialogue_history_short_window"
+      },
+      "diagnostic_steps": 6828,
+      "frame_counts": {
+        "1": 1000,
+        "2": 877,
+        "3": 706,
+        "4": 640,
+        "5": 516,
+        "6": 3089
+      },
+      "memory_feedback_keys": [],
+      "object_memory_feedback": []
+    },
+    {
+      "model": "qwen3-vl-8b",
+      "condition": "ar_sb_oe_memory",
+      "archive_sha256": "2742d2ac0ca98c7b4b5ac62366e4fabdc1c6d13abe16093bac0a038eb9dfbe1a",
+      "manifest_sha256": "148615e563f4b341ba4754283c50190cd96d1fda26541733ee695de2c9aa914b",
+      "source_commit": "a889badcb43b249d946cc26d20e8a4e7d1727561",
+      "counts": {
+        "n": 1000,
+        "W": 248,
+        "B": 203,
+        "reports": 923,
+        "exact_correct": 565,
+        "achievement_n": 875,
+        "achievement_W": 141,
+        "achievement_ever": 142,
+        "achievement_lost": 1,
+        "achievement_no_report": 75,
+        "achievement_false_success": 318,
+        "achievement_correct_success": 124,
+        "achievement_correct_failure": 348,
+        "achievement_false_failure": 10,
+        "sv_n": 125,
+        "sv_W": 107,
+        "sv_B": 79,
+        "sv_reports": 123,
+        "sv_exact_correct": 93,
+        "sv_ever_notW": 18,
+        "sv_returned_W": 0,
+        "sv_summary_unmapped": 29,
+        "sv_summary_agree": 75,
+        "sv_summary_no_report": 2,
+        "sv_summary_disagree": 19
+      },
+      "profile": {
+        "name": "pure_rgb_dialogue_history_ar_sb_oe_memory",
+        "observation_modalities": [
+          "rgb"
+        ],
+        "visual_context_policy": "current_only",
+        "feedback_policy": "none",
+        "pose_policy": "none",
+        "memory_policy": "ar_sb_oe",
+        "metadata": {
+          "observation_axis": "rgb",
+          "visual_context_axis": "current_only",
+          "feedback_axis": "none",
+          "pose_axis": "none",
+          "memory_axis": "ar_sb_oe",
+          "mainline": true,
+          "mainline_comparable": true,
+          "memory_bucket": "factual",
+          "diagnostic_reason": null,
+          "hypothesis": "Single-frame RGB with 20-turn dialogue history and full factual memory support (Action Trace / Stall, Spatial Search, and Object-State Evidence).",
+          "analysis_parent": "pure_rgb_dialogue_history_sb_oe_memory",
+          "conversation_history_turns": 20,
+          "memory_feedback_policy": "robot_observable"
+        }
+      },
+      "max_steps": 0,
+      "history_window": 6,
+      "coord_mode": "",
+      "coord_prompt_mode": "",
+      "prompt_policy": {
+        "policy_name": "native_embodied_public_evidence",
+        "policy_version": "2026-04-18",
+        "policy_sha256": "b450374f4bcc13a58a782c10522e8bc97f46d92d4b49039ee8f00a4889df1d38",
+        "render_profile_name": "pure_rgb_dialogue_history_ar_sb_oe_memory"
+      },
+      "diagnostic_steps": 6883,
+      "frame_counts": {
+        "1": 6883
+      },
+      "memory_feedback_keys": [
+        "error_message",
+        "is_holding",
+        "last_action"
+      ],
+      "object_memory_feedback": [
+        "hand_full",
+        "intent_not_supported",
+        "interaction_no_effect",
+        "interaction_not_available",
+        "too_far"
+      ]
+    },
+    {
+      "model": "internvl3_5-38b",
+      "condition": "baseline",
+      "archive_sha256": "422f7740921840c268ecd1e0ca8408e77f20e2030a0fa80e8bd938df82c283a3",
+      "manifest_sha256": "892d0bda9561b0a0323e61dff475aa02b212d27eb24e4eb8cf869813af8eb7cc",
+      "source_commit": "a889badcb43b249d946cc26d20e8a4e7d1727561",
+      "counts": {
+        "n": 1000,
+        "W": 407,
+        "B": 184,
+        "reports": 289,
+        "exact_correct": 191,
+        "achievement_n": 875,
+        "achievement_W": 299,
+        "achievement_ever": 301,
+        "achievement_lost": 2,
+        "achievement_correct_success": 112,
+        "achievement_no_report": 671,
+        "achievement_false_success": 50,
+        "sv_n": 125,
+        "sv_W": 108,
+        "sv_B": 72,
+        "sv_reports": 85,
+        "sv_exact_correct": 76,
+        "sv_ever_notW": 17,
+        "sv_returned_W": 0,
+        "sv_summary_agree": 75,
+        "sv_summary_no_report": 40,
+        "sv_summary_disagree": 7,
+        "sv_summary_unmapped": 3,
+        "achievement_other_invalid_label": 39,
+        "achievement_correct_failure": 3
+      },
+      "profile": {
+        "name": "pure_rgb_dialogue_history_baseline",
+        "observation_modalities": [
+          "rgb"
+        ],
+        "visual_context_policy": "current_only",
+        "feedback_policy": "none",
+        "pose_policy": "none",
+        "memory_policy": "none",
+        "metadata": {
+          "observation_axis": "rgb",
+          "visual_context_axis": "current_only",
+          "feedback_axis": "none",
+          "pose_axis": "none",
+          "memory_axis": "none",
+          "mainline": true,
+          "mainline_comparable": true,
+          "memory_bucket": "none",
+          "diagnostic_reason": null,
+          "hypothesis": "Single-frame RGB with 20-turn dialogue history only: no model-visible feedback, no agent-side memory, and no pose.",
+          "analysis_parent": "pure_rgb_baseline",
+          "conversation_history_turns": 20
+        }
+      },
+      "max_steps": 0,
+      "history_window": 6,
+      "coord_mode": "",
+      "coord_prompt_mode": "",
+      "prompt_policy": {
+        "policy_name": "native_embodied_public_evidence",
+        "policy_version": "2026-04-18",
+        "policy_sha256": "b450374f4bcc13a58a782c10522e8bc97f46d92d4b49039ee8f00a4889df1d38",
+        "render_profile_name": "pure_rgb_dialogue_history_baseline"
+      },
+      "diagnostic_steps": 18346,
+      "frame_counts": {
+        "1": 18346
+      },
+      "memory_feedback_keys": [],
+      "object_memory_feedback": []
+    },
+    {
+      "model": "internvl3_5-38b",
+      "condition": "ar_sb_oe_memory",
+      "archive_sha256": "d63a90867aee226ca3d13cb122e20748ae890356fc7d73ff277aab3caa962b0c",
+      "manifest_sha256": "260766627b2b088fbaddf90fe237784983a746be769f7cc34f89b84352d98257",
+      "source_commit": "a889badcb43b249d946cc26d20e8a4e7d1727561",
+      "counts": {
+        "n": 1000,
+        "W": 413,
+        "B": 205,
+        "reports": 294,
+        "exact_correct": 220,
+        "achievement_n": 875,
+        "achievement_W": 305,
+        "achievement_ever": 314,
+        "achievement_lost": 9,
+        "achievement_correct_success": 132,
+        "achievement_no_report": 674,
+        "achievement_false_success": 31,
+        "achievement_correct_failure": 10,
+        "achievement_false_failure": 2,
+        "sv_n": 125,
+        "sv_W": 108,
+        "sv_B": 73,
+        "sv_reports": 93,
+        "sv_exact_correct": 78,
+        "sv_ever_notW": 23,
+        "sv_returned_W": 6,
+        "sv_summary_agree": 76,
+        "sv_summary_no_report": 32,
+        "sv_summary_disagree": 13,
+        "sv_summary_unmapped": 4,
+        "achievement_other_invalid_label": 26
+      },
+      "profile": {
+        "name": "pure_rgb_dialogue_history_ar_sb_oe_memory",
+        "observation_modalities": [
+          "rgb"
+        ],
+        "visual_context_policy": "current_only",
+        "feedback_policy": "none",
+        "pose_policy": "none",
+        "memory_policy": "ar_sb_oe",
+        "metadata": {
+          "observation_axis": "rgb",
+          "visual_context_axis": "current_only",
+          "feedback_axis": "none",
+          "pose_axis": "none",
+          "memory_axis": "ar_sb_oe",
+          "mainline": true,
+          "mainline_comparable": true,
+          "memory_bucket": "factual",
+          "diagnostic_reason": null,
+          "hypothesis": "Single-frame RGB with 20-turn dialogue history and full factual memory support (Action Trace / Stall, Spatial Search, and Object-State Evidence).",
+          "analysis_parent": "pure_rgb_dialogue_history_sb_oe_memory",
+          "conversation_history_turns": 20,
+          "memory_feedback_policy": "robot_observable"
+        }
+      },
+      "max_steps": 0,
+      "history_window": 6,
+      "coord_mode": "",
+      "coord_prompt_mode": "",
+      "prompt_policy": {
+        "policy_name": "native_embodied_public_evidence",
+        "policy_version": "2026-04-18",
+        "policy_sha256": "b450374f4bcc13a58a782c10522e8bc97f46d92d4b49039ee8f00a4889df1d38",
+        "render_profile_name": "pure_rgb_dialogue_history_ar_sb_oe_memory"
+      },
+      "diagnostic_steps": 18186,
+      "frame_counts": {
+        "1": 18186
+      },
+      "memory_feedback_keys": [
+        "error_message",
+        "is_holding",
+        "last_action"
+      ],
+      "object_memory_feedback": [
+        "hand_full",
+        "intent_not_supported",
+        "interaction_no_effect",
+        "too_far"
+      ]
+    }
+  ]
+}

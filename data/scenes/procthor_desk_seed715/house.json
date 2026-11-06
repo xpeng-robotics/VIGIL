@@ -1,0 +1,3232 @@
+{
+    "doors": [
+        {
+            "assetId": "Doorway_10",
+            "assetPosition": {
+                "x": 0.6137641512128271,
+                "y": 1.05002281954512,
+                "z": 0
+            },
+            "holePolygon": [
+                {
+                    "x": 0.09481573312456977,
+                    "y": 0,
+                    "z": 0
+                },
+                {
+                    "x": 1.136045219590024,
+                    "y": 2.103169581387192,
+                    "z": 0
+                }
+            ],
+            "id": "door|3|5",
+            "openable": true,
+            "openness": 1,
+            "room0": "room|5",
+            "room1": "room|3",
+            "wall0": "wall|5|7.20|5.40|7.20|7.20",
+            "wall1": "wall|3|7.20|5.40|7.20|7.20"
+        },
+        {
+            "assetId": "Doorway_5",
+            "assetPosition": {
+                "x": 1.9574323047460669,
+                "y": 1.0459483740851283,
+                "z": 0
+            },
+            "holePolygon": [
+                {
+                    "x": 1.4399824200706237,
+                    "y": 0,
+                    "z": 0
+                },
+                {
+                    "x": 2.4775209485130065,
+                    "y": 2.0979503514245152,
+                    "z": 0
+                }
+            ],
+            "id": "door|2|3",
+            "openable": true,
+            "openness": 1,
+            "room0": "room|3",
+            "room1": "room|2",
+            "wall0": "wall|3|7.20|3.60|10.80|3.60",
+            "wall1": "wall|2|7.20|3.60|10.80|3.60"
+        },
+        {
+            "assetId": "Doorframe_Double_8",
+            "assetPosition": {
+                "x": 1.5990677440208003,
+                "y": 1.0496984720230103,
+                "z": 0
+            },
+            "holePolygon": [
+                {
+                    "x": 0.6183189611550973,
+                    "y": 0,
+                    "z": 0
+                },
+                {
+                    "x": 2.5834656219598457,
+                    "y": 2.0993969440460205,
+                    "z": 0
+                }
+            ],
+            "id": "door|3|4",
+            "room0": "room|3",
+            "room1": "room|4",
+            "wall0": "wall|3|7.20|7.20|7.20|10.80",
+            "wall1": "wall|4|7.20|7.20|7.20|10.80"
+        },
+        {
+            "assetId": "Doorway_8",
+            "assetPosition": {
+                "x": 0.8095911295292197,
+                "y": 1.0496987104415894,
+                "z": 0
+            },
+            "holePolygon": [
+                {
+                    "x": 0.28429795905475,
+                    "y": 0,
+                    "z": 0
+                },
+                {
+                    "x": 1.3348063389909683,
+                    "y": 2.0993974208831787,
+                    "z": 0
+                }
+            ],
+            "id": "door|1|4",
+            "openable": false,
+            "openness": 0,
+            "room0": "room|4",
+            "room1": "room|4",
+            "wall0": "wall|4|3.60|10.80|3.60|12.60",
+            "wall1": "wall|exterior|3.60|10.80|3.60|12.60"
+        }
+    ],
+    "metadata": {
+        "agent": {
+            "position": {
+                "x": 4.0,
+                "y": 0.9009993672370911,
+                "z": 2.75
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 233.84799194335938,
+                "z": 0.0
+            },
+            "horizon": 30.0,
+            "standing": true
+        },
+        "roomSpecId": "llm-env",
+        "schema": "1.0.0",
+        "task_goal": "朝向并点击卧室内的书桌",
+        "vigil_task_profile": "S2:hard"
+    },
+    "objects": [
+        {
+            "assetId": "Desk_318_1",
+            "children": [
+                {
+                    "assetId": "Desktop_316_1",
+                    "id": "small|2|1",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 0.46546000242233276,
+                        "y": 1.0125955820083619,
+                        "z": 0.3991651237010956
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": -0.00021173586719669402,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Book_2",
+                    "id": "small|2|2",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 0.27236154675483704,
+                        "y": 0.08353827893733978,
+                        "z": 0.4634551405906677
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Book_27",
+                    "id": "small|2|3",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 0.21272988617420197,
+                        "y": 0.6934155225753784,
+                        "z": 0.38011130690574646
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": -0.00021173586719669402,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Book_4",
+                    "id": "small|2|4",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 0.34492045640945435,
+                        "y": 0.0793454647064209,
+                        "z": 0.24687603116035461
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 90.0,
+                        "z": -0.0
+                    }
+                },
+                {
+                    "assetId": "Mug_1",
+                    "id": "small|2|8",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 0.47780463099479675,
+                        "y": 0.16968445777893065,
+                        "z": 0.4633049964904785
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Pencil_7",
+                    "id": "small|2|11",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 0.127038836479187,
+                        "y": 0.07259537279605865,
+                        "z": 0.46664661169052124
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Pencil_4",
+                    "id": "small|2|12",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 0.5618022680282593,
+                        "y": 0.07259535789489746,
+                        "z": 0.3948924243450165
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Box_26",
+                    "id": "small|2|13",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "openness": 0,
+                    "position": {
+                        "x": 1.1447548866271973,
+                        "y": 0.7958661913871765,
+                        "z": 0.3272991478443146
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": -0.00021173586719669402,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Stone_Statue_3",
+                    "id": "small|2|19",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 1.3242027759552002,
+                        "y": 1.0227339744567872,
+                        "z": 0.6489756107330322
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": -0.00021173586719669402,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Stone_Statue_4",
+                    "id": "small|2|20",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 0.95111083984375,
+                        "y": 1.0227339744567872,
+                        "z": 0.5593541860580444
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": -0.00021173586719669402,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "CD_1",
+                    "id": "small|2|24",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 0.5618022680282593,
+                        "y": 0.06966559588909149,
+                        "z": 0.17524206638336182
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ],
+            "id": "2|0",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 0.7756834268569947,
+                "y": 0.3374102711677551,
+                "z": 0.3844736754894257
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "RoboTHOR_bed_kritter",
+            "children": [
+                {
+                    "assetId": "pillow_19",
+                    "id": "small|2|16",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 7.476861000061035,
+                        "y": 0.4597766101360321,
+                        "z": 1.0312986373901367
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ],
+            "id": "2|1",
+            "isDirty": false,
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 7.569338393443488,
+                "y": 0.33533501625061035,
+                "z": 0.8505797624588013
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Dresser_218_1",
+            "children": [
+                {
+                    "assetId": "Pencil_5",
+                    "id": "small|2|5",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 6.846203804016113,
+                        "y": 0.9840810298919678,
+                        "z": 4.541109085083008
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": -2.390565896348562e-05,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Watch_2",
+                    "id": "small|2|6",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 6.721506118774414,
+                        "y": 0.5540629625320435,
+                        "z": 4.319787979125977
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 89.99998474121094,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Cellphone_5",
+                    "id": "small|2|9",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 6.896561622619629,
+                        "y": 0.5898966073989869,
+                        "z": 5.004430294036865
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": -2.390565896348562e-05,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Pen_1",
+                    "id": "small|2|10",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 6.931182384490967,
+                        "y": 0.10982726514339447,
+                        "z": 4.160717010498047
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": -2.390565896348562e-05,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Book_9",
+                    "id": "small|2|21",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 6.783864974975586,
+                        "y": 0.9895670413970947,
+                        "z": 4.330144882202148
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": -2.390565896348562e-05,
+                        "z": 0.0
+                    }
+                }
+            ],
+            "id": "2|2",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 6.908704328536988,
+                "y": 0.4871780574321747,
+                "z": 4.537916898727417
+            },
+            "rotation": {
+                "x": 0,
+                "y": 270,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Side_Table_302_1_4",
+            "children": [
+                {
+                    "assetId": "CD_1",
+                    "id": "small|2|0",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 4.5100297927856445,
+                        "y": 0.6754132509231567,
+                        "z": 0.24400368332862854
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Keychain_3",
+                    "id": "small|2|15",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 4.130213737487793,
+                        "y": 0.36932915449142456,
+                        "z": 0.3152007758617401
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 180.0,
+                        "z": -0.0
+                    }
+                },
+                {
+                    "assetId": "Watch_1",
+                    "id": "small|2|17",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 4.449674606323242,
+                        "y": 0.3834340572357178,
+                        "z": 0.26762598752975464
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ],
+            "id": "2|3",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 4.27793321642221,
+                "y": 0.33430731296539307,
+                "z": 0.20783388018608093
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Houseplant_18",
+            "id": "2|4|0",
+            "kinematic": false,
+            "layer": "Procedural2",
+            "position": {
+                "x": 0.19450639473975592,
+                "y": 0.42520612478256226,
+                "z": 3.4053759723804764
+            },
+            "rotation": {
+                "x": 0,
+                "y": 224.08139423874286,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Dog_Bed_1_1",
+            "id": "2|5",
+            "kinematic": false,
+            "layer": "Procedural2",
+            "position": {
+                "x": 1.728289301591392,
+                "y": 0.054420676082372665,
+                "z": 3.218648412866511
+            },
+            "rotation": {
+                "x": 0,
+                "y": 270,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Dining_Table_221_1",
+            "children": [
+                {
+                    "assetId": "Desk_Lamp_3",
+                    "id": "small|2|22",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 4.6000213623046875,
+                        "y": 0.9643128514289856,
+                        "z": 1.2296648025512695
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "RoboTHOR_laptop_props_america_1_v",
+                    "id": "small|2|25",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 5.044394493103027,
+                        "y": 0.9210065603256226,
+                        "z": 1.6305853128433228
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 0.0
+                    }
+                }
+            ],
+            "id": "2|6|0",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 4.378674462043479,
+                "y": 0.3910415768623352,
+                "z": 1.5247269502268992
+            },
+            "rotation": {
+                "x": 0,
+                "y": 180.0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "RoboTHOR_office_chair_allak",
+            "id": "2|6|1",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 4.378674462043479,
+                "y": 0.49566566944122314,
+                "z": 2.019622682629701
+            },
+            "rotation": {
+                "x": 0,
+                "y": 202.74537936425514,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Armchair_207_4",
+            "id": "2|7|0",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 10.393620038032532,
+                "y": 0.36259937286376953,
+                "z": 0.4260280592436187
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Floor_Lamp_11",
+            "id": "2|7|1",
+            "isOn": false,
+            "kinematic": false,
+            "layer": "Procedural2",
+            "position": {
+                "x": 9.421159446078892,
+                "y": 0.9675791263580322,
+                "z": 0.4260280592436187
+            },
+            "rotation": {
+                "x": 0,
+                "y": 323.5405040646322,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Box_3",
+            "id": "2|8",
+            "kinematic": false,
+            "layer": "Procedural2",
+            "openness": 0,
+            "position": {
+                "x": 6.435713937334107,
+                "y": 0.23727458715438843,
+                "z": 0.2670775592327118
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "RoboTHOR_baseball_bat_rawlings_v",
+            "id": "2|9",
+            "kinematic": false,
+            "layer": "Procedural2",
+            "position": {
+                "x": 2.4100100994110107,
+                "y": 2.999023914337158,
+                "z": 0.03577094152569771
+            },
+            "rotation": {
+                "x": 4.128378868103027,
+                "y": 318.9166564941406,
+                "z": 1.497990751886391e-06
+            }
+        },
+        {
+            "assetId": "Basketball_1",
+            "id": "2|10",
+            "kinematic": false,
+            "layer": "Procedural2",
+            "position": {
+                "x": 6.784461745165114,
+                "y": 0.11999999731779099,
+                "z": 1.9696999227630538
+            },
+            "rotation": {
+                "x": 0,
+                "y": 180,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Side_Table_209_2_1",
+            "children": [
+                {
+                    "assetId": "Vase_Open_1",
+                    "id": "small|2|14",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 8.536672592163086,
+                        "y": 0.6593851923942566,
+                        "z": 0.1991519331932068
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Watch_1",
+                    "id": "small|2|18",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 8.625187873840332,
+                        "y": 0.502143383026123,
+                        "z": 0.3270353674888611
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Keychain_2",
+                    "id": "small|2|23",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 8.63787841796875,
+                        "y": 0.49125435948371887,
+                        "z": 0.06215991824865341
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ],
+            "id": "2|11",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 8.580907073220718,
+                "y": 0.24030199646949768,
+                "z": 0.19852479696273803
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Shelving_Unit_324_1",
+            "children": [
+                {
+                    "assetId": "Alarm_Clock_4",
+                    "id": "small|2|7",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 2.560297966003418,
+                        "y": 0.27466297149658203,
+                        "z": 0.12985283136367798
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ],
+            "id": "2|12",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 2.7884854995325328,
+                "y": 0.3320479094982147,
+                "z": 0.10194946974515914
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Sofa_215_1",
+            "id": "3|0",
+            "kinematic": true,
+            "layer": "Procedural3",
+            "position": {
+                "x": 12.123864006996154,
+                "y": 0.5669702291488647,
+                "z": 9.52690544128418
+            },
+            "rotation": {
+                "x": 0,
+                "y": 270,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "TV_Stand_212_1",
+            "children": [
+                {
+                    "assetId": "Television_8",
+                    "id": "3|1|1",
+                    "kinematic": true,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 10.096707832351242,
+                        "y": 1.196289211511612,
+                        "z": 10.493183904886246
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 180.0,
+                        "z": 0
+                    }
+                },
+                {
+                    "assetId": "Newspaper_3",
+                    "id": "small|3|26",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 10.213663101196289,
+                        "y": 0.8214482069015503,
+                        "z": 10.599892616271973
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Vase_Open_2",
+                    "id": "small|3|31",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 9.782333374023438,
+                        "y": 0.5908820509910584,
+                        "z": 10.453289031982422
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Book_4",
+                    "id": "small|3|32",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 10.430551528930664,
+                        "y": 0.8141608238220215,
+                        "z": 10.444826126098633
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Cellphone_5",
+                    "id": "small|3|33",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 10.201621055603027,
+                        "y": 0.4712793707847595,
+                        "z": 10.529433250427246
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 0.0
+                    }
+                }
+            ],
+            "id": "3|1|0",
+            "kinematic": true,
+            "layer": "Procedural3",
+            "position": {
+                "x": 10.096707832351242,
+                "y": 0.3973931074142456,
+                "z": 10.493183904886246
+            },
+            "rotation": {
+                "x": 0,
+                "y": 180.0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Dining_Table_27_1",
+            "children": [
+                {
+                    "assetId": "Candle_4",
+                    "id": "small|3|34",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 11.92429256439209,
+                        "y": 0.8426930904388428,
+                        "z": 6.638150215148926
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": -8.196226553991437e-05,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Laptop_10",
+                    "id": "small|3|35",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "openness": 1,
+                    "position": {
+                        "x": 11.682594299316406,
+                        "y": 0.95050208568573,
+                        "z": 6.468404769897461
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": -8.196226553991437e-05,
+                        "z": 0.0
+                    }
+                }
+            ],
+            "id": "3|2|0",
+            "kinematic": true,
+            "layer": "Procedural3",
+            "position": {
+                "x": 11.767216533838631,
+                "y": 0.3790948987007141,
+                "z": 6.802893810806581
+            },
+            "rotation": {
+                "x": 0,
+                "y": 270.0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "RoboTHOR_office_chair_allak",
+            "id": "3|2|1",
+            "kinematic": true,
+            "layer": "Procedural3",
+            "position": {
+                "x": 11.31899088066709,
+                "y": 0.49566566944122314,
+                "z": 6.802893810806581
+            },
+            "rotation": {
+                "x": 0,
+                "y": 73.18749147024482,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "RoboTHOR_office_chair_allak",
+            "id": "3|2|2",
+            "kinematic": true,
+            "layer": "Procedural3",
+            "position": {
+                "x": 12.21544218701017,
+                "y": 0.49566566944122314,
+                "z": 6.802893810806581
+            },
+            "rotation": {
+                "x": 0,
+                "y": 260.1148240824541,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Houseplant_27",
+            "id": "3|3|0",
+            "kinematic": false,
+            "layer": "Procedural3",
+            "position": {
+                "x": 7.378288701881683,
+                "y": 0.44784826040267944,
+                "z": 4.630397570282753
+            },
+            "rotation": {
+                "x": 0,
+                "y": 75.71575768869326,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Shelving_Unit_303_1",
+            "id": "3|4",
+            "kinematic": true,
+            "layer": "Procedural3",
+            "position": {
+                "x": 12.484053832292556,
+                "y": 0.30221545696258545,
+                "z": 5.325966902705392
+            },
+            "rotation": {
+                "x": 0,
+                "y": 270,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Shelving_Unit_324_1",
+            "id": "3|5",
+            "kinematic": true,
+            "layer": "Procedural3",
+            "position": {
+                "x": 10.024073861565597,
+                "y": 0.3320479094982147,
+                "z": 3.701949469745159
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Cart_1",
+            "id": "3|6",
+            "kinematic": true,
+            "layer": "Procedural3",
+            "position": {
+                "x": 9.983062024054258,
+                "y": 0.6413500308990479,
+                "z": 9.302594754823936
+            },
+            "rotation": {
+                "x": 0,
+                "y": 270,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Dog_Bed_2_1",
+            "id": "3|7",
+            "kinematic": false,
+            "layer": "Procedural3",
+            "position": {
+                "x": 9.577801003891071,
+                "y": 0.15797579288482666,
+                "z": 5.9830860751449055
+            },
+            "rotation": {
+                "x": 0,
+                "y": 270,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Coffee_Table_218_1",
+            "children": [
+                {
+                    "assetId": "Plate_22",
+                    "id": "small|3|27",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 7.859663963317871,
+                        "y": 0.36745314598083495,
+                        "z": 10.014772415161133
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Book_21",
+                    "id": "small|3|28",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 8.436479568481445,
+                        "y": 0.31628382205963135,
+                        "z": 10.138463973999023
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Bowl_8",
+                    "id": "small|3|29",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 7.973658561706543,
+                        "y": 0.39126824140548705,
+                        "z": 10.392072677612305
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Keychain_1",
+                    "id": "small|3|30",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 8.122270584106445,
+                        "y": 0.3111127018928528,
+                        "z": 10.384499549865723
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Cellphone_5",
+                    "id": "small|3|36",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 7.858064651489258,
+                        "y": 0.361798095703125,
+                        "z": 10.646095275878906
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "RoboTHOR_cellphone_blackberry_v",
+                    "id": "small|3|37",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 8.320439338684082,
+                        "y": 0.3147621750831604,
+                        "z": 10.392071723937988
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Watch_1",
+                    "id": "small|3|38",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 8.204413414001465,
+                        "y": 0.3259817957878113,
+                        "z": 10.013612747192383
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "CreditCard_2",
+                    "id": "small|3|39",
+                    "kinematic": false,
+                    "layer": "Procedural3",
+                    "position": {
+                        "x": 8.320439338684082,
+                        "y": 0.30987030267715454,
+                        "z": 10.518875122070312
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 0.0
+                    }
+                }
+            ],
+            "id": "3|8",
+            "kinematic": true,
+            "layer": "Procedural3",
+            "position": {
+                "x": 8.200220794427903,
+                "y": 0.15131264925003052,
+                "z": 10.266006195545197
+            },
+            "rotation": {
+                "x": 0,
+                "y": 180,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "bin_30",
+            "id": "3|9",
+            "kinematic": false,
+            "layer": "Procedural3",
+            "position": {
+                "x": 12.334857267141341,
+                "y": 0.32935965061187744,
+                "z": 7.830422669653952
+            },
+            "rotation": {
+                "x": 0,
+                "y": 270,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Fridge_22",
+            "children": [
+                {
+                    "assetId": "Egg_20",
+                    "id": "small|4|40",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 0.18330837786197662,
+                        "y": 0.4861979365348816,
+                        "z": 7.769950866699219
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": -0.00016733960364945233,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Lettuce_19",
+                    "id": "small|4|41",
+                    "kinematic": false,
+                    "layer": "Procedural2",
+                    "position": {
+                        "x": 0.41200780868530273,
+                        "y": 0.4663006067276001,
+                        "z": 7.468044281005859
+                    },
+                    "rotation": {
+                        "x": -0.0,
+                        "y": 89.99983215332031,
+                        "z": -0.0
+                    }
+                }
+            ],
+            "id": "4|0",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 0.4253739356994629,
+                "y": 0.984512209892273,
+                "z": 7.598790681362152
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "openness": 0.0,
+            "openable": true
+        },
+        {
+            "assetId": "Toilet_1",
+            "children": [
+                {
+                    "assetId": "Paper_Towel_1",
+                    "id": "small|5|42",
+                    "kinematic": false,
+                    "layer": "Procedural1",
+                    "position": {
+                        "x": 6.965795516967773,
+                        "y": 1.1509146690368652,
+                        "z": 5.619563579559326
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0001525878906,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Cloth_7",
+                    "id": "small|5|43",
+                    "kinematic": false,
+                    "layer": "Procedural1",
+                    "position": {
+                        "x": 6.999720573425293,
+                        "y": 1.053192377090454,
+                        "z": 5.819149017333984
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0001525878906,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Toilet_Paper",
+                    "id": "small|5|44",
+                    "kinematic": false,
+                    "layer": "Procedural1",
+                    "position": {
+                        "x": 7.0868072509765625,
+                        "y": 1.1067216396331787,
+                        "z": 5.497011184692383
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 270.0001525878906,
+                        "z": 0.0
+                    }
+                }
+            ],
+            "id": "5|0",
+            "kinematic": true,
+            "layer": "Procedural1",
+            "position": {
+                "x": 6.688566374778748,
+                "y": 0.5189565420150757,
+                "z": 5.6897420465946205
+            },
+            "rotation": {
+                "x": 0,
+                "y": 270,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Sink_19",
+            "children": [
+                {
+                    "assetId": "Bathroom_Faucet_19",
+                    "id": "5|1|1",
+                    "kinematic": true,
+                    "layer": "Procedural1",
+                    "position": {
+                        "x": 5.015504002571106,
+                        "y": 1.148265428841114,
+                        "z": 3.7377080145478248
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 0.0,
+                        "z": 0
+                    }
+                }
+            ],
+            "id": "5|1|0",
+            "kinematic": true,
+            "layer": "Procedural1",
+            "position": {
+                "x": 5.015504002571106,
+                "y": 0.5229595303535461,
+                "z": 3.987886667251587
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0.0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Plunger_1",
+            "id": "5|2",
+            "kinematic": false,
+            "layer": "Procedural1",
+            "position": {
+                "x": 0.09900321960449218,
+                "y": 0.2696691155433655,
+                "z": 7.1008514940738685
+            },
+            "rotation": {
+                "x": 0,
+                "y": 90,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "bin_22",
+            "id": "5|3",
+            "kinematic": false,
+            "layer": "Procedural1",
+            "position": {
+                "x": 0.2210713118314743,
+                "y": 0.31416791677474976,
+                "z": 3.8188842236995697
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Clothes_Dryer_1",
+            "id": "5|4",
+            "kinematic": true,
+            "layer": "Procedural1",
+            "position": {
+                "x": 3.4447141982712175,
+                "y": 0.5715958476066589,
+                "z": 3.9644671976566315
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Wall_Decor_Painting_6",
+            "id": "2|13",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 7.707493732349549,
+                "y": 1.414635653421214,
+                "z": 3.57865
+            },
+            "rotation": {
+                "x": 0,
+                "y": 180,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Wall_Decor_Painting_9",
+            "id": "2|14",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 0.7311949420705895,
+                "y": 1.6381559158752,
+                "z": 0.01457472436130047
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Wall_Decor_Photo_2",
+            "id": "2|15",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 3.408629266685841,
+                "y": 1.0878764063368367,
+                "z": 3.5791295145452025
+            },
+            "rotation": {
+                "x": 0,
+                "y": 180,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Wall_Decor_Painting_7",
+            "id": "5|5",
+            "kinematic": true,
+            "layer": "Procedural1",
+            "position": {
+                "x": 3.5115286744954055,
+                "y": 1.1644646790782354,
+                "z": 7.182890177406371
+            },
+            "rotation": {
+                "x": 0,
+                "y": 180,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Wall_Decor_Painting_3",
+            "id": "4|1",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 6.640868728274906,
+                "y": 1.1664013436940708,
+                "z": 10.78532537639141
+            },
+            "rotation": {
+                "x": 0,
+                "y": 180,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Wall_Decor_Photo_7",
+            "id": "4|2",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 4.798904194169935,
+                "y": 1.019124017079482,
+                "z": 7.218713583350182
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Wall_Decor_Painting_10",
+            "id": "4|3",
+            "kinematic": true,
+            "layer": "Procedural2",
+            "position": {
+                "x": 6.17879682182829,
+                "y": 1.0920543291207654,
+                "z": 7.212999651134014
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "assetId": "Wall_Decor_Painting_1V",
+            "id": "3|10",
+            "kinematic": true,
+            "layer": "Procedural3",
+            "position": {
+                "x": 7.84796507362276,
+                "y": 1.488620048038043,
+                "z": 3.6208704854547977
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
+    "proceduralParameters": {
+        "ceilingMaterial": {
+            "name": "Porcelain_Blue_Mat"
+        },
+        "floorColliderThickness": 1.0,
+        "lights": [
+            {
+                "id": "DirectionalLight",
+                "indirectMultiplier": 1.0,
+                "intensity": 1,
+                "position": {
+                    "x": 0.84,
+                    "y": 0.1855,
+                    "z": -1.09
+                },
+                "rgb": {
+                    "b": 0.78,
+                    "g": 0.694,
+                    "r": 1.0
+                },
+                "rotation": {
+                    "x": 6,
+                    "y": -166,
+                    "z": 0
+                },
+                "shadow": {
+                    "bias": 0,
+                    "nearPlane": 0.2,
+                    "normalBias": 0,
+                    "resolution": "FromQualitySettings",
+                    "strength": 1,
+                    "type": "Soft"
+                },
+                "type": "directional"
+            },
+            {
+                "cullingMaskOff": [
+                    "Procedural0",
+                    "Procedural1",
+                    "Procedural3"
+                ],
+                "id": "light_2",
+                "intensity": 0.75,
+                "layer": "Procedural2",
+                "position": {
+                    "x": 5.469230769230769,
+                    "y": 2.5194280714195623,
+                    "z": 2.0076923076923077
+                },
+                "range": 15,
+                "rgb": {
+                    "b": 0.722,
+                    "g": 0.855,
+                    "r": 1.0
+                },
+                "shadow": {
+                    "bias": 0.05,
+                    "nearPlane": 0.2,
+                    "normalBias": 0,
+                    "resolution": "FromQualitySettings",
+                    "strength": 1,
+                    "type": "Soft"
+                },
+                "type": "point"
+            },
+            {
+                "cullingMaskOff": [
+                    "Procedural0",
+                    "Procedural1",
+                    "Procedural2"
+                ],
+                "id": "light_3",
+                "intensity": 0.75,
+                "layer": "Procedural3",
+                "position": {
+                    "x": 9.899999999999999,
+                    "y": 2.5194280714195623,
+                    "z": 7.2
+                },
+                "range": 15,
+                "rgb": {
+                    "b": 0.722,
+                    "g": 0.855,
+                    "r": 1.0
+                },
+                "shadow": {
+                    "bias": 0.05,
+                    "nearPlane": 0.2,
+                    "normalBias": 0,
+                    "resolution": "FromQualitySettings",
+                    "strength": 1,
+                    "type": "Soft"
+                },
+                "type": "point"
+            },
+            {
+                "cullingMaskOff": [
+                    "Procedural0",
+                    "Procedural1",
+                    "Procedural3"
+                ],
+                "id": "light_4",
+                "intensity": 0.75,
+                "layer": "Procedural2",
+                "position": {
+                    "x": 3.2400000000000007,
+                    "y": 2.5194280714195623,
+                    "z": 9.540000000000001
+                },
+                "range": 15,
+                "rgb": {
+                    "b": 0.722,
+                    "g": 0.855,
+                    "r": 1.0
+                },
+                "shadow": {
+                    "bias": 0.05,
+                    "nearPlane": 0.2,
+                    "normalBias": 0,
+                    "resolution": "FromQualitySettings",
+                    "strength": 1,
+                    "type": "Soft"
+                },
+                "type": "point"
+            },
+            {
+                "cullingMaskOff": [
+                    "Procedural0",
+                    "Procedural2",
+                    "Procedural3"
+                ],
+                "id": "light_5",
+                "intensity": 0.75,
+                "layer": "Procedural1",
+                "position": {
+                    "x": 3.2142857142857153,
+                    "y": 2.5194280714195623,
+                    "z": 5.5285714285714285
+                },
+                "range": 15,
+                "rgb": {
+                    "b": 0.722,
+                    "g": 0.855,
+                    "r": 1.0
+                },
+                "shadow": {
+                    "bias": 0.05,
+                    "nearPlane": 0.2,
+                    "normalBias": 0,
+                    "resolution": "FromQualitySettings",
+                    "strength": 1,
+                    "type": "Soft"
+                },
+                "type": "point"
+            }
+        ],
+        "receptacleHeight": 0.7,
+        "reflections": [],
+        "skyboxId": "SkyNeighborhood"
+    },
+    "rooms": [
+        {
+            "ceilings": [],
+            "children": [],
+            "floorMaterial": {
+                "name": "GreyFloor 3"
+            },
+            "floorPolygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 5.4,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 5.4,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 10.8,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 10.8,
+                    "y": 0,
+                    "z": 0.0
+                }
+            ],
+            "id": "room|2",
+            "layer": "Procedural2",
+            "roomType": "Bedroom"
+        },
+        {
+            "ceilings": [],
+            "children": [],
+            "floorMaterial": {
+                "name": "WoodPlanksCleanseamlesWhitePainted"
+            },
+            "floorPolygon": [
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 12.6,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 12.6,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 10.8,
+                    "y": 0,
+                    "z": 3.6
+                }
+            ],
+            "id": "room|3",
+            "layer": "Procedural3",
+            "roomType": "LivingRoom"
+        },
+        {
+            "ceilings": [],
+            "children": [],
+            "floorMaterial": {
+                "name": "GreyFloor 2"
+            },
+            "floorPolygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 12.6
+                },
+                {
+                    "x": 3.6,
+                    "y": 0,
+                    "z": 12.6
+                },
+                {
+                    "x": 3.6,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 7.2
+                }
+            ],
+            "id": "room|4",
+            "layer": "Procedural2",
+            "roomType": "Kitchen"
+        },
+        {
+            "ceilings": [],
+            "children": [],
+            "floorMaterial": {
+                "name": "TexturesCom_WoodFine0031_1_seamless_S"
+            },
+            "floorPolygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 5.4,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 5.4,
+                    "y": 0,
+                    "z": 3.6
+                }
+            ],
+            "id": "room|5",
+            "layer": "Procedural1",
+            "roomType": "Bathroom"
+        }
+    ],
+    "walls": [
+        {
+            "id": "wall|2|0.00|0.00|0.00|3.60",
+            "layer": "Procedural2",
+            "material": {
+                "color": {
+                    "b": 0.49411764705882355,
+                    "g": 0.5215686274509804,
+                    "r": 0.5294117647058824
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|2|0.00|3.60|5.40|3.60",
+            "layer": "Procedural2",
+            "material": {
+                "color": {
+                    "b": 0.49411764705882355,
+                    "g": 0.5215686274509804,
+                    "r": 0.5294117647058824
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 5.4,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 5.4,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|2|5.40|3.60|5.40|5.40",
+            "layer": "Procedural2",
+            "material": {
+                "color": {
+                    "b": 0.49411764705882355,
+                    "g": 0.5215686274509804,
+                    "r": 0.5294117647058824
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 5.4,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 5.4,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 5.4,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 5.4,
+                    "y": 2.7194280714195624,
+                    "z": 5.4
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|2|5.40|5.40|7.20|5.40",
+            "layer": "Procedural2",
+            "material": {
+                "color": {
+                    "b": 0.49411764705882355,
+                    "g": 0.5215686274509804,
+                    "r": 0.5294117647058824
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 5.4,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 5.4,
+                    "y": 2.7194280714195624,
+                    "z": 5.4
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 5.4
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|2|7.20|3.60|7.20|5.40",
+            "layer": "Procedural2",
+            "material": {
+                "color": {
+                    "b": 0.49411764705882355,
+                    "g": 0.5215686274509804,
+                    "r": 0.5294117647058824
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 5.4
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|2|7.20|3.60|10.80|3.60",
+            "layer": "Procedural2",
+            "material": {
+                "color": {
+                    "b": 0.49411764705882355,
+                    "g": 0.5215686274509804,
+                    "r": 0.5294117647058824
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 10.8,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 10.8,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|2|10.80|0.00|10.80|3.60",
+            "layer": "Procedural2",
+            "material": {
+                "color": {
+                    "b": 0.49411764705882355,
+                    "g": 0.5215686274509804,
+                    "r": 0.5294117647058824
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 10.8,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 10.8,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 10.8,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 10.8,
+                    "y": 2.7194280714195624,
+                    "z": 0.0
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|2|0.00|0.00|10.80|0.00",
+            "layer": "Procedural2",
+            "material": {
+                "color": {
+                    "b": 0.49411764705882355,
+                    "g": 0.5215686274509804,
+                    "r": 0.5294117647058824
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 10.8,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 10.8,
+                    "y": 2.7194280714195624,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 0.0
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|3|7.20|3.60|7.20|5.40",
+            "layer": "Procedural3",
+            "material": {
+                "name": "RoseGraniteTiles"
+            },
+            "polygon": [
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 5.4
+                }
+            ],
+            "roomId": "room|3"
+        },
+        {
+            "id": "wall|3|7.20|5.40|7.20|7.20",
+            "layer": "Procedural3",
+            "material": {
+                "name": "RoseGraniteTiles"
+            },
+            "polygon": [
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 5.4
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 7.2
+                }
+            ],
+            "roomId": "room|3"
+        },
+        {
+            "id": "wall|3|7.20|7.20|7.20|10.80",
+            "layer": "Procedural3",
+            "material": {
+                "name": "RoseGraniteTiles"
+            },
+            "polygon": [
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 7.2
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                }
+            ],
+            "roomId": "room|3"
+        },
+        {
+            "id": "wall|3|7.20|10.80|12.60|10.80",
+            "layer": "Procedural3",
+            "material": {
+                "name": "RoseGraniteTiles"
+            },
+            "polygon": [
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 12.6,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                },
+                {
+                    "x": 12.6,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                }
+            ],
+            "roomId": "room|3"
+        },
+        {
+            "id": "wall|3|12.60|3.60|12.60|10.80",
+            "layer": "Procedural3",
+            "material": {
+                "name": "RoseGraniteTiles"
+            },
+            "polygon": [
+                {
+                    "x": 12.6,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 12.6,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 12.6,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                },
+                {
+                    "x": 12.6,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                }
+            ],
+            "roomId": "room|3"
+        },
+        {
+            "id": "wall|3|10.80|3.60|12.60|3.60",
+            "layer": "Procedural3",
+            "material": {
+                "name": "RoseGraniteTiles"
+            },
+            "polygon": [
+                {
+                    "x": 12.6,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 10.8,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 12.6,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 10.8,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                }
+            ],
+            "roomId": "room|3"
+        },
+        {
+            "id": "wall|3|7.20|3.60|10.80|3.60",
+            "layer": "Procedural3",
+            "material": {
+                "name": "RoseGraniteTiles"
+            },
+            "polygon": [
+                {
+                    "x": 10.8,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 10.8,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                }
+            ],
+            "roomId": "room|3"
+        },
+        {
+            "id": "wall|4|0.00|7.20|0.00|12.60",
+            "layer": "Procedural2",
+            "material": {
+                "name": "BrownMarbleFake 1"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 12.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 7.2
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 12.6
+                }
+            ],
+            "roomId": "room|4"
+        },
+        {
+            "id": "wall|4|0.00|12.60|3.60|12.60",
+            "layer": "Procedural2",
+            "material": {
+                "name": "BrownMarbleFake 1"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 12.6
+                },
+                {
+                    "x": 3.6,
+                    "y": 0,
+                    "z": 12.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 12.6
+                },
+                {
+                    "x": 3.6,
+                    "y": 2.7194280714195624,
+                    "z": 12.6
+                }
+            ],
+            "roomId": "room|4"
+        },
+        {
+            "id": "wall|4|3.60|10.80|3.60|12.60",
+            "layer": "Procedural2",
+            "material": {
+                "name": "BrownMarbleFake 1"
+            },
+            "polygon": [
+                {
+                    "x": 3.6,
+                    "y": 0,
+                    "z": 12.6
+                },
+                {
+                    "x": 3.6,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 3.6,
+                    "y": 2.7194280714195624,
+                    "z": 12.6
+                },
+                {
+                    "x": 3.6,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                }
+            ],
+            "roomId": "room|4"
+        },
+        {
+            "id": "wall|4|3.60|10.80|7.20|10.80",
+            "layer": "Procedural2",
+            "material": {
+                "name": "BrownMarbleFake 1"
+            },
+            "polygon": [
+                {
+                    "x": 3.6,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 3.6,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                }
+            ],
+            "roomId": "room|4"
+        },
+        {
+            "id": "wall|4|7.20|7.20|7.20|10.80",
+            "layer": "Procedural2",
+            "material": {
+                "name": "BrownMarbleFake 1"
+            },
+            "polygon": [
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 7.2
+                }
+            ],
+            "roomId": "room|4"
+        },
+        {
+            "id": "wall|4|0.00|7.20|7.20|7.20",
+            "layer": "Procedural2",
+            "material": {
+                "name": "BrownMarbleFake 1"
+            },
+            "polygon": [
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 7.2
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 7.2
+                }
+            ],
+            "roomId": "room|4"
+        },
+        {
+            "id": "wall|5|0.00|3.60|0.00|7.20",
+            "layer": "Procedural1",
+            "material": {
+                "color": {
+                    "b": 0.5647058823529412,
+                    "g": 0.4549019607843137,
+                    "r": 0.35294117647058826
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 7.2
+                }
+            ],
+            "roomId": "room|5"
+        },
+        {
+            "id": "wall|5|0.00|7.20|7.20|7.20",
+            "layer": "Procedural1",
+            "material": {
+                "color": {
+                    "b": 0.5647058823529412,
+                    "g": 0.4549019607843137,
+                    "r": 0.35294117647058826
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 7.2
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 7.2
+                }
+            ],
+            "roomId": "room|5"
+        },
+        {
+            "id": "wall|5|7.20|5.40|7.20|7.20",
+            "layer": "Procedural1",
+            "material": {
+                "color": {
+                    "b": 0.5647058823529412,
+                    "g": 0.4549019607843137,
+                    "r": 0.35294117647058826
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 7.2
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 5.4
+                }
+            ],
+            "roomId": "room|5"
+        },
+        {
+            "id": "wall|5|5.40|5.40|7.20|5.40",
+            "layer": "Procedural1",
+            "material": {
+                "color": {
+                    "b": 0.5647058823529412,
+                    "g": 0.4549019607843137,
+                    "r": 0.35294117647058826
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 5.4,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 5.4
+                },
+                {
+                    "x": 5.4,
+                    "y": 2.7194280714195624,
+                    "z": 5.4
+                }
+            ],
+            "roomId": "room|5"
+        },
+        {
+            "id": "wall|5|5.40|3.60|5.40|5.40",
+            "layer": "Procedural1",
+            "material": {
+                "color": {
+                    "b": 0.5647058823529412,
+                    "g": 0.4549019607843137,
+                    "r": 0.35294117647058826
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 5.4,
+                    "y": 0,
+                    "z": 5.4
+                },
+                {
+                    "x": 5.4,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 5.4,
+                    "y": 2.7194280714195624,
+                    "z": 5.4
+                },
+                {
+                    "x": 5.4,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                }
+            ],
+            "roomId": "room|5"
+        },
+        {
+            "id": "wall|5|0.00|3.60|5.40|3.60",
+            "layer": "Procedural1",
+            "material": {
+                "color": {
+                    "b": 0.5647058823529412,
+                    "g": 0.4549019607843137,
+                    "r": 0.35294117647058826
+                },
+                "name": "PureWhite"
+            },
+            "polygon": [
+                {
+                    "x": 5.4,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 5.4,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                }
+            ],
+            "roomId": "room|5"
+        },
+        {
+            "id": "wall|exterior|0.00|0.00|10.80|0.00",
+            "layer": "Procedural2",
+            "material": {
+                "name": "DarkTiles"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 0.0
+                },
+                {
+                    "x": 10.8,
+                    "y": 2.7194280714195624,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 10.8,
+                    "y": 0,
+                    "z": 0.0
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|exterior|0.00|0.00|0.00|3.60",
+            "layer": "Procedural2",
+            "material": {
+                "name": "DarkTiles"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 0.0
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 0.0
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|exterior|10.80|0.00|10.80|3.60",
+            "layer": "Procedural2",
+            "material": {
+                "name": "DarkTiles"
+            },
+            "polygon": [
+                {
+                    "x": 10.8,
+                    "y": 2.7194280714195624,
+                    "z": 0.0
+                },
+                {
+                    "x": 10.8,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 10.8,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 10.8,
+                    "y": 0,
+                    "z": 3.6
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|exterior|0.00|3.60|0.00|7.20",
+            "layer": "Procedural1",
+            "material": {
+                "name": "DarkTiles"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 7.2
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 7.2
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 3.6
+                }
+            ],
+            "roomId": "room|5"
+        },
+        {
+            "id": "wall|exterior|0.00|7.20|0.00|12.60",
+            "layer": "Procedural2",
+            "material": {
+                "name": "DarkTiles"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 12.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 7.2
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 12.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 7.2
+                }
+            ],
+            "roomId": "room|4"
+        },
+        {
+            "id": "wall|exterior|3.60|10.80|3.60|12.60",
+            "layer": "Procedural2",
+            "material": {
+                "name": "DarkTiles"
+            },
+            "polygon": [
+                {
+                    "x": 3.6,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                },
+                {
+                    "x": 3.6,
+                    "y": 2.7194280714195624,
+                    "z": 12.6
+                },
+                {
+                    "x": 3.6,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 3.6,
+                    "y": 0,
+                    "z": 12.6
+                }
+            ],
+            "roomId": "room|4"
+        },
+        {
+            "id": "wall|exterior|0.00|12.60|3.60|12.60",
+            "layer": "Procedural2",
+            "material": {
+                "name": "DarkTiles"
+            },
+            "polygon": [
+                {
+                    "x": 3.6,
+                    "y": 2.7194280714195624,
+                    "z": 12.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.7194280714195624,
+                    "z": 12.6
+                },
+                {
+                    "x": 3.6,
+                    "y": 0,
+                    "z": 12.6
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 12.6
+                }
+            ],
+            "roomId": "room|4"
+        },
+        {
+            "id": "wall|exterior|3.60|10.80|7.20|10.80",
+            "layer": "Procedural2",
+            "material": {
+                "name": "DarkTiles"
+            },
+            "polygon": [
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                },
+                {
+                    "x": 3.6,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 3.6,
+                    "y": 0,
+                    "z": 10.8
+                }
+            ],
+            "roomId": "room|4"
+        },
+        {
+            "id": "wall|exterior|12.60|3.60|12.60|10.80",
+            "layer": "Procedural3",
+            "material": {
+                "name": "DarkTiles"
+            },
+            "polygon": [
+                {
+                    "x": 12.6,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 12.6,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                },
+                {
+                    "x": 12.6,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 12.6,
+                    "y": 0,
+                    "z": 10.8
+                }
+            ],
+            "roomId": "room|3"
+        },
+        {
+            "id": "wall|exterior|10.80|3.60|12.60|3.60",
+            "layer": "Procedural3",
+            "material": {
+                "name": "DarkTiles"
+            },
+            "polygon": [
+                {
+                    "x": 10.8,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 12.6,
+                    "y": 2.7194280714195624,
+                    "z": 3.6
+                },
+                {
+                    "x": 10.8,
+                    "y": 0,
+                    "z": 3.6
+                },
+                {
+                    "x": 12.6,
+                    "y": 0,
+                    "z": 3.6
+                }
+            ],
+            "roomId": "room|3"
+        },
+        {
+            "id": "wall|exterior|7.20|10.80|12.60|10.80",
+            "layer": "Procedural3",
+            "material": {
+                "name": "DarkTiles"
+            },
+            "polygon": [
+                {
+                    "x": 12.6,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                },
+                {
+                    "x": 7.2,
+                    "y": 2.7194280714195624,
+                    "z": 10.8
+                },
+                {
+                    "x": 12.6,
+                    "y": 0,
+                    "z": 10.8
+                },
+                {
+                    "x": 7.2,
+                    "y": 0,
+                    "z": 10.8
+                }
+            ],
+            "roomId": "room|3"
+        }
+    ],
+    "windows": [
+        {
+            "assetId": "Window_Hung_48x44",
+            "assetPosition": {
+                "x": 1.9692892612108635,
+                "y": 1.3589969620308109,
+                "z": 0
+            },
+            "holePolygon": [
+                {
+                    "x": 1.352260946590607,
+                    "y": 0.7223461911281772,
+                    "z": 0
+                },
+                {
+                    "x": 2.5688215487787174,
+                    "y": 1.995005522688312,
+                    "z": 0
+                }
+            ],
+            "id": "window|2|0",
+            "room0": "room|2",
+            "room1": "room|2",
+            "wall0": "wall|2|0.00|0.00|0.00|3.60",
+            "wall1": "wall|exterior|0.00|0.00|0.00|3.60"
+        },
+        {
+            "assetId": "Window_Hung_48x24",
+            "assetPosition": {
+                "x": 3.0198294233666374,
+                "y": 1.3584852263530918,
+                "z": 0
+            },
+            "holePolygon": [
+                {
+                    "x": 2.4084334757314636,
+                    "y": 1.0251717612346836,
+                    "z": 0
+                },
+                {
+                    "x": 3.625250377892108,
+                    "y": 1.688664381225986,
+                    "z": 0
+                }
+            ],
+            "id": "window|4|0",
+            "room0": "room|4",
+            "room1": "room|4",
+            "wall0": "wall|4|0.00|7.20|0.00|12.60",
+            "wall1": "wall|exterior|0.00|7.20|0.00|12.60"
+        },
+        {
+            "assetId": "Window_Hung_48x24",
+            "assetPosition": {
+                "x": 1.3453605973602492,
+                "y": 1.3584852263530918,
+                "z": 0
+            },
+            "holePolygon": [
+                {
+                    "x": 0.7339646497250755,
+                    "y": 1.0251717612346836,
+                    "z": 0
+                },
+                {
+                    "x": 1.9507815518857199,
+                    "y": 1.688664381225986,
+                    "z": 0
+                }
+            ],
+            "id": "window|4|1",
+            "room0": "room|4",
+            "room1": "room|4",
+            "wall0": "wall|4|3.60|10.80|7.20|10.80",
+            "wall1": "wall|exterior|3.60|10.80|7.20|10.80"
+        },
+        {
+            "assetId": "Window_Slider_48x36",
+            "assetPosition": {
+                "x": 0.7387563566828366,
+                "y": 1.3570740789374538,
+                "z": 0
+            },
+            "holePolygon": [
+                {
+                    "x": 0.1291487495566006,
+                    "y": 0.9025141045650669,
+                    "z": 0
+                },
+                {
+                    "x": 1.3431395570898648,
+                    "y": 1.8141790747842022,
+                    "z": 0
+                }
+            ],
+            "id": "window|3|0",
+            "room0": "room|3",
+            "room1": "room|3",
+            "wall0": "wall|3|10.80|3.60|12.60|3.60",
+            "wall1": "wall|exterior|10.80|3.60|12.60|3.60"
+        }
+    ]
+}

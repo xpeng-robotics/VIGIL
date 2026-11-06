@@ -1,0 +1,161 @@
+{
+  "episode_id": "procthor_laundryhamper_seed584_T4_medium_laundryhamper_001__mainline__assetfix_v1",
+  "sample_id": "procthor_laundryhamper_seed584_T4_medium_laundryhamper_001__mainline__assetfix_v1",
+  "scene_ref": "procthor_clothesdryer_seed584_assetfix_laundryhamper",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "Procedural",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6.0,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 0.5090660210638053,
+      "y": 0.9009993672370911,
+      "z": 9.050205587510385
+    },
+    "rotation": {
+      "x": 0.0,
+      "y": 357.4018859863281,
+      "z": 0.0
+    },
+    "horizon": 30.0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 0.5090660210638053,
+        "y": 0.9009993672370911,
+        "z": 9.050205587510385
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 357.4018859863281,
+        "z": 0.0
+      },
+      "horizon": 30.0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Reach the laundry hamper by taking a clear route around the obstruction, then open it and report success once it is open.",
+    "task_type": "T4c_approach_open",
+    "task_family": "T4_constraint_resolving",
+    "intent": "open_access",
+    "functional_template": "detour_open",
+    "difficulty": "medium",
+    "primary_capabilities": [
+      "CR",
+      "PG",
+      "DR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "LaundryHamper",
+    "target_group": "constraint_resolving"
+  },
+  "budget": {
+    "max_steps": 40,
+    "max_invalid_actions": 12,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "laundryhamper_open",
+      "target_object_type": "LaundryHamper",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_state",
+    "target_object_type": "LaundryHamper",
+    "field": "is_open",
+    "value": true,
+    "target_object_id": "6|0"
+  },
+  "trace_hints": {
+    "task_family": "T4_constraint_resolving",
+    "difficulty": "medium",
+    "functional_template": "detour_open",
+    "primary_capabilities": [
+      "CR",
+      "PG",
+      "DR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        2.0,
+        4.5
+      ],
+      "path_blocked": true
+    },
+    "sampling_notes": [
+      "migrated from procthor_clothesdryer_seed584_T4_medium_clothesdryer_001 (rebuild_t4)"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "LaundryHamper",
+    "benchmark_axes": {
+      "task_family": "T4_constraint_resolving",
+      "target_object_type": "ClothesDryer",
+      "difficulty": "medium"
+    },
+    "target_group": "constraint_resolving",
+    "target_object_id": "6|0",
+    "migration": {
+      "version": "mainline_2026_04_22",
+      "source_pack": "procthor_all_filter_848.json",
+      "source_episode_id": "procthor_clothesdryer_seed584_T4_medium_clothesdryer_001",
+      "source_family": "T4_obstructed_approach",
+      "migrated_at": "2026-04-22T04:45:26Z",
+      "action": "rebuild_t4"
+    }
+  },
+  "bindings": {
+    "target_object_type": "LaundryHamper",
+    "target_object_id": "6|0"
+  },
+  "pre_conditions": [
+    {
+      "path_blocked": true,
+      "detour_required": true
+    }
+  ],
+  "generation_hints": {
+    "asset_fix_provenance": {
+      "source_episode_id": "procthor_clothesdryer_seed584_T4_medium_clothesdryer_001__mainline",
+      "source_scene_ref": "procthor_clothesdryer_seed584",
+      "applied_kind": "assetfix_laundryhamper",
+      "applied_scene_ref": "procthor_clothesdryer_seed584_assetfix_laundryhamper",
+      "created_at": "2026-05-08T08:56:35.935245+00:00"
+    }
+  }
+}

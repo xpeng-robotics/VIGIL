@@ -1,0 +1,144 @@
+{
+  "episode_id": "procthor_safe_seed173_T2_medium_safe_001__mainline",
+  "sample_id": "procthor_safe_seed173_T2_medium_safe_001__mainline",
+  "scene_ref": "procthor_safe_seed173",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "Procedural",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6.0,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 3.8187331593837968,
+      "y": 0.9009994268417358,
+      "z": 7.437818403787067
+    },
+    "rotation": {
+      "x": 0.0,
+      "y": 200.10037231445312,
+      "z": 0.0
+    },
+    "horizon": 30.0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 3.8187331593837968,
+        "y": 0.9009994268417358,
+        "z": 7.437818403787067
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 200.10037231445312,
+        "z": 0.0
+      },
+      "horizon": 30.0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Find the safe, then open it and report success once it is open.",
+    "task_type": "T2_search_open",
+    "task_family": "T2_search_then_interact",
+    "intent": "open_access",
+    "functional_template": "search_open",
+    "difficulty": "medium",
+    "primary_capabilities": [
+      "VS",
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Safe",
+    "target_group": "container_access"
+  },
+  "budget": {
+    "max_steps": 35,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "safe_open",
+      "target_object_type": "Safe",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_state",
+    "target_object_type": "Safe",
+    "field": "is_open",
+    "value": true,
+    "target_object_id": "4|0"
+  },
+  "trace_hints": {
+    "task_family": "T2_search_then_interact",
+    "difficulty": "medium",
+    "functional_template": "search_open",
+    "primary_capabilities": [
+      "VS",
+      "DR",
+      "PG",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "look",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": false,
+      "target_distance_m": [
+        2.0,
+        5.0
+      ]
+    },
+    "sampling_notes": [
+      "migrated from procthor_safe_seed173_T2_medium_safe_001 (sync)"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "Safe",
+    "benchmark_axes": {
+      "task_family": "T2_search_then_interact",
+      "target_object_type": "Safe",
+      "difficulty": "medium"
+    },
+    "target_group": "container_access",
+    "target_object_id": "4|0",
+    "migration": {
+      "version": "mainline_2026_04_22",
+      "source_pack": "procthor_all_filter_848.json",
+      "source_episode_id": "procthor_safe_seed173_T2_medium_safe_001",
+      "source_family": "T2_search_then_interact",
+      "migrated_at": "2026-04-22T04:45:26Z",
+      "action": "sync"
+    }
+  },
+  "bindings": {
+    "target_object_type": "Safe",
+    "target_object_id": "4|0"
+  }
+}

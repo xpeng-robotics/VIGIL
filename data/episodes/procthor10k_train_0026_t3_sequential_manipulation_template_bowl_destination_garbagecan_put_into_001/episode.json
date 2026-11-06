@@ -1,0 +1,190 @@
+{
+  "episode_id": "procthor10k_train_0026_t3_sequential_manipulation_template_bowl_destination_garbagecan_put_into_001",
+  "sample_id": "procthor10k_train_0026_t3_sequential_manipulation_template_bowl_destination_garbagecan_put_into_001",
+  "scene_ref": "ithor_fp214",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan214",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -3.660229206085205,
+      "y": 0.9204407930374146,
+      "z": 2.1016359329223633
+    },
+    "rotation": {
+      "x": 0,
+      "y": 74.99999237060547,
+      "z": 0
+    },
+    "horizon": 14.999999046325684,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -3.660229206085205,
+        "y": 0.9204407930374146,
+        "z": 2.1016359329223633
+      },
+      "rotation": {
+        "x": 0,
+        "y": 74.99999237060547,
+        "z": 0
+      },
+      "horizon": 14.999999046325684,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the bowl, place it into the trash can, then report success once it is inside.",
+    "task_type": "T3_put_into",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "put_into",
+    "functional_template": "put_into",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Bowl",
+    "target_group": "sequential_manipulation",
+    "destination_type": "GarbageCan",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "bowl_pick",
+      "target_object_type": "Bowl",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "garbagecan_place",
+      "target_object_type": "GarbageCan",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Bowl",
+    "receptacle_type": "GarbageCan",
+    "target_object_id": "Bowl|-02.40|+00.46|+03.44",
+    "allowed_receptacle_object_ids": [
+      "GarbageCan|-00.53|-00.01|+02.82"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "Bowl",
+      "receptacle_type": "GarbageCan"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "Bowl",
+      "receptacle_type": "GarbageCan",
+      "target_object_id": "Bowl|-02.40|+00.46|+03.44",
+      "allowed_receptacle_object_ids": [
+        "GarbageCan|-00.53|-00.01|+02.82"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "put_into",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Bowl",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Bowl",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Bowl|-02.40|+00.46|+03.44",
+    "destination_object_id": "GarbageCan|-00.53|-00.01|+02.82",
+    "destination_allowed_object_ids": [
+      "GarbageCan|-00.53|-00.01|+02.82"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "Bowl",
+    "target_object_id": "Bowl|-02.40|+00.46|+03.44",
+    "destination_object_type": "GarbageCan",
+    "destination_object_id": "GarbageCan|-00.53|-00.01|+02.82",
+    "destination_allowed_object_ids": [
+      "GarbageCan|-00.53|-00.01|+02.82"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

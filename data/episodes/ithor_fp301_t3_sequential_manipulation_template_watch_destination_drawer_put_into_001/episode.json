@@ -1,0 +1,172 @@
+{
+  "episode_id": "ithor_fp301_t3_sequential_manipulation_template_watch_destination_drawer_put_into_001",
+  "sample_id": "ithor_fp301_t3_sequential_manipulation_template_watch_destination_drawer_put_into_001",
+  "scene_ref": "ithor_fp301",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan301",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 2.75,
+      "y": 0.910415768623352,
+      "z": -0.25
+    },
+    "rotation": {
+      "x": 0,
+      "y": 206.64836163923428,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 2.75,
+        "y": 0.910415768623352,
+        "z": -0.25
+      },
+      "rotation": {
+        "x": 0,
+        "y": 206.64836163923428,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the watch, open the drawer, place it inside, then report success once it is inside.",
+    "task_type": "T3_put_into",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "put_into",
+    "functional_template": "put_into",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Watch",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Drawer"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "drawer_open",
+      "target_object_type": "Drawer",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "watch_pick",
+      "target_object_type": "Watch",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "drawer_place",
+      "target_object_type": "Drawer",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Watch",
+    "receptacle_type": "Drawer",
+    "target_object_id": "Watch|+02.18|+00.82|-01.38"
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "put_into",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "reviewer workbench auto-suggested start pose",
+      "pose anchored to target Watch|+02.18|+00.82|-01.38",
+      "reachable positions=96"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "Watch",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Watch",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Watch|+02.18|+00.82|-01.38",
+    "destination_object_id": "Drawer|-01.31|+00.18|-00.58"
+  },
+  "bindings": {
+    "target_object_type": "Watch",
+    "target_object_id": "Watch|+02.18|+00.82|-01.38",
+    "destination_object_type": "Drawer",
+    "destination_object_id": "Drawer|-01.31|+00.18|-00.58"
+  },
+  "pre_conditions": [
+    {
+      "destination_is_closed": true
+    },
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

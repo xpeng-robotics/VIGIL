@@ -1,0 +1,205 @@
+{
+  "episode_id": "ithor_fp217_t3_sequential_manipulation_template_remotecontrol_destination_box_put_into_001",
+  "sample_id": "ithor_fp217_t3_sequential_manipulation_template_remotecontrol_destination_box_put_into_001",
+  "scene_ref": "ithor_fp217",
+  "scene": {
+    "platform": "ithor",
+    "scene_id": "FloorPlan217",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": -1.495827078819275,
+      "y": 0.9011412858963013,
+      "z": 4.258518218994141
+    },
+    "rotation": {
+      "x": 0,
+      "y": 105.00000762939453,
+      "z": 0
+    },
+    "horizon": 0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": -1.495827078819275,
+        "y": 0.9011412858963013,
+        "z": 4.258518218994141
+      },
+      "rotation": {
+        "x": 0,
+        "y": 105.00000762939453,
+        "z": 0
+      },
+      "horizon": 0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the remote control, open the box, place it inside, then report success once it is inside.",
+    "task_type": "T3_put_into",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "put_into",
+    "functional_template": "put_into",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "RemoteControl",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Box",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "box_open",
+      "target_object_type": "Box",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "remotecontrol_pick",
+      "target_object_type": "RemoteControl",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "box_place",
+      "target_object_type": "Box",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "RemoteControl",
+    "receptacle_type": "Box",
+    "target_object_id": "RemoteControl|-00.10|+00.71|+04.45",
+    "allowed_receptacle_object_ids": [
+      "Box|-02.18|+00.67|+02.43"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "RemoteControl",
+      "receptacle_type": "Box"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "RemoteControl",
+      "receptacle_type": "Box",
+      "target_object_id": "RemoteControl|-00.10|+00.71|+04.45",
+      "allowed_receptacle_object_ids": [
+        "Box|-02.18|+00.67|+02.43"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "put_into",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "ithor"
+    },
+    "target_object_type": "RemoteControl",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "RemoteControl",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "RemoteControl|-00.10|+00.71|+04.45",
+    "destination_object_id": "Box|-02.18|+00.67|+02.43",
+    "destination_allowed_object_ids": [
+      "Box|-02.18|+00.67|+02.43"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "RemoteControl",
+    "target_object_id": "RemoteControl|-00.10|+00.71|+04.45",
+    "destination_object_type": "Box",
+    "destination_object_id": "Box|-02.18|+00.67|+02.43",
+    "destination_allowed_object_ids": [
+      "Box|-02.18|+00.67|+02.43"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "destination_is_closed": true
+    },
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

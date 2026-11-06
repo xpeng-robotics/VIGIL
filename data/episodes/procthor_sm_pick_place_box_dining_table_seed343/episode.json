@@ -1,0 +1,198 @@
+{
+  "episode_id": "procthor_sm_pick_place_box_dining_table_seed343",
+  "sample_id": "procthor_sm_pick_place_box_dining_table_seed343",
+  "scene_ref": "procthor_laundryhamper_seed585",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "Procedural",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6.0,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 3.7422125339508057,
+      "y": 0.9009993672370911,
+      "z": 3.9177193641662598
+    },
+    "rotation": {
+      "x": -0.0,
+      "y": 89.41646575927734,
+      "z": -0.0
+    },
+    "horizon": 30.000003814697266,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "forceAction": true,
+      "position": {
+        "x": 3.7422125339508057,
+        "y": 0.9009993672370911,
+        "z": 3.9177193641662598
+      },
+      "rotation": {
+        "x": -0.0,
+        "y": 89.41646575927734,
+        "z": -0.0
+      },
+      "horizon": 30.000003814697266,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Find the laundry hamper and open it. Then pick up the box and place it on the dining table. Report success once the box is on the dining table.",
+    "task_type": "T3_open_pick_place",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "open_pick_place",
+    "functional_template": "open_pick_place",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Box",
+    "target_group": "sequential_manipulation",
+    "container_type": "LaundryHamper",
+    "destination_type": "DiningTable"
+  },
+  "budget": {
+    "max_steps": 45,
+    "max_invalid_actions": 12,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "laundryhamper_open",
+      "target_object_type": "LaundryHamper",
+      "intent": "open",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "OpenObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "box_pick",
+      "target_object_type": "Box",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "diningtable_place",
+      "target_object_type": "DiningTable",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Box",
+    "receptacle_type": "DiningTable",
+    "target_object_id": "2|2",
+    "allowed_receptacle_object_ids": [
+      "4|2"
+    ]
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "open_pick_place",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": false,
+      "target_distance_m": [
+        2.0,
+        5.0
+      ]
+    },
+    "sampling_notes": [
+      "migrated from procthor_laundryhamper_seed585_T2_easy_laundryhamper_001 (sync)",
+      {
+        "forked_from": "procthor_laundryhamper_seed585_T2_easy_laundryhamper_001__mainline",
+        "forked_at": "2026-05-13T05:42:15.327589+00:00"
+      },
+      "contract: T3 open_pick_place — LaundryHamper 6|0, Box 2|2 (Box_1), DiningTable 4|2 (Dining_Table_21_1); scene_ref seed585 (episode_id retains seed343)",
+      "upgraded from search_open-only to open+pick+place to match instruction"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "Box",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Box",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "2|2",
+    "container_object_type": "LaundryHamper",
+    "container_object_id": "6|0",
+    "destination_object_type": "DiningTable",
+    "destination_object_id": "4|2",
+    "destination_allowed_object_ids": [
+      "4|2"
+    ],
+    "migration": {
+      "version": "mainline_2026_04_22",
+      "source_pack": "procthor_all_filter_848.json",
+      "source_episode_id": "procthor_laundryhamper_seed585_T2_easy_laundryhamper_001",
+      "source_family": "T2_search_then_interact",
+      "migrated_at": "2026-04-22T04:45:26Z",
+      "action": "sync"
+    }
+  },
+  "bindings": {
+    "target_object_type": "Box",
+    "target_object_id": "2|2",
+    "container_object_type": "LaundryHamper",
+    "container_object_id": "6|0",
+    "destination_object_type": "DiningTable",
+    "destination_object_id": "4|2",
+    "destination_allowed_object_ids": [
+      "4|2"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "container_is_closed": true,
+      "destination_available": true
+    }
+  ]
+}

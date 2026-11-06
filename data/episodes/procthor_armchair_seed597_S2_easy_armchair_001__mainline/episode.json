@@ -1,0 +1,122 @@
+{
+  "episode_id": "procthor_armchair_seed597_S2_easy_armchair_001__mainline",
+  "sample_id": "procthor_armchair_seed597_S2_easy_armchair_001__mainline",
+  "scene_ref": "procthor_armchair_seed597",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "Procedural",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6.0,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 6.0,
+      "y": 0.9009993672370911,
+      "z": 5.5
+    },
+    "rotation": {
+      "x": 0.0,
+      "y": 286.2524719238281,
+      "z": 0.0
+    },
+    "horizon": 30.0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 6.0,
+        "y": 0.9009993672370911,
+        "z": 5.5
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 286.2524719238281,
+        "z": 0.0
+      },
+      "horizon": 30.0,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Move close to the armchair until you reach interaction range, then report success once you are close enough.",
+    "task_type": "approach_target",
+    "task_family": "S2_distance_approach",
+    "intent": "approach",
+    "functional_template": "approach_then_report",
+    "difficulty": "easy",
+    "primary_capabilities": [
+      "DR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "ArmChair"
+  },
+  "budget": {
+    "max_steps": 12,
+    "max_invalid_actions": 4,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "agent_near_target",
+    "target_object_type": "ArmChair",
+    "distance_threshold": 1.5,
+    "target_object_id": "3|0"
+  },
+  "trace_hints": {
+    "task_family": "S2_distance_approach",
+    "difficulty": "easy",
+    "functional_template": "approach_then_report",
+    "primary_capabilities": [
+      "DR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        2.0,
+        4.0
+      ]
+    },
+    "sampling_notes": [
+      "migrated from procthor_armchair_seed597_S2_easy_armchair_001 (sync)"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "ArmChair",
+    "benchmark_axes": {
+      "task_family": "S2_distance_approach",
+      "target_object_type": "ArmChair",
+      "difficulty": "easy"
+    },
+    "target_object_id": "3|0",
+    "migration": {
+      "version": "mainline_2026_04_22",
+      "source_pack": "procthor_all_filter_848.json",
+      "source_episode_id": "procthor_armchair_seed597_S2_easy_armchair_001",
+      "source_family": "S2_distance_approach",
+      "migrated_at": "2026-04-22T04:45:25Z",
+      "action": "sync"
+    }
+  },
+  "bindings": {
+    "target_object_type": "ArmChair",
+    "target_object_id": "3|0"
+  }
+}

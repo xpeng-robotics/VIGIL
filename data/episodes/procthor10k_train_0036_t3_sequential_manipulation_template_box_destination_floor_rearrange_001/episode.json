@@ -1,0 +1,199 @@
+{
+  "episode_id": "procthor10k_train_0036_t3_sequential_manipulation_template_box_destination_floor_rearrange_001",
+  "sample_id": "procthor10k_train_0036_t3_sequential_manipulation_template_box_destination_floor_rearrange_001",
+  "scene_ref": "procthor10k_train_0036",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "procthor10k_train_0036",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 3.753197193145752,
+      "y": 0.9009997844696045,
+      "z": 3.3549447059631348
+    },
+    "rotation": {
+      "x": 0,
+      "y": 270,
+      "z": 0
+    },
+    "horizon": 30.000003814697266,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 3.753197193145752,
+        "y": 0.9009997844696045,
+        "z": 3.3549447059631348
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 0
+      },
+      "horizon": 30.000003814697266,
+      "standing": true
+    }
+  ],
+  "task": {
+    "instruction": "Pick up the box, place it on the floor, then report success once it is placed correctly.",
+    "task_type": "T3_rearrange",
+    "task_family": "T3_sequential_manipulation",
+    "intent": "rearrange",
+    "functional_template": "rearrange",
+    "difficulty": "template",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Box",
+    "target_group": "sequential_manipulation",
+    "destination_type": "Floor",
+    "evaluation_primary": "semantic",
+    "evaluation_secondary": "strict",
+    "task_binding_mode": "instance_bound"
+  },
+  "budget": {
+    "max_steps": 30,
+    "max_invalid_actions": 10,
+    "timeout_policy": "fail"
+  },
+  "interactables": [
+    {
+      "interactable_id": "box_pick",
+      "target_object_type": "Box",
+      "intent": "pickup",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PickupObject"
+      },
+      "world_effect": {}
+    },
+    {
+      "interactable_id": "floor_place",
+      "target_object_type": "Floor",
+      "intent": "place",
+      "pixel_region_source": "instance_bbox",
+      "distance_limit": 1.5,
+      "visibility_required": true,
+      "thor_action": {
+        "action": "PutObject"
+      },
+      "world_effect": {}
+    }
+  ],
+  "hazards": [],
+  "success_condition": {
+    "type": "object_at_receptacle",
+    "target_object_type": "Box",
+    "receptacle_type": "Floor",
+    "target_object_id": "Box|surface|2|12",
+    "allowed_receptacle_object_ids": [
+      "Floor",
+      "room|2",
+      "room|3"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "semantic_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "Box",
+      "receptacle_type": "Floor"
+    },
+    "strict_spec": {
+      "type": "object_at_receptacle",
+      "target_object_type": "Box",
+      "receptacle_type": "Floor",
+      "target_object_id": "Box|surface|2|12",
+      "allowed_receptacle_object_ids": [
+        "Floor",
+        "room|2",
+        "room|3"
+      ]
+    }
+  },
+  "trace_hints": {
+    "task_family": "T3_sequential_manipulation",
+    "difficulty": "template",
+    "functional_template": "rearrange",
+    "primary_capabilities": [
+      "PG",
+      "SR",
+      "MR",
+      "TM"
+    ],
+    "expected_skills": [
+      "navigate",
+      "interact_pixel",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        2
+      ]
+    },
+    "sampling_notes": [
+      "authored in operator workbench"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "Box",
+    "benchmark_axes": {
+      "task_family": "T3_sequential_manipulation",
+      "target_object_type": "Box",
+      "difficulty": "template"
+    },
+    "target_group": "sequential_manipulation",
+    "target_object_id": "Box|surface|2|12",
+    "destination_object_id": "Floor",
+    "destination_allowed_object_ids": [
+      "Floor",
+      "room|2",
+      "room|3"
+    ],
+    "evaluation": {
+      "primary": "semantic",
+      "secondary": "strict"
+    },
+    "task_binding_mode": "instance_bound"
+  },
+  "bindings": {
+    "target_object_type": "Box",
+    "target_object_id": "Box|surface|2|12",
+    "destination_object_type": "Floor",
+    "destination_object_id": "Floor",
+    "destination_allowed_object_ids": [
+      "Floor",
+      "room|2",
+      "room|3"
+    ]
+  },
+  "pre_conditions": [
+    {
+      "target_pickupable": true,
+      "destination_available": true
+    }
+  ]
+}

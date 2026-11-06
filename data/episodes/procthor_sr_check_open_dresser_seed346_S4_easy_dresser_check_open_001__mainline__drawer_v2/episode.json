@@ -1,0 +1,137 @@
+{
+  "episode_id": "procthor_sr_check_open_dresser_seed346_S4_easy_dresser_check_open_001__mainline__drawer_v2",
+  "sample_id": "procthor_sr_check_open_dresser_seed346_S4_easy_dresser_check_open_001__mainline__drawer_v2",
+  "scene_ref": "procthor_sr_check_open_dresser_seed346",
+  "scene": {
+    "platform": "procthor",
+    "scene_id": "Procedural",
+    "controller": {
+      "width": 640,
+      "height": 480,
+      "fieldOfView": 90,
+      "visibilityDistance": 6.0,
+      "interaction_distance_limit": 1.5,
+      "renderDepthImage": false,
+      "renderInstanceSegmentation": true,
+      "quality": "Medium"
+    }
+  },
+  "agent_init": {
+    "position": {
+      "x": 10.0,
+      "y": 0.9009993672370911,
+      "z": 4.75
+    },
+    "rotation": {
+      "x": 0.0,
+      "y": 32.161685943603516,
+      "z": 0.0
+    },
+    "horizon": 30.0,
+    "standing": true
+  },
+  "scene_setup": [
+    {
+      "action": "TeleportFull",
+      "position": {
+        "x": 10.0,
+        "y": 0.9009993672370911,
+        "z": 4.75
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 32.161685943603516,
+        "z": 0.0
+      },
+      "horizon": 30.0,
+      "standing": true
+    },
+    {
+      "action": "OpenObject",
+      "forceAction": true,
+      "objectId": "3|2___9"
+    }
+  ],
+  "task": {
+    "instruction": "Check whether the top-left drawer of the dresser directly in front of you is open or closed, then report the observed state as open or closed.",
+    "task_type": "verify_open_state",
+    "task_family": "S4_state_recognition",
+    "intent": "verify_open",
+    "functional_template": "verify_open_state",
+    "difficulty": "na",
+    "primary_capabilities": [
+      "SR",
+      "TM"
+    ],
+    "intent_tags": [],
+    "target_object_type": "Drawer",
+    "target_group": "container_access"
+  },
+  "budget": {
+    "max_steps": 5,
+    "max_invalid_actions": 2,
+    "timeout_policy": "fail"
+  },
+  "interactables": [],
+  "hazards": [],
+  "success_condition": {
+    "type": "report_status",
+    "expected": "open",
+    "target_object_type": "Drawer",
+    "oracle_condition": {
+      "type": "object_state",
+      "target_object_type": "Drawer",
+      "field": "is_open",
+      "value": true,
+      "target_object_id": "3|2___9"
+    },
+    "target_object_id": "3|2___9"
+  },
+  "trace_hints": {
+    "task_family": "S4_state_recognition",
+    "difficulty": "na",
+    "functional_template": "verify_open_state",
+    "primary_capabilities": [
+      "SR",
+      "TM"
+    ],
+    "expected_skills": [
+      "look",
+      "report"
+    ],
+    "family_scene_requirements": {
+      "target_visible": true,
+      "target_distance_m": [
+        0.5,
+        1.5
+      ]
+    },
+    "sampling_notes": [
+      "migrated from procthor_sr_check_open_dresser_seed346_S4_easy_dresser_check_open_001 (migrate_s4)"
+    ],
+    "platform_strategy": {
+      "primary": "procthor"
+    },
+    "target_object_type": "Drawer",
+    "benchmark_axes": {
+      "task_family": "S4_state_recognition",
+      "target_object_type": "Drawer",
+      "difficulty": "na"
+    },
+    "target_group": "container_access",
+    "target_initial_state": "open",
+    "target_object_id": "3|2___9",
+    "migration": {
+      "version": "mainline_2026_04_22",
+      "source_pack": "procthor_all_filter_848.json",
+      "source_episode_id": "procthor_sr_check_open_dresser_seed346_S4_easy_dresser_check_open_001",
+      "source_family": "S4_state_recognition",
+      "migrated_at": "2026-04-22T04:45:26Z",
+      "action": "migrate_s4"
+    }
+  },
+  "bindings": {
+    "target_object_type": "Drawer",
+    "target_object_id": "3|2___9"
+  }
+}
